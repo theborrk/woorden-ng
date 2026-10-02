@@ -1,7 +1,9 @@
 {
-  "$comment": "Read by the Claude review routine (docs/agents/claude-review-routine.md). Edit on GitHub to tune the loop.",
+  "$comment": "Read by the Claude review routine and the CI/auto-merge workflows (docs/WORKFLOW.md, 'Unattended mode'). Edit on GitHub to tune the loop.",
   "maxReviewRounds": 3,
-  "codexAutoFix": false,
+  "codexAutoFix": true,
   "codexMention": "@codex",
-  "maxInlineComments": 10
+  "maxInlineComments": 10,
+  "autoMerge": true,
+  "autoMergeDependabot": false
 }

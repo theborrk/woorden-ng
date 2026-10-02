@@ -105,6 +105,8 @@ Be concise: the owner reads your summary on a phone.
    swaps the labels.
 4. Changes requested → the fix brief goes to Codex (you paste it, or the routine mentions
    `@codex` when `codexAutoFix` is on) → Codex pushes → back to step 1.
+5. Approved and green → you merge, or the **Auto merge** workflow does when `autoMerge` is on
+   (docs/WORKFLOW.md, "Unattended mode").
 
 ## Fallback: review inside GitHub Actions
 

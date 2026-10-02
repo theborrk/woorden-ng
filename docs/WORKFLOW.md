@@ -61,6 +61,29 @@ commit Claude read.
 Keep at most 2–3 PRs in flight. Your testing and merging is the bottleneck, and parallel PRs that
 touch the same files cause merge conflicts.
 
+## Unattended mode (overnight)
+
+With `autoMerge` and `codexAutoFix` set to `true` in `.github/agent-loop.json` and the
+`AUTOMATION_TOKEN` secret added (docs/SETUP-REFERENCE.md), the loop runs without you after a task
+has started:
+
+| Event                    | What happens                                                                             |
+| ------------------------ | ---------------------------------------------------------------------------------------- |
+| CI fails                 | CI posts `@codex` + the failure log as you; Codex pushes a fix (up to `maxReviewRounds`) |
+| Claude requests changes  | The review routine posts `@codex` + its fix brief; Codex pushes a fix                    |
+| Green and approved       | **Auto merge** squash-merges it; Main deploys the PWA and the dev APK                    |
+| Approved but behind main | Auto merge updates the branch from main; CI runs again; the approval carries over        |
+| Conflicts with main      | Auto merge asks Codex to resolve them (a new review follows)                             |
+| Round limit reached      | `needs-human`: nothing more happens until you look                                       |
+
+What stays with you: **starting tasks**. Codex cloud tasks start from ChatGPT, so queue the evening's
+batch before bed: tasks that are ready now and don't depend on each other (the CI summary lists the
+ready ones). Up to about five run in parallel without stepping on each other; merges happen one at
+a time and later ones are updated from main first. In the morning, check `needs-human` PRs, try the
+new dev APK, and queue the next batch.
+
+Keep a pull request out of auto-merge with the `hold` label. Releases stay manual.
+
 ## Releases
 
 1. GitHub → Releases → **Draft a new release** → **Create new tag** `v0.1.0` (format `vMAJOR.MINOR.PATCH`,

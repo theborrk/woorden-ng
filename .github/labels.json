@@ -43,5 +43,10 @@
     "name": "blocked",
     "color": "000000",
     "description": "Waiting on something outside the repository"
+  },
+  {
+    "name": "hold",
+    "color": "e99695",
+    "description": "Owner: never auto-merge this pull request"
   }
 ]

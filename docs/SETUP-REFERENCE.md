@@ -44,6 +44,21 @@ Other knobs: `package.json` → `config.playwrightBrowsers` lists the browsers C
 Playwright config has projects for them. `APP_BASE=/sub-path/` builds and tests the PWA under a
 sub-path; production deploys use `/`.
 
+## Unattended mode: `AUTOMATION_TOKEN` and `.github/agent-loop.json`
+
+Auto-merge, branch updates and `@codex` requests act **as you**, so Codex accepts them and the
+usual workflows run on what they push. Create a fine-grained token (GitHub → Settings → Developer
+settings → Fine-grained tokens): **Repository access:** only this repository; **Expiration:** up to a
+year (put a reminder in your calendar); **Permissions (Repository):** Contents, Pull requests, Issues
+and Workflows: Read and write. Save it as the secret `AUTOMATION_TOKEN`.
+
+| Key in `agent-loop.json` | Default | Effect                                                        |
+| ------------------------ | ------- | ------------------------------------------------------------- |
+| `autoMerge`              | `false` | Merge green, Claude-approved, up-to-date PRs automatically    |
+| `autoMergeDependabot`    | `false` | Also auto-merge Dependabot PRs                                |
+| `codexAutoFix`           | `false` | Send review fix briefs and CI failures to Codex with `@codex` |
+| `maxReviewRounds`        | `3`     | Fix requests per PR before it gets `needs-human`              |
+
 ## The temporary `SETUP_TOKEN`
 
 GitHub → Settings → Developer settings → Personal access tokens → **Fine-grained tokens** → Generate:

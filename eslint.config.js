@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import prettier from 'eslint-config-prettier';
+import nativePluginBoundary from './scripts/eslint/native-plugin-boundary.mjs';
 
 export default tseslint.config(
   {
@@ -30,6 +31,12 @@ export default tseslint.config(
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/no-floating-promises': 'error',
     },
+  },
+  {
+    files: ['**/*.{ts,tsx,js,jsx,mjs,cjs}'],
+    ignores: ['src/platform/android/**', 'src/infrastructure/db/android/**'],
+    plugins: { native: { rules: { 'plugin-boundary': nativePluginBoundary } } },
+    rules: { 'native/plugin-boundary': 'error' },
   },
   {
     files: ['**/*.{js,mjs,cjs}'],

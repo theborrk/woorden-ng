@@ -9,15 +9,17 @@ export interface AppProps {
   name: string;
   platform: Platform;
   updates: Pick<TargetServices, 'registerUpdates'>;
+  storage?: Pick<TargetServices, 'initialize'>;
   initialLanguageError?: boolean;
 }
 
-export function App({ name, platform, updates, initialLanguageError = false }: AppProps) {
+export function App({ name, platform, updates, storage, initialLanguageError = false }: AppProps) {
   const { t, i18n } = useTranslation();
   const [route, setRoute] = useState(() => routeFromHash(window.location.hash));
   const [online, setOnline] = useState(navigator.onLine);
   const [applyUpdate, setApplyUpdate] = useState<(() => void) | null>(null);
   const [languageError, setLanguageError] = useState(initialLanguageError);
+  const [storageError, setStorageError] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -52,6 +54,17 @@ export function App({ name, platform, updates, initialLanguageError = false }: A
   }, [updates]);
 
   useEffect(() => {
+    if (!storage) return;
+    let mounted = true;
+    void storage.initialize().catch(() => {
+      if (mounted) setStorageError(true);
+    });
+    return () => {
+      mounted = false;
+    };
+  }, [storage]);
+
+  useEffect(() => {
     document.documentElement.lang = i18n.resolvedLanguage ?? 'en';
   }, [i18n.resolvedLanguage]);
 
@@ -72,6 +85,11 @@ export function App({ name, platform, updates, initialLanguageError = false }: A
           {t(online ? 'online' : 'offline')}
         </p>
       </section>
+      {storageError && (
+        <p role="alert" data-testid="storage-error">
+          {t('storageError')}
+        </p>
+      )}
       {applyUpdate && (
         <div className="update-banner" data-testid="update-banner" role="alert">
           <span>{t('update')}</span>

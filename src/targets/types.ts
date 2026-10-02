@@ -7,6 +7,8 @@ export type TargetName = 'web' | 'android';
 
 export interface TargetServices {
   readonly name: TargetName;
+  /** Opens target storage; rejects visibly if native storage is unavailable. */
+  initialize(): Promise<void>;
   /** Starts update checks; calls `onUpdateReady` with a function that applies the update. */
   registerUpdates(onUpdateReady: (applyUpdate: () => void) => void): void;
 }

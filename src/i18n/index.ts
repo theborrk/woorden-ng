@@ -23,6 +23,7 @@ const en = {
   placeholder: 'This screen is being prepared. Learning features will arrive in a future update.',
   language: 'Interface language',
   session: 'Your language choice applies to this tab session.',
+  storageError: 'Native storage is unavailable. Data cannot be saved. Restart the app to retry.',
   languageError:
     'The language could not be saved for this session. You can still use it until you reload.',
 };
@@ -46,6 +47,8 @@ const pl: typeof en = {
     'Ten ekran jest w przygotowaniu. Funkcje nauki pojawią się w przyszłej aktualizacji.',
   language: 'Język interfejsu',
   session: 'Wybrany język obowiązuje w tej sesji karty.',
+  storageError:
+    'Pamięć natywna jest niedostępna. Nie można zapisać danych. Uruchom aplikację ponownie, aby spróbować jeszcze raz.',
   languageError:
     'Nie udało się zapisać języka na czas tej sesji. Możesz go używać do odświeżenia strony.',
 };

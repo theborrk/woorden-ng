@@ -72,3 +72,50 @@ body {
   color: #ffffff;
   font: inherit;
 }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0.5rem 0.75rem;
+  color: var(--fg);
+  border: 1px solid var(--muted);
+  border-radius: 0.375rem;
+  text-decoration: none;
+}
+
+nav a[aria-current='page'] {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+select {
+  min-height: 44px;
+  max-width: 100%;
+  padding: 0.5rem 0.75rem;
+  font: inherit;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--muted);
+  border-radius: 0.375rem;
+}

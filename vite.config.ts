@@ -1,5 +1,6 @@
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
+import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 import { APP } from './app.config.ts';
 
@@ -45,6 +46,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       appMeta,
+      react(),
       ...(target === 'web'
         ? [
             VitePWA({
@@ -94,15 +96,15 @@ export default defineConfig(({ mode }) => {
       // Unit tests sit next to the code; the blueprint's tests/domain and tests/integration and the
       // content tools (tools/) are picked up too.
       include: [
-        'src/**/*.test.ts',
+        'src/**/*.test.{ts,tsx}',
         'tests/**/*.test.ts',
         'tools/**/*.test.{mjs,ts}',
         'scripts/**/*.test.{mjs,ts}',
       ],
       coverage: {
         provider: 'v8',
-        include: ['src/**/*.ts'],
-        exclude: ['src/**/*.test.ts', 'src/main.ts'],
+        include: ['src/**/*.{ts,tsx}'],
+        exclude: ['src/**/*.test.{ts,tsx}', 'src/main.ts'],
         reporter: ['text', 'json-summary'],
       },
     },

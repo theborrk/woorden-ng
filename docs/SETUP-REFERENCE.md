@@ -92,8 +92,10 @@ Node 24 matches the project. Check that it ends up with:
 
 - **Install script:** `bash scripts/agent-setup.sh` (ask for exactly this if it proposes something
   else: the script also installs the Playwright browser the e2e tests need).
-- **Internet access:** on, the **Package managers** preset, plus these additional domains for the
-  Playwright browser download: `cdn.playwright.dev`, `playwright.download.prss.microsoft.com`.
+- **Internet access:** on, the **Package managers** preset, plus these additional domains:
+  `api.github.com` (Codex opens the pull request with `gh pr create`; without it the branch is
+  pushed but no PR appears) and, for the Playwright browser download, `cdn.playwright.dev` and
+  `playwright.download.prss.microsoft.com`.
 - **Code review:** automatic reviews **off** (Claude reviews here).
 
 ## Claude

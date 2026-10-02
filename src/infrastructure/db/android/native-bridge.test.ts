@@ -9,7 +9,12 @@ const mocks = vi.hoisted(() => ({
   create: vi.fn<() => Promise<void>>(),
   open: vi.fn<() => Promise<void>>(),
   close: vi.fn<() => Promise<void>>(),
-  query: vi.fn(() => Promise.resolve({ values: [{ user_version: 2 }] })),
+  query: vi.fn((options: { values?: unknown[] }) => {
+    if (!Array.isArray(options.values)) {
+      return Promise.reject(new Error('Query: Must provide an Array of Strings'));
+    }
+    return Promise.resolve({ values: [{ user_version: 2 }] });
+  }),
   execute: vi.fn(() => Promise.resolve({ changes: { changes: 0 } })),
   run: vi.fn(() => Promise.resolve({ changes: { changes: 1 } })),
 }));
@@ -80,5 +85,16 @@ describe('native target initialization', () => {
       expect.objectContaining({ transaction: false, values: ['event-1'] }),
     );
     expect(mocks.execute).toHaveBeenCalledWith(expect.objectContaining({ transaction: false }));
+  });
+
+  it('passes an explicit empty values array for parameterless native queries', async () => {
+    const connection = await nativeSqliteBridge.connect('woorden_spike_query');
+    expect(await connection.query('PRAGMA user_version;')).toEqual([{ user_version: 2 }]);
+    expect(mocks.query).toHaveBeenCalledExactlyOnceWith({
+      database: 'woorden_spike_query',
+      readonly: false,
+      statement: 'PRAGMA user_version;',
+      values: [],
+    });
   });
 });

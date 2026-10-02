@@ -45,7 +45,8 @@ export const nativeSqliteBridge: NativeSqliteBridge = {
         );
       },
       async query(statement) {
-        const result = await CapacitorSQLite.query({ ...options, statement });
+        // Android requires the values field even for parameterless PRAGMAs/SELECTs.
+        const result = await CapacitorSQLite.query({ ...options, statement, values: [] });
         const rows: unknown = result.values;
         if (!Array.isArray(rows) || rows.some((row: unknown) => !row || typeof row !== 'object')) {
           throw new Error('Native SQLite returned invalid rows.');

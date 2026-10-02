@@ -1,5 +1,9 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { renderApp } from '../../../app';
+import { createElement } from 'react';
+import { cleanup, render, screen } from '@testing-library/react';
+import { I18nextProvider } from 'react-i18next';
+import { App } from '../../../app/App';
+import { createLocalization } from '../../../i18n';
 import { target } from '../../../targets/android';
 import { nativeSqliteBridge } from './native-bridge';
 
@@ -50,17 +54,29 @@ describe('native target initialization', () => {
     delete window.Capacitor;
   });
   afterEach(() => {
+    cleanup();
     delete window.__storageSpike;
     delete window.Capacitor;
   });
 
   it('I20: missing plugin surfaces the storage error through Android initialization', async () => {
     mocks.available.mockReturnValue(false);
-    const root = document.createElement('div');
-    const view = renderApp(root, { name: 'Woorden', platform: 'android', online: true });
     await expect(target.initialize()).rejects.toThrow('Data cannot be saved.');
-    await target.initialize().catch(() => view.showStorageError());
-    expect(root.querySelector<HTMLElement>('[data-testid="storage-error"]')?.hidden).toBe(false);
+    render(
+      createElement(
+        I18nextProvider,
+        { i18n: createLocalization('en') },
+        createElement(App, {
+          name: 'Woorden',
+          platform: 'android',
+          updates: target,
+          storage: target,
+        }),
+      ),
+    );
+    expect((await screen.findByTestId('storage-error')).textContent).toContain(
+      'Data cannot be saved. Restart the app to retry.',
+    );
     expect(mocks.create).not.toHaveBeenCalled();
     expect(window.__storageSpike).toBeUndefined();
   });

@@ -57,7 +57,7 @@ device suite.** Native behavior is an executable CI hypothesis until the PR emul
 unit mocks are not native proof. Consult the CI summary/log tail and `device-screenshots` artifact
 for failures.
 
-Local `npm run verify` passes (45 unit tests), and `npm run test:e2e:web` passes (3 tests).
+Local `npm run verify` passes (58 unit tests), and `npm run test:e2e:web` passes (9 tests).
 The matching Playwright browser download was denied by the environment's HTTP domain policy.
 The preinstalled Chromium 151 incorrectly reset `navigator.onLine` after an offline service-worker
 reload. Validation therefore used the supported `PW_CHROMIUM_PATH` fallback with Chromium
@@ -102,3 +102,7 @@ Source inspection establishes these adapter requirements:
   transfer behavior. Native file access and the backup rules are later W47 work.
 - Validate final APK/AAB packaging and real ABI/page-size compatibility in W49/W50/T75; the ELF
   alignment audit is not the signed-release compatibility matrix.
+
+The PR was reconciled with the merged T-006 React shell and T-001 seed extraction changes.
+The active React shell initializes the target storage and shows its failure alert in EN/PL;
+the native availability test exercises that real component.

@@ -53,7 +53,7 @@ do not edit the process files listed under [Protected files](#protected-files).
 
 ## Environment
 
-- Node 22 (`.nvmrc`). Setup script: `bash scripts/agent-setup.sh` (runs `npm ci` and installs the
+- Node 24 (`.nvmrc`; Node 22 also works). Setup script: `bash scripts/agent-setup.sh` (runs `npm ci` and installs the
   Playwright browsers listed in `package.json` under `config.playwrightBrowsers`).
 - **There is no Android SDK in your environment.** Do not run Gradle, an emulator or the device
   tests, and do not try to install the SDK. CI builds the debug APK and runs the device tests on an

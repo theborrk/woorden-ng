@@ -69,13 +69,17 @@ and the secret.
 repository public (also gives unlimited Actions minutes) or keep it private and treat the two checks
 as advisory: you are the only one who presses Merge.
 
-## Codex cloud environment (chatgpt.com → Codex → Settings → Environments)
+## Codex cloud environment (chatgpt.com → Codex → Environments)
 
-- Repository: this one. Node: 22.
-- Install script: `bash scripts/agent-setup.sh`
-- Internet access: on, **Package managers** preset, plus these additional domains for the Playwright
-  browser download: `cdn.playwright.dev`, `playwright.download.prss.microsoft.com`.
-- Code review: leave **automatic reviews off** (Claude reviews here).
+Codex sets an environment up in a conversation: it reads the repository (Node 24 from `.nvmrc`,
+npm from `package-lock.json`) and proposes the setup. There is no version picker; its default
+Node 24 matches the project. Check that it ends up with:
+
+- **Install script:** `bash scripts/agent-setup.sh` (ask for exactly this if it proposes something
+  else: the script also installs the Playwright browser the e2e tests need).
+- **Internet access:** on, the **Package managers** preset, plus these additional domains for the
+  Playwright browser download: `cdn.playwright.dev`, `playwright.download.prss.microsoft.com`.
+- **Code review:** automatic reviews **off** (Claude reviews here).
 
 ## Claude
 

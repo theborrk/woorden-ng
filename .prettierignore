@@ -1,0 +1,10 @@
+dist/
+dev-dist/
+android/
+coverage/
+playwright-report/
+test-results/
+review-screenshots/
+package-lock.json
+docs/architecture/
+legacy/

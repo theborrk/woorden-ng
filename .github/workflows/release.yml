@@ -1,0 +1,123 @@
+name: Release
+
+# Publish a GitHub Release with a tag like v1.2.3 (Releases > Draft a new release > Create new tag).
+# This workflow then attaches the signed APK (sideload / Obtainium) and AAB (Google Play).
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing release tag to (re)build, e.g. v1.2.3
+        required: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.event.release.tag_name || inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  version:
+    name: Resolve version
+    if: github.event_name == 'workflow_dispatch' || github.event.release.tag_name != 'dev-latest'
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.v.outputs.tag }}
+      versionCode: ${{ steps.v.outputs.versionCode }}
+      versionName: ${{ steps.v.outputs.versionName }}
+    steps:
+      - uses: actions/checkout@v7
+      - id: v
+        env:
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          node scripts/android-version.mjs release "$TAG" >> "$GITHUB_OUTPUT"
+          cat "$GITHUB_OUTPUT"
+
+  build:
+    name: Build signed APK and AAB
+    needs: version
+    uses: ./.github/workflows/android-build.yml
+    secrets: inherit
+    with:
+      build-type: release
+      ref: ${{ needs.version.outputs.tag }}
+      version-code: ${{ needs.version.outputs.versionCode }}
+      version-name: ${{ needs.version.outputs.versionName }}
+
+  # Every release runs the device tests (when the project has them) on a debug build of the same
+  # tag: release builds don't allow attaching to their WebView. See .github/ci-policy.json.
+  policy:
+    name: Read CI policy
+    needs: version
+    runs-on: ubuntu-latest
+    outputs:
+      device-tests: ${{ steps.plan.outputs.device-tests }}
+      emulator-api: ${{ steps.plan.outputs.emulator-api }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ needs.version.outputs.tag }}
+      - id: plan
+        run: |
+          set -euo pipefail
+          policy='{}'
+          if [[ -f .github/ci-policy.json ]]; then policy="$(cat .github/ci-policy.json)"; fi
+          mode=$(jq -r '.deviceTests // "affected"' <<<"$policy")
+          api=$(jq -r '.emulatorApiLevel // 35' <<<"$policy")
+          has_device_scripts=$(jq -r '((.scripts["test:repositories:android"] // .scripts["test:e2e:android"]) != null)' package.json)
+          device=false
+          if [[ "$has_device_scripts" == "true" && "$mode" != "off" ]]; then device=true; fi
+          {
+            echo "device-tests=$device"
+            echo "emulator-api=$api"
+          } | tee -a "$GITHUB_OUTPUT"
+
+  debug-apk:
+    name: Debug APK for device tests
+    needs: [version, policy]
+    if: needs.policy.outputs.device-tests == 'true'
+    uses: ./.github/workflows/android-build.yml
+    with:
+      build-type: debug
+      ref: ${{ needs.version.outputs.tag }}
+      version-label: ${{ needs.version.outputs.tag }}
+
+  device-tests:
+    name: Device tests
+    needs: [version, policy, debug-apk]
+    uses: ./.github/workflows/android-device-tests.yml
+    with:
+      apk-name: ${{ needs.debug-apk.outputs.apk-name }}
+      api-level: ${{ needs.policy.outputs.emulator-api }}
+      ref: ${{ needs.version.outputs.tag }}
+
+  publish:
+    name: Attach to release
+    needs: [version, build, device-tests]
+    # Skipped device tests (none defined, or policy "off") don't block the release.
+    if: >-
+      always() && !cancelled()
+      && needs.build.result == 'success'
+      && contains(fromJSON('["success","skipped"]'), needs.device-tests.result)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: app-release-*
+          path: out
+          merge-multiple: true
+      - name: Upload assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ needs.version.outputs.tag }}
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(find out -type f \( -name '*.apk' -o -name '*.aab' \))
+          printf 'Uploading %s\n' "${files[@]}"
+          gh release upload "$TAG" "${files[@]}" --clobber --repo "$GITHUB_REPOSITORY"

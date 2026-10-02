@@ -1,0 +1,108 @@
+name: Android device tests
+
+# Reusable: installs a debug APK built by android-build.yml on an Android emulator and runs the
+# device test scripts from package.json (test:repositories:android, test:e2e:android) through
+# scripts/device-tests.sh. CI calls it when .github/ci-policy.json "deviceTests" says so.
+# The emulator uses KVM hardware acceleration, available on GitHub-hosted Linux runners.
+on:
+  workflow_call:
+    inputs:
+      apk-name:
+        description: Name of the debug APK artifact uploaded by android-build.yml
+        type: string
+        required: true
+      api-level:
+        description: Android API level of the emulator
+        type: string
+        default: '35'
+      ref:
+        description: Git ref to test (defaults to the triggering ref)
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  emulator:
+    name: Emulator (API ${{ inputs.api-level }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download the debug APK
+        uses: actions/download-artifact@v8
+        with:
+          name: ${{ inputs.apk-name }}
+          path: apk
+
+      - name: Locate the APK and its application id
+        shell: bash
+        env:
+          APK_NAME: ${{ inputs.apk-name }}
+        run: |
+          set -euo pipefail
+          apk="$(find apk -name '*.apk' -type f | head -1)"
+          if [[ -z "$apk" ]]; then echo "::error::No APK found in artifact $APK_NAME"; exit 1; fi
+          # Debug builds carry the ".dev" application id suffix (android/app/build.gradle).
+          app_id="$(sed -n "s/^[[:space:]]*appId:[[:space:]]*['\"]\([^'\"]*\)['\"].*/\1/p" capacitor.config.ts | head -1)"
+          if [[ -z "$app_id" ]]; then echo "::error::Could not read appId from capacitor.config.ts"; exit 1; fi
+          {
+            echo "ANDROID_APK_PATH=$GITHUB_WORKSPACE/$apk"
+            echo "ANDROID_PACKAGE=$app_id.dev"
+          } | tee -a "$GITHUB_ENV"
+
+      - name: Enable KVM hardware acceleration
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      # Each line of `script` runs as its own `sh -c`, so the logic lives in scripts/device-tests.sh.
+      - name: Run device tests on the emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        env:
+          REVIEW_SCREENSHOTS_DIR: device-screenshots
+          DEVICE_TESTS_LOG: device-tests.log
+        with:
+          api-level: ${{ inputs.api-level }}
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          ram-size: 3072M
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim -camera-back none
+          disable-animations: true
+          script: bash scripts/device-tests.sh
+
+      - name: Upload device screenshots
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: device-screenshots
+          path: device-screenshots
+          if-no-files-found: ignore
+          retention-days: 14
+
+      # Named *-log so the PR summary comment includes its tail.
+      - name: Upload device test log and report
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: device-tests-log
+          path: |
+            device-tests.log
+            playwright-report/android
+            test-results/android
+          if-no-files-found: ignore
+          retention-days: 7

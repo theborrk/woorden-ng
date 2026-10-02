@@ -1,0 +1,57 @@
+name: Review gate
+
+# Turns the Claude review routine's verdict comment into the required `claude-review` status.
+# The routine runs as you (repository owner) and ends its summary comment with:
+#   <!-- claude-review:v1 verdict=approve|changes sha=<head sha> round=<n> -->
+# Comments from bots or non-collaborators are ignored, and a verdict only counts for the
+# exact commit it reviewed. You can also post that marker yourself to override the gate.
+on:
+  issue_comment:
+    types: [created, edited]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: review-gate-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  gate:
+    if: github.event.issue.pull_request && contains(github.event.comment.body, 'claude-review:v1')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      statuses: write
+      issues: write
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: scripts/lib
+      - uses: actions/github-script@v9
+        with:
+          script: |
+            const gate = require('./scripts/lib/review-gate.cjs');
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const { data: pr } = await github.rest.pulls.get({ owner, repo, pull_number: issue_number });
+            if (pr.state !== 'open') {
+              core.notice('PR is not open; nothing to do.');
+              return;
+            }
+            const decision = gate.decide(context.payload.comment, pr.head.sha);
+            if (decision.action === 'skip') {
+              core.notice(decision.reason);
+              return;
+            }
+            await github.rest.repos.createCommitStatus({
+              owner, repo, sha: pr.head.sha, context: 'claude-review',
+              state: decision.state, description: decision.description.slice(0, 140),
+              target_url: context.payload.comment.html_url,
+            });
+            for (const name of decision.labelsToRemove) {
+              await github.rest.issues.removeLabel({ owner, repo, issue_number, name }).catch(() => {});
+            }
+            await github.rest.issues.addLabels({ owner, repo, issue_number, labels: decision.labelsToAdd });
+            core.notice(`${decision.description} for ${pr.head.sha.slice(0, 7)}`);

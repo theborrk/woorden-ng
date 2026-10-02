@@ -1,0 +1,47 @@
+[
+  {
+    "name": "task",
+    "color": "1d76db",
+    "description": "Implementation task (spec lives in docs/tasks)"
+  },
+  {
+    "name": "needs-claude-review",
+    "color": "fbca04",
+    "description": "CI is green; the Claude review routine picks this up"
+  },
+  {
+    "name": "claude-approved",
+    "color": "0e8a16",
+    "description": "Claude approved the current head commit"
+  },
+  {
+    "name": "claude-changes-requested",
+    "color": "d93f0b",
+    "description": "Claude found blocking issues; Codex should address them"
+  },
+  {
+    "name": "ci-failed",
+    "color": "b60205",
+    "description": "CI failed on the current head commit"
+  },
+  {
+    "name": "needs-human",
+    "color": "5319e7",
+    "description": "Agents stopped: a decision or manual check is needed"
+  },
+  {
+    "name": "deep-review",
+    "color": "0052cc",
+    "description": "Ask for a deeper review (stronger model, more scrutiny)"
+  },
+  {
+    "name": "skip-claude-review",
+    "color": "c5def5",
+    "description": "Owner-only: mark claude-review as passed without a review"
+  },
+  {
+    "name": "blocked",
+    "color": "000000",
+    "description": "Waiting on something outside the repository"
+  }
+]

@@ -1,0 +1,174 @@
+name: Android build
+
+# Reusable: called by CI (PR debug APK), Main (dev APK) and Release (signed APK + AAB).
+# Can also be started by hand: Actions > Android build > Run workflow (pick a branch).
+on:
+  workflow_call:
+    inputs:
+      build-type:
+        description: debug or release
+        type: string
+        default: debug
+      version-label:
+        description: Debug builds only - human-readable versionName, e.g. pr12 or main
+        type: string
+        default: ''
+      version-code:
+        description: Release builds only - versionCode from scripts/android-version.mjs
+        type: string
+        default: ''
+      version-name:
+        description: Release builds only - versionName, e.g. 1.2.3
+        type: string
+        default: ''
+      ref:
+        description: Git ref to build (defaults to the triggering ref)
+        type: string
+        default: ''
+    outputs:
+      apk-name:
+        description: File name of the uploaded APK artifact
+        value: ${{ jobs.build.outputs.apk-name }}
+      apk-url:
+        description: Download URL of the APK artifact (requires being logged in to GitHub)
+        value: ${{ jobs.build.outputs.apk-url }}
+  workflow_dispatch:
+    inputs:
+      build-type:
+        description: Build type
+        type: choice
+        options: [debug, release]
+        default: debug
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      apk-name: ${{ steps.collect.outputs.apk-name }}
+      apk-url: ${{ steps.upload-apk.outputs.artifact-url }}
+    env:
+      BUILD_TYPE: ${{ inputs.build-type || 'debug' }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - uses: android-actions/setup-android@v4
+
+      - uses: gradle/actions/setup-gradle@v6
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the Android web bundle (dist/android) and sync it into the Android project
+        run: |
+          npm run build:android
+          npx cap sync android
+
+      - name: Compute version
+        id: version
+        shell: bash
+        env:
+          VERSION_LABEL: ${{ inputs.version-label }}
+          VERSION_CODE: ${{ inputs.version-code }}
+          VERSION_NAME: ${{ inputs.version-name }}
+        run: |
+          if [[ "$BUILD_TYPE" == "release" && -n "$VERSION_CODE" ]]; then
+            printf 'versionCode=%s\nversionName=%s\n' "$VERSION_CODE" "$VERSION_NAME" >> "$GITHUB_OUTPUT"
+          else
+            label="${VERSION_LABEL:-${GITHUB_REF_NAME//\//-}}.${GITHUB_SHA::7}"
+            node scripts/android-version.mjs debug "$label" >> "$GITHUB_OUTPUT"
+          fi
+          cat "$GITHUB_OUTPUT"
+
+      - name: Decode release keystore
+        if: env.BUILD_TYPE == 'release'
+        shell: bash
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          if [[ -z "$KEYSTORE_BASE64" ]]; then
+            echo "::error::ANDROID_KEYSTORE_BASE64 secret is missing. Run Actions > Setup repository with 'keystore' enabled first."
+            exit 1
+          fi
+          echo "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/release.jks"
+          echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
+
+      - name: Gradle build
+        working-directory: android
+        shell: bash
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          VERSION_CODE: ${{ steps.version.outputs.versionCode }}
+          VERSION_NAME: ${{ steps.version.outputs.versionName }}
+        run: |
+          chmod +x gradlew
+          if [[ "$BUILD_TYPE" == "release" ]]; then tasks="assembleRelease bundleRelease"; else tasks="assembleDebug"; fi
+          # shellcheck disable=SC2086
+          ./gradlew $tasks --no-daemon --stacktrace \
+            -PappVersionCode="$VERSION_CODE" -PappVersionName="$VERSION_NAME" 2>&1 | tee "$GITHUB_WORKSPACE/android-build.log"
+
+      - name: Collect outputs
+        id: collect
+        shell: bash
+        env:
+          VERSION_NAME: ${{ steps.version.outputs.versionName }}
+        run: |
+          mkdir -p out
+          safe_name="${VERSION_NAME//[^A-Za-z0-9._-]/-}"
+          if [[ "$BUILD_TYPE" == "release" ]]; then
+            apk=android/app/build/outputs/apk/release/app-release.apk
+            if [[ ! -f "$apk" ]]; then echo "::error::Signed release APK not found (is signing configured?)"; ls -R android/app/build/outputs || true; exit 1; fi
+            cp "$apk" "out/app-release-${safe_name}.apk"
+            cp android/app/build/outputs/bundle/release/app-release.aab "out/app-release-${safe_name}.aab"
+            apksigner="$(find "$ANDROID_HOME/build-tools" -maxdepth 2 -name apksigner -type f | sort -V | tail -1)"
+            "$apksigner" verify --print-certs "out/app-release-${safe_name}.apk" | tee -a "$GITHUB_STEP_SUMMARY"
+            echo "apk-name=app-release-${safe_name}.apk" >> "$GITHUB_OUTPUT"
+            echo "aab-name=app-release-${safe_name}.aab" >> "$GITHUB_OUTPUT"
+          else
+            cp android/app/build/outputs/apk/debug/app-debug.apk "out/app-debug-${safe_name}.apk"
+            echo "apk-name=app-debug-${safe_name}.apk" >> "$GITHUB_OUTPUT"
+          fi
+          ls -la out
+
+      # Uploaded unzipped, so tapping the link on a phone downloads an installable .apk directly.
+      - name: Upload APK
+        id: upload-apk
+        uses: actions/upload-artifact@v7
+        with:
+          path: out/${{ steps.collect.outputs.apk-name }}
+          archive: false
+          retention-days: 14
+
+      - name: Upload AAB
+        if: env.BUILD_TYPE == 'release'
+        uses: actions/upload-artifact@v7
+        with:
+          path: out/${{ steps.collect.outputs.aab-name }}
+          archive: false
+          retention-days: 30
+
+      - name: Upload build log
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: android-log
+          path: android-build.log
+          if-no-files-found: ignore
+          retention-days: 7

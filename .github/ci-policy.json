@@ -1,0 +1,5 @@
+{
+  "androidOnEveryPr": true,
+  "deviceTests": "affected",
+  "emulatorApiLevel": 36
+}

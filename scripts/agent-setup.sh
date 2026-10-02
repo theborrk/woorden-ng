@@ -8,7 +8,7 @@ cd "$(dirname "$0")/.."
 
 node_major="$(node -p 'process.versions.node.split(".")[0]')"
 if (( node_major < 22 )); then
-  echo "Node 22+ is required (found $(node --version)). Pin Node 22 in the environment settings." >&2
+  echo "Node 22 or newer is required; the project uses Node 24 (.nvmrc). Found $(node --version)." >&2
   exit 1
 fi
 

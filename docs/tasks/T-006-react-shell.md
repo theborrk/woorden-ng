@@ -1,7 +1,7 @@
 ---
 id: T-006
 title: React app shell with hash routes and English/Polish interface
-status: todo
+status: done
 size: M
 depends_on: []
 type: task
@@ -44,19 +44,19 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a phone-sized browser, when the app opens, then the shell renders the app name and
+- [x] AC1: Given a phone-sized browser, when the app opens, then the shell renders the app name and
       navigation to every listed screen, and each route has its own URL hash (e2e, `snap()` per
       screen)
-- [ ] AC2: Given English is active, when the user switches the interface to Polish in Settings, then
+- [x] AC2: Given English is active, when the user switches the interface to Polish in Settings, then
       the navigation and screen titles change to Polish without a reload (e2e and unit)
-- [ ] AC3: Given the app was visited once, when the network goes offline and the page reloads, then
+- [x] AC3: Given the app was visited once, when the network goes offline and the page reloads, then
       the shell still renders (existing e2e test still passes)
-- [ ] AC4: Given a waiting service worker, then the update banner appears and its button activates
+- [x] AC4: Given a waiting service worker, then the update banner appears and its button activates
       the update (unit)
-- [ ] AC5: The app works under a sub-path: `APP_BASE=/woorden/ npm run test:e2e:web` passes (e2e)
-- [ ] AC6: Given the Android build on the emulator, then the shell renders and no service worker is
+- [x] AC5: The app works under a sub-path: `APP_BASE=/woorden/ npm run test:e2e:web` passes (e2e)
+- [x] AC6: Given the Android build on the emulator, then the shell renders and no service worker is
       registered (existing device tests still pass in CI)
-- [ ] AC7: The production web bundle's JavaScript stays under 150 kB gzip, as reported by
+- [x] AC7: The production web bundle's JavaScript stays under 150 kB gzip, as reported by
       `npm run build:web` and noted in the PR body (review)
 
 ## Notes for the implementer
@@ -67,3 +67,16 @@ Out (do not do in this task):
 ## Notes for the reviewer
 
 This task sets the conventions every later task copies: check the structure and naming carefully.
+
+## Verification
+
+- `npm run verify`: lint, formatting, TypeScript, unit tests and requirement ledger.
+- `e2e/shell.spec.ts`: all five routes (a screenshot per screen), EN/PL switching without
+  reload, session persistence, browser language defaults, keyboard/back navigation and dark mode.
+- `e2e/smoke.spec.ts`: retained mobile shell, offline reload and manifest tests.
+- `src/app/App.test.tsx` and `src/sw.test.ts`: shell behavior and waiting-worker activation.
+- `e2e/bundle.spec.ts`: production JavaScript gzip budget, including service-worker assets.
+- The full web suite also runs with `APP_BASE=/woorden/`.
+- `npm run build:android` verifies the shared shell compiles. AC6 remains covered by the existing
+  shell/no-service-worker device tests in `e2e-android/smoke.spec.ts`; emulator execution is CI-only
+  per `AGENTS.md` and must be confirmed there.

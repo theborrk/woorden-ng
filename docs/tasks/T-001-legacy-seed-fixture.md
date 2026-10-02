@@ -1,7 +1,7 @@
 ---
 id: T-001
 title: Extract the original seed into a verified content fixture
-status: todo
+status: done
 size: M
 depends_on: []
 type: task
@@ -48,17 +48,17 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given `legacy/index.html`, when the extractor runs twice, then both outputs are
+- [x] AC1: Given `legacy/index.html`, when the extractor runs twice, then both outputs are
       byte-identical to the committed `content/legacy/seed-v1.json` (unit)
-- [ ] AC2: The fixture reproduces section 3's counts: 1,946 entries; 35 with theme `slang` and 1,911
+- [x] AC2: The fixture reproduces section 3's counts: 1,946 entries; 35 with theme `slang` and 1,911
       without; 169 with an example; 1,005 with an article, of which 993 outside slang (712 `de`, 281
       `het`); 163 with conjugation data; 191 with theme `agro` (farming) (unit)
-- [ ] AC3: Entry _i_ has `legacyId` `s<i>` and exactly the original values: checked on the first,
+- [x] AC3: Entry _i_ has `legacyId` `s<i>` and exactly the original values: checked on the first,
       the last, a conjugated and a slang entry, and by converting the whole fixture back to the
       source array and comparing (unit)
-- [ ] AC4: Given a modified copy of the source (in the test), when validation runs against it, then
+- [x] AC4: Given a modified copy of the source (in the test), when validation runs against it, then
       it fails and reports the hash mismatch (unit)
-- [ ] AC5: `docs/content/legacy-inventory.md` lists the original features (study, browse, de/het and
+- [x] AC5: `docs/content/legacy-inventory.md` lists the original features (study, browse, de/het and
       conjugation drills, TTS, themes, settings, export/import, generated husky icon) and storage
       keys, with line references into `legacy/index.html` (review)
 

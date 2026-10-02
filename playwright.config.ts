@@ -1,7 +1,14 @@
-import { defineConfig, devices } from '@playwright/test';
+import { existsSync } from 'node:fs';
+import { chromium, defineConfig, devices } from '@playwright/test';
 
-// Optional: point at a pre-installed Chromium (useful in agent sandboxes that cannot download browsers).
-const chromiumPath = process.env.PW_CHROMIUM_PATH;
+// Tests run on the Chromium build that matches this Playwright version (what CI uses). A different
+// Chromium can behave differently (for example its offline emulation), so PW_CHROMIUM_PATH is only
+// a fallback for sandboxes that cannot download the browser.
+const bundledChromium = existsSync(chromium.executablePath());
+const chromiumPath = bundledChromium ? undefined : process.env.PW_CHROMIUM_PATH;
+if (chromiumPath) {
+  console.warn(`Playwright's Chromium is not installed; using PW_CHROMIUM_PATH=${chromiumPath}.`);
+}
 
 // The web build can be served under a sub-path (APP_BASE, e.g. /my-app/). Tests navigate with
 // relative URLs ('./'), so the same suite covers '/' and any sub-path.

@@ -58,8 +58,9 @@ do not edit the process files listed under [Protected files](#protected-files).
 - **There is no Android SDK in your environment.** Do not run Gradle, an emulator or the device
   tests, and do not try to install the SDK. CI builds the debug APK and runs the device tests on an
   emulator, and reports failures in the PR's CI summary comment.
-- If the sandbox already has a Chromium binary, set `PW_CHROMIUM_PATH` to it instead of downloading
-  one.
+- E2e tests use the Chromium build that matches the project's Playwright version (the setup script
+  installs it, CI uses the same). `PW_CHROMIUM_PATH` is only a fallback when that download is
+  impossible: another Chromium version can fail tests that pass in CI.
 
 ## Commands
 

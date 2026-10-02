@@ -14,14 +14,18 @@ fi
 
 npm ci
 
-# Browsers for `npm run test:e2e` (package.json "config.playwrightBrowsers", the same list CI
-# installs). Skip if the sandbox already provides Chromium via PW_CHROMIUM_PATH.
-if [[ -z "${PW_CHROMIUM_PATH:-}" ]]; then
-  read -r -a browsers <<<"$(node -p 'require("./package.json").config?.playwrightBrowsers ?? "chromium"')"
-  if [[ "$(id -u)" == "0" ]]; then
-    npx playwright install --with-deps "${browsers[@]}"
+# Browsers for the e2e tests: the builds that match this Playwright version, as in CI
+# (package.json "config.playwrightBrowsers"). A pre-installed Chromium (PW_CHROMIUM_PATH) is only a
+# fallback when the download fails: other versions can behave differently in tests.
+read -r -a browsers <<<"$(node -p 'require("./package.json").config?.playwrightBrowsers ?? "chromium"')"
+install=(npx playwright install)
+if [[ "$(id -u)" == "0" ]]; then install+=(--with-deps); fi
+if ! "${install[@]}" "${browsers[@]}"; then
+  if [[ -n "${PW_CHROMIUM_PATH:-}" ]]; then
+    echo "WARNING: could not download Playwright's browsers; e2e tests will use $PW_CHROMIUM_PATH." >&2
   else
-    npx playwright install "${browsers[@]}"
+    echo "Could not download Playwright's browsers: allow cdn.playwright.dev and playwright.download.prss.microsoft.com." >&2
+    exit 1
   fi
 fi
 

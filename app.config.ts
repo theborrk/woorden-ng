@@ -4,7 +4,7 @@
  * Do not edit `id` after the first public release: it is the permanent Android application ID.
  */
 export const APP = {
-  id: 'io.github.theborrk.woorden',
+  id: 'nl.theborrk.woorden',
   name: 'Woorden',
   shortName: 'Woorden',
   description: 'Learn Dutch words that stay: spaced retrieval practice that works offline.',

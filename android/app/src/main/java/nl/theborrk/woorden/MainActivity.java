@@ -1,4 +1,4 @@
-package io.github.theborrk.woorden;
+package nl.theborrk.woorden;
 
 import com.getcapacitor.BridgeActivity;
 

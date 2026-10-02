@@ -46,9 +46,9 @@ need Android Studio. What runs on which pull request is set in `.github/ci-polic
 
 - **PR previews:** `https://pr-<number>.<project>.pages.dev` (link in each PR's CI comment)
 - **Production PWA:** `https://<project>.pages.dev` after every merge to `main`
-- **Dev APK:** the `dev-latest` pre-release (`app-dev.apk`, app ID `io.github.theborrk.woorden.dev`)
+- **Dev APK:** the `dev-latest` pre-release (`app-dev.apk`, app ID `nl.theborrk.woorden.dev`)
 - **Release APK and AAB:** attached to each published `vX.Y.Z` GitHub Release (app ID
-  `io.github.theborrk.woorden`); Google Play internal testing per the blueprint, section 23.4
+  `nl.theborrk.woorden`); Google Play internal testing per the blueprint, section 23.4
 
 ## License and credits
 

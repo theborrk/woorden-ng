@@ -42,9 +42,9 @@ into the PR body's "Assumptions and open questions" for the owner.
 
 ### 3. Identity and signing
 
-- Application ID `io.github.theborrk.woorden`, name "Woorden": a namespace the owner controls
+- Application ID `nl.theborrk.woorden`, name "Woorden": a namespace the owner controls
   (section 18.4). It is permanent after the first Google Play upload.
-- Debug builds use the `.dev` suffix (`io.github.theborrk.woorden.dev`), the separate development
+- Debug builds use the `.dev` suffix (`nl.theborrk.woorden.dev`), the separate development
   package section 18.4 allows (it suggests `.debug`).
 - Release versionCode comes from the `vMAJOR.MINOR.PATCH` tag and is monotonic (section 18.6); debug
   builds use a build-time code.

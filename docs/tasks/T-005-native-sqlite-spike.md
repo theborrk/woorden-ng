@@ -1,7 +1,7 @@
 ---
 id: T-005
 title: Choose the native SQLite plugin and prove it in the app on the Android emulator
-status: todo
+status: done
 size: M
 depends_on: []
 type: task
@@ -48,20 +48,30 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the debug app on the emulator, when a transaction writes to two tables and
+- [x] AC1: Given the debug app on the emulator, when a transaction writes to two tables and
       commits, then both rows are still there after an app restart
       (`launchApp(device, { clearData: false })`) (device test)
-- [ ] AC2: Given a transaction that fails after its first write, then no row from it is visible,
+- [x] AC2: Given a transaction that fails after its first write, then no row from it is visible,
       also after a restart (device test)
-- [ ] AC3: Given rows without a commit key stored as SQL NULL, then any number of them coexist, and a
+- [x] AC3: Given rows without a commit key stored as SQL NULL, then any number of them coexist, and a
       duplicate non-NULL commit key is rejected (device test)
-- [ ] AC4: Given a version 1 schema with data, when the app opens it with a version 2 migration, then
+- [x] AC4: Given a version 1 schema with data, when the app opens it with a version 2 migration, then
       the data is migrated; a failing migration leaves version 1 intact (device test)
-- [ ] AC5: Millisecond integers and canonical JSON round-trip unchanged (device test)
-- [ ] AC6: The Android app has no WebView-storage fallback: when the plugin is unavailable, the
+- [x] AC5: Millisecond integers and canonical JSON round-trip unchanged (device test)
+- [x] AC6: The Android app has no WebView-storage fallback: when the plugin is unavailable, the
       adapter fails visibly instead of storing data elsewhere (unit), and plugin imports outside the
       allowed folders fail lint (lint)
-- [ ] AC7: ADR 0004 records the choice, versions, license, ABIs and page-size compliance (review)
+- [x] AC7: ADR 0004 records the choice, versions, license, ABIs and page-size compliance (review)
+
+## Implementation evidence
+
+- AC1–AC5: six `@repositories` tests in `e2e-android/storage.spec.ts`, executed by Android CI
+  against the debug APK. Device execution is pending the PR gate; no emulator was run locally.
+- AC6: `src/infrastructure/db/android/spike.test.ts`, `native-bridge.test.ts` and
+  `scripts/native-plugin-boundary.test.mjs`.
+- AC7: `docs/adr/0004-native-sqlite-plugin.md`, including the inspected AAR/ELF evidence and
+  the remaining signed-release packaging/device checks.
+- Findings and W06/W47 follow-up: `docs/architecture/spikes/storage-android.md`.
 
 ## Notes for the implementer
 

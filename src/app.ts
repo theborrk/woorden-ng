@@ -9,6 +9,7 @@ export interface AppState {
 export interface AppView {
   setOnline(online: boolean): void;
   showUpdateBanner(onReload: () => void): void;
+  showStorageError(): void;
 }
 
 function el<K extends keyof HTMLElementTagNameMap>(
@@ -43,10 +44,17 @@ export function renderApp(root: HTMLElement, state: AppState): AppView {
   });
   banner.hidden = true;
 
-  main.append(header, status, banner);
+  const storageError = el('p', { role: 'alert', 'data-testid': 'storage-error' });
+  storageError.hidden = true;
+  main.append(header, status, banner, storageError);
   root.append(main);
 
   const view: AppView = {
+    showStorageError() {
+      storageError.textContent =
+        'Native storage is unavailable. Data cannot be saved. Restart the app to retry.';
+      storageError.hidden = false;
+    },
     setOnline(online) {
       network.textContent = online ? 'Online' : 'Offline - showing cached app';
       network.dataset['state'] = online ? 'online' : 'offline';

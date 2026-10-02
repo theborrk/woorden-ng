@@ -14,3 +14,4 @@ window.addEventListener('online', () => view.setOnline(true));
 window.addEventListener('offline', () => view.setOnline(false));
 
 target.registerUpdates((applyUpdate) => view.showUpdateBanner(applyUpdate));
+void target.initialize().catch(() => view.showStorageError());

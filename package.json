@@ -24,13 +24,15 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "npm run test:e2e:web",
     "test:e2e:web": "playwright test",
-    "test:e2e:android": "playwright test --config playwright.android.config.ts",
+    "test:e2e:android": "playwright test --config playwright.android.config.ts --grep-invert @repositories",
+    "test:repositories:android": "playwright test --config playwright.android.config.ts --grep @repositories",
     "check:tasks": "node scripts/check-tasks.mjs --strict-refs",
     "verify": "npm run lint && npm run format:check && npm run typecheck && npm run test:unit && npm run check:tasks && npm run --if-present content:validate",
     "android:sync": "npm run build:android && cap sync android",
     "rename-app": "node scripts/rename-app.mjs"
   },
   "dependencies": {
+    "@capacitor-community/sqlite": "8.1.1",
     "@capacitor/android": "^8.5.2",
     "@capacitor/core": "^8.5.2"
   },

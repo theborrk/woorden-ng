@@ -97,7 +97,8 @@ export async function openSpikeDatabase(
   const connection = await bridge.connect(name);
   try {
     // The plugin enables foreign keys at open. Bound lock waiting before any write begins.
-    await connection.execute('PRAGMA busy_timeout = 3000;');
+    // This PRAGMA returns a row; SQLCipher rejects result-bearing SQL through execSQL.
+    await connection.query('PRAGMA busy_timeout = 3000;');
     const current = await schemaVersion(connection);
     if (current > version) throw new Error('Database is newer than this app. Data was preserved.');
     if (current === 0) await transaction(connection, () => connection.execute(SCHEMA_V1));

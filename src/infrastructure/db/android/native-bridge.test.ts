@@ -15,7 +15,14 @@ const mocks = vi.hoisted(() => ({
     }
     return Promise.resolve({ values: [{ user_version: 2 }] });
   }),
-  execute: vi.fn(() => Promise.resolve({ changes: { changes: 0 } })),
+  execute: vi.fn((options: { statements?: string }) => {
+    if (options.statements?.includes('PRAGMA busy_timeout')) {
+      return Promise.reject(
+        new Error('Queries can be performed using query or rawQuery methods only.'),
+      );
+    }
+    return Promise.resolve({ changes: { changes: 0 } });
+  }),
   run: vi.fn(() => Promise.resolve({ changes: { changes: 1 } })),
 }));
 
@@ -96,5 +103,16 @@ describe('native target initialization', () => {
       statement: 'PRAGMA user_version;',
       values: [],
     });
+  });
+
+  it('configures the native busy timeout through the result-bearing query API', async () => {
+    await target.initialize();
+    expect(mocks.query).toHaveBeenCalledWith({
+      database: 'woorden_spike_startup',
+      readonly: false,
+      statement: 'PRAGMA busy_timeout = 3000;',
+      values: [],
+    });
+    expect(mocks.execute).not.toHaveBeenCalled();
   });
 });

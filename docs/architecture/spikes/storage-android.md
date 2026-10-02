@@ -57,7 +57,7 @@ device suite.** Native behavior is an executable CI hypothesis until the PR emul
 unit mocks are not native proof. Consult the CI summary/log tail and `device-screenshots` artifact
 for failures.
 
-Local `npm run verify` passes (44 unit tests), and `npm run test:e2e:web` passes (3 tests).
+Local `npm run verify` passes (45 unit tests), and `npm run test:e2e:web` passes (3 tests).
 The matching Playwright browser download was denied by the environment's HTTP domain policy.
 The preinstalled Chromium 151 incorrectly reset `navigator.onLine` after an offline service-worker
 reload. Validation therefore used the supported `PW_CHROMIUM_PATH` fallback with Chromium
@@ -72,6 +72,9 @@ Source inspection establishes these adapter requirements:
 - Android's low-level `query` method requires an explicit `values` array even for parameterless
   SELECT/PRAGMA statements. The bridge sends `values: []`; the unit mock enforces this native
   contract. Omitting it prevented startup and all repository tests in the first PR CI run.
+- `PRAGMA busy_timeout = 3000` returns a row. SQLCipher's native execution method rejects
+  result-bearing statements, so this PRAGMA must use `query`, not `execute`/`execSQL`.
+  The native bridge mock also enforces that distinction during startup regression tests.
 - Queue reads, writes and close operations on that connection so concurrent callers cannot
   interleave a transaction. Return an operation's rejection to its caller while keeping the queue
   usable for subsequent operations.

@@ -86,11 +86,13 @@ jobs:
           VERSION_LABEL: ${{ inputs.version-label }}
           VERSION_CODE: ${{ inputs.version-code }}
           VERSION_NAME: ${{ inputs.version-name }}
+          # On pull requests GITHUB_SHA is the temporary merge commit; label with the PR's head commit.
+          SOURCE_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
         run: |
           if [[ "$BUILD_TYPE" == "release" && -n "$VERSION_CODE" ]]; then
             printf 'versionCode=%s\nversionName=%s\n' "$VERSION_CODE" "$VERSION_NAME" >> "$GITHUB_OUTPUT"
           else
-            label="${VERSION_LABEL:-${GITHUB_REF_NAME//\//-}}.${GITHUB_SHA::7}"
+            label="${VERSION_LABEL:-${GITHUB_REF_NAME//\//-}}.${SOURCE_SHA::7}"
             node scripts/android-version.mjs debug "$label" >> "$GITHUB_OUTPUT"
           fi
           cat "$GITHUB_OUTPUT"

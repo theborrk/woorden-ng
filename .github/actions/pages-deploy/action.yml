@@ -1,0 +1,73 @@
+name: Deploy to Cloudflare Pages
+description: Creates the Pages project on first use, then deploys a folder to a branch alias.
+
+inputs:
+  api-token:
+    description: Cloudflare API token with "Cloudflare Pages - Edit" permission.
+    required: true
+  account-id:
+    description: Cloudflare account ID.
+    required: true
+  project:
+    description: Pages project name (repository variable CF_PAGES_PROJECT).
+    required: true
+  branch:
+    description: Branch alias. "main" is production; anything else is a preview alias.
+    required: true
+  directory:
+    description: Folder to deploy (the web build target writes dist/web).
+    default: dist/web
+
+outputs:
+  url:
+    description: Stable URL of this deployment (branch alias, or production URL for main).
+    value: ${{ steps.result.outputs.url }}
+
+runs:
+  using: composite
+  steps:
+    - name: Check Cloudflare credentials
+      shell: bash
+      env:
+        API_TOKEN: ${{ inputs.api-token }}
+        ACCOUNT_ID: ${{ inputs.account-id }}
+      run: |
+        if [[ -z "$API_TOKEN" || -z "$ACCOUNT_ID" ]]; then
+          echo "::error::Repository variable CF_PAGES_PROJECT is set, but the CLOUDFLARE_API_TOKEN or CLOUDFLARE_ACCOUNT_ID secret is missing."
+          exit 1
+        fi
+
+    - name: Create the Pages project (no-op if it already exists)
+      uses: cloudflare/wrangler-action@v4
+      continue-on-error: true
+      with:
+        apiToken: ${{ inputs.api-token }}
+        accountId: ${{ inputs.account-id }}
+        quiet: true
+        command: pages project create ${{ inputs.project }} --production-branch=main
+
+    - name: Deploy
+      id: deploy
+      uses: cloudflare/wrangler-action@v4
+      with:
+        apiToken: ${{ inputs.api-token }}
+        accountId: ${{ inputs.account-id }}
+        command: pages deploy ${{ inputs.directory }} --project-name=${{ inputs.project }} --branch=${{ inputs.branch }} --commit-dirty=true
+
+    - name: Resolve URL
+      id: result
+      shell: bash
+      env:
+        ALIAS_URL: ${{ steps.deploy.outputs.pages-deployment-alias-url }}
+        DEPLOY_URL: ${{ steps.deploy.outputs.deployment-url }}
+        PROJECT: ${{ inputs.project }}
+        BRANCH: ${{ inputs.branch }}
+      run: |
+        if [[ "$BRANCH" == "main" ]]; then
+          # https://<hash>.<subdomain>.pages.dev -> https://<subdomain>.pages.dev (subdomain may differ from the project name)
+          if [[ -n "$DEPLOY_URL" ]]; then host="${DEPLOY_URL#https://}"; url="https://${host#*.}"; else url="https://${PROJECT}.pages.dev"; fi
+        else
+          url="${ALIAS_URL:-${DEPLOY_URL:-https://${BRANCH}.${PROJECT}.pages.dev}}"
+        fi
+        echo "url=$url" >> "$GITHUB_OUTPUT"
+        echo "Deployed to $url (immutable: ${DEPLOY_URL:-n/a})" >> "$GITHUB_STEP_SUMMARY"

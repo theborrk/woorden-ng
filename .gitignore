@@ -1,0 +1,17 @@
+node_modules/
+dist/
+dev-dist/
+coverage/
+playwright-report/
+test-results/
+review-screenshots/
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+# Release signing material must never be committed (CI decodes it from secrets).
+*.jks
+*.keystore
+!android/app/debug.keystore
+keystore-backup*

@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["vite/client", "vite-plugin-pwa/client", "node"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "paths": {
+      "#target": ["./src/targets/web.ts"]
+    }
+  },
+  "include": [
+    "src",
+    "e2e",
+    "e2e-android",
+    "tests",
+    "tools",
+    "app.config.ts",
+    "vite.config.ts",
+    "playwright.config.ts",
+    "playwright.android.config.ts",
+    "capacitor.config.ts"
+  ]
+}

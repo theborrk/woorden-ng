@@ -1,0 +1,7 @@
+{
+  "$comment": "Read by the Claude review routine (docs/agents/claude-review-routine.md). Edit on GitHub to tune the loop.",
+  "maxReviewRounds": 3,
+  "codexAutoFix": false,
+  "codexMention": "@codex",
+  "maxInlineComments": 10
+}

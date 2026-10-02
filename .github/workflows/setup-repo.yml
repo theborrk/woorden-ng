@@ -1,0 +1,193 @@
+name: Setup repository
+
+# One-time (re-runnable) setup you can trigger from your phone: Actions > Setup repository > Run workflow.
+# Needs a temporary fine-grained token in the SETUP_TOKEN secret (see docs/SETUP-REFERENCE.md);
+# delete that token when you are done.
+on:
+  workflow_dispatch:
+    inputs:
+      app-id:
+        description: Android application ID, e.g. nl.yourname.appname (permanent after first release; empty = skip rename)
+        type: string
+        default: ''
+      app-name:
+        description: App display name (used together with app-id)
+        type: string
+        default: ''
+      labels:
+        description: Create or update labels
+        type: boolean
+        default: true
+      repo-settings:
+        description: Squash-only merges, auto-delete branches, allow auto-merge
+        type: boolean
+        default: true
+      ruleset:
+        description: Protect main (needs a public repo or GitHub Pro)
+        type: boolean
+        default: true
+      keystore:
+        description: Generate the release signing key and store it as secrets
+        type: boolean
+        default: true
+      overwrite-keystore:
+        description: Replace an existing signing key (dangerous after you have published)
+        type: boolean
+        default: false
+      certificate-name:
+        description: Name shown in the signing certificate
+        type: string
+        default: App Developer
+
+permissions:
+  contents: read
+
+jobs:
+  labels:
+    if: inputs.labels
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v7
+      - name: Create labels
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          jq -c '.[]' .github/labels.json | while read -r label; do
+            name=$(jq -r .name <<<"$label"); color=$(jq -r .color <<<"$label"); desc=$(jq -r .description <<<"$label")
+            gh label create "$name" --color "$color" --description "$desc" --force --repo "$GITHUB_REPOSITORY"
+          done
+
+  repo-settings:
+    if: inputs.repo-settings
+    runs-on: ubuntu-latest
+    steps:
+      - name: Apply merge settings
+        env:
+          GH_TOKEN: ${{ secrets.SETUP_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$GH_TOKEN" ]]; then echo "::error::SETUP_TOKEN secret is missing (see docs/SETUP-REFERENCE.md)."; exit 1; fi
+          gh api -X PATCH "repos/$GITHUB_REPOSITORY" \
+            -F allow_squash_merge=true -F allow_merge_commit=false -F allow_rebase_merge=false \
+            -F delete_branch_on_merge=true -F allow_auto_merge=true -F allow_update_branch=true \
+            -f squash_merge_commit_title=PR_TITLE -f squash_merge_commit_message=PR_BODY >/dev/null
+          echo "Merge settings applied: squash only, delete branches after merge, auto-merge allowed." >> "$GITHUB_STEP_SUMMARY"
+
+  ruleset:
+    if: inputs.ruleset
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Create or update the main-protection ruleset
+        env:
+          GH_TOKEN: ${{ secrets.SETUP_TOKEN }}
+        run: |
+          set -uo pipefail
+          if [[ -z "$GH_TOKEN" ]]; then echo "::error::SETUP_TOKEN secret is missing (see docs/SETUP-REFERENCE.md)."; exit 1; fi
+          id=$(gh api "repos/$GITHUB_REPOSITORY/rulesets" --jq '.[] | select(.name == "main-protection") | .id' 2>/dev/null || true)
+          if [[ -n "$id" ]]; then
+            out=$(gh api -X PUT "repos/$GITHUB_REPOSITORY/rulesets/$id" --input .github/rulesets/main.json 2>&1); rc=$?
+          else
+            out=$(gh api -X POST "repos/$GITHUB_REPOSITORY/rulesets" --input .github/rulesets/main.json 2>&1); rc=$?
+          fi
+          if [[ $rc -ne 0 ]]; then
+            echo "$out"
+            echo "::warning::Could not apply the ruleset. Private repositories need GitHub Pro for rulesets; on GitHub Free, make the repository public or treat the checks as advisory (just don't merge red PRs)."
+            echo "Ruleset NOT applied: $out" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          echo "Ruleset main-protection applied: PRs required, checks ci-ok and claude-review required, admins may bypass via PR." >> "$GITHUB_STEP_SUMMARY"
+
+  keystore:
+    if: inputs.keystore
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate release key and store it as repository secrets
+        env:
+          GH_TOKEN: ${{ secrets.SETUP_TOKEN }}
+          BACKUP_PASSPHRASE: ${{ secrets.KEYSTORE_BACKUP_PASSPHRASE }}
+          OVERWRITE: ${{ inputs.overwrite-keystore }}
+          CERT_NAME: ${{ inputs.certificate-name }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$GH_TOKEN" ]]; then echo "::error::SETUP_TOKEN secret is missing (see docs/SETUP-REFERENCE.md)."; exit 1; fi
+          if gh secret list --repo "$GITHUB_REPOSITORY" --json name --jq '.[].name' | grep -qx ANDROID_KEYSTORE_BASE64 && [[ "$OVERWRITE" != "true" ]]; then
+            echo "A release key already exists; leaving it untouched (set overwrite-keystore to replace it)." | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          if [[ ${#BACKUP_PASSPHRASE} -lt 12 ]]; then
+            echo "::error::Add a KEYSTORE_BACKUP_PASSPHRASE secret (12+ characters, saved in your password manager) first. It encrypts the downloadable backup of the key."
+            exit 1
+          fi
+          work="$RUNNER_TEMP/keystore"; mkdir -p "$work"; cd "$work"
+          pass="$(openssl rand -hex 24)"; echo "::add-mask::$pass"
+          cn="${CERT_NAME//,/ }"
+          keytool -genkeypair -noprompt -keystore release.jks -storetype PKCS12 \
+            -storepass "$pass" -keypass "$pass" -alias upload -keyalg RSA -keysize 4096 -validity 10000 \
+            -dname "CN=$cn"
+          base64 -w0 release.jks | gh secret set ANDROID_KEYSTORE_BASE64 --repo "$GITHUB_REPOSITORY"
+          printf '%s' "$pass" | gh secret set ANDROID_KEYSTORE_PASSWORD --repo "$GITHUB_REPOSITORY"
+          printf '%s' "$pass" | gh secret set ANDROID_KEY_PASSWORD --repo "$GITHUB_REPOSITORY"
+          printf '%s' "upload" | gh secret set ANDROID_KEY_ALIAS --repo "$GITHUB_REPOSITORY"
+          {
+            echo "### Release signing key created"
+            echo "Stored as secrets ANDROID_KEYSTORE_BASE64, ANDROID_KEYSTORE_PASSWORD, ANDROID_KEY_PASSWORD, ANDROID_KEY_ALIAS."
+            echo '```'
+            keytool -list -v -keystore release.jks -storepass "$pass" 2>/dev/null | grep -E 'SHA1:|SHA256:|Valid' || true
+            echo '```'
+            echo "Download the **keystore-backup** artifact below within 3 days and keep it with your passphrase (see docs/SETUP-REFERENCE.md)."
+          } >> "$GITHUB_STEP_SUMMARY"
+          printf 'alias=upload\nstore_password=%s\nkey_password=%s\n' "$pass" "$pass" > credentials.txt
+          tar czf - release.jks credentials.txt \
+            | openssl enc -aes-256-cbc -pbkdf2 -iter 600000 -salt -pass env:BACKUP_PASSPHRASE -out "$GITHUB_WORKSPACE/keystore-backup.tar.gz.enc"
+          shred -u release.jks credentials.txt
+      - name: Upload encrypted backup
+        uses: actions/upload-artifact@v7
+        with:
+          path: keystore-backup.tar.gz.enc
+          archive: false
+          retention-days: 3
+          if-no-files-found: ignore
+
+  rename:
+    # Runs after labels (so skip-claude-review exists), but also when the labels step was unticked.
+    if: always() && inputs.app-id != '' && needs.labels.result != 'failure'
+    needs: labels
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check token
+        env:
+          SETUP_TOKEN: ${{ secrets.SETUP_TOKEN }}
+        run: |
+          if [[ -z "$SETUP_TOKEN" ]]; then echo "::error::SETUP_TOKEN secret is missing (see docs/SETUP-REFERENCE.md)."; exit 1; fi
+      # Pushing with your token (not GITHUB_TOKEN) makes CI run on the resulting pull request.
+      - uses: actions/checkout@v7
+        with:
+          token: ${{ secrets.SETUP_TOKEN }}
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+      - name: Rename and open a pull request
+        env:
+          GH_TOKEN: ${{ secrets.SETUP_TOKEN }}
+          APP_ID: ${{ inputs.app-id }}
+          APP_NAME: ${{ inputs.app-name }}
+        run: |
+          set -euo pipefail
+          name="${APP_NAME:-$APP_ID}"
+          node scripts/rename-app.mjs --id "$APP_ID" --name "$name"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b setup/rename-app
+          git add -A
+          git commit -m "chore: rename app to $name ($APP_ID)"
+          git push -f origin setup/rename-app
+          gh pr create --base main --head setup/rename-app \
+            --title "chore: rename app to $name ($APP_ID)" \
+            --label skip-claude-review \
+            --body "Generated by **Setup repository**. Sets the Android application ID to \`$APP_ID\` and the display name to \"$name\" in app.config.ts, capacitor.config.ts and the Android project. The application ID is permanent once you publish a release." \
+            || gh pr view setup/rename-app --json url --jq .url

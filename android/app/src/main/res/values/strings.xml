@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Woorden</string>
+    <string name="title_activity_main">Woorden</string>
+    <string name="package_name">io.github.theborrk.woorden</string>
+    <string name="custom_url_scheme">io.github.theborrk.woorden</string>
+</resources>

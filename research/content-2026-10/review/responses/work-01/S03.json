@@ -36,7 +36,7 @@
   "task_ambiguity": {
    "verdict": "pass",
    "severity": "none",
-   "explanation": "For 'Het brood is ___.' the cue 'good; satisfactory in quality' / 'dobry; ...' has 'goed' as its direct equivalent; near-synonyms that fit the frame mean something else ('lekker' tasty, 'prima' excellent, 'vers' fresh) and are excluded by the cue's head word, and as a predicative adjective 'goed' has no competing inflected form.",
+   "explanation": "For 'Het brood is ___.' the cue 'good; satisfactory in quality' / 'dobry; ...' has 'goed' as its direct equivalent; near-synonyms that fit the frame mean something else ('lekker' tasty, 'prima' excellent, 'vers' fresh) and are excluded by the cue's head word; the comparison forms 'beter'/'best' also fit the frame but do not answer the cue 'good', and a predicative adjective takes no inflection, so 'goede' cannot occur.",
    "source_ids": ["en:1318"],
    "proposed_patch": null
   },

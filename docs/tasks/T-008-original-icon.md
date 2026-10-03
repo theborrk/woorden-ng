@@ -1,7 +1,7 @@
 ---
 id: T-008
 title: Carry the original husky icon into the PWA and the Android launcher
-status: todo
+status: in-progress
 size: S
 depends_on: []
 type: task
@@ -37,12 +37,12 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: The manifest lists the 192 and 512 icons and a maskable icon whose face fits the inner
+- [x] AC1: The manifest lists the 192 and 512 icons and a maskable icon whose face fits the inner
       80% circle (existing manifest e2e test still passes; screenshots of the icons attached to the
       PR)
 - [ ] AC2: Given the debug APK on the emulator, then the launcher shows the husky icon (device test
       screenshot with `snapDevice` of the home screen or app list)
-- [ ] AC3: Running the script twice produces identical files (unit or script check)
+- [x] AC3: Running the script twice produces identical files (unit or script check)
 
 ## Notes for the implementer
 

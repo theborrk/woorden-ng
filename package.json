@@ -10,6 +10,7 @@
   },
   "scripts": {
     "dev": "vite",
+    "icons:generate": "node scripts/generate-icons.mjs",
     "build": "npm run build:web && npm run build:android",
     "build:web": "vite build --mode web",
     "build:android": "vite build --mode android",

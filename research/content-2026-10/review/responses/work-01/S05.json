@@ -1,0 +1,72 @@
+{
+ "entry_id": "8e094be1-35f7-42b5-8dbf-ba6ed3afb567",
+ "fixture_ref": "S05",
+ "content_sha256": "26df4988e65305e6431b2cf98d028a75edca2f8a541bdbe75f82b91d7c9d3fd4",
+ "dimensions": {
+  "sense_scope": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "NL 'Een beleefde aanspreekvorm voor de aangesprokene.', EN 'you, polite form of address' and PL 'pan, pani lub państwo jako uprzejma forma zwracania się' all name the polite second-person pronoun (singular and plural), matching en:203 senses 0/3 ('you (polite)'), nl:525 sense 0 ('tweede persoon enkelvoud en meervoud formeel') and pl:19 ('forma grzecznościowa zaimka osobowego drugiej osoby'); the example uses subject u, the reflexive and dialectal uses (en:203 senses 2, 5-8; nl:526) are not claimed, and legacy s1834 ('Вы/вам/вас (формальное обращение)'/'you (formal)') is the same sense.",
+   "source_ids": ["en:203", "nl:525", "pl:19", "s1834"],
+   "proposed_patch": null
+  },
+  "dictionary_facts": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Spelling 'u' and POS pron match en:203, nl:525 and pl:19, and the IPA '/y/' is the value in en:203 (nl:525/nl:526 give '/yː/', a narrower convention for the same tense vowel). The selector '/sounds/1' does not index the one-item IPA excerpt in the packet; the packet's sound excerpts omit non-IPA items (S01-S03 cite Commons audio from records whose excerpted sounds list no audio), so it presumably indexes the full Kaikki record, which is not in the repository and is left to the deterministic locator check. No forms are claimed.",
+   "source_ids": ["en:203", "nl:525", "nl:526", "pl:19"],
+   "proposed_patch": null
+  },
+  "dutch_naturalness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'Heeft u een afspraak?' is idiomatic standard Dutch (both 'heeft u' and 'hebt u' are correct; 'heeft u' is the more common in the Netherlands) and is the prototypical reception-desk question, with 'u' as polite subject exactly as in en:203 sense 0 ('Bent u klaar?').",
+   "source_ids": ["en:203"],
+   "proposed_patch": null
+  },
+  "en_pl_translation": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "EN 'Do you have an appointment?' is exact; PL 'Czy ma pan/pani umówioną wizytę?' is natural, renders polite u with pan/pani plus a third-person verb (as Dutch u takes 'heeft'), and 'umówiona wizyta' is the idiomatic term for a booked appointment; the PL learner meaning correctly explains that Polish expresses u with pan, pani or państwo, consistent with pl:19.",
+   "source_ids": ["pl:19"],
+   "proposed_patch": null
+  },
+  "task_ambiguity": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "In 'Heeft ___ een afspraak?' the verb form 'heeft' excludes je/jij ('heb je'), and the cue 'you, polite form of address' excludes hij/zij/het, so 'u' is the only valid answer; the archaic capitalised 'U' listed in en:203 is accepted because matching is case-insensitive.",
+   "source_ids": ["en:203"],
+   "proposed_patch": null
+  },
+  "span_form_contract": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The span [6,7) slices exactly 'u' from the NFC text and covers the whole target; no form IDs are needed because u has the same shape as subject and object.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "level_usefulness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "A1, priority 5 and core are plausible and important for an adult learner (doctor, municipality, shops): the NT2Lex VNW(pers,pron) row is F@A1 14, A2 667, B1 382, B2 34, C1 5 and VNW(pr,pron) is 6/120/65/8/1 (checked against evidence/sources/nt2lex-basic.tsv), and the SUBTLEX-NL VNW lemma count is 288,286. The N(soort) row is the letter u, not this pronoun, which its tag makes transparent. Prerequisites (S09, S39, support unit 'een') are listed and marked provisional.",
+   "source_ids": ["nt2lex:u", "subtlex:u"],
+   "proposed_patch": null
+  },
+  "register_pragmatics": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'polite' is correct (en:203 and nl:525 tag it formal; pl:19 calls it 'forma grzecznościowa'), and the example sits in exactly the setting where u is expected, a receptionist addressing a visitor.",
+   "source_ids": ["en:203", "nl:525", "pl:19"],
+   "proposed_patch": null
+  },
+  "hints_media": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; the audio candidate is 'candidate_not_downloaded' with review 'not_run' (Commons path 0/04 matches the MD5 of 'Nl-u.ogg'), listening is ineligible, and the image is not recommended under a labelled model judgment.",
+   "source_ids": ["en:203"],
+   "proposed_patch": null
+  }
+ },
+ "overall_verdict": "pass",
+ "unresolved_doubts": []
+}

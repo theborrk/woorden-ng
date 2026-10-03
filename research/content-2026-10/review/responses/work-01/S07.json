@@ -1,0 +1,77 @@
+{
+ "entry_id": "fe21dcb7-b84a-4f1d-9893-f87e3334f6a2",
+ "fixture_ref": "S07",
+ "content_sha256": "4aec56a289467737f0d9c189716e1870fb221e0bfeba3fc544a8568990a1605e",
+ "dimensions": {
+  "sense_scope": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "NL 'Een ontkenning uitdrukken.', EN 'not' and PL 'nie' name the negating adverb, matching en:37 sense 0 ('not, no, don't: used to express negation'), nl:458 ('ontkenning, tegenovergestelde van wel') and pl:636 ('nie'); the example negates the clause exactly in that sense, and legacy s882 ('не'/'not') is the same sense. The infinitival NL definition describes the word's function rather than paraphrasing it, which is acceptable for a function word.",
+   "source_ids": ["en:37", "nl:458", "pl:636", "s882"],
+   "proposed_patch": null
+  },
+  "dictionary_facts": {
+   "verdict": "revise",
+   "severity": "minor",
+   "explanation": "Spelling, POS adv and '/nit/' (en:37 /sounds/0, tag standard; nl:458 'nit') are correct. But the second variant '/ni/' (en:37 /sounds/1) keeps only the tag 'often' and silently drops the source's condition 'for sense “not”; in fast speech', contradicting the provenance note 'no silent normalization'. Without it the reduced [ni] reads like a general alternative pronunciation; the condition should be kept with the variant (patch: as its raw tag).",
+   "source_ids": ["en:37", "nl:458"],
+   "proposed_patch": [
+    {"op": "replace", "path": "/lexeme/pronunciation/ipa/1/raw_tags", "value": ["for sense “not”; in fast speech"]}
+   ]
+  },
+  "dutch_naturalness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'Ik begrijp het niet.' is idiomatic, with 'niet' correctly placed after the object pronoun at the end of the clause, negating it in the target sense (cf. 'Dat is niet waar.' in en:37).",
+   "source_ids": ["en:37"],
+   "proposed_patch": null
+  },
+  "en_pl_translation": {
+   "verdict": "revise",
+   "severity": "minor",
+   "explanation": "The example translations are accurate ('I do not understand it.'; 'Nie rozumiem tego.'). The sense-level learner meanings 'not; negate the statement in this context' and 'nie; zaprzeczenie zdania w tym kontekście' read like a task instruction rather than a meaning: 'in this context' refers to no context on a flashcard. 'negate the statement' is also narrower than the word ('niet ver', 'niet iedereen' negate only a constituent). The PL gloss should still separate this 'nie' from the answer 'nie' (Dutch 'nee'), which 'w zdaniu' does.",
+   "source_ids": ["en:37", "pl:636", "nl:458"],
+   "proposed_patch": [
+    {"op": "replace", "path": "/sense/meanings/en/0", "value": "not (negation within a sentence)"},
+    {"op": "replace", "path": "/sense/meanings/pl/0", "value": "nie (przeczenie w zdaniu)"}
+   ]
+  },
+  "task_ambiguity": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "In 'Ik begrijp het ___.' with the cue 'not' / 'nie' the only fitting answer is 'niet': 'nooit' and 'wel' contradict the cue, and the Polish learner's trap 'nee' cannot occupy this clause-internal position.",
+   "source_ids": ["en:37", "pl:636"],
+   "proposed_patch": null
+  },
+  "span_form_contract": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The span [15,19) slices exactly 'niet' from the NFC text and covers the whole invariable target; no form IDs are needed.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "level_usefulness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "A1, priority 7 and core are plausible: the NT2Lex BW() row is F@A1 195, A2 1770, B1 1397, B2 534, C1 33 (checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL BW lemma count is 801,268; prerequisites (S01, S06, support unit 'het') are listed and marked provisional.",
+   "source_ids": ["nt2lex:niet", "subtlex:niet"],
+   "proposed_patch": null
+  },
+  "register_pragmatics": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'neutral' is correct: 'niet' is unmarked in every register and region.",
+   "source_ids": ["en:37"],
+   "proposed_patch": null
+  },
+  "hints_media": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Hints repeat the meanings and are labelled meaning_reveal (inside a task, 'in this context' does refer to the sentence), with no invented mnemonic or etymology; the audio candidate is 'candidate_not_downloaded' with review 'not_run' (Commons path c/c8 matches the MD5 of 'Nl-niet.ogg'), listening is ineligible, and the image is not recommended under a labelled model judgment.",
+   "source_ids": ["en:37"],
+   "proposed_patch": null
+  }
+ },
+ "overall_verdict": "revise",
+ "unresolved_doubts": []
+}

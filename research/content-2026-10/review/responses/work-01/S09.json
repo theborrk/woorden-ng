@@ -1,0 +1,75 @@
+{
+ "entry_id": "d66ba490-4dcc-482e-885b-cf97a000a036",
+ "fixture_ref": "S09",
+ "content_sha256": "69e6418f29bcbefb36d55a7aa4f4bbf19ac9d900f8c51f245a4f249650af858c",
+ "dimensions": {
+  "sense_scope": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "NL 'Iets bezitten of tot je beschikking hebben.', EN 'have; possess or have available' and PL 'mieć; posiadać lub mieć do dyspozycji' name the possession sense, matching en:175 sense 0 ('to have, to possess, own, hold'), nl:56 sense 1 ('bezitten', 'Ik heb een mooi huis.'), pl:469 ('mieć', 'posiadać') and ODWN hebben-v-1 ('bezitten'). It is kept apart from the auxiliary, illness and 'hebben te' senses, and legacy s121 ('иметь'/'to have') is a compatible lemma link.",
+   "source_ids": ["en:175", "nl:56", "pl:469", "hebben-v-1", "s121"],
+   "proposed_patch": null
+  },
+  "dictionary_facts": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "IPA '/ˈɦɛbə(n)/' is verbatim from en:175 /sounds/0 (identical in nl:56 and nl:57); every form selector resolves to the claimed surface and tags in en:175 (hebben /forms/2, heb /4, had /5, heeft /16, had /17, hebben /18, hadden /19, gehad /27); perfect auxiliary 'hebben' is given by all seven ODWN records; non-separable and non-reflexive are correct. Coverage note, not an error: the second-person 'hebt' (en:175 /forms/6, /forms/9) is not in the selected inventory.",
+   "source_ids": ["en:175", "nl:56", "nl:57", "hebben-v-1", "hebben-v-5"],
+   "proposed_patch": null
+  },
+  "dutch_naturalness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'Ik heb een fiets.' is idiomatic, everyday Dutch with 'heb' in the possession sense, parallel to the source examples 'Ik heb een mooi huis.' (nl:56) and 'Ik heb een nieuwe auto.' (pl:469).",
+   "source_ids": ["nl:56", "pl:469"],
+   "proposed_patch": null
+  },
+  "en_pl_translation": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "EN 'I have a bicycle.' and PL 'Mam rower.' (natural pro-drop, as in pl:469 'Mam nowe auto.') are direct and keep person, number and tense; the meanings render the Dutch anchor faithfully.",
+   "source_ids": ["pl:469"],
+   "proposed_patch": null
+  },
+  "task_ambiguity": {
+   "verdict": "revise",
+   "severity": "major",
+   "explanation": "In 'Ik ___ een fiets.' the cue 'have; possess or have available' / 'mieć; posiadać lub mieć do dyspozycji' does not fix the tense, so 'had' ('Ik had een fiets.') is a valid answer of the same sense that would be marked wrong. The cue's own word 'possess' / 'posiadać' also invites 'bezit' ('Ik bezit een fiets.'), grammatical and literally what the cue says. A cue naming only the head meaning and the tense removes both (patch).",
+   "source_ids": ["en:175", "hebben-v-1"],
+   "proposed_patch": [
+    {"op": "replace", "path": "/examples/0/context/en", "value": "have (present tense)"},
+    {"op": "replace", "path": "/examples/0/context/pl", "value": "mieć (czas teraźniejszy)"}
+   ]
+  },
+  "span_form_contract": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The span [3,6) slices exactly 'heb', and target_form_ids points to the first-person singular present 'heb' (0293e1eb, en:175 /forms/4), which agrees with 'Ik'; it is one segment with no particle or reflexive.",
+   "source_ids": ["en:175"],
+   "proposed_patch": null
+  },
+  "level_usefulness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "A1, priority 9 and core are plausible: the NT2Lex WW() row is F@A1 223, A2 2051, B1 1597, B2 553, C1 37 (checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL WW lemma count is 845,402; prerequisites (S01, S29, support unit 'een') are listed and marked provisional. The theme 'home' fits a bicycle loosely, but that is editorial metadata, not a defect.",
+   "source_ids": ["nt2lex:hebben", "subtlex:hebben"],
+   "proposed_patch": null
+  },
+  "register_pragmatics": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'neutral' is correct: possessive hebben and the example are unmarked in every register and region.",
+   "source_ids": ["en:175"],
+   "proposed_patch": null
+  },
+  "hints_media": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; the audio candidate is 'candidate_not_downloaded' with review 'not_run' (Commons path a/a1 matches the MD5 of 'Nl-hebben.ogg'), listening is ineligible, and the image is not recommended under a labelled model judgment.",
+   "source_ids": ["en:175"],
+   "proposed_patch": null
+  }
+ },
+ "overall_verdict": "revise",
+ "unresolved_doubts": []
+}

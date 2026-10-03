@@ -1,0 +1,72 @@
+{
+ "entry_id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+ "fixture_ref": "S10",
+ "content_sha256": "e0ba92254db1c22970dcd427889e48f5537faa66a947b6153c7584fe8d41198e",
+ "dimensions": {
+  "sense_scope": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "NL 'Een gebouw waarin mensen wonen.', EN 'house; building used as a home' and PL 'dom; budynek mieszkalny' name the dwelling sense, matching en:864 sense 0 ('a house, home; residence'), nl:484 sense 0 ('gebouw bestemd om in te wonen') and pl:541 ('dom'). It is kept apart from the dynasty, chamber, casing and horoscope senses, and legacy s267 ('дом'/'house') is the same sense.",
+   "source_ids": ["en:864", "nl:484", "pl:541", "s267"],
+   "proposed_patch": null
+  },
+  "dictionary_facts": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Article 'het' is supported by the neuter tags in en:864, nl:484 and pl:541 and attested directly ('naar het huis van mijn ouders' in en:864, 'Het huis van Oranje' in nl:484). Plural 'huizen' and diminutive 'huisje' appear in both en:864 and nl:484 and suit this count sense. All four IPA strings are verbatim from en:864 /sounds/0-3 with their Netherlands/Belgium tags. Bookkeeping note: the two noun forms carry no source_selector (they are en:864 /forms/0 and /forms/1).",
+   "source_ids": ["en:864", "nl:484", "pl:541"],
+   "proposed_patch": null
+  },
+  "dutch_naturalness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'Het huis is klein.' is grammatical and idiomatic, with the correct article and 'huis' in the dwelling sense (cf. 'Zij wonen in een groot huis.' in nl:484).",
+   "source_ids": ["nl:484", "en:864"],
+   "proposed_patch": null
+  },
+  "en_pl_translation": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "EN 'The house is small.' and PL 'Dom jest mały.' are direct and natural (Polish has no article, and 'mały' agrees with masculine 'dom'); singular number and present tense are kept, and the meanings render the Dutch anchor faithfully.",
+   "source_ids": ["pl:541"],
+   "proposed_patch": null
+  },
+  "task_ambiguity": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "In 'Het ___ is klein.' the visible 'Het' admits only het-nouns, which already excludes 'woning'. The cue 'house' / 'dom' selects 'huis' over 'gebouw' ('building'), 'appartement' and 'pand', and the case-insensitive single answer 'huis' is gradable. The article stays outside the span, consistent with 'article_scored_separately'.",
+   "source_ids": ["en:864"],
+   "proposed_patch": null
+  },
+  "span_form_contract": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The span [4,8) slices exactly 'huis' from the NFC text, covering the singular noun and excluding the separately scored article 'Het'; no form IDs are needed for the base singular.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "level_usefulness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "A1, priority 10, theme 'home' and core are plausible: the NT2Lex N(soort) row is F@A1 77, A2 232, B1 187, B2 28, C1 3 (checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL N lemma count is 37,139; prerequisites (S02, S26, support unit 'het') are listed and marked provisional.",
+   "source_ids": ["nt2lex:huis", "subtlex:huis"],
+   "proposed_patch": null
+  },
+  "register_pragmatics": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'neutral' is correct: 'huis' is the unmarked everyday word in every region, and the pronunciation variants keep their region tags rather than restricting the word.",
+   "source_ids": ["en:864", "nl:484"],
+   "proposed_patch": null
+  },
+  "hints_media": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; the Netherlands-tagged audio candidate is 'candidate_not_downloaded' with review 'not_run' (Commons path e/e3 matches the MD5 of 'Nl-huis.ogg'), and listening is ineligible. Image suitability 'high'/'single_referent' is plausible for a house, labelled as model judgment and not produced.",
+   "source_ids": ["en:864"],
+   "proposed_patch": null
+  }
+ },
+ "overall_verdict": "pass",
+ "unresolved_doubts": []
+}

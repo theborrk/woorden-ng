@@ -5,8 +5,10 @@ name: Auto merge
 # is updated from main first, so CI tests what will actually land. Off unless `autoMerge` is true in
 # .github/agent-loop.json. Labels `hold`, `needs-human` and `blocked` keep a pull request out.
 #
-# Uses the AUTOMATION_TOKEN secret (your fine-grained token) so that updates and merges start the
-# usual workflows; without it, merges still work but branch updates and Codex requests don't.
+# Uses the AUTOMATION_TOKEN secret (your fine-grained token) for writes, so that updates and merges
+# start the usual workflows; without it, merges still work but branch updates and Codex requests
+# don't. Check runs and commit statuses are read with the workflow's own token, because a
+# fine-grained token can't be given access to check runs.
 on:
   workflow_run:
     workflows: [CI, Review gate]
@@ -40,10 +42,12 @@ jobs:
       - uses: actions/github-script@v9
         env:
           HAS_AUTOMATION_TOKEN: ${{ secrets.AUTOMATION_TOKEN != '' }}
+          WORKFLOW_TOKEN: ${{ github.token }}
         with:
           github-token: ${{ secrets.AUTOMATION_TOKEN || github.token }}
           script: |
             const fs = require('fs');
+            const reader = getOctokit(process.env.WORKFLOW_TOKEN);
             const orch = require('./scripts/lib/orchestrator.cjs');
             const config = JSON.parse(fs.readFileSync('.github/agent-loop.json', 'utf8'));
             if (!config.autoMerge) {
@@ -66,10 +70,10 @@ jobs:
                 ({ data: pr } = await github.rest.pulls.get({ owner, repo, pull_number: listed.number }));
               }
               const sha = pr.head.sha;
-              const runs = await github.paginate(github.rest.checks.listForRef, { owner, repo, ref: sha, check_name: 'ci-ok', per_page: 100 });
+              const runs = await reader.paginate(reader.rest.checks.listForRef, { owner, repo, ref: sha, check_name: 'ci-ok', per_page: 100 });
               runs.sort((a, b) => new Date(b.started_at) - new Date(a.started_at));
               const ciOk = runs[0] ? (runs[0].conclusion ?? runs[0].status) : null;
-              const { data: combined } = await github.rest.repos.getCombinedStatusForRef({ owner, repo, ref: sha });
+              const { data: combined } = await reader.rest.repos.getCombinedStatusForRef({ owner, repo, ref: sha });
               const review = combined.statuses.find((s) => s.context === 'claude-review');
               const { data: compare } = await github.rest.repos.compareCommitsWithBasehead({ owner, repo, basehead: `${base}...${sha}` });
 

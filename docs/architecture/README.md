@@ -7,8 +7,10 @@ they disagree, the ADRs win.
 | Read                                                                                     | For                                                                         |
 | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | [`blueprint.md`](blueprint.md)                                                           | Product scope (F01–F14), architecture, contracts, tests (T01–T75), work packages (W01–W51) |
+| [`../adr/0006-native-sqlite-plugin.md`](../adr/0006-native-sqlite-plugin.md) | Native SQLite plugin for Android storage (T-005) |
 | [`../adr/0005-source-and-ai-content-review.md`](../adr/0005-source-and-ai-content-review.md) | **Content review without a Dutch speaker:** source-verified facts plus an independent review by a different AI vendor replace section 14.2's human language review |
 | [`../content/`](../content/) | Content research: curriculum, entry format, sources, verification pipeline, legacy audit (data in `research/content-2026-10/`) |
+| [`../adr/0004-react-shell-and-localization.md`](../adr/0004-react-shell-and-localization.md) | React shell, hash routes and EN/PL interface localization (T-006) |
 | [`../adr/0003-woorden-scope-and-adaptation.md`](../adr/0003-woorden-scope-and-adaptation.md) | **Scope change: no data migration from the old app**, and how the blueprint maps onto this repository |
 | [`../adr/0002-build-targets-and-device-tests.md`](../adr/0002-build-targets-and-device-tests.md) | Build targets, composition root, device tests on an emulator                |
 | [`../adr/0001-agent-workflow-and-delivery.md`](../adr/0001-agent-workflow-and-delivery.md) | Who does what: Codex implements, Claude reviews, the owner merges           |

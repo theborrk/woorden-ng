@@ -1,7 +1,8 @@
-# ADR 0004: Native SQLite plugin for the Android storage spike
+# ADR 0006: Native SQLite plugin for the Android storage spike
 
 - **Status:** accepted for M0; emulator proof is a PR CI gate
 - **Date:** 2026-10-02
+- **Number:** written as ADR 0004 in parallel with the React shell ADR; renumbered on 2026-10-04
 
 ## Context
 

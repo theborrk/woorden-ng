@@ -1,0 +1,10 @@
+{
+  "file": "large_nl.msgpack.gz",
+  "url": "https://raw.githubusercontent.com/rspeer/wordfreq/master/wordfreq/data/large_nl.msgpack.gz",
+  "retrieved_at": "2026-10-03T00:22:24.177441+00:00",
+  "status": 200,
+  "content_type": "application/octet-stream",
+  "last_modified": null,
+  "bytes": 1661682,
+  "sha256": "cfdae01b2ccd5bc94be046645b6ba8682e65d6709beedf6ab98d7bdc5414d671"
+}

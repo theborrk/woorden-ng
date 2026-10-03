@@ -1,0 +1,10 @@
+{
+  "file": "kaikki-en-nl-postprocessed.jsonl",
+  "url": "https://kaikki.org/dictionary/Dutch/kaikki.org-dictionary-Dutch.jsonl",
+  "retrieved_at": "2026-10-03T00:17:35.526498+00:00",
+  "status": 200,
+  "content_type": "application/octet-stream",
+  "last_modified": "Mon, 28 Sep 2026 17:41:05 GMT",
+  "bytes": 256173808,
+  "sha256": "1f6ed26d77ded4f1538cfe5a9769e11faa90cad42c8b243f827252bef95a92a0"
+}

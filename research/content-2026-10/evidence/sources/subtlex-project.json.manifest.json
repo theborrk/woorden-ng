@@ -1,0 +1,10 @@
+{
+  "file": "subtlex-project.json",
+  "url": "https://api.osf.io/v2/nodes/3d8cx/",
+  "retrieved_at": "2026-10-03T00:18:39.246844+00:00",
+  "status": 200,
+  "content_type": "application/vnd.api+json; charset=utf-8",
+  "last_modified": null,
+  "bytes": 4441,
+  "sha256": "dd6c7b0a30971b460d94e3d1e8d61136bea6695ec2d35299b42ebcd8bda1222c"
+}

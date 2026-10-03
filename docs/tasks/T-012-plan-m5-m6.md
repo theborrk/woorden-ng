@@ -78,6 +78,10 @@ Out (do not do in this task):
 
 ## Notes for the implementer
 
+- T-100 to T-122 (see "Content backlog" in `docs/tasks/README.md`) already break down part of
+  W18–W21. Build on them instead of duplicating them: plan what remains (the full-catalog review UI,
+  diff reports, image manifests, scaling the curriculum beyond the pilot) and M6, with
+  `depends_on` pointing at the content tasks where needed.
 - Order by risk and value: the riskiest unknowns first, polish late.
 - A blueprint work package marked L usually becomes three to six tasks.
 - Mark this plan `done` with all criteria ticked in the same PR.

@@ -1,0 +1,18 @@
+﻿nl,proposed_en,proposed_pl,theme,legacy_headword_present,evidence_url,status
+DigiD,digital identity/login service,tożsamość cyfrowa; logowanie do usług,services,False,https://www.digid.nl/en/about-digid/what-digid,service meaning checked on official page; PL wording is model draft
+BSN,citizen service number,numer identyfikacyjny mieszkańca,services,False,https://www.government.nl/themes/government-and-democracy/personal-data/citizen-service-number-bsn,identity-number meaning checked on official page; PL wording is model draft
+zorgverzekering,health insurance,ubezpieczenie zdrowotne,health,False,,editorial addition; retrieve same-sense dictionary evidence
+huurtoeslag,housing/rent benefit,dodatek mieszkaniowy,services,False,,"editorial addition; vocabulary only, no eligibility/rules claim"
+zorgtoeslag,healthcare benefit,dodatek do ubezpieczenia zdrowotnego,services,False,,"editorial addition; vocabulary only, no eligibility/rules claim"
+eigen risico,deductible/excess in insurance,udział własny w ubezpieczeniu,health,False,,construction/sense candidate; not a policy amount or rule
+statiegeld,refundable container deposit,kaucja za opakowanie,shopping,False,,editorial addition; no fee/regulation claim
+inchecken,check in; tap in for public transport,odprawić się; zarejestrować wejście w transporcie,travel,False,https://en.wiktionary.org/wiki/inchecken,Kaikki en-supplement:63354; split travel-service and transit senses
+uitchecken,check out; tap out for public transport,wymeldować się; zarejestrować wyjście w transporcie,travel,False,,editorial addition; needs source and sense split
+afvalpas,waste-disposal access card,karta dostępu do pojemników na odpady,home,False,,editorial local-service candidate; availability depends on municipality
+verblijfsvergunning,residence permit,zezwolenie na pobyt,services,False,,editorial vocabulary candidate; no advice about who needs one
+loonstrook,payslip,pasek wynagrodzenia,work,False,,editorial addition; check variant loonstrookje
+arbeidsovereenkomst,employment contract,umowa o pracę,work,False,,"editorial vocabulary candidate, no contract interpretation"
+ziekmelden,report sick,zgłosić chorobę/niezdolność do pracy,work,False,,retrieve spelling and reflexive zich ziekmelden construction before activation
+huisartspraktijk,GP practice,praktyka lekarza rodzinnego,health,False,,editorial addition; verify compound morphology
+pinnen,pay by debit card,płacić kartą debetową,shopping,False,https://en.wiktionary.org/wiki/pinnen,"pilot S53; sourced sense and forms, independent review pending"
+spijker,nail as metal fastener,gwóźdź,home,False,,editorial gap; helps distinguish body nail nagel; source verification pending

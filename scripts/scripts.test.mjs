@@ -13,6 +13,7 @@ import {
 import { escapeHtml, galleryHtml } from './review-gallery.mjs';
 import { renameApp, validateAppId } from './rename-app.mjs';
 import gate from './lib/review-gate.cjs';
+import orchestrator from './lib/orchestrator.cjs';
 
 const SHA = 'a'.repeat(40);
 
@@ -247,5 +248,79 @@ describe('rename-app', () => {
     const activity = 'android/app/src/main/java/nl/example/groceries/MainActivity.java';
     expect(read(activity)).toMatch(/^package nl\.example\.groceries;/);
     expect(existsSync(join(dir, 'android/app/src/main/java/com'))).toBe(false);
+  });
+});
+
+describe('orchestrator', () => {
+  const ready = {
+    config: { autoMerge: true },
+    pr: { state: 'open', draft: false, mergeable: true, author: 'owner' },
+    labels: ['claude-approved'],
+    ciOk: 'success',
+    claudeReview: 'success',
+    behindBy: 0,
+  };
+
+  it('merges only a green, approved, up-to-date pull request', () => {
+    expect(orchestrator.mergeDecision(ready).action).toBe('merge');
+    const variants = [
+      { config: { autoMerge: false } },
+      { pr: { ...ready.pr, draft: true } },
+      { labels: ['claude-approved', 'hold'] },
+      { labels: ['needs-human'] },
+      { ciOk: 'failure' },
+      { ciOk: null },
+      { claudeReview: 'pending' },
+      { pr: { ...ready.pr, author: 'dependabot[bot]' } },
+    ];
+    for (const variant of variants) {
+      expect(orchestrator.mergeDecision({ ...ready, ...variant }).action).toBe('wait');
+    }
+  });
+
+  it('updates a branch that is behind and reports conflicts', () => {
+    expect(orchestrator.mergeDecision({ ...ready, behindBy: 2 }).action).toBe('update');
+    const conflicted = { ...ready, pr: { ...ready.pr, mergeable: false } };
+    expect(orchestrator.mergeDecision(conflicted).action).toBe('conflict');
+    const dependabot = {
+      ...ready,
+      config: { autoMerge: true, autoMergeDependabot: true },
+      pr: { ...ready.pr, author: 'dependabot[bot]' },
+    };
+    expect(orchestrator.mergeDecision(dependabot).action).toBe('merge');
+  });
+
+  it('carries an approval over a GitHub-made update from the base branch only', () => {
+    const update = {
+      parentCount: 2,
+      committerLogin: 'web-flow',
+      verified: true,
+      firstParentApproved: true,
+      secondParentOnBase: true,
+    };
+    expect(orchestrator.canCarryOverApproval(update)).toBe(true);
+    expect(orchestrator.canCarryOverApproval({ ...update, committerLogin: 'codex' })).toBe(false);
+    expect(orchestrator.canCarryOverApproval({ ...update, parentCount: 1 })).toBe(false);
+    expect(orchestrator.canCarryOverApproval({ ...update, verified: false })).toBe(false);
+    expect(orchestrator.canCarryOverApproval({ ...update, firstParentApproved: false })).toBe(
+      false,
+    );
+    expect(orchestrator.canCarryOverApproval({ ...update, secondParentOnBase: false })).toBe(false);
+  });
+
+  it('asks Codex to fix CI failures until the round limit', () => {
+    const config = { codexAutoFix: true, maxReviewRounds: 3 };
+    expect(orchestrator.ciFailureAction(config, { hasToken: true, earlierRequests: 0 })).toBe(
+      'mention',
+    );
+    expect(orchestrator.ciFailureAction(config, { hasToken: true, earlierRequests: 3 })).toBe(
+      'needs-human',
+    );
+    expect(orchestrator.ciFailureAction(config, { hasToken: false, earlierRequests: 0 })).toBe(
+      'none',
+    );
+    expect(
+      orchestrator.ciFailureAction({ codexAutoFix: false }, { hasToken: true, earlierRequests: 0 }),
+    ).toBe('none');
   });
 });

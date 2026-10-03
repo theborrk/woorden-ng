@@ -251,16 +251,21 @@ jobs:
       && (vars.CLAUDE_REVIEWER == '' || vars.CLAUDE_REVIEWER == 'routine' || vars.CLAUDE_REVIEWER == 'off')
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       statuses: write
       issues: write
       pull-requests: write
     steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: scripts/lib
       - uses: actions/github-script@v9
         env:
           NEEDS: ${{ toJSON(needs) }}
           REVIEWER: ${{ vars.CLAUDE_REVIEWER }}
         with:
           script: |
+            const orch = require('./scripts/lib/orchestrator.cjs');
             const pr = context.payload.pull_request;
             const sha = pr.head.sha;
             const { owner, repo } = context.repo;
@@ -288,6 +293,30 @@ jobs:
               return;
             }
             await removeLabel('ci-failed');
+
+            // A branch update from the base (the auto-merge workflow does these) changes no reviewed
+            // code: keep the approval instead of paying for a new review.
+            const { data: commit } = await github.rest.repos.getCommit({ owner, repo, ref: sha });
+            if (commit.parents.length === 2) {
+              const [first, second] = commit.parents.map((p) => p.sha);
+              const { data: firstStatus } = await github.rest.repos.getCombinedStatusForRef({ owner, repo, ref: first });
+              const { data: cmp } = await github.rest.repos.compareCommitsWithBasehead({ owner, repo, basehead: `${second}...${pr.base.ref}` });
+              const carry = orch.canCarryOverApproval({
+                parentCount: commit.parents.length,
+                committerLogin: commit.committer ? commit.committer.login : null,
+                verified: Boolean(commit.commit.verification && commit.commit.verification.verified),
+                firstParentApproved: firstStatus.statuses.some((s) => s.context === 'claude-review' && s.state === 'success'),
+                secondParentOnBase: ['identical', 'ahead'].includes(cmp.status),
+              });
+              if (carry) {
+                await status('success', 'Approval carried over: only the base branch was merged in');
+                await removeLabel('needs-claude-review');
+                await addLabel('claude-approved');
+                core.notice(`Approval of ${first.slice(0, 7)} carried over to ${sha.slice(0, 7)}`);
+                return;
+              }
+            }
+
             await removeLabel('claude-approved');
             await removeLabel('claude-changes-requested');
             if (skipReason) {
@@ -394,15 +423,23 @@ jobs:
     if: always() && !cancelled()
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pull-requests: write
       actions: read
     steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: |
+            scripts/lib
+            .github/agent-loop.json
+          sparse-checkout-cone-mode: false
       - uses: actions/download-artifact@v8
         continue-on-error: true
         with:
           pattern: '*-log'
           path: logs
-      - uses: actions/github-script@v9
+      - id: summary
+        uses: actions/github-script@v9
         env:
           NEEDS: ${{ toJSON(needs) }}
           PREVIEW_URL: ${{ needs.preview.outputs.url }}
@@ -451,18 +488,22 @@ jobs:
             if (failed.length) {
               const logs = tail('logs');
               const nativeOnly = failed.every((k) => ['android', 'device-tests'].includes(k));
-              lines.push(
-                '',
-                `#### ❌ Failed: ${failed.map((k) => names[k] || k).join(', ')}`,
-                '',
-                'Copy this into the Codex task that opened this PR:',
-                '```text',
+              const fixRequest = [
                 `CI failed on PR #${pr.number} (commit ${pr.head.sha.slice(0, 7)}) in: ${failed.join(', ')}.`,
                 nativeOnly
                   ? 'The Android build and device tests run only in CI (there is no Android SDK in your environment): work from the log below and keep npm run verify green.'
                   : 'Reproduce locally with the matching npm script from AGENTS.md (npm run verify / npm run test:e2e:web).',
                 'Fix the root cause (do not weaken or skip tests) and push to the same branch.',
                 logs ? 'Relevant log output:\n' + logs.slice(-6000) : `Logs: ${runUrl}`,
+              ].join('\n');
+              core.setOutput('fix-request', fixRequest);
+              lines.push(
+                '',
+                `#### ❌ Failed: ${failed.map((k) => names[k] || k).join(', ')}`,
+                '',
+                'Copy this into the Codex task that opened this PR:',
+                '```text',
+                fixRequest,
                 '```',
               );
             }
@@ -472,6 +513,34 @@ jobs:
             const existing = comments.find((c) => c.user.type === 'Bot' && c.body.includes('<!-- ci-summary -->'));
             if (existing) await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
             else await github.rest.issues.createComment({ owner, repo, issue_number: pr.number, body });
+
+      # Unattended mode: hand the failure to Codex as you (needs codexAutoFix and AUTOMATION_TOKEN).
+      - name: Ask Codex to fix the failure
+        if: steps.summary.outputs.fix-request != '' && github.event.pull_request.head.repo.full_name == github.repository
+        uses: actions/github-script@v9
+        env:
+          FIX_REQUEST: ${{ steps.summary.outputs.fix-request }}
+          HAS_AUTOMATION_TOKEN: ${{ secrets.AUTOMATION_TOKEN != '' }}
+        with:
+          github-token: ${{ secrets.AUTOMATION_TOKEN || github.token }}
+          script: |
+            const fs = require('fs');
+            const orch = require('./scripts/lib/orchestrator.cjs');
+            const config = JSON.parse(fs.readFileSync('.github/agent-loop.json', 'utf8'));
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+            const comments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number, per_page: 100 });
+            const action = orch.ciFailureAction(config, {
+              hasToken: process.env.HAS_AUTOMATION_TOKEN === 'true',
+              earlierRequests: comments.filter((c) => c.body.includes(orch.CI_AUTOFIX_MARKER)).length,
+            });
+            if (action === 'mention') {
+              const body = `${config.codexMention} ${process.env.FIX_REQUEST}\n\n${orch.CI_AUTOFIX_MARKER}`;
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            } else if (action === 'needs-human') {
+              await github.rest.issues.addLabels({ owner, repo, issue_number, labels: ['needs-human'] });
+            }
+            core.notice(`CI failure follow-up: ${action}`);
 
   # The single required CI check. Skipped jobs (e.g. no Android changes) count as passing.
   ci-ok:

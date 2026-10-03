@@ -1,7 +1,7 @@
 ---
 id: T-010
 title: Plan the tasks for milestones M1 and M2
-status: todo
+status: done
 size: M
 depends_on: [T-004, T-005, T-006]
 type: plan
@@ -75,13 +75,13 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Every ID in this plan's `refs` appears in the `refs` of at least one new task: with this
+- [x] AC1: Every ID in this plan's `refs` appears in the `refs` of at least one new task: with this
       plan set to `done`, `npm run check:tasks` still passes (verify)
-- [ ] AC2: Every new task is size S or M, a vertical slice, and has Given/When/Then criteria naming
+- [x] AC2: Every new task is size S or M, a vertical slice, and has Given/When/Then criteria naming
       the test type (unit, integration, e2e, device test) that proves them (review)
-- [ ] AC3: Native work (plugins, permissions) sits in tasks of its own, and every native task has a
+- [x] AC3: Native work (plugins, permissions) sits in tasks of its own, and every native task has a
       device test criterion (review)
-- [ ] AC4: Dependencies are minimal and correct, so at least three tasks can start in parallel
+- [x] AC4: Dependencies are minimal and correct, so at least three tasks can start in parallel
       without touching the same files (review)
 
 ## Notes for the implementer
@@ -93,3 +93,45 @@ Out (do not do in this task):
 ## Notes for the reviewer
 
 Apply `docs/agents/plan-red-team.md`. Coverage and test quality are the main risks.
+
+## Planned slices and acceptance evidence
+
+T-123–T-141 implement this plan. T-110 remains the entry schema owner; T-109 remains the legacy
+audit/registry owner. T-128 depends on both and extends their contracts for W05/W07 rather than
+repeating extraction, validation, review or compilation. ADR 0005 governs content status; no task
+imports old-app learner data or treats source/structural checks as language approval.
+
+| Work        | New tasks                                | Observable result                                                                     |
+| ----------- | ---------------------------------------- | ------------------------------------------------------------------------------------- |
+| W05         | T-123, T-124, T-128                      | Runtime/backup inspection and normalized catalog using T-110                          |
+| W06         | T-126, T-127, T-129, T-130, T-132, T-133 | Durable profiles, atomic command/query slice, shared conformance and recovery         |
+| W07         | T-128                                    | All legacy rows browsable with stable sense identity and original RU                  |
+| W09         | T-124, T-134–T-141                       | Portable snapshot/export, bounded preview, all three restore modes and verified media |
+| W47 (M1–M2) | T-127, T-130, T-131, T-135, T-139, T-140 | Native DB, lifecycle checkpoints, durable files and scoped backup access              |
+| W50 (M2)    | T-130, T-132, T-141                      | Real native repository equivalence and PWA → Android → PWA transfer                   |
+| W51         | T-125                                    | Provider-neutral lesson/observation validation and future boundary documentation      |
+
+The first three tasks can start now with disjoint primary files:
+
+| Task  | Primary implementation area                                                                                                                                    | Shared-file policy                         |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| T-123 | `src/contracts/runtime/`, `tools/contracts/inspect-runtime.ts`, `tests/fixtures/runtime/`                                                                      | No package manifest or shared barrel edits |
+| T-124 | `src/contracts/backup/`, `tools/contracts/inspect-backup.ts`, `tests/fixtures/backup-manifests/`                                                               | No package manifest or shared barrel edits |
+| T-125 | `src/contracts/external-practice/`, `tools/contracts/inspect-external-practice.ts`, `tests/fixtures/external-practice/`, `docs/contracts/external-practice.md` | No package manifest or shared barrel edits |
+
+Validation commands:
+
+- `node --test docs/tasks/T-010-plan-m1-m2.test.mjs`: AC1 checks every plan ref in new ordinary
+  tasks, independently of existing coverage; AC2 checks bounded task format and Given/When/Then
+  test types; AC3 checks explicit native isolation/device criteria; AC4 checks real acyclic,
+  non-redundant dependencies, three ready tasks and disjoint declared primary files. It also
+  checks T-128's T-109/T-110 dependency handoff.
+- `npm run check:tasks`: strict full-backlog coverage with this plan done.
+- `npm run verify` and `npm run test:e2e:web`: required repository regression gates.
+
+Automated structural evidence supplements the plan-red-team review: each slice exposes a real
+inspector, profile/catalog/recovery flow or executable production-adapter result; native mocks
+cannot satisfy device criteria. Future task criteria remain unchecked until implementation.
+Full grading/study/audio lifecycle work, reminders, pack downloads, signed updates/ABI checks and
+physical-device release verification remain with the later milestone plans. W50 is not complete
+merely because its M2 portion is allocated here.

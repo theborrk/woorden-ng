@@ -1,0 +1,1117 @@
+{
+ "batch_id": "woorden-starter-v0.2-01",
+ "reviewer": {
+  "vendor": "Anthropic",
+  "model_id": null,
+  "performed_at": "2026-10-03T23:05:55Z",
+  "run_reference": "https://claude.ai/code/session_01Mg1hbGXZtE8vwaqmHCWTcr",
+  "source_access": "supplied_evidence_only"
+ },
+ "entries": [
+  {
+   "entry_id": "604c9517-d603-45ca-b859-4e98dd122cbf",
+   "fixture_ref": "S01",
+   "content_sha256": "1ef00b4a4ed71fab8320b8778fdff9f98755df0ea3cb94d556661bc862520439",
+   "dimensions": {
+    "sense_scope": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The Dutch definition 'De spreker verwijst naar zichzelf als onderwerp van de zin' (subject form, gender-neutral 'zichzelf'), EN 'I' and PL 'ja' all name the same first-person singular subject pronoun, matching en:24 sense 0 and nl:11 ('nominatief (onderwerp), verwijst naar de spreker'); the legacy row s1506 (RU 'я', EN 'I') is the same sense.",
+     "source_ids": [
+      "en:24",
+      "nl:11",
+      "pl:136",
+      "s1506"
+     ],
+     "proposed_patch": null
+    },
+    "dictionary_facts": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Spelling 'ik' and POS pron match all three Wiktionary records; IPA '/ɪk/' (stressed) and '/ək/' (unstressed) are copied verbatim from en:24 /sounds/0 and /sounds/1 and agree with nl:11 and pl:136 ('ɪk'); no article, plural or verb facts apply and none are invented.",
+     "source_ids": [
+      "en:24",
+      "nl:11",
+      "pl:136"
+     ],
+     "proposed_patch": null
+    },
+    "dutch_naturalness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'Ik ben hier.' is grammatical, idiomatic and register-neutral, and 'Ik' is used exactly in the target sense (speaker as subject); it mirrors the attested pattern 'Ik ben Anna.' in pl:136.",
+     "source_ids": [
+      "pl:136"
+     ],
+     "proposed_patch": null
+    },
+    "en_pl_translation": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "EN 'I am here.' is exact; PL 'Jestem tutaj.' is the natural rendering because Polish drops the unstressed subject pronoun (adding 'Ja' would add emphasis absent from the Dutch), and person, number and tense are retained; the PL cue 'ja' correctly names the target.",
+     "source_ids": [
+      "en:24",
+      "pl:136"
+     ],
+     "proposed_patch": null
+    },
+    "task_ambiguity": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "In the frame '___ ben hier.' the verb form 'ben' admits only a first-person singular subject in preverbal position (jij/u would need 'bent'), so with the cue 'I'/'ja' the only standard answer is 'Ik' (case-insensitive, so 'ik' is accepted); the colloquial clitic spelling ''k' listed in en:24 is not a realistic answer and not a different word.",
+     "source_ids": [
+      "en:24"
+     ],
+     "proposed_patch": null
+    },
+    "span_form_contract": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The span [0,2) slices exactly 'Ik' from the NFC text (UTF-16 units equal code points here), it covers the whole single-word target and nothing else, and no form task is declared (forms list empty, which is appropriate for this subject-form sense).",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "level_usefulness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "A1, priority 1 and core are plausible: SUBTLEX-NL Zipf 7.60 (CD 8054) and NT2Lex exposure from A1 onward (F@A1 429, A2 3156, B1 1854, B2 366, checked against evidence/sources/nt2lex-basic.tsv); prerequisites (support unit 'hier', S02 'zijn') are listed and honestly marked provisional.",
+     "source_ids": [
+      "nt2lex:ik",
+      "subtlex:ik"
+     ],
+     "proposed_patch": null
+    },
+    "register_pragmatics": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'neutral' is correct: 'ik' is unmarked in every register and region, and the example carries no politeness or social implication.",
+     "source_ids": [
+      "en:24"
+     ],
+     "proposed_patch": null
+    },
+    "hints_media": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Hints 'I'/'ja' are labelled meaning_reveal with no invented mnemonic or etymology; the audio candidate is honestly 'candidate_not_downloaded' with review 'not_run' and listening_task_eligible false (its Commons path c/cc matches the MD5 of 'Nl-ik.ogg', so the URL is extracted rather than invented); the image verdict is labelled model judgment and not recommended.",
+     "source_ids": [
+      "en:24"
+     ],
+     "proposed_patch": null
+    }
+   },
+   "overall_verdict": "pass",
+   "unresolved_doubts": []
+  },
+  {
+   "entry_id": "faa0d8d3-bbb2-4a6f-ae8b-8c8825241803",
+   "fixture_ref": "S02",
+   "content_sha256": "5d6c5a5c0f86c6ce860363c39076ea53fd585c59de54c35b64ef6611c150724f",
+   "dimensions": {
+    "sense_scope": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "NL 'Een persoon of zaak verbinden met een eigenschap of toestand', EN 'be, linking a person or thing to a description' and PL 'być, ...' all select the copula, matching en:40 sense 1, nl:80 sense 6 ('de eigenschap hebben') and ODWN zijn-v-7 ('koppelwerkwoord'); the example 'Ik ben ziek.' uses exactly that sense rather than the existential, locative or auxiliary senses, and legacy s120 ('быть'/'to be') is a compatible lemma-level link. The NL definition describes the copula's function rather than giving a substitutable paraphrase, which is acceptable for a copula.",
+     "source_ids": [
+      "en:40",
+      "nl:80",
+      "zijn-v-7",
+      "s120"
+     ],
+     "proposed_patch": null
+    },
+    "dictionary_facts": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "IPA '/zɛi̯n/' is verbatim from en:40 /sounds/0 and agrees with nl:80 and pl:132; every form selector resolves to the claimed surface and tags in en:40 (zijn /forms/2, ben /4, was /5, is /16, was /17, zijn /18, waren /19, geweest /29); perfect auxiliary 'zijn' is supported by all nine ODWN records; non-separable and non-reflexive are correct. Coverage note, not an error: the second-person present 'bent' (en:40 /forms/6) is not in the selected inventory and will be needed before any jij/u form task.",
+     "source_ids": [
+      "en:40",
+      "nl:80",
+      "pl:132",
+      "zijn-v-1",
+      "zijn-v-2",
+      "zijn-v-7",
+      "zijn-v-9"
+     ],
+     "proposed_patch": null
+    },
+    "dutch_naturalness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'Ik ben ziek.' is grammatical, idiomatic and an everyday sentence (calling in sick, at the doctor), with 'ben' as copula plus adjectival predicate, i.e. exactly the target sense; compare 'Hij is nieuwsgierig.' in nl:80 sense 6 and pl:132.",
+     "source_ids": [
+      "nl:80",
+      "pl:132"
+     ],
+     "proposed_patch": null
+    },
+    "en_pl_translation": {
+     "verdict": "revise",
+     "severity": "minor",
+     "explanation": "The example translations are precise ('I am ill.'; 'Jestem chora/chory.' gives both genders because the Polish predicative adjective must agree while Dutch 'ziek' does not). The PL learner meaning 'być, łączyć osobę lub rzecz z opisem' turns the English participial gloss 'linking ...' into a second coordinated infinitive, so it reads as two meanings ('to be' and 'to connect a person or thing with a description') and suggests that zijn can mean 'łączyć'. It should render the Dutch anchor ('eigenschap of toestand') as a parenthetical gloss.",
+     "source_ids": [
+      "pl:132",
+      "en:40"
+     ],
+     "proposed_patch": [
+      {
+       "op": "replace",
+       "path": "/sense/meanings/pl/0",
+       "value": "być (o cesze lub stanie osoby albo rzeczy)"
+      }
+     ]
+    },
+    "task_ambiguity": {
+     "verdict": "revise",
+     "severity": "major",
+     "explanation": "In the cloze 'Ik ___ ziek.' the cue 'be, linking a person or thing to a description' / 'być, ...' does not fix the tense, so 'was' ('Ik was ziek.', 'I was ill') is an equally valid form of the target sense, yet only 'ben' is accepted; other verbs that fit the frame (word, blijf, lijk) are excluded by the cue. The cue must state the tense (patch below), or the task must show the sentence translation 'I am ill.' as its cue; this finding assumes, as the packet's context field indicates, that the cue is the meaning gloss only.",
+     "source_ids": [
+      "en:40"
+     ],
+     "proposed_patch": [
+      {
+       "op": "replace",
+       "path": "/examples/0/context/en",
+       "value": "be (present tense)"
+      },
+      {
+       "op": "replace",
+       "path": "/examples/0/context/pl",
+       "value": "być (czas teraźniejszy)"
+      }
+     ]
+    },
+    "span_form_contract": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The span [3,6) slices exactly 'ben' from the NFC text, and target_form_ids points to the first-person singular present form 'ben' (57715d8e, en:40 /forms/4), which agrees with the subject 'Ik'; it is a single segment with no particle or reflexive to cover.",
+     "source_ids": [
+      "en:40"
+     ],
+     "proposed_patch": null
+    },
+    "level_usefulness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "A1, priority 2 and core are plausible: the NT2Lex WW() row (F@A1 591, A2 5145, B1 3684, B2 1789, C1 112, checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL WW lemma count 1,891,414 support it; the first source_exposure row VNW(bez,det) is the possessive homograph 'zijn' ('his') and carries no evidence for this verb, which is transparent from its tag. Prerequisites (S01 'ik', S42) are listed and marked provisional.",
+     "source_ids": [
+      "nt2lex:zijn",
+      "subtlex:zijn"
+     ],
+     "proposed_patch": null
+    },
+    "register_pragmatics": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'neutral' is correct: copular zijn and 'Ik ben ziek.' are standard in every register and region, with no politeness implication.",
+     "source_ids": [
+      "en:40"
+     ],
+     "proposed_patch": null
+    },
+    "hints_media": {
+     "verdict": "revise",
+     "severity": "minor",
+     "explanation": "The meaning-reveal hint is correctly labelled and has no invented mnemonic or etymology, but its PL text repeats 'być, łączyć osobę lub rzecz z opisem' with the same misleading second infinitive and should follow the corrected meaning. The audio candidate is honestly 'candidate_not_downloaded' with review 'not_run' (Commons path 5/50 matches the MD5 of 'Nl-zijn.ogg'), listening is ineligible, and the image is not recommended under a labelled model judgment.",
+     "source_ids": [
+      "en:40"
+     ],
+     "proposed_patch": [
+      {
+       "op": "replace",
+       "path": "/hints/pl",
+       "value": "być (o cesze lub stanie osoby albo rzeczy)"
+      }
+     ]
+    }
+   },
+   "overall_verdict": "revise",
+   "unresolved_doubts": []
+  },
+  {
+   "entry_id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
+   "fixture_ref": "S03",
+   "content_sha256": "3be060496214ce524f196216fcdaf748fddfcd1474eea246662c2e68a15fa952",
+   "dimensions": {
+    "sense_scope": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "NL 'Van voldoende of gewenste kwaliteit.', EN 'good; satisfactory in quality' and PL 'dobry; zadowalający pod względem jakości' name the same quality sense, matching en:1318 sense 0 ('good (not bad)'), nl:17 sense 0 ('kwaliteit bezittend, aan verwachtingen voldoend') and pl:582 sense 0 ('dobry'); it is kept apart from 'correct' (en:1318 sense 1) and 'all right' (sense 2), and legacy s353 ('хороший'/'good') is the same sense.",
+     "source_ids": [
+      "en:1318",
+      "nl:17",
+      "pl:582",
+      "s353"
+     ],
+     "proposed_patch": null
+    },
+    "dictionary_facts": {
+     "verdict": "revise",
+     "severity": "minor",
+     "explanation": "IPA '/ɣut/' is verbatim from en:1318 /sounds/0 (nl:17 'ɣut'), and the irregular comparison beter/best, inflected goede/betere/beste and partitive goeds/beters all resolve correctly to en:1318 /forms/0-21. But draft /forms/20 (4007bceb) records the surface '-' as a source_verified form: in en:1318 /forms/22 the '-' is a table placeholder meaning the partitive superlative does not exist, so it is not an attested surface and should be removed (or recorded as absent) rather than listed as a verified form.",
+     "source_ids": [
+      "en:1318",
+      "nl:17"
+     ],
+     "proposed_patch": [
+      {
+       "op": "remove",
+       "path": "/forms/20"
+      }
+     ]
+    },
+    "dutch_naturalness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'Het brood is goed.' is grammatical and idiomatic as a quality judgement (or 'still fine to eat'), with 'goed' as a predicative adjective in the target sense; for taste alone Dutch would rather say 'lekker', but the quality reading is natural and matches the definition.",
+     "source_ids": [
+      "en:1318",
+      "nl:17"
+     ],
+     "proposed_patch": null
+    },
+    "en_pl_translation": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "EN 'The bread is good.' and PL 'Chleb jest dobry.' are direct, natural and keep number and tense (the Polish predicative adjective correctly agrees with masculine 'chleb'); the learner meanings 'good; satisfactory in quality' and 'dobry; zadowalający pod względem jakości' render the Dutch anchor faithfully.",
+     "source_ids": [
+      "pl:582"
+     ],
+     "proposed_patch": null
+    },
+    "task_ambiguity": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "For 'Het brood is ___.' the cue 'good; satisfactory in quality' / 'dobry; ...' has 'goed' as its direct equivalent; near-synonyms that fit the frame mean something else ('lekker' tasty, 'prima' excellent, 'vers' fresh) and are excluded by the cue's head word; the comparison forms 'beter'/'best' also fit the frame but do not answer the cue 'good', and a predicative adjective takes no inflection, so 'goede' cannot occur.",
+     "source_ids": [
+      "en:1318"
+     ],
+     "proposed_patch": null
+    },
+    "span_form_contract": {
+     "verdict": "revise",
+     "severity": "minor",
+     "explanation": "The span [13,17) slices exactly 'goed' and the first target form (cafedea7, adverbial/positive/predicative, en:1318 /forms/4) is right. The second target form (ca8c7e30, indefinite neuter singular, en:1318 /forms/11) is the attributive cell of 'een goed brood' and does not apply here: after the copula a Dutch adjective is predicative and never agrees, and 'het brood' is definite anyway. Listing it would let form tasks or grammar explanations attach wrong features to this sentence.",
+     "source_ids": [
+      "en:1318"
+     ],
+     "proposed_patch": [
+      {
+       "op": "remove",
+       "path": "/examples/0/target_form_ids/1"
+      }
+     ]
+    },
+    "level_usefulness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "A1, priority 3 and core are plausible: the NT2Lex ADJ() row is F@A1 75, A2 596, B1 397, B2 162, C1 7 (checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL ADJ lemma count is 219,524; the N(soort) row belongs to the noun homograph 'goed' ('goods, property') and is not evidence for this sense, which its tag makes transparent. Prerequisites (S02, S20, support unit 'het') are listed and marked provisional.",
+     "source_ids": [
+      "nt2lex:goed",
+      "subtlex:goed"
+     ],
+     "proposed_patch": null
+    },
+    "register_pragmatics": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'neutral' is correct: 'goed' as a quality adjective is unmarked in every register and region, and the example has no social implication.",
+     "source_ids": [
+      "en:1318"
+     ],
+     "proposed_patch": null
+    },
+    "hints_media": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; both audio candidates keep their region tags (Belgium, Netherlands), are 'candidate_not_downloaded' with review 'not_run', and their Commons paths (c/cb, 1/10) match the MD5 of the decoded filenames; listening is ineligible and the image is not recommended under a labelled model judgment.",
+     "source_ids": [
+      "en:1318"
+     ],
+     "proposed_patch": null
+    }
+   },
+   "overall_verdict": "revise",
+   "unresolved_doubts": []
+  },
+  {
+   "entry_id": "de6f4380-8bbc-4ebb-8852-418ee312edda",
+   "fixture_ref": "S04",
+   "content_sha256": "1e55d6b05d1b85bc9873b2cc6e19b9e1b3edb9a37aa5e2d6d098e2135db06268",
+   "dimensions": {
+    "sense_scope": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "NL 'Een beleefde uiting van dank.', EN 'thank you, polite' and PL 'dziękuję, forma uprzejma' all name the polite (u-form) expression of thanks, matching en:1876 sense 0 ('thank you very much', tagged formal); 'beleefd' here corresponds to the Dutch 'beleefdheidsvorm' u, and the example uses the phrase in exactly that function.",
+     "source_ids": [
+      "en:1876"
+     ],
+     "proposed_patch": null
+    },
+    "dictionary_facts": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Spelling 'dank u wel' (written apart) and POS phrase match en:1876; both IPA strings '/ˌdɑŋk y ˈʋɛl/' and '[ˌdɑŋk y ˈʋɛl]' (Netherlands) are verbatim from /sounds/0 and /sounds/1 with the region tag kept; no forms are claimed, and the one-word source variant 'dankuwel' is honestly left unselected.",
+     "source_ids": [
+      "en:1876"
+     ],
+     "proposed_patch": null
+    },
+    "dutch_naturalness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'Dank u wel voor het water.' is grammatical and idiomatic ('dank u wel voor' + noun phrase is the standard pattern), and fits an everyday situation such as being served water.",
+     "source_ids": [
+      "en:1876"
+     ],
+     "proposed_patch": null
+    },
+    "en_pl_translation": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "EN 'Thank you for the water.' and PL 'Dziękuję za wodę.' are direct and natural, with the correct prepositions ('for'/'za' + accusative 'wodę'); the learner meanings render the polite thank-you faithfully, although 'forma grzecznościowa' is the more established Polish term than 'forma uprzejma'.",
+     "source_ids": [
+      "en:1876"
+     ],
+     "proposed_patch": null
+    },
+    "task_ambiguity": {
+     "verdict": "revise",
+     "severity": "major",
+     "explanation": "In the open cloze '___ voor het water.' the cue 'thank you, polite' / 'dziękuję, forma uprzejma' admits several valid Dutch answers, yet only 'Dank u wel' is accepted. 'Dank u', 'Hartelijk dank' and 'Bedankt' are equally correct and polite. Because 'polite' does not exclude the je-form, 'Dank je wel' (polite, but informal address) also fits. The cue must name the formal address, and the remaining polite equivalents must be acknowledged without penalty, as patched below; otherwise the phrase should be used only in recognition tasks.",
+     "source_ids": [
+      "en:1876"
+     ],
+     "proposed_patch": [
+      {
+       "op": "replace",
+       "path": "/examples/0/context/en",
+       "value": "thank you (formal)"
+      },
+      {
+       "op": "replace",
+       "path": "/examples/0/context/pl",
+       "value": "dziękuję (forma grzecznościowa)"
+      },
+      {
+       "op": "add",
+       "path": "/examples/0/accepted_answers/-",
+       "value": {
+        "ordered_segments": [
+         "Dank u"
+        ],
+        "case_sensitive": false
+       }
+      },
+      {
+       "op": "add",
+       "path": "/examples/0/accepted_answers/-",
+       "value": {
+        "ordered_segments": [
+         "Hartelijk dank"
+        ],
+        "case_sensitive": false
+       }
+      },
+      {
+       "op": "add",
+       "path": "/examples/0/accepted_answers/-",
+       "value": {
+        "ordered_segments": [
+         "Bedankt"
+        ],
+        "case_sensitive": false
+       }
+      }
+     ]
+    },
+    "span_form_contract": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The single span [0,10) slices exactly 'Dank u wel' from the NFC text, covering the whole three-word phrase and nothing else; no form IDs are needed for a fixed phrase.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "level_usefulness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "A1, priority 4 and core are plausible for a first-day politeness formula; frequency and NT2Lex exposure are honestly 'missing' (single-word sources do not cover the phrase) rather than imputed, and prerequisites (S17, support units 'het', 'voor') are listed and marked provisional.",
+     "source_ids": [
+      "en:1876"
+     ],
+     "proposed_patch": null
+    },
+    "register_pragmatics": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'polite' is a defensible mapping of the source tag 'formal' (u is the Dutch beleefdheidsvorm): the phrase is used with people addressed as u (strangers, shop and service staff, older people), and the example scene fits that use.",
+     "source_ids": [
+      "en:1876"
+     ],
+     "proposed_patch": null
+    },
+    "hints_media": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; there is no audio candidate, listening is ineligible and device TTS is 'not_tested', all stated honestly; the image is not recommended under a labelled model judgment.",
+     "source_ids": [],
+     "proposed_patch": null
+    }
+   },
+   "overall_verdict": "revise",
+   "unresolved_doubts": []
+  },
+  {
+   "entry_id": "8e094be1-35f7-42b5-8dbf-ba6ed3afb567",
+   "fixture_ref": "S05",
+   "content_sha256": "26df4988e65305e6431b2cf98d028a75edca2f8a541bdbe75f82b91d7c9d3fd4",
+   "dimensions": {
+    "sense_scope": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "NL 'Een beleefde aanspreekvorm voor de aangesprokene.', EN 'you, polite form of address' and PL 'pan, pani lub państwo jako uprzejma forma zwracania się' all name the polite second-person pronoun (singular and plural), matching en:203 senses 0/3 ('you (polite)'), nl:525 sense 0 ('tweede persoon enkelvoud en meervoud formeel') and pl:19 ('forma grzecznościowa zaimka osobowego drugiej osoby'); the example uses subject u, the reflexive and dialectal uses (en:203 senses 2, 5-8; nl:526) are not claimed, and legacy s1834 ('Вы/вам/вас (формальное обращение)'/'you (formal)') is the same sense.",
+     "source_ids": [
+      "en:203",
+      "nl:525",
+      "pl:19",
+      "s1834"
+     ],
+     "proposed_patch": null
+    },
+    "dictionary_facts": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Spelling 'u' and POS pron match en:203, nl:525 and pl:19, and the IPA '/y/' is the value in en:203 (nl:525/nl:526 give '/yː/', a narrower convention for the same tense vowel). The selector '/sounds/1' does not index the one-item IPA excerpt in the packet; the packet's sound excerpts omit non-IPA items (S01-S03 cite Commons audio from records whose excerpted sounds list no audio), so it presumably indexes the full Kaikki record, which is not in the repository and is left to the deterministic locator check. No forms are claimed.",
+     "source_ids": [
+      "en:203",
+      "nl:525",
+      "nl:526",
+      "pl:19"
+     ],
+     "proposed_patch": null
+    },
+    "dutch_naturalness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'Heeft u een afspraak?' is idiomatic standard Dutch (both 'heeft u' and 'hebt u' are correct; 'heeft u' is the more common in the Netherlands) and is the prototypical reception-desk question, with 'u' as polite subject exactly as in en:203 sense 0 ('Bent u klaar?').",
+     "source_ids": [
+      "en:203"
+     ],
+     "proposed_patch": null
+    },
+    "en_pl_translation": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "EN 'Do you have an appointment?' is exact; PL 'Czy ma pan/pani umówioną wizytę?' is natural, renders polite u with pan/pani plus a third-person verb (as Dutch u takes 'heeft'), and 'umówiona wizyta' is the idiomatic term for a booked appointment; the PL learner meaning correctly explains that Polish expresses u with pan, pani or państwo, consistent with pl:19.",
+     "source_ids": [
+      "pl:19"
+     ],
+     "proposed_patch": null
+    },
+    "task_ambiguity": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "In 'Heeft ___ een afspraak?' the verb form 'heeft' excludes je/jij ('heb je'), and the cue 'you, polite form of address' excludes hij/zij/het, so 'u' is the only valid answer; the archaic capitalised 'U' listed in en:203 is accepted because matching is case-insensitive.",
+     "source_ids": [
+      "en:203"
+     ],
+     "proposed_patch": null
+    },
+    "span_form_contract": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The span [6,7) slices exactly 'u' from the NFC text and covers the whole target; no form IDs are needed because u has the same shape as subject and object.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "level_usefulness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "A1, priority 5 and core are plausible and important for an adult learner (doctor, municipality, shops): the NT2Lex VNW(pers,pron) row is F@A1 14, A2 667, B1 382, B2 34, C1 5 and VNW(pr,pron) is 6/120/65/8/1 (checked against evidence/sources/nt2lex-basic.tsv), and the SUBTLEX-NL VNW lemma count is 288,286. The N(soort) row is the letter u, not this pronoun, which its tag makes transparent. Prerequisites (S09, S39, support unit 'een') are listed and marked provisional.",
+     "source_ids": [
+      "nt2lex:u",
+      "subtlex:u"
+     ],
+     "proposed_patch": null
+    },
+    "register_pragmatics": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'polite' is correct (en:203 and nl:525 tag it formal; pl:19 calls it 'forma grzecznościowa'), and the example sits in exactly the setting where u is expected, a receptionist addressing a visitor.",
+     "source_ids": [
+      "en:203",
+      "nl:525",
+      "pl:19"
+     ],
+     "proposed_patch": null
+    },
+    "hints_media": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; the audio candidate is 'candidate_not_downloaded' with review 'not_run' (Commons path 0/04 matches the MD5 of 'Nl-u.ogg'), listening is ineligible, and the image is not recommended under a labelled model judgment.",
+     "source_ids": [
+      "en:203"
+     ],
+     "proposed_patch": null
+    }
+   },
+   "overall_verdict": "pass",
+   "unresolved_doubts": []
+  },
+  {
+   "entry_id": "ff49fcaa-a55f-4ff6-bd55-6a1a99535bd9",
+   "fixture_ref": "S06",
+   "content_sha256": "d91103e00c70b461df49d08b87d5167422bc85d8b63c23ac3ddbd9431cc51499",
+   "dimensions": {
+    "sense_scope": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "NL 'De betekenis van iets kunnen volgen.', EN 'understand the meaning' and PL 'rozumieć znaczenie' name the same cognitive sense, which falls under en:1101 sense 0 ('to understand (concepts, ideas), to comprehend'), nl:1330 sense 0 ('met het verstand vatten, snappen') and ODWN begrijpen-v-1 ('samenhang doorzien'). It is kept apart from 'include/encompass' (en:1101 sense 1, nl:1330 senses 1-2, begrijpen-v-3) and empathic understanding of a person (nl:1330 sense 3). The definition is somewhat narrower ('meaning') than the source sense, but the example falls within both, and legacy s202 ('понимать'/'to understand') is a compatible lemma link.",
+     "source_ids": [
+      "en:1101",
+      "nl:1330",
+      "begrijpen-v-1",
+      "begrijpen-v-3",
+      "s202"
+     ],
+     "proposed_patch": null
+    },
+    "dictionary_facts": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "IPA '/bəˈɣrɛi̯pə(n)/' is verbatim from en:1101 /sounds/0 (consistent with nl:1330 and pl:214); every form selector resolves to the claimed surface and tags (begrijpen /forms/3, begrijp /5, begreep /6, begrijpt /16, begreep /17, begrijpen /18, begrepen /19, participle begrepen /27), i.e. strong class 1 with no ge- after the unstressed prefix be-; perfect auxiliary 'hebben' is given by all three ODWN records; non-separable and non-reflexive are correct.",
+     "source_ids": [
+      "en:1101",
+      "nl:1330",
+      "pl:214",
+      "begrijpen-v-1",
+      "begrijpen-v-2",
+      "begrijpen-v-3"
+     ],
+     "proposed_patch": null
+    },
+    "dutch_naturalness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'Ik begrijp het niet.' is idiomatic, high-frequency and in the target sense (it is also the pl:214 example; for a formula this short, independent authoring is plausible, so the 'model_A_original' label is not misleading).",
+     "source_ids": [
+      "pl:214",
+      "nl:1330"
+     ],
+     "proposed_patch": null
+    },
+    "en_pl_translation": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "PL 'Nie rozumiem tego.' is natural (pl:214 renders the same sentence as 'Nie rozumiem.'), and EN 'I do not understand it.' is accurate though stiffer than 'I don't understand (it).'; both keep person, negation and present tense, and the meanings 'understand the meaning'/'rozumieć znaczenie' render the Dutch anchor directly.",
+     "source_ids": [
+      "pl:214",
+      "en:1101"
+     ],
+     "proposed_patch": null
+    },
+    "task_ambiguity": {
+     "verdict": "revise",
+     "severity": "major",
+     "explanation": "In the open cloze 'Ik ___ het niet.' the cue 'understand the meaning' / 'rozumieć znaczenie' admits two kinds of valid answers that only 'begrijp' does not cover. One is 'snap' ('Ik snap het niet.', very common; nl:1330 itself glosses begrijpen with 'snappen'). The other is the past tense 'begreep' ('Ik begreep het niet.'), because the cue does not fix the tense. The cue must state the tense, and 'snap' must be acknowledged without penalty (patch below).",
+     "source_ids": [
+      "nl:1330",
+      "en:1101"
+     ],
+     "proposed_patch": [
+      {
+       "op": "replace",
+       "path": "/examples/0/context/en",
+       "value": "understand the meaning (present tense)"
+      },
+      {
+       "op": "replace",
+       "path": "/examples/0/context/pl",
+       "value": "rozumieć znaczenie (czas teraźniejszy)"
+      },
+      {
+       "op": "add",
+       "path": "/examples/0/accepted_answers/-",
+       "value": {
+        "ordered_segments": [
+         "snap"
+        ],
+        "case_sensitive": false
+       }
+      }
+     ]
+    },
+    "span_form_contract": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The span [3,10) slices exactly 'begrijp', and target_form_ids points to the first-person singular present 'begrijp' (6b80a313, en:1101 /forms/5), which agrees with 'Ik'; begrijpen is inseparable, so one segment covers the whole target.",
+     "source_ids": [
+      "en:1101"
+     ],
+     "proposed_patch": null
+    },
+    "level_usefulness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "A1, priority 6 and core are plausible for a survival phrase: the NT2Lex WW() row is F@A1 23, A2 116, B1 50, B2 13 (checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL WW lemma count is 32,272; prerequisites (S01 'ik', S07 'niet', support unit 'het') are listed and marked provisional.",
+     "source_ids": [
+      "nt2lex:begrijpen",
+      "subtlex:begrijpen"
+     ],
+     "proposed_patch": null
+    },
+    "register_pragmatics": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'neutral' is correct: begrijpen is the standard, register-neutral verb (snappen being the informal one), and 'Ik begrijp het niet.' is appropriate with anyone.",
+     "source_ids": [
+      "nl:1330"
+     ],
+     "proposed_patch": null
+    },
+    "hints_media": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; the audio candidate is 'candidate_not_downloaded' with review 'not_run' (Commons path 8/89 matches the MD5 of 'Nl-begrijpen.ogg'), listening is ineligible, and the image is not recommended under a labelled model judgment.",
+     "source_ids": [
+      "en:1101"
+     ],
+     "proposed_patch": null
+    }
+   },
+   "overall_verdict": "revise",
+   "unresolved_doubts": []
+  },
+  {
+   "entry_id": "fe21dcb7-b84a-4f1d-9893-f87e3334f6a2",
+   "fixture_ref": "S07",
+   "content_sha256": "4aec56a289467737f0d9c189716e1870fb221e0bfeba3fc544a8568990a1605e",
+   "dimensions": {
+    "sense_scope": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "NL 'Een ontkenning uitdrukken.', EN 'not' and PL 'nie' name the negating adverb, matching en:37 sense 0 ('not, no, don't: used to express negation'), nl:458 ('ontkenning, tegenovergestelde van wel') and pl:636 ('nie'); the example negates the clause exactly in that sense, and legacy s882 ('не'/'not') is the same sense. The infinitival NL definition describes the word's function rather than paraphrasing it, which is acceptable for a function word.",
+     "source_ids": [
+      "en:37",
+      "nl:458",
+      "pl:636",
+      "s882"
+     ],
+     "proposed_patch": null
+    },
+    "dictionary_facts": {
+     "verdict": "revise",
+     "severity": "minor",
+     "explanation": "Spelling, POS adv and '/nit/' (en:37 /sounds/0, tag standard; nl:458 'nit') are correct. But the second variant '/ni/' (en:37 /sounds/1) keeps only the tag 'often' and silently drops the source's condition 'for sense “not”; in fast speech', contradicting the provenance note 'no silent normalization'. Without it the reduced [ni] reads like a general alternative pronunciation; the condition should be kept with the variant (patch: as its raw tag).",
+     "source_ids": [
+      "en:37",
+      "nl:458"
+     ],
+     "proposed_patch": [
+      {
+       "op": "replace",
+       "path": "/lexeme/pronunciation/ipa/1/raw_tags",
+       "value": [
+        "for sense “not”; in fast speech"
+       ]
+      }
+     ]
+    },
+    "dutch_naturalness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'Ik begrijp het niet.' is idiomatic, with 'niet' correctly placed after the object pronoun at the end of the clause, negating it in the target sense (cf. 'Dat is niet waar.' in en:37).",
+     "source_ids": [
+      "en:37"
+     ],
+     "proposed_patch": null
+    },
+    "en_pl_translation": {
+     "verdict": "revise",
+     "severity": "minor",
+     "explanation": "The example translations are accurate ('I do not understand it.'; 'Nie rozumiem tego.'). The sense-level learner meanings 'not; negate the statement in this context' and 'nie; zaprzeczenie zdania w tym kontekście' read like a task instruction rather than a meaning: 'in this context' refers to no context on a flashcard. 'negate the statement' is also narrower than the word ('niet ver', 'niet iedereen' negate only a constituent). The PL gloss should still separate this 'nie' from the answer 'nie' (Dutch 'nee'), which 'w zdaniu' does.",
+     "source_ids": [
+      "en:37",
+      "pl:636",
+      "nl:458"
+     ],
+     "proposed_patch": [
+      {
+       "op": "replace",
+       "path": "/sense/meanings/en/0",
+       "value": "not (negation within a sentence)"
+      },
+      {
+       "op": "replace",
+       "path": "/sense/meanings/pl/0",
+       "value": "nie (przeczenie w zdaniu)"
+      }
+     ]
+    },
+    "task_ambiguity": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "In 'Ik begrijp het ___.' with the cue 'not' / 'nie' the only fitting answer is 'niet': 'nooit' and 'wel' contradict the cue, and the Polish learner's trap 'nee' cannot occupy this clause-internal position.",
+     "source_ids": [
+      "en:37",
+      "pl:636"
+     ],
+     "proposed_patch": null
+    },
+    "span_form_contract": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The span [15,19) slices exactly 'niet' from the NFC text and covers the whole invariable target; no form IDs are needed.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "level_usefulness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "A1, priority 7 and core are plausible: the NT2Lex BW() row is F@A1 195, A2 1770, B1 1397, B2 534, C1 33 (checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL BW lemma count is 801,268; prerequisites (S01, S06, support unit 'het') are listed and marked provisional.",
+     "source_ids": [
+      "nt2lex:niet",
+      "subtlex:niet"
+     ],
+     "proposed_patch": null
+    },
+    "register_pragmatics": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'neutral' is correct: 'niet' is unmarked in every register and region.",
+     "source_ids": [
+      "en:37"
+     ],
+     "proposed_patch": null
+    },
+    "hints_media": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Hints repeat the meanings and are labelled meaning_reveal (inside a task, 'in this context' does refer to the sentence), with no invented mnemonic or etymology; the audio candidate is 'candidate_not_downloaded' with review 'not_run' (Commons path c/c8 matches the MD5 of 'Nl-niet.ogg'), listening is ineligible, and the image is not recommended under a labelled model judgment.",
+     "source_ids": [
+      "en:37"
+     ],
+     "proposed_patch": null
+    }
+   },
+   "overall_verdict": "revise",
+   "unresolved_doubts": []
+  },
+  {
+   "entry_id": "86106c24-7587-4f0d-b1b2-3d1e14505a48",
+   "fixture_ref": "S08",
+   "content_sha256": "b318c9578dbd5043b3f158f9ec706b0f66685ecadf47cfe4a711283fd039ca71",
+   "dimensions": {
+    "sense_scope": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "NL 'Een beleefd verzoek om iets nog een keer te zeggen.', EN 'could you repeat that?' and PL 'czy może pan/pani to powtórzyć?' name the same speech act, a polite request for repetition; there is no source sense to match (record_id null), and as reviewer I confirm that the definition, meanings and example agree.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "dictionary_facts": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The entry claims no source-verified facts: the expression is labelled model-authored, IPA is honestly 'missing' (whole-phrase IPA is optional and is recorded as missing) and no forms are listed. Its spelling and grammar are supported by evidence supplied with this batch, though not citable for this entry: the polite 'Kunt u' + infinitive question in nl:525 (S05 packet, https://nl.wiktionary.org/wiki/u: 'Kunt u mij zeggen waar het politiebureau is?') and the lemma 'herhalen' WW() in evidence/sources/nt2lex-basic.tsv. Bookkeeping note for the structural validator: provenance '/forms' says 'source_verified' and '/lexeme/pos' says 'source_tag_mapping' although the entry has no sources.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "dutch_naturalness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'Kunt u dat herhalen?' is idiomatic, polite standard Dutch, with 'kunt' agreeing with 'u' and 'dat' referring back to what was just said; it is the phrase a learner needs at a counter or on the phone.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "en_pl_translation": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "EN 'Could you repeat that?' matches the Dutch request in politeness, and PL 'Czy może pan/pani to powtórzyć?' is natural and direct, rendering u with pan/pani plus a third-person verb and keeping the question form; meanings and example translations are consistent.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "task_ambiguity": {
+     "verdict": "revise",
+     "severity": "major",
+     "explanation": "The span is the whole sentence, so the task is free production from the cue 'could you repeat that?', and only the exact string 'Kunt u dat herhalen' is accepted. Equally valid answers would be marked wrong: 'Zou u dat kunnen herhalen?' (the most literal rendering of 'could'), 'Kunt u het herhalen?', 'Kunt u dat nog een keer zeggen?', 'Wilt u dat herhalen?'. Because the EN cue does not mark formality, even 'Kun je dat herhalen?' fits. The EN cue must say formal, and the close equivalents must be accepted without penalty (patch below). Paraphrases remain possible, so for open production this phrase is better tested by recognition or word-order assembly.",
+     "source_ids": [],
+     "proposed_patch": [
+      {
+       "op": "replace",
+       "path": "/examples/0/context/en",
+       "value": "could you repeat that? (formal)"
+      },
+      {
+       "op": "add",
+       "path": "/examples/0/accepted_answers/-",
+       "value": {
+        "ordered_segments": [
+         "Zou u dat kunnen herhalen"
+        ],
+        "case_sensitive": false
+       }
+      },
+      {
+       "op": "add",
+       "path": "/examples/0/accepted_answers/-",
+       "value": {
+        "ordered_segments": [
+         "Kunt u het herhalen"
+        ],
+        "case_sensitive": false
+       }
+      },
+      {
+       "op": "add",
+       "path": "/examples/0/accepted_answers/-",
+       "value": {
+        "ordered_segments": [
+         "Kunt u dat nog een keer zeggen"
+        ],
+        "case_sensitive": false
+       }
+      }
+     ]
+    },
+    "span_form_contract": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The single span [0,19) slices exactly 'Kunt u dat herhalen' from the NFC text, covering the whole expression and excluding only the question mark; no form IDs are needed for a fixed expression.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "level_usefulness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "A1, priority 8 and core are plausible for a survival formula taught as a chunk, even though NT2Lex first shows 'herhalen' at A2 (F@A2 5, B1 7); frequency is honestly 'missing' rather than imputed. The whole sentence is the target, so no support units are needed.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "register_pragmatics": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'polite' is correct: the u-form request is appropriate with strangers and service staff (adding 'alstublieft' or using 'Zou u ...' would be more polite still), and the PL 'pan/pani' matches that level.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "hints_media": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; there is no audio candidate, listening is ineligible, device TTS is 'not_tested' and phrase IPA is recorded as missing, all stated honestly; the image is not recommended under a labelled model judgment.",
+     "source_ids": [],
+     "proposed_patch": null
+    }
+   },
+   "overall_verdict": "revise",
+   "unresolved_doubts": []
+  },
+  {
+   "entry_id": "d66ba490-4dcc-482e-885b-cf97a000a036",
+   "fixture_ref": "S09",
+   "content_sha256": "69e6418f29bcbefb36d55a7aa4f4bbf19ac9d900f8c51f245a4f249650af858c",
+   "dimensions": {
+    "sense_scope": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "NL 'Iets bezitten of tot je beschikking hebben.', EN 'have; possess or have available' and PL 'mieć; posiadać lub mieć do dyspozycji' name the possession sense, matching en:175 sense 0 ('to have, to possess, own, hold'), nl:56 sense 1 ('bezitten', 'Ik heb een mooi huis.'), pl:469 ('mieć', 'posiadać') and ODWN hebben-v-1 ('bezitten'). It is kept apart from the auxiliary, illness and 'hebben te' senses, and legacy s121 ('иметь'/'to have') is a compatible lemma link.",
+     "source_ids": [
+      "en:175",
+      "nl:56",
+      "pl:469",
+      "hebben-v-1",
+      "s121"
+     ],
+     "proposed_patch": null
+    },
+    "dictionary_facts": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "IPA '/ˈɦɛbə(n)/' is verbatim from en:175 /sounds/0 (identical in nl:56 and nl:57); every form selector resolves to the claimed surface and tags in en:175 (hebben /forms/2, heb /4, had /5, heeft /16, had /17, hebben /18, hadden /19, gehad /27); perfect auxiliary 'hebben' is given by all seven ODWN records; non-separable and non-reflexive are correct. Coverage note, not an error: the second-person 'hebt' (en:175 /forms/6, /forms/9) is not in the selected inventory.",
+     "source_ids": [
+      "en:175",
+      "nl:56",
+      "nl:57",
+      "hebben-v-1",
+      "hebben-v-5"
+     ],
+     "proposed_patch": null
+    },
+    "dutch_naturalness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'Ik heb een fiets.' is idiomatic, everyday Dutch with 'heb' in the possession sense, parallel to the source examples 'Ik heb een mooi huis.' (nl:56) and 'Ik heb een nieuwe auto.' (pl:469).",
+     "source_ids": [
+      "nl:56",
+      "pl:469"
+     ],
+     "proposed_patch": null
+    },
+    "en_pl_translation": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "EN 'I have a bicycle.' and PL 'Mam rower.' (natural pro-drop, as in pl:469 'Mam nowe auto.') are direct and keep person, number and tense; the meanings render the Dutch anchor faithfully.",
+     "source_ids": [
+      "pl:469"
+     ],
+     "proposed_patch": null
+    },
+    "task_ambiguity": {
+     "verdict": "revise",
+     "severity": "major",
+     "explanation": "In 'Ik ___ een fiets.' the cue 'have; possess or have available' / 'mieć; posiadać lub mieć do dyspozycji' does not fix the tense, so 'had' ('Ik had een fiets.') is a valid answer of the same sense that would be marked wrong. The cue's own word 'possess' / 'posiadać' also invites 'bezit' ('Ik bezit een fiets.'), grammatical and literally what the cue says. A cue naming only the head meaning and the tense removes both (patch).",
+     "source_ids": [
+      "en:175",
+      "hebben-v-1"
+     ],
+     "proposed_patch": [
+      {
+       "op": "replace",
+       "path": "/examples/0/context/en",
+       "value": "have (present tense)"
+      },
+      {
+       "op": "replace",
+       "path": "/examples/0/context/pl",
+       "value": "mieć (czas teraźniejszy)"
+      }
+     ]
+    },
+    "span_form_contract": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The span [3,6) slices exactly 'heb', and target_form_ids points to the first-person singular present 'heb' (0293e1eb, en:175 /forms/4), which agrees with 'Ik'; it is one segment with no particle or reflexive.",
+     "source_ids": [
+      "en:175"
+     ],
+     "proposed_patch": null
+    },
+    "level_usefulness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "A1, priority 9 and core are plausible: the NT2Lex WW() row is F@A1 223, A2 2051, B1 1597, B2 553, C1 37 (checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL WW lemma count is 845,402; prerequisites (S01, S29, support unit 'een') are listed and marked provisional. The theme 'home' fits a bicycle loosely, but that is editorial metadata, not a defect.",
+     "source_ids": [
+      "nt2lex:hebben",
+      "subtlex:hebben"
+     ],
+     "proposed_patch": null
+    },
+    "register_pragmatics": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'neutral' is correct: possessive hebben and the example are unmarked in every register and region.",
+     "source_ids": [
+      "en:175"
+     ],
+     "proposed_patch": null
+    },
+    "hints_media": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; the audio candidate is 'candidate_not_downloaded' with review 'not_run' (Commons path a/a1 matches the MD5 of 'Nl-hebben.ogg'), listening is ineligible, and the image is not recommended under a labelled model judgment.",
+     "source_ids": [
+      "en:175"
+     ],
+     "proposed_patch": null
+    }
+   },
+   "overall_verdict": "revise",
+   "unresolved_doubts": []
+  },
+  {
+   "entry_id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+   "fixture_ref": "S10",
+   "content_sha256": "e0ba92254db1c22970dcd427889e48f5537faa66a947b6153c7584fe8d41198e",
+   "dimensions": {
+    "sense_scope": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "NL 'Een gebouw waarin mensen wonen.', EN 'house; building used as a home' and PL 'dom; budynek mieszkalny' name the dwelling sense, matching en:864 sense 0 ('a house, home; residence'), nl:484 sense 0 ('gebouw bestemd om in te wonen') and pl:541 ('dom'). It is kept apart from the dynasty, chamber, casing and horoscope senses, and legacy s267 ('дом'/'house') is the same sense.",
+     "source_ids": [
+      "en:864",
+      "nl:484",
+      "pl:541",
+      "s267"
+     ],
+     "proposed_patch": null
+    },
+    "dictionary_facts": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Article 'het' is supported by the neuter tags in en:864, nl:484 and pl:541 and attested directly ('naar het huis van mijn ouders' in en:864, 'Het huis van Oranje' in nl:484). Plural 'huizen' and diminutive 'huisje' appear in both en:864 and nl:484 and suit this count sense. All four IPA strings are verbatim from en:864 /sounds/0-3 with their Netherlands/Belgium tags. Bookkeeping note: the two noun forms carry no source_selector (they are en:864 /forms/0 and /forms/1).",
+     "source_ids": [
+      "en:864",
+      "nl:484",
+      "pl:541"
+     ],
+     "proposed_patch": null
+    },
+    "dutch_naturalness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'Het huis is klein.' is grammatical and idiomatic, with the correct article and 'huis' in the dwelling sense (cf. 'Zij wonen in een groot huis.' in nl:484).",
+     "source_ids": [
+      "nl:484",
+      "en:864"
+     ],
+     "proposed_patch": null
+    },
+    "en_pl_translation": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "EN 'The house is small.' and PL 'Dom jest mały.' are direct and natural (Polish has no article, and 'mały' agrees with masculine 'dom'); singular number and present tense are kept, and the meanings render the Dutch anchor faithfully.",
+     "source_ids": [
+      "pl:541"
+     ],
+     "proposed_patch": null
+    },
+    "task_ambiguity": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "In 'Het ___ is klein.' the visible 'Het' admits only het-nouns, which already excludes 'woning'. The cue 'house' / 'dom' selects 'huis' over 'gebouw' ('building'), 'appartement' and 'pand', and the case-insensitive single answer 'huis' is gradable. The article stays outside the span, consistent with 'article_scored_separately'.",
+     "source_ids": [
+      "en:864"
+     ],
+     "proposed_patch": null
+    },
+    "span_form_contract": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "The span [4,8) slices exactly 'huis' from the NFC text, covering the singular noun and excluding the separately scored article 'Het'; no form IDs are needed for the base singular.",
+     "source_ids": [],
+     "proposed_patch": null
+    },
+    "level_usefulness": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "A1, priority 10, theme 'home' and core are plausible: the NT2Lex N(soort) row is F@A1 77, A2 232, B1 187, B2 28, C1 3 (checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL N lemma count is 37,139; prerequisites (S02, S26, support unit 'het') are listed and marked provisional.",
+     "source_ids": [
+      "nt2lex:huis",
+      "subtlex:huis"
+     ],
+     "proposed_patch": null
+    },
+    "register_pragmatics": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "'neutral' is correct: 'huis' is the unmarked everyday word in every region, and the pronunciation variants keep their region tags rather than restricting the word.",
+     "source_ids": [
+      "en:864",
+      "nl:484"
+     ],
+     "proposed_patch": null
+    },
+    "hints_media": {
+     "verdict": "pass",
+     "severity": "none",
+     "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; the Netherlands-tagged audio candidate is 'candidate_not_downloaded' with review 'not_run' (Commons path e/e3 matches the MD5 of 'Nl-huis.ogg'), and listening is ineligible. Image suitability 'high'/'single_referent' is plausible for a house, labelled as model judgment and not produced.",
+     "source_ids": [
+      "en:864"
+     ],
+     "proposed_patch": null
+    }
+   },
+   "overall_verdict": "pass",
+   "unresolved_doubts": []
+  }
+ ]
+}

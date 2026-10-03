@@ -1,0 +1,76 @@
+{
+ "entry_id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
+ "fixture_ref": "S03",
+ "content_sha256": "3be060496214ce524f196216fcdaf748fddfcd1474eea246662c2e68a15fa952",
+ "dimensions": {
+  "sense_scope": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "NL 'Van voldoende of gewenste kwaliteit.', EN 'good; satisfactory in quality' and PL 'dobry; zadowalający pod względem jakości' name the same quality sense, matching en:1318 sense 0 ('good (not bad)'), nl:17 sense 0 ('kwaliteit bezittend, aan verwachtingen voldoend') and pl:582 sense 0 ('dobry'); it is kept apart from 'correct' (en:1318 sense 1) and 'all right' (sense 2), and legacy s353 ('хороший'/'good') is the same sense.",
+   "source_ids": ["en:1318", "nl:17", "pl:582", "s353"],
+   "proposed_patch": null
+  },
+  "dictionary_facts": {
+   "verdict": "revise",
+   "severity": "minor",
+   "explanation": "IPA '/ɣut/' is verbatim from en:1318 /sounds/0 (nl:17 'ɣut'), and the irregular comparison beter/best, inflected goede/betere/beste and partitive goeds/beters all resolve correctly to en:1318 /forms/0-21. But draft /forms/20 (4007bceb) records the surface '-' as a source_verified form: in en:1318 /forms/22 the '-' is a table placeholder meaning the partitive superlative does not exist, so it is not an attested surface and should be removed (or recorded as absent) rather than listed as a verified form.",
+   "source_ids": ["en:1318", "nl:17"],
+   "proposed_patch": [
+    {"op": "remove", "path": "/forms/20"}
+   ]
+  },
+  "dutch_naturalness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'Het brood is goed.' is grammatical and idiomatic as a quality judgement (or 'still fine to eat'), with 'goed' as a predicative adjective in the target sense; for taste alone Dutch would rather say 'lekker', but the quality reading is natural and matches the definition.",
+   "source_ids": ["en:1318", "nl:17"],
+   "proposed_patch": null
+  },
+  "en_pl_translation": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "EN 'The bread is good.' and PL 'Chleb jest dobry.' are direct, natural and keep number and tense (the Polish predicative adjective correctly agrees with masculine 'chleb'); the learner meanings 'good; satisfactory in quality' and 'dobry; zadowalający pod względem jakości' render the Dutch anchor faithfully.",
+   "source_ids": ["pl:582"],
+   "proposed_patch": null
+  },
+  "task_ambiguity": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "For 'Het brood is ___.' the cue 'good; satisfactory in quality' / 'dobry; ...' has 'goed' as its direct equivalent; near-synonyms that fit the frame mean something else ('lekker' tasty, 'prima' excellent, 'vers' fresh) and are excluded by the cue's head word, and as a predicative adjective 'goed' has no competing inflected form.",
+   "source_ids": ["en:1318"],
+   "proposed_patch": null
+  },
+  "span_form_contract": {
+   "verdict": "revise",
+   "severity": "minor",
+   "explanation": "The span [13,17) slices exactly 'goed' and the first target form (cafedea7, adverbial/positive/predicative, en:1318 /forms/4) is right. The second target form (ca8c7e30, indefinite neuter singular, en:1318 /forms/11) is the attributive cell of 'een goed brood' and does not apply here: after the copula a Dutch adjective is predicative and never agrees, and 'het brood' is definite anyway. Listing it would let form tasks or grammar explanations attach wrong features to this sentence.",
+   "source_ids": ["en:1318"],
+   "proposed_patch": [
+    {"op": "remove", "path": "/examples/0/target_form_ids/1"}
+   ]
+  },
+  "level_usefulness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "A1, priority 3 and core are plausible: the NT2Lex ADJ() row is F@A1 75, A2 596, B1 397, B2 162, C1 7 (checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL ADJ lemma count is 219,524; the N(soort) row belongs to the noun homograph 'goed' ('goods, property') and is not evidence for this sense, which its tag makes transparent. Prerequisites (S02, S20, support unit 'het') are listed and marked provisional.",
+   "source_ids": ["nt2lex:goed", "subtlex:goed"],
+   "proposed_patch": null
+  },
+  "register_pragmatics": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'neutral' is correct: 'goed' as a quality adjective is unmarked in every register and region, and the example has no social implication.",
+   "source_ids": ["en:1318"],
+   "proposed_patch": null
+  },
+  "hints_media": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; both audio candidates keep their region tags (Belgium, Netherlands), are 'candidate_not_downloaded' with review 'not_run', and their Commons paths (c/cb, 1/10) match the MD5 of the decoded filenames; listening is ineligible and the image is not recommended under a labelled model judgment.",
+   "source_ids": ["en:1318"],
+   "proposed_patch": null
+  }
+ },
+ "overall_verdict": "revise",
+ "unresolved_doubts": []
+}

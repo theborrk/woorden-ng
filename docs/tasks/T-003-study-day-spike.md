@@ -1,7 +1,7 @@
 ---
 id: T-003
 title: Choose the Temporal implementation and prove the study-day policy on fixtures
-status: todo
+status: done
 size: S
 depends_on: []
 type: task
@@ -36,17 +36,17 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a 06:00 boundary in Europe/Amsterdam, when a one-study-day review happens at 01:00
+- [x] AC1: Given a 06:00 boundary in Europe/Amsterdam, when a one-study-day review happens at 01:00
       on 2 October 2026, then its study date is 1 October and it becomes eligible at 07:00 on 2
       October (six-hour gap), never on 3 October (section 12.3) (unit)
-- [ ] AC2: Given the same settings, when the review happens at 23:50 on 1 October, then it becomes
+- [x] AC2: Given the same settings, when the review happens at 23:50 on 1 October, then it becomes
       eligible at 06:00 on 2 October (section 12.3) (unit)
-- [ ] AC3: Given the March and October 2026 DST changes in Europe/Amsterdam, when instants around the
+- [x] AC3: Given the March and October 2026 DST changes in Europe/Amsterdam, when instants around the
       boundary are mapped, then every instant has exactly one study date and the 23- and 25-hour
       days produce no gaps or duplicates; nonexistent and ambiguous boundary times resolve as
       documented (unit)
-- [ ] AC4: Given 28 February to 1 March 2028, then 29 February is a study date of its own (unit)
-- [ ] AC5: No code path computes "tomorrow" by adding 86,400,000 ms (unit or lint rule, plus review)
+- [x] AC4: Given 28 February to 1 March 2028, then 29 February is a study date of its own (unit)
+- [x] AC5: No code path computes "tomorrow" by adding 86,400,000 ms (unit or lint rule, plus review)
 
 ## Notes for the implementer
 

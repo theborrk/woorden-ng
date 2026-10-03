@@ -1,0 +1,1212 @@
+{
+  "engine": "v5.4.2 using FSRS-6.0",
+  "parameters": {
+    "request_retention": 0.9,
+    "maximum_interval": 365,
+    "w": [
+      0.212, 1.2931, 2.3065, 8.2956, 6.4133, 0.8334, 3.0194, 0.001, 1.8722, 0.1666, 0.796, 1.4835,
+      0.0614, 0.2629, 1.6483, 0.6014, 1.8729, 0.5425, 0.0912, 0.0658, 0.1542
+    ],
+    "enable_fuzz": false,
+    "enable_short_term": true,
+    "learning_steps": ["1m", "10m"],
+    "relearning_steps": ["1m", "10m"]
+  },
+  "cases": [
+    {
+      "name": "new",
+      "at": "2026-01-01T12:00:00.000Z",
+      "card": {
+        "due": "2026-01-01T12:00:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsed_days": 0,
+        "scheduled_days": 0,
+        "reps": 0,
+        "lapses": 0,
+        "learning_steps": 0,
+        "state": "New"
+      },
+      "ratings": {
+        "Again": {
+          "card": {
+            "due": "2026-01-01T12:01:00.000Z",
+            "stability": 0.212,
+            "difficulty": 6.4133,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 1,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Learning",
+            "last_review": "2026-01-01T12:00:00.000Z"
+          },
+          "log": {
+            "rating": "Again",
+            "state": "New",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 0,
+            "difficulty": 0,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-01-01T12:00:00.000Z"
+          }
+        },
+        "Hard": {
+          "card": {
+            "due": "2026-01-01T12:06:00.000Z",
+            "stability": 1.2931,
+            "difficulty": 5.11217071,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 1,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Learning",
+            "last_review": "2026-01-01T12:00:00.000Z"
+          },
+          "log": {
+            "rating": "Hard",
+            "state": "New",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 0,
+            "difficulty": 0,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-01-01T12:00:00.000Z"
+          }
+        },
+        "Good": {
+          "card": {
+            "due": "2026-01-01T12:10:00.000Z",
+            "stability": 2.3065,
+            "difficulty": 2.11810397,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 1,
+            "lapses": 0,
+            "learning_steps": 1,
+            "state": "Learning",
+            "last_review": "2026-01-01T12:00:00.000Z"
+          },
+          "log": {
+            "rating": "Good",
+            "state": "New",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 0,
+            "difficulty": 0,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-01-01T12:00:00.000Z"
+          }
+        },
+        "Easy": {
+          "card": {
+            "due": "2026-01-09T12:00:00.000Z",
+            "stability": 8.2956,
+            "difficulty": 1,
+            "elapsed_days": 0,
+            "scheduled_days": 8,
+            "reps": 1,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2026-01-01T12:00:00.000Z"
+          },
+          "log": {
+            "rating": "Easy",
+            "state": "New",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 0,
+            "difficulty": 0,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-01-01T12:00:00.000Z"
+          }
+        }
+      }
+    },
+    {
+      "name": "learning-step-0",
+      "at": "2026-01-01T12:01:00.000Z",
+      "card": {
+        "due": "2026-01-01T12:01:00.000Z",
+        "stability": 0.212,
+        "difficulty": 6.4133,
+        "elapsed_days": 0,
+        "scheduled_days": 0,
+        "reps": 1,
+        "lapses": 0,
+        "learning_steps": 0,
+        "state": "Learning",
+        "last_review": "2026-01-01T12:00:00.000Z"
+      },
+      "ratings": {
+        "Again": {
+          "card": {
+            "due": "2026-01-01T12:02:00.000Z",
+            "stability": 0.08335672,
+            "difficulty": 8.80630447,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 2,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Learning",
+            "last_review": "2026-01-01T12:01:00.000Z"
+          },
+          "log": {
+            "rating": "Again",
+            "state": "Learning",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 0.212,
+            "difficulty": 6.4133,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-01-01T12:01:00.000Z"
+          }
+        },
+        "Hard": {
+          "card": {
+            "due": "2026-01-01T12:07:00.000Z",
+            "stability": 0.212,
+            "difficulty": 7.60420977,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 2,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Learning",
+            "last_review": "2026-01-01T12:01:00.000Z"
+          },
+          "log": {
+            "rating": "Hard",
+            "state": "Learning",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 0.212,
+            "difficulty": 6.4133,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-01-01T12:01:00.000Z"
+          }
+        },
+        "Good": {
+          "card": {
+            "due": "2026-01-01T12:11:00.000Z",
+            "stability": 0.24668919,
+            "difficulty": 6.40211507,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 2,
+            "lapses": 0,
+            "learning_steps": 1,
+            "state": "Learning",
+            "last_review": "2026-01-01T12:01:00.000Z"
+          },
+          "log": {
+            "rating": "Good",
+            "state": "Learning",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 0.212,
+            "difficulty": 6.4133,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-01-01T12:01:00.000Z"
+          }
+        },
+        "Easy": {
+          "card": {
+            "due": "2026-01-02T12:01:00.000Z",
+            "stability": 0.42437996,
+            "difficulty": 5.20002037,
+            "elapsed_days": 0,
+            "scheduled_days": 1,
+            "reps": 2,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2026-01-01T12:01:00.000Z"
+          },
+          "log": {
+            "rating": "Easy",
+            "state": "Learning",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 0.212,
+            "difficulty": 6.4133,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-01-01T12:01:00.000Z"
+          }
+        }
+      }
+    },
+    {
+      "name": "learning-step-1",
+      "at": "2026-01-01T12:10:00.000Z",
+      "card": {
+        "due": "2026-01-01T12:10:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsed_days": 0,
+        "scheduled_days": 0,
+        "reps": 1,
+        "lapses": 0,
+        "learning_steps": 1,
+        "state": "Learning",
+        "last_review": "2026-01-01T12:00:00.000Z"
+      },
+      "ratings": {
+        "Again": {
+          "card": {
+            "due": "2026-01-01T12:11:00.000Z",
+            "stability": 0.77508398,
+            "difficulty": 7.39450274,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 2,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Learning",
+            "last_review": "2026-01-01T12:10:00.000Z"
+          },
+          "log": {
+            "rating": "Again",
+            "state": "Learning",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 2.3065,
+            "difficulty": 2.11810397,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 1,
+            "review": "2026-01-01T12:10:00.000Z"
+          }
+        },
+        "Hard": {
+          "card": {
+            "due": "2026-01-01T12:16:00.000Z",
+            "stability": 2.3065,
+            "difficulty": 4.75285849,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 2,
+            "lapses": 0,
+            "learning_steps": 1,
+            "state": "Learning",
+            "last_review": "2026-01-01T12:10:00.000Z"
+          },
+          "log": {
+            "rating": "Hard",
+            "state": "Learning",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 2.3065,
+            "difficulty": 2.11810397,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 1,
+            "review": "2026-01-01T12:10:00.000Z"
+          }
+        },
+        "Good": {
+          "card": {
+            "due": "2026-01-03T12:10:00.000Z",
+            "stability": 2.3065,
+            "difficulty": 2.11121424,
+            "elapsed_days": 0,
+            "scheduled_days": 2,
+            "reps": 2,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2026-01-01T12:10:00.000Z"
+          },
+          "log": {
+            "rating": "Good",
+            "state": "Learning",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 2.3065,
+            "difficulty": 2.11810397,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 1,
+            "review": "2026-01-01T12:10:00.000Z"
+          }
+        },
+        "Easy": {
+          "card": {
+            "due": "2026-01-05T12:10:00.000Z",
+            "stability": 3.94605407,
+            "difficulty": 1,
+            "elapsed_days": 0,
+            "scheduled_days": 4,
+            "reps": 2,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2026-01-01T12:10:00.000Z"
+          },
+          "log": {
+            "rating": "Easy",
+            "state": "Learning",
+            "due": "2026-01-01T12:00:00.000Z",
+            "stability": 2.3065,
+            "difficulty": 2.11810397,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 1,
+            "review": "2026-01-01T12:10:00.000Z"
+          }
+        }
+      }
+    },
+    {
+      "name": "review-after-several-reviews",
+      "at": "2026-07-11T12:10:00.000Z",
+      "card": {
+        "due": "2026-07-11T12:10:00.000Z",
+        "stability": 145.72543096,
+        "difficulty": 2.97253869,
+        "elapsed_days": 32,
+        "scheduled_days": 146,
+        "reps": 5,
+        "lapses": 0,
+        "learning_steps": 0,
+        "state": "Review",
+        "last_review": "2026-02-15T12:10:00.000Z"
+      },
+      "ratings": {
+        "Again": {
+          "card": {
+            "due": "2026-07-11T12:11:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.67534962,
+            "elapsed_days": 146,
+            "scheduled_days": 0,
+            "reps": 6,
+            "lapses": 1,
+            "learning_steps": 0,
+            "state": "Relearning",
+            "last_review": "2026-07-11T12:10:00.000Z"
+          },
+          "log": {
+            "rating": "Again",
+            "state": "Review",
+            "due": "2026-02-15T12:10:00.000Z",
+            "stability": 145.72543096,
+            "difficulty": 2.97253869,
+            "elapsed_days": 146,
+            "last_elapsed_days": 32,
+            "scheduled_days": 146,
+            "learning_steps": 0,
+            "review": "2026-07-11T12:10:00.000Z"
+          }
+        },
+        "Hard": {
+          "card": {
+            "due": "2027-05-18T12:10:00.000Z",
+            "stability": 311.2318773,
+            "difficulty": 5.32007208,
+            "elapsed_days": 146,
+            "scheduled_days": 311,
+            "reps": 6,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2026-07-11T12:10:00.000Z"
+          },
+          "log": {
+            "rating": "Hard",
+            "state": "Review",
+            "due": "2026-02-15T12:10:00.000Z",
+            "stability": 145.72543096,
+            "difficulty": 2.97253869,
+            "elapsed_days": 146,
+            "last_elapsed_days": 32,
+            "scheduled_days": 146,
+            "learning_steps": 0,
+            "review": "2026-07-11T12:10:00.000Z"
+          }
+        },
+        "Good": {
+          "card": {
+            "due": "2027-07-11T12:10:00.000Z",
+            "stability": 420.92737033,
+            "difficulty": 2.96479452,
+            "elapsed_days": 146,
+            "scheduled_days": 365,
+            "reps": 6,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2026-07-11T12:10:00.000Z"
+          },
+          "log": {
+            "rating": "Good",
+            "state": "Review",
+            "due": "2026-02-15T12:10:00.000Z",
+            "stability": 145.72543096,
+            "difficulty": 2.97253869,
+            "elapsed_days": 146,
+            "last_elapsed_days": 32,
+            "scheduled_days": 146,
+            "learning_steps": 0,
+            "review": "2026-07-11T12:10:00.000Z"
+          }
+        },
+        "Easy": {
+          "card": {
+            "due": "2027-07-12T12:10:00.000Z",
+            "stability": 661.15114321,
+            "difficulty": 1,
+            "elapsed_days": 146,
+            "scheduled_days": 366,
+            "reps": 6,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2026-07-11T12:10:00.000Z"
+          },
+          "log": {
+            "rating": "Easy",
+            "state": "Review",
+            "due": "2026-02-15T12:10:00.000Z",
+            "stability": 145.72543096,
+            "difficulty": 2.97253869,
+            "elapsed_days": 146,
+            "last_elapsed_days": 32,
+            "scheduled_days": 146,
+            "learning_steps": 0,
+            "review": "2026-07-11T12:10:00.000Z"
+          }
+        }
+      }
+    },
+    {
+      "name": "relearning-step-0",
+      "at": "2026-07-11T12:11:00.000Z",
+      "card": {
+        "due": "2026-07-11T12:11:00.000Z",
+        "stability": 4.4377052,
+        "difficulty": 7.67534962,
+        "elapsed_days": 146,
+        "scheduled_days": 0,
+        "reps": 6,
+        "lapses": 1,
+        "learning_steps": 0,
+        "state": "Relearning",
+        "last_review": "2026-07-11T12:10:00.000Z"
+      },
+      "ratings": {
+        "Again": {
+          "card": {
+            "due": "2026-07-11T12:12:00.000Z",
+            "stability": 1.4284106,
+            "difficulty": 9.2211316,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 7,
+            "lapses": 1,
+            "learning_steps": 0,
+            "state": "Relearning",
+            "last_review": "2026-07-11T12:11:00.000Z"
+          },
+          "log": {
+            "rating": "Again",
+            "state": "Relearning",
+            "due": "2026-07-11T12:10:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.67534962,
+            "elapsed_days": 0,
+            "last_elapsed_days": 146,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-07-11T12:11:00.000Z"
+          }
+        },
+        "Hard": {
+          "card": {
+            "due": "2026-07-11T12:17:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 8.44201712,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 7,
+            "lapses": 1,
+            "learning_steps": 0,
+            "state": "Relearning",
+            "last_review": "2026-07-11T12:11:00.000Z"
+          },
+          "log": {
+            "rating": "Hard",
+            "state": "Relearning",
+            "due": "2026-07-11T12:10:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.67534962,
+            "elapsed_days": 0,
+            "last_elapsed_days": 146,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-07-11T12:11:00.000Z"
+          }
+        },
+        "Good": {
+          "card": {
+            "due": "2026-07-11T12:21:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.66290264,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 7,
+            "lapses": 1,
+            "learning_steps": 1,
+            "state": "Relearning",
+            "last_review": "2026-07-11T12:11:00.000Z"
+          },
+          "log": {
+            "rating": "Good",
+            "state": "Relearning",
+            "due": "2026-07-11T12:10:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.67534962,
+            "elapsed_days": 0,
+            "last_elapsed_days": 146,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-07-11T12:11:00.000Z"
+          }
+        },
+        "Easy": {
+          "card": {
+            "due": "2026-07-18T12:11:00.000Z",
+            "stability": 7.27222542,
+            "difficulty": 6.88378816,
+            "elapsed_days": 0,
+            "scheduled_days": 7,
+            "reps": 7,
+            "lapses": 1,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2026-07-11T12:11:00.000Z"
+          },
+          "log": {
+            "rating": "Easy",
+            "state": "Relearning",
+            "due": "2026-07-11T12:10:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.67534962,
+            "elapsed_days": 0,
+            "last_elapsed_days": 146,
+            "scheduled_days": 0,
+            "learning_steps": 0,
+            "review": "2026-07-11T12:11:00.000Z"
+          }
+        }
+      }
+    },
+    {
+      "name": "relearning-step-1",
+      "at": "2026-07-11T12:21:00.000Z",
+      "card": {
+        "due": "2026-07-11T12:21:00.000Z",
+        "stability": 4.4377052,
+        "difficulty": 7.66290264,
+        "elapsed_days": 0,
+        "scheduled_days": 0,
+        "reps": 7,
+        "lapses": 1,
+        "learning_steps": 1,
+        "state": "Relearning",
+        "last_review": "2026-07-11T12:11:00.000Z"
+      },
+      "ratings": {
+        "Again": {
+          "card": {
+            "due": "2026-07-11T12:22:00.000Z",
+            "stability": 1.4284106,
+            "difficulty": 9.21704036,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 8,
+            "lapses": 1,
+            "learning_steps": 0,
+            "state": "Relearning",
+            "last_review": "2026-07-11T12:21:00.000Z"
+          },
+          "log": {
+            "rating": "Again",
+            "state": "Relearning",
+            "due": "2026-07-11T12:11:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.66290264,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 1,
+            "review": "2026-07-11T12:21:00.000Z"
+          }
+        },
+        "Hard": {
+          "card": {
+            "due": "2026-07-11T12:27:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 8.43375424,
+            "elapsed_days": 0,
+            "scheduled_days": 0,
+            "reps": 8,
+            "lapses": 1,
+            "learning_steps": 1,
+            "state": "Relearning",
+            "last_review": "2026-07-11T12:21:00.000Z"
+          },
+          "log": {
+            "rating": "Hard",
+            "state": "Relearning",
+            "due": "2026-07-11T12:11:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.66290264,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 1,
+            "review": "2026-07-11T12:21:00.000Z"
+          }
+        },
+        "Good": {
+          "card": {
+            "due": "2026-07-15T12:21:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.65046811,
+            "elapsed_days": 0,
+            "scheduled_days": 4,
+            "reps": 8,
+            "lapses": 1,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2026-07-11T12:21:00.000Z"
+          },
+          "log": {
+            "rating": "Good",
+            "state": "Relearning",
+            "due": "2026-07-11T12:11:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.66290264,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 1,
+            "review": "2026-07-11T12:21:00.000Z"
+          }
+        },
+        "Easy": {
+          "card": {
+            "due": "2026-07-18T12:21:00.000Z",
+            "stability": 7.27222542,
+            "difficulty": 6.86718198,
+            "elapsed_days": 0,
+            "scheduled_days": 7,
+            "reps": 8,
+            "lapses": 1,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2026-07-11T12:21:00.000Z"
+          },
+          "log": {
+            "rating": "Easy",
+            "state": "Relearning",
+            "due": "2026-07-11T12:11:00.000Z",
+            "stability": 4.4377052,
+            "difficulty": 7.66290264,
+            "elapsed_days": 0,
+            "last_elapsed_days": 0,
+            "scheduled_days": 0,
+            "learning_steps": 1,
+            "review": "2026-07-11T12:21:00.000Z"
+          }
+        }
+      }
+    },
+    {
+      "name": "review-at-maximum",
+      "at": "2027-03-16T12:00:00.000Z",
+      "card": {
+        "due": "2027-03-16T12:00:00.000Z",
+        "stability": 396.77501923,
+        "difficulty": 1,
+        "elapsed_days": 66,
+        "scheduled_days": 365,
+        "reps": 3,
+        "lapses": 0,
+        "learning_steps": 0,
+        "state": "Review",
+        "last_review": "2026-03-16T12:00:00.000Z"
+      },
+      "ratings": {
+        "Again": {
+          "card": {
+            "due": "2027-03-16T12:01:00.000Z",
+            "stability": 6.62836096,
+            "difficulty": 7.02698957,
+            "elapsed_days": 365,
+            "scheduled_days": 0,
+            "reps": 4,
+            "lapses": 1,
+            "learning_steps": 0,
+            "state": "Relearning",
+            "last_review": "2027-03-16T12:00:00.000Z"
+          },
+          "log": {
+            "rating": "Again",
+            "state": "Review",
+            "due": "2026-03-16T12:00:00.000Z",
+            "stability": 396.77501923,
+            "difficulty": 1,
+            "elapsed_days": 365,
+            "last_elapsed_days": 66,
+            "scheduled_days": 365,
+            "learning_steps": 0,
+            "review": "2027-03-16T12:00:00.000Z"
+          }
+        },
+        "Hard": {
+          "card": {
+            "due": "2028-03-15T12:00:00.000Z",
+            "stability": 843.49009505,
+            "difficulty": 4.01060897,
+            "elapsed_days": 365,
+            "scheduled_days": 365,
+            "reps": 4,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2027-03-16T12:00:00.000Z"
+          },
+          "log": {
+            "rating": "Hard",
+            "state": "Review",
+            "due": "2026-03-16T12:00:00.000Z",
+            "stability": 396.77501923,
+            "difficulty": 1,
+            "elapsed_days": 365,
+            "last_elapsed_days": 66,
+            "scheduled_days": 365,
+            "learning_steps": 0,
+            "review": "2027-03-16T12:00:00.000Z"
+          }
+        },
+        "Good": {
+          "card": {
+            "due": "2028-03-16T12:00:00.000Z",
+            "stability": 1139.56696438,
+            "difficulty": 1,
+            "elapsed_days": 365,
+            "scheduled_days": 366,
+            "reps": 4,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2027-03-16T12:00:00.000Z"
+          },
+          "log": {
+            "rating": "Good",
+            "state": "Review",
+            "due": "2026-03-16T12:00:00.000Z",
+            "stability": 396.77501923,
+            "difficulty": 1,
+            "elapsed_days": 365,
+            "last_elapsed_days": 66,
+            "scheduled_days": 365,
+            "learning_steps": 0,
+            "review": "2027-03-16T12:00:00.000Z"
+          }
+        },
+        "Easy": {
+          "card": {
+            "due": "2028-03-17T12:00:00.000Z",
+            "stability": 1787.95005331,
+            "difficulty": 1,
+            "elapsed_days": 365,
+            "scheduled_days": 367,
+            "reps": 4,
+            "lapses": 0,
+            "learning_steps": 0,
+            "state": "Review",
+            "last_review": "2027-03-16T12:00:00.000Z"
+          },
+          "log": {
+            "rating": "Easy",
+            "state": "Review",
+            "due": "2026-03-16T12:00:00.000Z",
+            "stability": 396.77501923,
+            "difficulty": 1,
+            "elapsed_days": 365,
+            "last_elapsed_days": 66,
+            "scheduled_days": 365,
+            "learning_steps": 0,
+            "review": "2027-03-16T12:00:00.000Z"
+          }
+        }
+      }
+    }
+  ],
+  "traces": [
+    {
+      "name": "learning-reviews-lapse-relearning",
+      "steps": [
+        {
+          "at": "2026-01-01T12:00:00.000Z",
+          "rating": "Good",
+          "result": {
+            "card": {
+              "due": "2026-01-01T12:10:00.000Z",
+              "stability": 2.3065,
+              "difficulty": 2.11810397,
+              "elapsed_days": 0,
+              "scheduled_days": 0,
+              "reps": 1,
+              "lapses": 0,
+              "learning_steps": 1,
+              "state": "Learning",
+              "last_review": "2026-01-01T12:00:00.000Z"
+            },
+            "log": {
+              "rating": "Good",
+              "state": "New",
+              "due": "2026-01-01T12:00:00.000Z",
+              "stability": 0,
+              "difficulty": 0,
+              "elapsed_days": 0,
+              "last_elapsed_days": 0,
+              "scheduled_days": 0,
+              "learning_steps": 0,
+              "review": "2026-01-01T12:00:00.000Z"
+            }
+          }
+        },
+        {
+          "at": "2026-01-01T12:10:00.000Z",
+          "rating": "Good",
+          "result": {
+            "card": {
+              "due": "2026-01-03T12:10:00.000Z",
+              "stability": 2.3065,
+              "difficulty": 2.11121424,
+              "elapsed_days": 0,
+              "scheduled_days": 2,
+              "reps": 2,
+              "lapses": 0,
+              "learning_steps": 0,
+              "state": "Review",
+              "last_review": "2026-01-01T12:10:00.000Z"
+            },
+            "log": {
+              "rating": "Good",
+              "state": "Learning",
+              "due": "2026-01-01T12:00:00.000Z",
+              "stability": 2.3065,
+              "difficulty": 2.11810397,
+              "elapsed_days": 0,
+              "last_elapsed_days": 0,
+              "scheduled_days": 0,
+              "learning_steps": 1,
+              "review": "2026-01-01T12:10:00.000Z"
+            }
+          }
+        },
+        {
+          "at": "2026-01-03T12:10:00.000Z",
+          "rating": "Good",
+          "result": {
+            "card": {
+              "due": "2026-01-14T12:10:00.000Z",
+              "stability": 10.97104786,
+              "difficulty": 2.1043314,
+              "elapsed_days": 2,
+              "scheduled_days": 11,
+              "reps": 3,
+              "lapses": 0,
+              "learning_steps": 0,
+              "state": "Review",
+              "last_review": "2026-01-03T12:10:00.000Z"
+            },
+            "log": {
+              "rating": "Good",
+              "state": "Review",
+              "due": "2026-01-01T12:10:00.000Z",
+              "stability": 2.3065,
+              "difficulty": 2.11121424,
+              "elapsed_days": 2,
+              "last_elapsed_days": 0,
+              "scheduled_days": 2,
+              "learning_steps": 0,
+              "review": "2026-01-03T12:10:00.000Z"
+            }
+          }
+        },
+        {
+          "at": "2026-01-14T12:10:00.000Z",
+          "rating": "Hard",
+          "result": {
+            "card": {
+              "due": "2026-02-15T12:10:00.000Z",
+              "stability": 32.22801722,
+              "difficulty": 4.74371562,
+              "elapsed_days": 11,
+              "scheduled_days": 32,
+              "reps": 4,
+              "lapses": 0,
+              "learning_steps": 0,
+              "state": "Review",
+              "last_review": "2026-01-14T12:10:00.000Z"
+            },
+            "log": {
+              "rating": "Hard",
+              "state": "Review",
+              "due": "2026-01-03T12:10:00.000Z",
+              "stability": 10.97104786,
+              "difficulty": 2.1043314,
+              "elapsed_days": 11,
+              "last_elapsed_days": 2,
+              "scheduled_days": 11,
+              "learning_steps": 0,
+              "review": "2026-01-14T12:10:00.000Z"
+            }
+          }
+        },
+        {
+          "at": "2026-02-15T12:10:00.000Z",
+          "rating": "Easy",
+          "result": {
+            "card": {
+              "due": "2026-07-11T12:10:00.000Z",
+              "stability": 145.72543096,
+              "difficulty": 2.97253869,
+              "elapsed_days": 32,
+              "scheduled_days": 146,
+              "reps": 5,
+              "lapses": 0,
+              "learning_steps": 0,
+              "state": "Review",
+              "last_review": "2026-02-15T12:10:00.000Z"
+            },
+            "log": {
+              "rating": "Easy",
+              "state": "Review",
+              "due": "2026-01-14T12:10:00.000Z",
+              "stability": 32.22801722,
+              "difficulty": 4.74371562,
+              "elapsed_days": 32,
+              "last_elapsed_days": 11,
+              "scheduled_days": 32,
+              "learning_steps": 0,
+              "review": "2026-02-15T12:10:00.000Z"
+            }
+          }
+        },
+        {
+          "at": "2026-07-11T12:10:00.000Z",
+          "rating": "Again",
+          "result": {
+            "card": {
+              "due": "2026-07-11T12:11:00.000Z",
+              "stability": 4.4377052,
+              "difficulty": 7.67534962,
+              "elapsed_days": 146,
+              "scheduled_days": 0,
+              "reps": 6,
+              "lapses": 1,
+              "learning_steps": 0,
+              "state": "Relearning",
+              "last_review": "2026-07-11T12:10:00.000Z"
+            },
+            "log": {
+              "rating": "Again",
+              "state": "Review",
+              "due": "2026-02-15T12:10:00.000Z",
+              "stability": 145.72543096,
+              "difficulty": 2.97253869,
+              "elapsed_days": 146,
+              "last_elapsed_days": 32,
+              "scheduled_days": 146,
+              "learning_steps": 0,
+              "review": "2026-07-11T12:10:00.000Z"
+            }
+          }
+        },
+        {
+          "at": "2026-07-11T12:11:00.000Z",
+          "rating": "Good",
+          "result": {
+            "card": {
+              "due": "2026-07-11T12:21:00.000Z",
+              "stability": 4.4377052,
+              "difficulty": 7.66290264,
+              "elapsed_days": 0,
+              "scheduled_days": 0,
+              "reps": 7,
+              "lapses": 1,
+              "learning_steps": 1,
+              "state": "Relearning",
+              "last_review": "2026-07-11T12:11:00.000Z"
+            },
+            "log": {
+              "rating": "Good",
+              "state": "Relearning",
+              "due": "2026-07-11T12:10:00.000Z",
+              "stability": 4.4377052,
+              "difficulty": 7.67534962,
+              "elapsed_days": 0,
+              "last_elapsed_days": 146,
+              "scheduled_days": 0,
+              "learning_steps": 0,
+              "review": "2026-07-11T12:11:00.000Z"
+            }
+          }
+        },
+        {
+          "at": "2026-07-11T12:21:00.000Z",
+          "rating": "Good",
+          "result": {
+            "card": {
+              "due": "2026-07-15T12:21:00.000Z",
+              "stability": 4.4377052,
+              "difficulty": 7.65046811,
+              "elapsed_days": 0,
+              "scheduled_days": 4,
+              "reps": 8,
+              "lapses": 1,
+              "learning_steps": 0,
+              "state": "Review",
+              "last_review": "2026-07-11T12:21:00.000Z"
+            },
+            "log": {
+              "rating": "Good",
+              "state": "Relearning",
+              "due": "2026-07-11T12:11:00.000Z",
+              "stability": 4.4377052,
+              "difficulty": 7.66290264,
+              "elapsed_days": 0,
+              "last_elapsed_days": 0,
+              "scheduled_days": 0,
+              "learning_steps": 1,
+              "review": "2026-07-11T12:21:00.000Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "easy-reviews-reach-maximum",
+      "steps": [
+        {
+          "at": "2026-01-01T12:00:00.000Z",
+          "rating": "Easy",
+          "result": {
+            "card": {
+              "due": "2026-01-09T12:00:00.000Z",
+              "stability": 8.2956,
+              "difficulty": 1,
+              "elapsed_days": 0,
+              "scheduled_days": 8,
+              "reps": 1,
+              "lapses": 0,
+              "learning_steps": 0,
+              "state": "Review",
+              "last_review": "2026-01-01T12:00:00.000Z"
+            },
+            "log": {
+              "rating": "Easy",
+              "state": "New",
+              "due": "2026-01-01T12:00:00.000Z",
+              "stability": 0,
+              "difficulty": 0,
+              "elapsed_days": 0,
+              "last_elapsed_days": 0,
+              "scheduled_days": 0,
+              "learning_steps": 0,
+              "review": "2026-01-01T12:00:00.000Z"
+            }
+          }
+        },
+        {
+          "at": "2026-01-09T12:00:00.000Z",
+          "rating": "Easy",
+          "result": {
+            "card": {
+              "due": "2026-03-16T12:00:00.000Z",
+              "stability": 65.62422648,
+              "difficulty": 1,
+              "elapsed_days": 8,
+              "scheduled_days": 66,
+              "reps": 2,
+              "lapses": 0,
+              "learning_steps": 0,
+              "state": "Review",
+              "last_review": "2026-01-09T12:00:00.000Z"
+            },
+            "log": {
+              "rating": "Easy",
+              "state": "Review",
+              "due": "2026-01-01T12:00:00.000Z",
+              "stability": 8.2956,
+              "difficulty": 1,
+              "elapsed_days": 8,
+              "last_elapsed_days": 0,
+              "scheduled_days": 8,
+              "learning_steps": 0,
+              "review": "2026-01-09T12:00:00.000Z"
+            }
+          }
+        },
+        {
+          "at": "2026-03-16T12:00:00.000Z",
+          "rating": "Easy",
+          "result": {
+            "card": {
+              "due": "2027-03-16T12:00:00.000Z",
+              "stability": 396.77501923,
+              "difficulty": 1,
+              "elapsed_days": 66,
+              "scheduled_days": 365,
+              "reps": 3,
+              "lapses": 0,
+              "learning_steps": 0,
+              "state": "Review",
+              "last_review": "2026-03-16T12:00:00.000Z"
+            },
+            "log": {
+              "rating": "Easy",
+              "state": "Review",
+              "due": "2026-01-09T12:00:00.000Z",
+              "stability": 65.62422648,
+              "difficulty": 1,
+              "elapsed_days": 66,
+              "last_elapsed_days": 8,
+              "scheduled_days": 66,
+              "learning_steps": 0,
+              "review": "2026-03-16T12:00:00.000Z"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

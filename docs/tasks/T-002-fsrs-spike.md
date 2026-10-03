@@ -1,7 +1,7 @@
 ---
 id: T-002
 title: Pin ts-fsrs and record its actual scheduling behavior in fixtures
-status: todo
+status: done
 size: S
 depends_on: []
 type: task
@@ -37,19 +37,19 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a new card at a fixed instant, when it is rated Again, Hard, Good and Easy, then
+- [x] AC1: Given a new card at a fixed instant, when it is rated Again, Hard, Good and Easy, then
       the resulting state, step, due instant, stability and difficulty match committed fixture
       values (unit)
-- [ ] AC2: Given a card moving through the learning steps (for example Good, then Good after the
+- [x] AC2: Given a card moving through the learning steps (for example Good, then Good after the
       step delay), then the fixture shows when it graduates to Review and with which interval; the
       same for Relearning after a lapse (unit)
-- [ ] AC3: Given fuzz disabled, when identical inputs are scheduled twice, then the results are
+- [x] AC3: Given fuzz disabled, when identical inputs are scheduled twice, then the results are
       identical (unit)
-- [ ] AC4: Given a card after several reviews, when it is serialized to JSON and back, then the next
+- [x] AC4: Given a card after several reviews, when it is serialized to JSON and back, then the next
       scheduling result is identical (unit)
-- [ ] AC5: Given the same card state and evaluation instant, when the preview API and the rating API
+- [x] AC5: Given the same card state and evaluation instant, when the preview API and the rating API
       are called, then they agree (unit)
-- [ ] AC6: `docs/architecture/spikes/fsrs.md` records the version, findings and open questions
+- [x] AC6: `docs/architecture/spikes/fsrs.md` records the version, findings and open questions
       (review)
 
 ## Notes for the implementer

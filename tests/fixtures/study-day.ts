@@ -1,0 +1,100 @@
+// Literal UTC expectations checked against IANA Europe rules (see spikes/time.md).
+export const reviewFixtures = [
+  {
+    name: 'T19: AC1 late-night review belongs to yesterday and is eligible at 07:00 today',
+    instant: '2026-10-02T01:00:00+02:00',
+    studyDate: '2026-10-01',
+    dueStudyDate: '2026-10-02',
+    eligibleAt: '2026-10-02T05:00:00Z',
+  },
+  {
+    name: 'T20: AC2 23:50 review is eligible at the next 06:00 boundary',
+    instant: '2026-10-01T23:50:00+02:00',
+    studyDate: '2026-10-01',
+    dueStudyDate: '2026-10-02',
+    eligibleAt: '2026-10-02T04:00:00Z',
+  },
+  {
+    name: 'T20: review just before 06:00 cannot return a minute later',
+    instant: '2026-10-02T05:59:00+02:00',
+    studyDate: '2026-10-01',
+    dueStudyDate: '2026-10-02',
+    eligibleAt: '2026-10-02T09:59:00Z',
+  },
+  {
+    name: 'T20: review exactly at 06:00 targets the next study date',
+    instant: '2026-10-02T06:00:00+02:00',
+    studyDate: '2026-10-02',
+    dueStudyDate: '2026-10-03',
+    eligibleAt: '2026-10-03T04:00:00Z',
+  },
+  {
+    name: 'T21: AC5 spring tomorrow uses a 23-hour calendar day',
+    instant: '2026-03-28T06:00:00+01:00',
+    studyDate: '2026-03-28',
+    dueStudyDate: '2026-03-29',
+    eligibleAt: '2026-03-29T04:00:00Z',
+  },
+  {
+    name: 'T21: AC5 autumn tomorrow uses a 25-hour calendar day',
+    instant: '2026-10-24T06:00:00+02:00',
+    studyDate: '2026-10-24',
+    dueStudyDate: '2026-10-25',
+    eligibleAt: '2026-10-25T05:00:00Z',
+  },
+  {
+    name: 'T21: six elapsed hours across the spring jump end at 07:30',
+    instant: '2026-03-29T00:30:00+01:00',
+    studyDate: '2026-03-28',
+    dueStudyDate: '2026-03-29',
+    eligibleAt: '2026-03-29T05:30:00Z',
+  },
+  {
+    name: 'T21: six elapsed hours across the autumn overlap end at 06:30',
+    instant: '2026-10-25T01:30:00+02:00',
+    studyDate: '2026-10-24',
+    dueStudyDate: '2026-10-25',
+    eligibleAt: '2026-10-25T05:30:00Z',
+  },
+  {
+    name: 'T21: AC4 February 28 projects to leap day',
+    instant: '2028-02-28T23:50:00+01:00',
+    studyDate: '2028-02-28',
+    dueStudyDate: '2028-02-29',
+    eligibleAt: '2028-02-29T05:00:00Z',
+  },
+  {
+    name: 'T21: AC4 leap day projects to March 1',
+    instant: '2028-02-29T23:50:00+01:00',
+    studyDate: '2028-02-29',
+    dueStudyDate: '2028-03-01',
+    eligibleAt: '2028-03-01T05:00:00Z',
+  },
+] as const;
+
+export const boundaryFixtures = [
+  { date: '2026-03-28', boundary: '06:00', start: '2026-03-28T05:00:00Z' },
+  { date: '2026-03-29', boundary: '06:00', start: '2026-03-29T04:00:00Z' },
+  { date: '2026-03-30', boundary: '06:00', start: '2026-03-30T04:00:00Z' },
+  { date: '2026-10-24', boundary: '06:00', start: '2026-10-24T04:00:00Z' },
+  { date: '2026-10-25', boundary: '06:00', start: '2026-10-25T05:00:00Z' },
+  { date: '2026-10-26', boundary: '06:00', start: '2026-10-26T05:00:00Z' },
+  { date: '2026-03-29', boundary: '02:30', start: '2026-03-29T01:30:00Z' },
+  { date: '2026-10-25', boundary: '02:30', start: '2026-10-25T00:30:00Z' },
+  { date: '2028-02-28', boundary: '06:00', start: '2028-02-28T05:00:00Z' },
+  { date: '2028-02-29', boundary: '06:00', start: '2028-02-29T05:00:00Z' },
+  { date: '2028-03-01', boundary: '06:00', start: '2028-03-01T05:00:00Z' },
+] as const;
+
+export const disambiguationFixtures = [
+  { instant: '2026-03-29T00:59:59Z', date: '2026-03-28' },
+  { instant: '2026-03-29T01:00:00Z', date: '2026-03-28' },
+  { instant: '2026-03-29T01:29:59Z', date: '2026-03-28' },
+  { instant: '2026-03-29T01:30:00Z', date: '2026-03-29' },
+  { instant: '2026-10-25T00:29:59Z', date: '2026-10-24' },
+  { instant: '2026-10-25T00:30:00Z', date: '2026-10-25' },
+  { instant: '2026-10-25T00:59:59Z', date: '2026-10-25' },
+  { instant: '2026-10-25T01:00:00Z', date: '2026-10-25' },
+  { instant: '2026-10-25T01:29:59Z', date: '2026-10-25' },
+  { instant: '2026-10-25T01:30:00Z', date: '2026-10-25' },
+] as const;

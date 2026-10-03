@@ -15,6 +15,7 @@ export default tseslint.config(
       'test-results/',
       'review-screenshots/',
       'node_modules/',
+      '.cache/',
       'legacy/',
     ],
   },

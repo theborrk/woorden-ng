@@ -1,0 +1,77 @@
+{
+ "entry_id": "86106c24-7587-4f0d-b1b2-3d1e14505a48",
+ "fixture_ref": "S08",
+ "content_sha256": "b318c9578dbd5043b3f158f9ec706b0f66685ecadf47cfe4a711283fd039ca71",
+ "dimensions": {
+  "sense_scope": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "NL 'Een beleefd verzoek om iets nog een keer te zeggen.', EN 'could you repeat that?' and PL 'czy może pan/pani to powtórzyć?' name the same speech act, a polite request for repetition; there is no source sense to match (record_id null), and as reviewer I confirm that the definition, meanings and example agree.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "dictionary_facts": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The entry claims no source-verified facts: the expression is labelled model-authored, IPA is honestly 'missing' (whole-phrase IPA is optional and is recorded as missing) and no forms are listed. Its spelling and grammar are supported by evidence supplied with this batch, though not citable for this entry: the polite 'Kunt u' + infinitive question in nl:525 (S05 packet, https://nl.wiktionary.org/wiki/u: 'Kunt u mij zeggen waar het politiebureau is?') and the lemma 'herhalen' WW() in evidence/sources/nt2lex-basic.tsv. Bookkeeping note for the structural validator: provenance '/forms' says 'source_verified' and '/lexeme/pos' says 'source_tag_mapping' although the entry has no sources.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "dutch_naturalness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'Kunt u dat herhalen?' is idiomatic, polite standard Dutch, with 'kunt' agreeing with 'u' and 'dat' referring back to what was just said; it is the phrase a learner needs at a counter or on the phone.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "en_pl_translation": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "EN 'Could you repeat that?' matches the Dutch request in politeness, and PL 'Czy może pan/pani to powtórzyć?' is natural and direct, rendering u with pan/pani plus a third-person verb and keeping the question form; meanings and example translations are consistent.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "task_ambiguity": {
+   "verdict": "revise",
+   "severity": "major",
+   "explanation": "The span is the whole sentence, so the task is free production from the cue 'could you repeat that?', and only the exact string 'Kunt u dat herhalen' is accepted. Equally valid answers would be marked wrong: 'Zou u dat kunnen herhalen?' (the most literal rendering of 'could'), 'Kunt u het herhalen?', 'Kunt u dat nog een keer zeggen?', 'Wilt u dat herhalen?'. Because the EN cue does not mark formality, even 'Kun je dat herhalen?' fits. The EN cue must say formal, and the close equivalents must be accepted without penalty (patch below). Paraphrases remain possible, so for open production this phrase is better tested by recognition or word-order assembly.",
+   "source_ids": [],
+   "proposed_patch": [
+    {"op": "replace", "path": "/examples/0/context/en", "value": "could you repeat that? (formal)"},
+    {"op": "add", "path": "/examples/0/accepted_answers/-", "value": {"ordered_segments": ["Zou u dat kunnen herhalen"], "case_sensitive": false}},
+    {"op": "add", "path": "/examples/0/accepted_answers/-", "value": {"ordered_segments": ["Kunt u het herhalen"], "case_sensitive": false}},
+    {"op": "add", "path": "/examples/0/accepted_answers/-", "value": {"ordered_segments": ["Kunt u dat nog een keer zeggen"], "case_sensitive": false}}
+   ]
+  },
+  "span_form_contract": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The single span [0,19) slices exactly 'Kunt u dat herhalen' from the NFC text, covering the whole expression and excluding only the question mark; no form IDs are needed for a fixed expression.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "level_usefulness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "A1, priority 8 and core are plausible for a survival formula taught as a chunk, even though NT2Lex first shows 'herhalen' at A2 (F@A2 5, B1 7); frequency is honestly 'missing' rather than imputed. The whole sentence is the target, so no support units are needed.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "register_pragmatics": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'polite' is correct: the u-form request is appropriate with strangers and service staff (adding 'alstublieft' or using 'Zou u ...' would be more polite still), and the PL 'pan/pani' matches that level.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "hints_media": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; there is no audio candidate, listening is ineligible, device TTS is 'not_tested' and phrase IPA is recorded as missing, all stated honestly; the image is not recommended under a labelled model judgment.",
+   "source_ids": [],
+   "proposed_patch": null
+  }
+ },
+ "overall_verdict": "revise",
+ "unresolved_doubts": []
+}

@@ -1,0 +1,79 @@
+{
+ "entry_id": "faa0d8d3-bbb2-4a6f-ae8b-8c8825241803",
+ "fixture_ref": "S02",
+ "content_sha256": "5d6c5a5c0f86c6ce860363c39076ea53fd585c59de54c35b64ef6611c150724f",
+ "dimensions": {
+  "sense_scope": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "NL 'Een persoon of zaak verbinden met een eigenschap of toestand', EN 'be, linking a person or thing to a description' and PL 'być, ...' all select the copula, matching en:40 sense 1, nl:80 sense 6 ('de eigenschap hebben') and ODWN zijn-v-7 ('koppelwerkwoord'); the example 'Ik ben ziek.' uses exactly that sense rather than the existential, locative or auxiliary senses, and legacy s120 ('быть'/'to be') is a compatible lemma-level link. The NL definition describes the copula's function rather than giving a substitutable paraphrase, which is acceptable for a copula.",
+   "source_ids": ["en:40", "nl:80", "zijn-v-7", "s120"],
+   "proposed_patch": null
+  },
+  "dictionary_facts": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "IPA '/zɛi̯n/' is verbatim from en:40 /sounds/0 and agrees with nl:80 and pl:132; every form selector resolves to the claimed surface and tags in en:40 (zijn /forms/2, ben /4, was /5, is /16, was /17, zijn /18, waren /19, geweest /29); perfect auxiliary 'zijn' is supported by all nine ODWN records; non-separable and non-reflexive are correct. Coverage note, not an error: the second-person present 'bent' (en:40 /forms/6) is not in the selected inventory and will be needed before any jij/u form task.",
+   "source_ids": ["en:40", "nl:80", "pl:132", "zijn-v-1", "zijn-v-2", "zijn-v-7", "zijn-v-9"],
+   "proposed_patch": null
+  },
+  "dutch_naturalness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'Ik ben ziek.' is grammatical, idiomatic and an everyday sentence (calling in sick, at the doctor), with 'ben' as copula plus adjectival predicate, i.e. exactly the target sense; compare 'Hij is nieuwsgierig.' in nl:80 sense 6 and pl:132.",
+   "source_ids": ["nl:80", "pl:132"],
+   "proposed_patch": null
+  },
+  "en_pl_translation": {
+   "verdict": "revise",
+   "severity": "minor",
+   "explanation": "The example translations are precise ('I am ill.'; 'Jestem chora/chory.' gives both genders because the Polish predicative adjective must agree while Dutch 'ziek' does not). The PL learner meaning 'być, łączyć osobę lub rzecz z opisem' turns the English participial gloss 'linking ...' into a second coordinated infinitive, so it reads as two meanings ('to be' and 'to connect a person or thing with a description') and suggests that zijn can mean 'łączyć'. It should render the Dutch anchor ('eigenschap of toestand') as a parenthetical gloss.",
+   "source_ids": ["pl:132", "en:40"],
+   "proposed_patch": [
+    {"op": "replace", "path": "/sense/meanings/pl/0", "value": "być (o cesze lub stanie osoby albo rzeczy)"}
+   ]
+  },
+  "task_ambiguity": {
+   "verdict": "revise",
+   "severity": "major",
+   "explanation": "In the cloze 'Ik ___ ziek.' the cue 'be, linking a person or thing to a description' / 'być, ...' does not fix the tense, so 'was' ('Ik was ziek.', 'I was ill') is an equally valid form of the target sense, yet only 'ben' is accepted; other verbs that fit the frame (word, blijf, lijk) are excluded by the cue. The cue must state the tense (patch below), or the task must show the sentence translation 'I am ill.' as its cue; this finding assumes, as the packet's context field indicates, that the cue is the meaning gloss only.",
+   "source_ids": ["en:40"],
+   "proposed_patch": [
+    {"op": "replace", "path": "/examples/0/context/en", "value": "be (present tense)"},
+    {"op": "replace", "path": "/examples/0/context/pl", "value": "być (czas teraźniejszy)"}
+   ]
+  },
+  "span_form_contract": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The span [3,6) slices exactly 'ben' from the NFC text, and target_form_ids points to the first-person singular present form 'ben' (57715d8e, en:40 /forms/4), which agrees with the subject 'Ik'; it is a single segment with no particle or reflexive to cover.",
+   "source_ids": ["en:40"],
+   "proposed_patch": null
+  },
+  "level_usefulness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "A1, priority 2 and core are plausible: the NT2Lex WW() row (F@A1 591, A2 5145, B1 3684, B2 1789, C1 112, checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL WW lemma count 1,891,414 support it; the first source_exposure row VNW(bez,det) is the possessive homograph 'zijn' ('his') and carries no evidence for this verb, which is transparent from its tag. Prerequisites (S01 'ik', S42) are listed and marked provisional.",
+   "source_ids": ["nt2lex:zijn", "subtlex:zijn"],
+   "proposed_patch": null
+  },
+  "register_pragmatics": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'neutral' is correct: copular zijn and 'Ik ben ziek.' are standard in every register and region, with no politeness implication.",
+   "source_ids": ["en:40"],
+   "proposed_patch": null
+  },
+  "hints_media": {
+   "verdict": "revise",
+   "severity": "minor",
+   "explanation": "The meaning-reveal hint is correctly labelled and has no invented mnemonic or etymology, but its PL text repeats 'być, łączyć osobę lub rzecz z opisem' with the same misleading second infinitive and should follow the corrected meaning. The audio candidate is honestly 'candidate_not_downloaded' with review 'not_run' (Commons path 5/50 matches the MD5 of 'Nl-zijn.ogg'), listening is ineligible, and the image is not recommended under a labelled model judgment.",
+   "source_ids": ["en:40"],
+   "proposed_patch": [
+    {"op": "replace", "path": "/hints/pl", "value": "być (o cesze lub stanie osoby albo rzeczy)"}
+   ]
+  }
+ },
+ "overall_verdict": "revise",
+ "unresolved_doubts": []
+}

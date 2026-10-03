@@ -1,0 +1,72 @@
+{
+ "entry_id": "604c9517-d603-45ca-b859-4e98dd122cbf",
+ "fixture_ref": "S01",
+ "content_sha256": "1ef00b4a4ed71fab8320b8778fdff9f98755df0ea3cb94d556661bc862520439",
+ "dimensions": {
+  "sense_scope": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The Dutch definition 'De spreker verwijst naar zichzelf als onderwerp van de zin' (subject form, gender-neutral 'zichzelf'), EN 'I' and PL 'ja' all name the same first-person singular subject pronoun, matching en:24 sense 0 and nl:11 ('nominatief (onderwerp), verwijst naar de spreker'); the legacy row s1506 (RU 'я', EN 'I') is the same sense.",
+   "source_ids": ["en:24", "nl:11", "pl:136", "s1506"],
+   "proposed_patch": null
+  },
+  "dictionary_facts": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Spelling 'ik' and POS pron match all three Wiktionary records; IPA '/ɪk/' (stressed) and '/ək/' (unstressed) are copied verbatim from en:24 /sounds/0 and /sounds/1 and agree with nl:11 and pl:136 ('ɪk'); no article, plural or verb facts apply and none are invented.",
+   "source_ids": ["en:24", "nl:11", "pl:136"],
+   "proposed_patch": null
+  },
+  "dutch_naturalness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'Ik ben hier.' is grammatical, idiomatic and register-neutral, and 'Ik' is used exactly in the target sense (speaker as subject); it mirrors the attested pattern 'Ik ben Anna.' in pl:136.",
+   "source_ids": ["pl:136"],
+   "proposed_patch": null
+  },
+  "en_pl_translation": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "EN 'I am here.' is exact; PL 'Jestem tutaj.' is the natural rendering because Polish drops the unstressed subject pronoun (adding 'Ja' would add emphasis absent from the Dutch), and person, number and tense are retained; the PL cue 'ja' correctly names the target.",
+   "source_ids": ["en:24", "pl:136"],
+   "proposed_patch": null
+  },
+  "task_ambiguity": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "In the frame '___ ben hier.' the verb form 'ben' admits only a first-person singular subject in preverbal position (jij/u would need 'bent'), so with the cue 'I'/'ja' the only standard answer is 'Ik' (case-insensitive, so 'ik' is accepted); the colloquial clitic spelling ''k' listed in en:24 is not a realistic answer and not a different word.",
+   "source_ids": ["en:24"],
+   "proposed_patch": null
+  },
+  "span_form_contract": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The span [0,2) slices exactly 'Ik' from the NFC text (UTF-16 units equal code points here), it covers the whole single-word target and nothing else, and no form task is declared (forms list empty, which is appropriate for this subject-form sense).",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "level_usefulness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "A1, priority 1 and core are plausible: SUBTLEX-NL Zipf 7.60 (CD 8054) and NT2Lex exposure from A1 onward (F@A1 429, A2 3156, B1 1854, B2 366, checked against evidence/sources/nt2lex-basic.tsv); prerequisites (support unit 'hier', S02 'zijn') are listed and honestly marked provisional.",
+   "source_ids": ["nt2lex:ik", "subtlex:ik"],
+   "proposed_patch": null
+  },
+  "register_pragmatics": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'neutral' is correct: 'ik' is unmarked in every register and region, and the example carries no politeness or social implication.",
+   "source_ids": ["en:24"],
+   "proposed_patch": null
+  },
+  "hints_media": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Hints 'I'/'ja' are labelled meaning_reveal with no invented mnemonic or etymology; the audio candidate is honestly 'candidate_not_downloaded' with review 'not_run' and listening_task_eligible false (its Commons path c/cc matches the MD5 of 'Nl-ik.ogg', so the URL is extracted rather than invented); the image verdict is labelled model judgment and not recommended.",
+   "source_ids": ["en:24"],
+   "proposed_patch": null
+  }
+ },
+ "overall_verdict": "pass",
+ "unresolved_doubts": []
+}

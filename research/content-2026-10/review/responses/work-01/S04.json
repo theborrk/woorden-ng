@@ -1,0 +1,78 @@
+{
+ "entry_id": "de6f4380-8bbc-4ebb-8852-418ee312edda",
+ "fixture_ref": "S04",
+ "content_sha256": "1e55d6b05d1b85bc9873b2cc6e19b9e1b3edb9a37aa5e2d6d098e2135db06268",
+ "dimensions": {
+  "sense_scope": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "NL 'Een beleefde uiting van dank.', EN 'thank you, polite' and PL 'dziękuję, forma uprzejma' all name the polite (u-form) expression of thanks, matching en:1876 sense 0 ('thank you very much', tagged formal); 'beleefd' here corresponds to the Dutch 'beleefdheidsvorm' u, and the example uses the phrase in exactly that function.",
+   "source_ids": ["en:1876"],
+   "proposed_patch": null
+  },
+  "dictionary_facts": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Spelling 'dank u wel' (written apart) and POS phrase match en:1876; both IPA strings '/ˌdɑŋk y ˈʋɛl/' and '[ˌdɑŋk y ˈʋɛl]' (Netherlands) are verbatim from /sounds/0 and /sounds/1 with the region tag kept; no forms are claimed, and the one-word source variant 'dankuwel' is honestly left unselected.",
+   "source_ids": ["en:1876"],
+   "proposed_patch": null
+  },
+  "dutch_naturalness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'Dank u wel voor het water.' is grammatical and idiomatic ('dank u wel voor' + noun phrase is the standard pattern), and fits an everyday situation such as being served water.",
+   "source_ids": ["en:1876"],
+   "proposed_patch": null
+  },
+  "en_pl_translation": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "EN 'Thank you for the water.' and PL 'Dziękuję za wodę.' are direct and natural, with the correct prepositions ('for'/'za' + accusative 'wodę'); the learner meanings render the polite thank-you faithfully, although 'forma grzecznościowa' is the more established Polish term than 'forma uprzejma'.",
+   "source_ids": ["en:1876"],
+   "proposed_patch": null
+  },
+  "task_ambiguity": {
+   "verdict": "revise",
+   "severity": "major",
+   "explanation": "In the open cloze '___ voor het water.' the cue 'thank you, polite' / 'dziękuję, forma uprzejma' admits several valid Dutch answers, yet only 'Dank u wel' is accepted. 'Dank u', 'Hartelijk dank' and 'Bedankt' are equally correct and polite. Because 'polite' does not exclude the je-form, 'Dank je wel' (polite, but informal address) also fits. The cue must name the formal address, and the remaining polite equivalents must be acknowledged without penalty, as patched below; otherwise the phrase should be used only in recognition tasks.",
+   "source_ids": ["en:1876"],
+   "proposed_patch": [
+    {"op": "replace", "path": "/examples/0/context/en", "value": "thank you (formal)"},
+    {"op": "replace", "path": "/examples/0/context/pl", "value": "dziękuję (forma grzecznościowa)"},
+    {"op": "add", "path": "/examples/0/accepted_answers/-", "value": {"ordered_segments": ["Dank u"], "case_sensitive": false}},
+    {"op": "add", "path": "/examples/0/accepted_answers/-", "value": {"ordered_segments": ["Hartelijk dank"], "case_sensitive": false}},
+    {"op": "add", "path": "/examples/0/accepted_answers/-", "value": {"ordered_segments": ["Bedankt"], "case_sensitive": false}}
+   ]
+  },
+  "span_form_contract": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The single span [0,10) slices exactly 'Dank u wel' from the NFC text, covering the whole three-word phrase and nothing else; no form IDs are needed for a fixed phrase.",
+   "source_ids": [],
+   "proposed_patch": null
+  },
+  "level_usefulness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "A1, priority 4 and core are plausible for a first-day politeness formula; frequency and NT2Lex exposure are honestly 'missing' (single-word sources do not cover the phrase) rather than imputed, and prerequisites (S17, support units 'het', 'voor') are listed and marked provisional.",
+   "source_ids": ["en:1876"],
+   "proposed_patch": null
+  },
+  "register_pragmatics": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'polite' is a defensible mapping of the source tag 'formal' (u is the Dutch beleefdheidsvorm): the phrase is used with people addressed as u (strangers, shop and service staff, older people), and the example scene fits that use.",
+   "source_ids": ["en:1876"],
+   "proposed_patch": null
+  },
+  "hints_media": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; there is no audio candidate, listening is ineligible and device TTS is 'not_tested', all stated honestly; the image is not recommended under a labelled model judgment.",
+   "source_ids": [],
+   "proposed_patch": null
+  }
+ },
+ "overall_verdict": "revise",
+ "unresolved_doubts": []
+}

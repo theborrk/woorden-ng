@@ -1,11 +1,10 @@
-// @vitest-environment node
 import { existsSync } from 'node:fs';
 import { chromium } from '@playwright/test';
 import { mkdtemp, readFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
-import { expect, test } from 'vitest';
-import { generateIcons, iconOutputs } from './generate-icons.mjs';
+import { expect, test } from '@playwright/test';
+import { generateIcons, iconOutputs } from '../scripts/generate-icons.mjs';
 
 test('AC3: two generator runs are identical and every committed launcher/PWA icon is current', async () => {
   const root = await mkdtemp(resolve(tmpdir(), 'woorden-icons-'));
@@ -24,7 +23,7 @@ test('AC3: two generator runs are identical and every committed launcher/PWA ico
   } finally {
     await rm(root, { recursive: true, force: true });
   }
-}, 30_000);
+});
 
 test('AC1/AC2: the rendered husky exactly preserves legacy makeIcon shapes and colors', async () => {
   const legacy = await readFile('legacy/index.html', 'utf8');
@@ -52,4 +51,4 @@ test('AC1/AC2: the rendered husky exactly preserves legacy makeIcon shapes and c
   } finally {
     await browser.close();
   }
-}, 30_000);
+});

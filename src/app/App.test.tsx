@@ -7,11 +7,14 @@ import { browserLanguage, createLocalization, languageKey } from '../i18n';
 import type { TargetServices } from '../targets/types';
 
 const noUpdates = { registerUpdates() {} };
+const appInfo = {
+  getInfo: () => Promise.resolve({ version: 'test-version', build: 'test-build' }),
+};
 function mount(updates: Pick<TargetServices, 'registerUpdates'> = noUpdates, name = 'Woorden') {
   const i18n = createLocalization('en');
   return render(
     <I18nextProvider i18n={i18n}>
-      <App name={name} platform="browser" updates={updates} />
+      <App name={name} platform="browser" updates={updates} appInfo={appInfo} />
     </I18nextProvider>,
   );
 }

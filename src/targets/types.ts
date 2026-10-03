@@ -3,10 +3,13 @@
  * `#target` alias (vite.config.ts), so web-only code never ships in the Android bundle and the
  * other way round. Add platform adapters (storage, files, audio, lifecycle) here as the app grows.
  */
+import type { AppInfo } from '../application/ports/app-info';
+
 export type TargetName = 'web' | 'android';
 
 export interface TargetServices {
   readonly name: TargetName;
+  readonly appInfo: AppInfo;
   /** Opens target storage; rejects visibly if native storage is unavailable. */
   initialize(): Promise<void>;
   /** Starts update checks; calls `onUpdateReady` with a function that applies the update. */

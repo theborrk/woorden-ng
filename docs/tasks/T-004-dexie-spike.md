@@ -1,7 +1,7 @@
 ---
 id: T-004
 title: Prove Dexie transactions, unique keys and upgrades in a first web repository suite
-status: todo
+status: done
 size: M
 depends_on: []
 type: task
@@ -39,19 +39,19 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a transaction that writes an event, a progress row and a projection watermark, when
+- [x] AC1: Given a transaction that writes an event, a progress row and a projection watermark, when
       it completes, then all three are stored; when it throws after the writes, then none are
       (integration)
-- [ ] AC2: Given attempt events with a `commitKey` and other events without the property, then any
+- [x] AC2: Given attempt events with a `commitKey` and other events without the property, then any
       number of events without it coexist, and a second event with an existing `commitKey` is
       rejected (integration)
-- [ ] AC3: Given a compound-key progress row, when it is written twice, then one row with the latest
+- [x] AC3: Given a compound-key progress row, when it is written twice, then one row with the latest
       revision exists; queries by the eligibility index return a stable order (integration)
-- [ ] AC4: Given a version 1 database with data, when it opens as version 2 with an upgrade function,
+- [x] AC4: Given a version 1 database with data, when it opens as version 2 with an upgrade function,
       then the data is migrated; when the upgrade throws, then the version 1 data is intact
       (integration)
-- [ ] AC5: Millisecond instants and canonical JSON values round-trip unchanged (integration)
-- [ ] AC6: `npm run test:repositories:web` runs the suite, and the spike document records the
+- [x] AC5: Millisecond instants and canonical JSON values round-trip unchanged (integration)
+- [x] AC6: `npm run test:repositories:web` runs the suite, and the spike document records the
       findings (review)
 
 ## Notes for the implementer

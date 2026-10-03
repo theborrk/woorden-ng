@@ -1,0 +1,69 @@
+{
+  "errors": [],
+  "artifact_sha256": "8777fbbcefc4748fa0532decf94d689adef85bf63075de980c576a83e6f766f8",
+  "response_sha256": "8777fbbcefc4748fa0532decf94d689adef85bf63075de980c576a83e6f766f8",
+  "proposals": [
+    {
+      "entry_id": "604c9517-d603-45ca-b859-4e98dd122cbf",
+      "fixture_ref": "S01",
+      "proposed_ai_review": "ai_reviewed",
+      "release_state": "still_requires_policy_and_task_eligibility_evaluation"
+    },
+    {
+      "entry_id": "faa0d8d3-bbb2-4a6f-ae8b-8c8825241803",
+      "fixture_ref": "S02",
+      "proposed_ai_review": "revision_requested",
+      "release_state": "still_requires_policy_and_task_eligibility_evaluation"
+    },
+    {
+      "entry_id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
+      "fixture_ref": "S03",
+      "proposed_ai_review": "revision_requested",
+      "release_state": "still_requires_policy_and_task_eligibility_evaluation"
+    },
+    {
+      "entry_id": "de6f4380-8bbc-4ebb-8852-418ee312edda",
+      "fixture_ref": "S04",
+      "proposed_ai_review": "revision_requested",
+      "release_state": "still_requires_policy_and_task_eligibility_evaluation"
+    },
+    {
+      "entry_id": "8e094be1-35f7-42b5-8dbf-ba6ed3afb567",
+      "fixture_ref": "S05",
+      "proposed_ai_review": "ai_reviewed",
+      "release_state": "still_requires_policy_and_task_eligibility_evaluation"
+    },
+    {
+      "entry_id": "ff49fcaa-a55f-4ff6-bd55-6a1a99535bd9",
+      "fixture_ref": "S06",
+      "proposed_ai_review": "revision_requested",
+      "release_state": "still_requires_policy_and_task_eligibility_evaluation"
+    },
+    {
+      "entry_id": "fe21dcb7-b84a-4f1d-9893-f87e3334f6a2",
+      "fixture_ref": "S07",
+      "proposed_ai_review": "revision_requested",
+      "release_state": "still_requires_policy_and_task_eligibility_evaluation"
+    },
+    {
+      "entry_id": "86106c24-7587-4f0d-b1b2-3d1e14505a48",
+      "fixture_ref": "S08",
+      "proposed_ai_review": "revision_requested",
+      "release_state": "still_requires_policy_and_task_eligibility_evaluation"
+    },
+    {
+      "entry_id": "d66ba490-4dcc-482e-885b-cf97a000a036",
+      "fixture_ref": "S09",
+      "proposed_ai_review": "revision_requested",
+      "release_state": "still_requires_policy_and_task_eligibility_evaluation"
+    },
+    {
+      "entry_id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+      "fixture_ref": "S10",
+      "proposed_ai_review": "ai_reviewed",
+      "release_state": "still_requires_policy_and_task_eligibility_evaluation"
+    }
+  ],
+  "mutated_content": false,
+  "vendor_attestation_limit": "Metadata plus retained original response is an audit trail; provenance of the actual external run must be checked by the importing operator."
+}

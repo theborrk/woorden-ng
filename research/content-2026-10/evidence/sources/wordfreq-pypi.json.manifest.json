@@ -1,0 +1,10 @@
+{
+  "file": "wordfreq-pypi.json",
+  "url": "https://pypi.org/pypi/wordfreq/3.1.1/json",
+  "retrieved_at": "2026-10-03T13:31:27.343594+00:00",
+  "status": 200,
+  "content_type": "application/json",
+  "last_modified": null,
+  "bytes": 30516,
+  "sha256": "9bc54a59a899f17713681db10016eeba0d4d4834d53bd594ba2e7af33f7e8264"
+}

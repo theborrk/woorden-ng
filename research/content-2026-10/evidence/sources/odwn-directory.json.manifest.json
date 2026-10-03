@@ -1,0 +1,10 @@
+{
+  "file": "odwn-directory.json",
+  "url": "https://api.github.com/repos/cltl/OpenDutchWordnet/contents/resources/odwn",
+  "retrieved_at": "2026-10-03T00:22:24.175481+00:00",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "last_modified": "Tue, 22 Sep 2026 09:41:28 GMT",
+  "bytes": 9585,
+  "sha256": "ff78ec3be6bf9843e08e21fc73e766860029fcd886a84e6f61f21b88b5f77b1a"
+}

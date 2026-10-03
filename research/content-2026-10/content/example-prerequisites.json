@@ -1,0 +1,1167 @@
+[
+  {
+    "fixture_ref": "S01",
+    "example_id": "e45bc075-0726-4434-a6d5-86401f8fef93",
+    "nl": "Ik ben hier.",
+    "other_fixture_candidates": [
+      "S02"
+    ],
+    "support_units": [
+      "hier"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S02",
+    "example_id": "ba61338f-d27d-4090-af5a-5f40eda05532",
+    "nl": "Ik ben ziek.",
+    "other_fixture_candidates": [
+      "S01",
+      "S42"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S03",
+    "example_id": "8bf1edad-a084-48fd-8470-de9ba0e4f2d0",
+    "nl": "Het brood is goed.",
+    "other_fixture_candidates": [
+      "S02",
+      "S20"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S04",
+    "example_id": "4c7c6881-3702-47e3-9444-1d13aff5e934",
+    "nl": "Dank u wel voor het water.",
+    "other_fixture_candidates": [
+      "S17"
+    ],
+    "support_units": [
+      "het",
+      "voor"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S05",
+    "example_id": "963d540b-47ce-430b-9c11-6b2f560e64c3",
+    "nl": "Heeft u een afspraak?",
+    "other_fixture_candidates": [
+      "S09",
+      "S39"
+    ],
+    "support_units": [
+      "een"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S06",
+    "example_id": "4ab6dcdc-9b7a-4b56-ae45-4c4c9f8a187e",
+    "nl": "Ik begrijp het niet.",
+    "other_fixture_candidates": [
+      "S01",
+      "S07"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S07",
+    "example_id": "07ef4d04-c343-4413-8b5f-7332e2871158",
+    "nl": "Ik begrijp het niet.",
+    "other_fixture_candidates": [
+      "S01",
+      "S06"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S08",
+    "example_id": "845e6140-7f63-414c-b250-18cf1d782fbf",
+    "nl": "Kunt u dat herhalen?",
+    "other_fixture_candidates": [],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S09",
+    "example_id": "ca351d9f-65ec-4348-8e2b-d811de44fbbc",
+    "nl": "Ik heb een fiets.",
+    "other_fixture_candidates": [
+      "S01",
+      "S29"
+    ],
+    "support_units": [
+      "een"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S10",
+    "example_id": "ec5a9423-b2ec-4d27-b189-1158d6f4f9a2",
+    "nl": "Het huis is klein.",
+    "other_fixture_candidates": [
+      "S02",
+      "S26"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S11",
+    "example_id": "70e3f7f1-970d-4999-8d4f-1531e27abe1d",
+    "nl": "Ik heb de sleutel van het huis.",
+    "other_fixture_candidates": [
+      "S01",
+      "S09",
+      "S10"
+    ],
+    "support_units": [
+      "de",
+      "het",
+      "van"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S12",
+    "example_id": "fc7ea837-e226-476d-8161-f68bf952e54e",
+    "nl": "De deur is open.",
+    "other_fixture_candidates": [
+      "S02",
+      "S13"
+    ],
+    "support_units": [
+      "de"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S13",
+    "example_id": "3a024027-a2da-4405-b977-cd2ffb41b305",
+    "nl": "De deur is open.",
+    "other_fixture_candidates": [
+      "S02",
+      "S12"
+    ],
+    "support_units": [
+      "de"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S14",
+    "example_id": "189c5a61-751e-4c25-af10-f48f2e26b649",
+    "nl": "Ik kom morgen.",
+    "other_fixture_candidates": [
+      "S01"
+    ],
+    "support_units": [
+      "morgen"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S15",
+    "example_id": "9ae1fc12-268c-4f0f-afa1-ba6d792509a1",
+    "nl": "Ik heb geen fiets.",
+    "other_fixture_candidates": [
+      "S01",
+      "S09",
+      "S29"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S16",
+    "example_id": "4a329e2f-5306-462c-a1ed-6bc483137af2",
+    "nl": "Het huis is groot.",
+    "other_fixture_candidates": [
+      "S02",
+      "S10"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S17",
+    "example_id": "b98ba71f-5492-454e-b1d0-b6b2667f950d",
+    "nl": "Ik wil water.",
+    "other_fixture_candidates": [
+      "S01",
+      "S21"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S18",
+    "example_id": "09905d4b-acec-4bd0-9288-15923318db23",
+    "nl": "De winkel is open.",
+    "other_fixture_candidates": [
+      "S02",
+      "S12"
+    ],
+    "support_units": [
+      "de"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S19",
+    "example_id": "d84a8770-e1f9-4359-8a7f-69a6d740b355",
+    "nl": "Ik koop brood.",
+    "other_fixture_candidates": [
+      "S01",
+      "S20"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S20",
+    "example_id": "f8ab73f0-ffb4-4f3c-a1a8-cdbfa1b51c57",
+    "nl": "Ik koop brood.",
+    "other_fixture_candidates": [
+      "S01",
+      "S19"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S21",
+    "example_id": "31071148-37a7-48db-a6da-861f1507f946",
+    "nl": "Ik wil betalen.",
+    "other_fixture_candidates": [
+      "S01",
+      "S22"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S22",
+    "example_id": "c9b144ef-854b-43b3-bb29-bb8e66140007",
+    "nl": "Ik wil betalen.",
+    "other_fixture_candidates": [
+      "S01",
+      "S21"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S23",
+    "example_id": "718acecd-618a-453b-af9b-1a14df9d703e",
+    "nl": "Ik heb geen geld.",
+    "other_fixture_candidates": [
+      "S01",
+      "S09",
+      "S15"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S24",
+    "example_id": "e637d859-86cb-4ec6-8d75-bcf12691a418",
+    "nl": "De fiets is duur.",
+    "other_fixture_candidates": [
+      "S02",
+      "S29"
+    ],
+    "support_units": [
+      "de"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S25",
+    "example_id": "21fcf778-ff0c-423e-a646-42d028a1b091",
+    "nl": "Ik wil de rekening betalen.",
+    "other_fixture_candidates": [
+      "S01",
+      "S21",
+      "S22"
+    ],
+    "support_units": [
+      "de"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S26",
+    "example_id": "ade416d3-e237-4926-a48e-392c53d3ce20",
+    "nl": "Het huis is klein.",
+    "other_fixture_candidates": [
+      "S02",
+      "S10"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S27",
+    "example_id": "25563f29-f290-4116-b110-7bb78417e6ae",
+    "nl": "Morgen? Geen probleem!",
+    "other_fixture_candidates": [],
+    "support_units": [
+      "morgen"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S28",
+    "example_id": "fdc1e553-de3c-457d-8c9d-bd5382682071",
+    "nl": "Ik ga naar de winkel.",
+    "other_fixture_candidates": [
+      "S01",
+      "S18"
+    ],
+    "support_units": [
+      "de",
+      "naar"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S29",
+    "example_id": "e6c42138-67eb-431c-ba37-8e72f48e67d1",
+    "nl": "Mijn fiets is klein.",
+    "other_fixture_candidates": [
+      "S02",
+      "S26"
+    ],
+    "support_units": [
+      "mijn"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S30",
+    "example_id": "eac71b67-31e4-46ae-ace0-d5274d7482be",
+    "nl": "Waar is de winkel?",
+    "other_fixture_candidates": [
+      "S02",
+      "S18"
+    ],
+    "support_units": [
+      "de"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S31",
+    "example_id": "3b5ebe52-80f2-4c0c-ad17-37e9cb3ee25d",
+    "nl": "Ik kan het formulier invullen.",
+    "other_fixture_candidates": [
+      "S01",
+      "S45",
+      "S46"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S32",
+    "example_id": "788647ba-e4b7-407c-bffb-6af809d6513e",
+    "nl": "Ik neem mijn sleutel mee.",
+    "other_fixture_candidates": [
+      "S01",
+      "S11"
+    ],
+    "support_units": [
+      "mijn"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause particle separation",
+      "infinitive word order"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S32",
+    "example_id": "966666c5-810f-46c1-8c37-07c0e400948c",
+    "nl": "Ik wil mijn sleutel meenemen.",
+    "other_fixture_candidates": [
+      "S01",
+      "S11",
+      "S21"
+    ],
+    "support_units": [
+      "mijn"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause particle separation",
+      "infinitive word order"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S33",
+    "example_id": "04aa14b3-3c4d-4d67-be49-8989b96cbabd",
+    "nl": "Hoe laat komt u?",
+    "other_fixture_candidates": [
+      "S05",
+      "S14"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S34",
+    "example_id": "92017113-4d9a-4f00-9668-ca3f567c97f6",
+    "nl": "Ik kom op tijd.",
+    "other_fixture_candidates": [
+      "S01",
+      "S14"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S35",
+    "example_id": "c4239882-0aba-459b-88e9-10bf7a803d09",
+    "nl": "Tot ziens!",
+    "other_fixture_candidates": [],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S36",
+    "example_id": "6afce06c-403e-4a97-91cd-f51aeff5e23f",
+    "nl": "Ik sta vroeg op.",
+    "other_fixture_candidates": [
+      "S01"
+    ],
+    "support_units": [
+      "vroeg"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause particle separation",
+      "infinitive word order"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S36",
+    "example_id": "bb08c8af-5cbc-4678-9882-c14b30cecedc",
+    "nl": "Ik wil vroeg opstaan.",
+    "other_fixture_candidates": [
+      "S01",
+      "S21"
+    ],
+    "support_units": [
+      "vroeg"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause particle separation",
+      "infinitive word order"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S37",
+    "example_id": "a3e5ddd3-afee-4582-9dfd-abdec887b343",
+    "nl": "Ik heb veel werk.",
+    "other_fixture_candidates": [
+      "S01",
+      "S09"
+    ],
+    "support_units": [
+      "veel"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S38",
+    "example_id": "10c8ecff-cb1e-4755-965e-6496b4301eac",
+    "nl": "Wanneer komt u?",
+    "other_fixture_candidates": [
+      "S05",
+      "S14"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S39",
+    "example_id": "b0ec74e6-343e-4afe-99ec-4f4314e68845",
+    "nl": "Ik heb een afspraak bij de huisarts.",
+    "other_fixture_candidates": [
+      "S01",
+      "S09",
+      "S41"
+    ],
+    "support_units": [
+      "bij",
+      "de",
+      "een"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S40",
+    "example_id": "0cdf801f-de12-405f-a181-1e828aaebecc",
+    "nl": "Ik wil een afspraak maken.",
+    "other_fixture_candidates": [
+      "S01",
+      "S21"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S41",
+    "example_id": "7a376e33-85a5-4e14-a00f-eb7f55c742a5",
+    "nl": "Ik heb een afspraak bij de huisarts.",
+    "other_fixture_candidates": [
+      "S01",
+      "S09",
+      "S39"
+    ],
+    "support_units": [
+      "bij",
+      "de",
+      "een"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S42",
+    "example_id": "9bae4ea9-53a4-4d27-b707-4cb7e97817c5",
+    "nl": "Ik ben ziek.",
+    "other_fixture_candidates": [
+      "S01",
+      "S02"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S43",
+    "example_id": "4719b903-0651-4df9-9d51-16519a98e44d",
+    "nl": "Het spijt me, ik ben laat.",
+    "other_fixture_candidates": [
+      "S01",
+      "S02"
+    ],
+    "support_units": [
+      "laat"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S44",
+    "example_id": "08e32a52-ecab-4b15-8dae-aa177bd16fb8",
+    "nl": "Ik heb een afspraak bij de gemeente.",
+    "other_fixture_candidates": [
+      "S01",
+      "S09",
+      "S39"
+    ],
+    "support_units": [
+      "bij",
+      "de",
+      "een"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S45",
+    "example_id": "e7e23019-9103-49f7-9ba1-96459171d902",
+    "nl": "Ik vul het formulier in.",
+    "other_fixture_candidates": [
+      "S01",
+      "S46"
+    ],
+    "support_units": [
+      "het",
+      "in"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S46",
+    "example_id": "ac4a84e3-3e70-412a-9541-135e665a0e33",
+    "nl": "Ik vul het formulier in.",
+    "other_fixture_candidates": [
+      "S01",
+      "S45"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause particle separation",
+      "infinitive word order"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S46",
+    "example_id": "eabd46b9-93f1-4be4-817d-e0dc03e4a51a",
+    "nl": "Ik wil het formulier invullen.",
+    "other_fixture_candidates": [
+      "S01",
+      "S21",
+      "S45"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause particle separation",
+      "infinitive word order"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S47",
+    "example_id": "265dd1e2-db8b-454a-b641-56fb4480a412",
+    "nl": "Het huis is klein, maar de tuin is groot.",
+    "other_fixture_candidates": [
+      "S02",
+      "S10",
+      "S16",
+      "S26"
+    ],
+    "support_units": [
+      "de",
+      "het",
+      "tuin"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause order",
+      "contrast coordination"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S48",
+    "example_id": "faaecc8c-45d1-4b23-b72c-0f35ee553a89",
+    "nl": "Ik kom niet omdat ik ziek ben.",
+    "other_fixture_candidates": [
+      "S01",
+      "S02",
+      "S07",
+      "S14",
+      "S42"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause order",
+      "subordinate verb-final order"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S49",
+    "example_id": "a6fa0e0c-e5af-4ae9-af9b-8f482e322b06",
+    "nl": "De bank in het huis is groot.",
+    "other_fixture_candidates": [
+      "S02",
+      "S10",
+      "S16"
+    ],
+    "support_units": [
+      "de",
+      "het",
+      "in"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S50",
+    "example_id": "6b3e25e8-8391-467d-a7ad-17045216394f",
+    "nl": "Mijn geld staat op een rekening bij de bank.",
+    "other_fixture_candidates": [
+      "S23"
+    ],
+    "support_units": [
+      "bij",
+      "de",
+      "een",
+      "mijn",
+      "op",
+      "rekening/account",
+      "staan"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S51",
+    "example_id": "8375e374-c77e-4ca9-baca-82c2346553b8",
+    "nl": "Het kind is ziek.",
+    "other_fixture_candidates": [
+      "S02",
+      "S42"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S52",
+    "example_id": "8b7bfe8f-9550-42e0-8047-0014a37287ee",
+    "nl": "Het meisje heeft een fiets.",
+    "other_fixture_candidates": [
+      "S09",
+      "S29"
+    ],
+    "support_units": [
+      "een",
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S53",
+    "example_id": "08475190-4356-42ff-8fb5-f8ef49930f9b",
+    "nl": "Ik wil pinnen.",
+    "other_fixture_candidates": [
+      "S01",
+      "S21"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S54",
+    "example_id": "e5769def-fbc0-450a-9d74-99a9195579eb",
+    "nl": "Ik schrijf me in.",
+    "other_fixture_candidates": [
+      "S01"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause particle separation",
+      "infinitive word order",
+      "reflexive agreement"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S54",
+    "example_id": "0a7efa63-18b3-463f-b792-5db2de2429d7",
+    "nl": "Ik wil me inschrijven.",
+    "other_fixture_candidates": [
+      "S01",
+      "S21"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause particle separation",
+      "infinitive word order",
+      "reflexive agreement"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S54",
+    "example_id": "2b3cb07c-c66c-40c2-aaef-4d3d01aae75e",
+    "nl": "U schrijft zich in.",
+    "other_fixture_candidates": [
+      "S05"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "main-clause particle separation",
+      "infinitive word order",
+      "reflexive agreement"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S55",
+    "example_id": "69070888-3956-499b-a0f8-9373e56e8a08",
+    "nl": "Kunt u even komen?",
+    "other_fixture_candidates": [
+      "S05",
+      "S14",
+      "S31"
+    ],
+    "support_units": [],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S56",
+    "example_id": "17b05827-143e-458b-a6b3-7ab5e2bd42cb",
+    "nl": "Kun je alsjeblieft komen?",
+    "other_fixture_candidates": [
+      "S14",
+      "S31"
+    ],
+    "support_units": [
+      "je"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S57",
+    "example_id": "830a5607-bae4-401b-97b0-c99cd89d9583",
+    "nl": "Alsjeblieft, je sleutel.",
+    "other_fixture_candidates": [
+      "S11"
+    ],
+    "support_units": [
+      "je"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S58",
+    "example_id": "90d7f0b0-c3c3-40b1-88f8-c0271522807f",
+    "nl": "De afspraak is om half drie.",
+    "other_fixture_candidates": [
+      "S02",
+      "S39"
+    ],
+    "support_units": [
+      "de",
+      "om"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S59",
+    "example_id": "e83a5832-5bc2-4df2-9d65-434900fce560",
+    "nl": "Waar is het deksel?",
+    "other_fixture_candidates": [
+      "S02",
+      "S30"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  },
+  {
+    "fixture_ref": "S60",
+    "example_id": "d4598af6-2ad3-4e44-9478-905c9e442ee8",
+    "nl": "Het kind is slim.",
+    "other_fixture_candidates": [
+      "S02",
+      "S51"
+    ],
+    "support_units": [
+      "het"
+    ],
+    "unresolved_surface_tokens": [],
+    "grammar": [
+      "sentence pattern must be reviewed before clean cloze"
+    ],
+    "semantic_mapping_status": "model_draft_requires_sense_and_grammar_review",
+    "clean_trial_eligible_without_learner_state": false
+  }
+]

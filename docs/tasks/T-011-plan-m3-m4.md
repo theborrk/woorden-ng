@@ -111,6 +111,9 @@ Out (do not do in this task):
 
 ## Notes for the implementer
 
+- M4 needs a reviewed representative starter fixture (blueprint M4 dependencies). That fixture is
+  the 60-entry starter pilot admitted by T-120: tasks that load starter content for study depend on
+  T-120 (or on T-116, studying only entries that are eligible).
 - Order by risk and value: the riskiest unknowns first, polish late.
 - A blueprint work package marked L usually becomes three to six tasks.
 - Mark this plan `done` with all criteria ticked in the same PR.

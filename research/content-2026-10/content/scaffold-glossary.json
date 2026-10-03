@@ -1,0 +1,28 @@
+{
+ "status":"model_authored_support_glosses_external_review_pending",
+ "rule":"These are additional support units, not automatically known words and not extra scheduled target entries. Gate clean example practice on actual learner knowledge or explicitly recorded scaffolding.",
+ "items":[
+  {"surface":"de","en":"definite article for the indicated noun","pl":"rodzajnik określony przy danym rzeczowniku"},
+  {"surface":"het","en":"definite article; or it, as identified by the example","pl":"rodzajnik określony albo to; zależnie od zdania"},
+  {"surface":"een","en":"a/an","pl":"rodzajnik nieokreślony"},
+  {"surface":"hier","en":"here","pl":"tutaj"},
+  {"surface":"voor","en":"for","pl":"za/dla, zależnie od zdania"},
+  {"surface":"van","en":"of; belonging to","pl":"od; wskazanie przynależności"},
+  {"surface":"morgen","en":"tomorrow","pl":"jutro"},
+  {"surface":"naar","en":"to, towards","pl":"do, w kierunku"},
+  {"surface":"mijn","en":"my","pl":"mój/moja/moje"},
+  {"surface":"veel","en":"a lot of","pl":"dużo"},
+  {"surface":"vroeg","en":"early","pl":"wcześnie"},
+  {"surface":"bij","en":"at/with, as in an appointment with a professional","pl":"u/w, jak w wizycie u specjalisty"},
+  {"surface":"laat","en":"late","pl":"późno/spóźniony"},
+  {"surface":"in","en":"in; also a separated verb particle where annotated","pl":"w; także oddzielona część czasownika"},
+  {"surface":"tuin","en":"garden","pl":"ogród"},
+  {"surface":"op","en":"on; also a separated verb particle where annotated","pl":"na; także oddzielona część czasownika"},
+  {"surface":"staan","en":"stand; in the money example, be held in an account","pl":"stać; w zdaniu o pieniądzach: znajdować się na koncie"},
+  {"surface":"rekening/account","en":"bank account, distinct from the bill target S25","pl":"konto bankowe, odrębne od rachunku do zapłaty S25"},
+  {"surface":"me","en":"myself/me, as required by the construction","pl":"się/mnie, zależnie od konstrukcji"},
+  {"surface":"zich","en":"oneself; reflexive pronoun","pl":"się; zaimek zwrotny"},
+  {"surface":"je","en":"you/your, informal and unstressed","pl":"ty/twój, nieformalna forma nieakcentowana"},
+  {"surface":"om","en":"at, with a clock time","pl":"o, przy godzinie"}
+ ]
+}

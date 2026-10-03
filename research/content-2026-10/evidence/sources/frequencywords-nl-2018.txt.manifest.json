@@ -1,0 +1,10 @@
+{
+  "file": "frequencywords-nl-2018.txt",
+  "url": "https://raw.githubusercontent.com/hermitdave/FrequencyWords/master/content/2018/nl/nl_full.txt",
+  "retrieved_at": "2026-10-03T13:31:26.960409+00:00",
+  "status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "last_modified": null,
+  "bytes": 15457399,
+  "sha256": "50c9691c82d2eb267f6db4ab042cab8fe366f32da958ebae0a220764db1e0cf3"
+}

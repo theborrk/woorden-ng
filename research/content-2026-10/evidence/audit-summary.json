@@ -1,0 +1,31 @@
+{
+  "rows": 1946,
+  "unique_ids": 1946,
+  "decisions": {
+    "fix": 554,
+    "keep": 1268,
+    "drop": 2,
+    "move to opt-in": 122
+  },
+  "original_pos": {
+    "zn": 1005,
+    "ww": 412,
+    "bn": 205,
+    "bw": 54,
+    "vw": 18,
+    "ov": 252
+  },
+  "original_themes": {
+    "none": 1643,
+    "sep": 77,
+    "agro": 191,
+    "slang": 35
+  },
+  "core_reclassified_agro": 85,
+  "core_reclassified_slang": 19,
+  "specific_sense_split_proposals": 118,
+  "specific_editorial_fix_proposals": 113,
+  "surface_or_article_flags": [],
+  "reviewer_B": "not_run",
+  "semantics_not_measured_accuracy": true
+}

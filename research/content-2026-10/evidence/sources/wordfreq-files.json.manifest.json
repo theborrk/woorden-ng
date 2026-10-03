@@ -1,0 +1,10 @@
+{
+  "file": "wordfreq-files.json",
+  "url": "https://api.github.com/repos/rspeer/wordfreq/contents/wordfreq/data",
+  "retrieved_at": "2026-10-03T00:21:05.514650+00:00",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "last_modified": "Fri, 02 Oct 2026 21:58:25 GMT",
+  "bytes": 58166,
+  "sha256": "41ee4945cc1d9194e0f018972a10c037842ff0b15c0f7f0af3135c56c2fd9b23"
+}

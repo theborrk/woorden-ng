@@ -1,0 +1,10 @@
+{
+  "file": "pattern3-pypi.json",
+  "url": "https://pypi.org/pypi/pattern3/json",
+  "retrieved_at": "2026-10-03T13:31:27.473662+00:00",
+  "status": 200,
+  "content_type": "application/json",
+  "last_modified": null,
+  "bytes": 9499,
+  "sha256": "d49f68a44fa2c299125015f6ac5c3745c3b334d21b3df0a2b97399023268a81c"
+}

@@ -1,0 +1,10 @@
+{
+  "file": "kaikki-pl-raw.jsonl.gz",
+  "url": "https://kaikki.org/dictionary/downloads/pl/pl-extract.jsonl.gz",
+  "retrieved_at": "2026-10-03T00:17:37.334414+00:00",
+  "status": 200,
+  "content_type": "application/octet-stream",
+  "last_modified": "Mon, 28 Sep 2026 15:21:28 GMT",
+  "bytes": 137385920,
+  "sha256": "a03dec44f783a81e6f920eefe37d8e007f452310268c040d46f463925b438aed"
+}

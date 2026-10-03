@@ -1,0 +1,1037 @@
+[
+  {
+    "ref": "S01",
+    "lemma": "ik",
+    "pos": "pron",
+    "en": "I",
+    "pl": "ja",
+    "nl_definition": "De spreker verwijst naar zichzelf als onderwerp van de zin.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "[[Ik]] ben hier.",
+      "I am here.",
+      "Jestem tutaj."
+    ],
+    "sense_index": 0
+  },
+  {
+    "ref": "S02",
+    "lemma": "zijn",
+    "pos": "verb",
+    "en": "be, linking a person or thing to a description",
+    "pl": "być, łączyć osobę lub rzecz z opisem",
+    "nl_definition": "Een persoon of zaak verbinden met een eigenschap of toestand.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "Ik [[ben]] ziek.",
+      "I am ill.",
+      "Jestem chora/chory."
+    ],
+    "sense_index": 1
+  },
+  {
+    "ref": "S03",
+    "lemma": "goed",
+    "pos": "adj",
+    "en": "good; satisfactory in quality",
+    "pl": "dobry; zadowalający pod względem jakości",
+    "nl_definition": "Van voldoende of gewenste kwaliteit.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "Het brood is [[goed]].",
+      "The bread is good.",
+      "Chleb jest dobry."
+    ]
+  },
+  {
+    "ref": "S04",
+    "lemma": "dank u wel",
+    "pos": "phrase",
+    "en": "thank you, polite",
+    "pl": "dziękuję, forma uprzejma",
+    "nl_definition": "Een beleefde uiting van dank.",
+    "level": "A1",
+    "theme": "communication",
+    "register": "polite",
+    "example": [
+      "[[Dank u wel]] voor het water.",
+      "Thank you for the water.",
+      "Dziękuję za wodę."
+    ]
+  },
+  {
+    "ref": "S05",
+    "lemma": "u",
+    "pos": "pron",
+    "en": "you, polite form of address",
+    "pl": "pan, pani lub państwo jako uprzejma forma zwracania się",
+    "nl_definition": "Een beleefde aanspreekvorm voor de aangesprokene.",
+    "level": "A1",
+    "theme": "communication",
+    "register": "polite",
+    "example": [
+      "Heeft [[u]] een afspraak?",
+      "Do you have an appointment?",
+      "Czy ma pan/pani umówioną wizytę?"
+    ]
+  },
+  {
+    "ref": "S06",
+    "lemma": "begrijpen",
+    "pos": "verb",
+    "en": "understand the meaning",
+    "pl": "rozumieć znaczenie",
+    "nl_definition": "De betekenis van iets kunnen volgen.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "Ik [[begrijp]] het niet.",
+      "I do not understand it.",
+      "Nie rozumiem tego."
+    ]
+  },
+  {
+    "ref": "S07",
+    "lemma": "niet",
+    "pos": "adv",
+    "en": "not; negate the statement in this context",
+    "pl": "nie; zaprzeczenie zdania w tym kontekście",
+    "nl_definition": "Een ontkenning uitdrukken.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "Ik begrijp het [[niet]].",
+      "I do not understand it.",
+      "Nie rozumiem tego."
+    ]
+  },
+  {
+    "ref": "S08",
+    "lemma": "kunt u dat herhalen",
+    "pos": "phrase",
+    "en": "could you repeat that?",
+    "pl": "czy może pan/pani to powtórzyć?",
+    "nl_definition": "Een beleefd verzoek om iets nog een keer te zeggen.",
+    "level": "A1",
+    "theme": "communication",
+    "register": "polite",
+    "example": [
+      "[[Kunt u dat herhalen]]?",
+      "Could you repeat that?",
+      "Czy może pan/pani to powtórzyć?"
+    ],
+    "components": [
+      "kunnen",
+      "u",
+      "dat",
+      "herhalen"
+    ]
+  },
+  {
+    "ref": "S09",
+    "lemma": "hebben",
+    "pos": "verb",
+    "en": "have; possess or have available",
+    "pl": "mieć; posiadać lub mieć do dyspozycji",
+    "nl_definition": "Iets bezitten of tot je beschikking hebben.",
+    "level": "A1",
+    "theme": "home",
+    "example": [
+      "Ik [[heb]] een fiets.",
+      "I have a bicycle.",
+      "Mam rower."
+    ]
+  },
+  {
+    "ref": "S10",
+    "lemma": "huis",
+    "pos": "noun",
+    "en": "house; building used as a home",
+    "pl": "dom; budynek mieszkalny",
+    "nl_definition": "Een gebouw waarin mensen wonen.",
+    "level": "A1",
+    "theme": "home",
+    "example": [
+      "Het [[huis]] is klein.",
+      "The house is small.",
+      "Dom jest mały."
+    ],
+    "image": "single_referent"
+  },
+  {
+    "ref": "S11",
+    "lemma": "sleutel",
+    "pos": "noun",
+    "en": "key for a lock",
+    "pl": "klucz do zamka",
+    "nl_definition": "Een voorwerp waarmee je een slot opent of sluit.",
+    "level": "A1",
+    "theme": "home",
+    "example": [
+      "Ik heb de [[sleutel]] van het huis.",
+      "I have the key to the house.",
+      "Mam klucz do domu."
+    ],
+    "image": "single_referent"
+  },
+  {
+    "ref": "S12",
+    "lemma": "open",
+    "pos": "adj",
+    "en": "open; not closed",
+    "pl": "otwarty; niezamknięty",
+    "nl_definition": "Niet gesloten, zodat iets toegankelijk is.",
+    "level": "A1",
+    "theme": "home",
+    "example": [
+      "De deur is [[open]].",
+      "The door is open.",
+      "Drzwi są otwarte."
+    ]
+  },
+  {
+    "ref": "S13",
+    "lemma": "deur",
+    "pos": "noun",
+    "en": "door",
+    "pl": "drzwi",
+    "nl_definition": "Een beweegbaar deel waarmee je een doorgang afsluit.",
+    "level": "A1",
+    "theme": "home",
+    "example": [
+      "De [[deur]] is open.",
+      "The door is open.",
+      "Drzwi są otwarte."
+    ],
+    "image": "single_referent",
+    "note": "Dutch deur is singular; Polish drzwi has plural grammatical form."
+  },
+  {
+    "ref": "S14",
+    "lemma": "komen",
+    "pos": "verb",
+    "en": "come; move towards the relevant place",
+    "pl": "przychodzić lub przyjeżdżać do danego miejsca",
+    "nl_definition": "Zich naar de bedoelde plaats bewegen.",
+    "level": "A1",
+    "theme": "travel",
+    "example": [
+      "Ik [[kom]] morgen.",
+      "I will come tomorrow.",
+      "Przyjdę jutro."
+    ]
+  },
+  {
+    "ref": "S15",
+    "lemma": "geen",
+    "pos": "det",
+    "en": "no; not any, before a noun phrase",
+    "pl": "żaden; nie mieć czegoś, przed frazą rzeczownikową",
+    "nl_definition": "Aangeven dat iets of iemand niet aanwezig is of niet bestaat.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "Ik heb [[geen]] fiets.",
+      "I do not have a bicycle.",
+      "Nie mam roweru."
+    ],
+    "sense_index": 0
+  },
+  {
+    "ref": "S16",
+    "lemma": "groot",
+    "pos": "adj",
+    "en": "big; large in physical size",
+    "pl": "duży pod względem rozmiaru",
+    "nl_definition": "Van aanzienlijke afmetingen.",
+    "level": "A1",
+    "theme": "home",
+    "example": [
+      "Het huis is [[groot]].",
+      "The house is big.",
+      "Dom jest duży."
+    ]
+  },
+  {
+    "ref": "S17",
+    "lemma": "water",
+    "pos": "noun",
+    "en": "water, the substance",
+    "pl": "woda jako substancja",
+    "nl_definition": "De vloeistof die mensen onder meer drinken.",
+    "level": "A1",
+    "theme": "shopping",
+    "example": [
+      "Ik wil [[water]].",
+      "I want water.",
+      "Chcę wodę."
+    ],
+    "mass": true,
+    "image": "context_required"
+  },
+  {
+    "ref": "S18",
+    "lemma": "winkel",
+    "pos": "noun",
+    "en": "shop",
+    "pl": "sklep",
+    "nl_definition": "Een plaats waar je producten kunt kopen.",
+    "level": "A1",
+    "theme": "shopping",
+    "example": [
+      "De [[winkel]] is open.",
+      "The shop is open.",
+      "Sklep jest otwarty."
+    ],
+    "image": "context_required"
+  },
+  {
+    "ref": "S19",
+    "lemma": "kopen",
+    "pos": "verb",
+    "en": "buy",
+    "pl": "kupować, kupić",
+    "nl_definition": "Iets tegen betaling verkrijgen.",
+    "level": "A1",
+    "theme": "shopping",
+    "example": [
+      "Ik [[koop]] brood.",
+      "I am buying bread.",
+      "Kupuję chleb."
+    ]
+  },
+  {
+    "ref": "S20",
+    "lemma": "brood",
+    "pos": "noun",
+    "en": "bread as food",
+    "pl": "chleb jako żywność",
+    "nl_definition": "Een voedingsmiddel dat van deeg wordt gebakken.",
+    "level": "A1",
+    "theme": "shopping",
+    "example": [
+      "Ik koop [[brood]].",
+      "I am buying bread.",
+      "Kupuję chleb."
+    ],
+    "mass": true,
+    "image": "single_referent",
+    "note": "Broden means loaves; broodje can mean a bread roll. Those uses are not interchangeable with the mass-food sense."
+  },
+  {
+    "ref": "S21",
+    "lemma": "willen",
+    "pos": "verb",
+    "en": "want to do something",
+    "pl": "chcieć coś zrobić",
+    "nl_definition": "De wens hebben om iets te doen.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "Ik [[wil]] betalen.",
+      "I want to pay.",
+      "Chcę zapłacić."
+    ],
+    "sense_index": 1
+  },
+  {
+    "ref": "S22",
+    "lemma": "betalen",
+    "pos": "verb",
+    "en": "pay",
+    "pl": "płacić, zapłacić",
+    "nl_definition": "Geld geven voor iets of om een schuld te voldoen.",
+    "level": "A1",
+    "theme": "shopping",
+    "example": [
+      "Ik wil [[betalen]].",
+      "I want to pay.",
+      "Chcę zapłacić."
+    ]
+  },
+  {
+    "ref": "S23",
+    "lemma": "geld",
+    "pos": "noun",
+    "en": "money",
+    "pl": "pieniądze",
+    "nl_definition": "Een betaalmiddel waarmee je onder meer producten koopt.",
+    "level": "A1",
+    "theme": "shopping",
+    "example": [
+      "Ik heb geen [[geld]].",
+      "I have no money.",
+      "Nie mam pieniędzy."
+    ],
+    "mass": true,
+    "image": "context_required"
+  },
+  {
+    "ref": "S24",
+    "lemma": "duur",
+    "pos": "adj",
+    "en": "expensive",
+    "pl": "drogi, o cenie",
+    "nl_definition": "Veel geld kostend.",
+    "level": "A1",
+    "theme": "shopping",
+    "example": [
+      "De fiets is [[duur]].",
+      "The bicycle is expensive.",
+      "Rower jest drogi."
+    ]
+  },
+  {
+    "ref": "S25",
+    "lemma": "rekening",
+    "pos": "noun",
+    "en": "bill that states the amount to pay",
+    "pl": "rachunek do zapłaty",
+    "nl_definition": "Een overzicht van het bedrag dat je moet betalen.",
+    "level": "A1",
+    "theme": "shopping",
+    "example": [
+      "Ik wil de [[rekening]] betalen.",
+      "I want to pay the bill.",
+      "Chcę zapłacić rachunek."
+    ],
+    "note": "This target excludes bank account; use a separate sense for bankrekening/rekening as an account.",
+    "sense_index": 4
+  },
+  {
+    "ref": "S26",
+    "lemma": "klein",
+    "pos": "adj",
+    "en": "small in physical size",
+    "pl": "mały pod względem rozmiaru",
+    "nl_definition": "Van geringe afmetingen.",
+    "level": "A1",
+    "theme": "home",
+    "example": [
+      "Het huis is [[klein]].",
+      "The house is small.",
+      "Dom jest mały."
+    ]
+  },
+  {
+    "ref": "S27",
+    "lemma": "geen probleem",
+    "pos": "phrase",
+    "en": "no problem; accepting a request or inconvenience",
+    "pl": "nie ma problemu; przyjęcie prośby lub niedogodności",
+    "nl_definition": "Aangeven dat een verzoek of ongemak geen bezwaar is.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "Morgen? [[Geen probleem]]!",
+      "Tomorrow? No problem!",
+      "Jutro? Nie ma problemu!"
+    ],
+    "components": [
+      "geen",
+      "probleem"
+    ],
+    "source_pos": "intj"
+  },
+  {
+    "ref": "S28",
+    "lemma": "gaan",
+    "pos": "verb",
+    "en": "go; move to a destination",
+    "pl": "iść lub jechać do celu",
+    "nl_definition": "Zich naar een bestemming bewegen.",
+    "level": "A1",
+    "theme": "travel",
+    "example": [
+      "Ik [[ga]] naar de winkel.",
+      "I am going to the shop.",
+      "Idę do sklepu."
+    ]
+  },
+  {
+    "ref": "S29",
+    "lemma": "fiets",
+    "pos": "noun",
+    "en": "bicycle",
+    "pl": "rower",
+    "nl_definition": "Een voertuig met twee wielen dat je met pedalen aandrijft.",
+    "level": "A1",
+    "theme": "travel",
+    "example": [
+      "Mijn [[fiets]] is klein.",
+      "My bicycle is small.",
+      "Mój rower jest mały."
+    ],
+    "image": "single_referent"
+  },
+  {
+    "ref": "S30",
+    "lemma": "waar",
+    "pos": "adv",
+    "en": "where, asking about location",
+    "pl": "gdzie, pytanie o miejsce",
+    "nl_definition": "Vragen naar een plaats.",
+    "level": "A1",
+    "theme": "travel",
+    "example": [
+      "[[Waar]] is de winkel?",
+      "Where is the shop?",
+      "Gdzie jest sklep?"
+    ]
+  },
+  {
+    "ref": "S31",
+    "lemma": "kunnen",
+    "pos": "verb",
+    "en": "can; be able to do something",
+    "pl": "móc, potrafić coś zrobić",
+    "nl_definition": "In staat zijn om iets te doen.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "Ik [[kan]] het formulier invullen.",
+      "I can fill in the form.",
+      "Potrafię wypełnić formularz."
+    ],
+    "sense_index": 0
+  },
+  {
+    "ref": "S32",
+    "lemma": "meenemen",
+    "pos": "verb",
+    "en": "take along",
+    "pl": "zabrać ze sobą",
+    "nl_definition": "Iets of iemand met je laten meegaan naar een andere plaats.",
+    "level": "A1",
+    "theme": "travel",
+    "particle": "mee",
+    "base": "nemen",
+    "example": [
+      "Ik [[neem]] mijn sleutel [[mee]].",
+      "I am taking my key with me.",
+      "Biorę ze sobą klucz."
+    ],
+    "extra_examples": [
+      [
+        "Ik wil mijn sleutel [[meenemen]].",
+        "I want to take my key with me.",
+        "Chcę zabrać ze sobą klucz."
+      ]
+    ]
+  },
+  {
+    "ref": "S33",
+    "lemma": "hoe laat",
+    "pos": "phrase",
+    "en": "at what time?",
+    "pl": "o której godzinie?",
+    "nl_definition": "Vragen naar een tijdstip.",
+    "level": "A1",
+    "theme": "time",
+    "example": [
+      "[[Hoe laat]] komt u?",
+      "At what time are you coming?",
+      "O której godzinie pan/pani przyjdzie?"
+    ],
+    "components": [
+      "hoe",
+      "laat"
+    ],
+    "source_pos": "adv"
+  },
+  {
+    "ref": "S34",
+    "lemma": "op tijd",
+    "pos": "phrase",
+    "en": "on time; at the required time",
+    "pl": "na czas, punktualnie",
+    "nl_definition": "Op het afgesproken of noodzakelijke tijdstip.",
+    "level": "A1",
+    "theme": "time",
+    "example": [
+      "Ik kom [[op tijd]].",
+      "I will arrive on time.",
+      "Przyjdę na czas."
+    ],
+    "components": [
+      "op",
+      "tijd"
+    ],
+    "source_pos": "adv"
+  },
+  {
+    "ref": "S35",
+    "lemma": "tot ziens",
+    "pos": "phrase",
+    "en": "goodbye; see you",
+    "pl": "do widzenia",
+    "nl_definition": "Een groet bij het afscheid nemen.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "[[Tot ziens]]!",
+      "Goodbye!",
+      "Do widzenia!"
+    ]
+  },
+  {
+    "ref": "S36",
+    "lemma": "opstaan",
+    "pos": "verb",
+    "en": "get up out of bed",
+    "pl": "wstawać z łóżka",
+    "nl_definition": "Na het slapen uit bed komen.",
+    "level": "A1",
+    "theme": "home",
+    "particle": "op",
+    "base": "staan",
+    "example": [
+      "Ik [[sta]] vroeg [[op]].",
+      "I get up early.",
+      "Wstaję wcześnie."
+    ],
+    "extra_examples": [
+      [
+        "Ik wil vroeg [[opstaan]].",
+        "I want to get up early.",
+        "Chcę wcześnie wstać."
+      ]
+    ],
+    "sense_index": 1
+  },
+  {
+    "ref": "S37",
+    "lemma": "werk",
+    "pos": "noun",
+    "en": "work; activity done as a job",
+    "pl": "praca, zajęcie zawodowe",
+    "nl_definition": "Activiteit die je voor je beroep verricht.",
+    "level": "A1",
+    "theme": "work",
+    "example": [
+      "Ik heb veel [[werk]].",
+      "I have a lot of work.",
+      "Mam dużo pracy."
+    ],
+    "mass": true,
+    "sense_index": 1
+  },
+  {
+    "ref": "S38",
+    "lemma": "wanneer",
+    "pos": "adv",
+    "en": "when, asking about time",
+    "pl": "kiedy, pytanie o czas",
+    "nl_definition": "Vragen op welk tijdstip iets gebeurt.",
+    "level": "A1",
+    "theme": "time",
+    "example": [
+      "[[Wanneer]] komt u?",
+      "When are you coming?",
+      "Kiedy pan/pani przyjdzie?"
+    ]
+  },
+  {
+    "ref": "S39",
+    "lemma": "afspraak",
+    "pos": "noun",
+    "en": "appointment; an arranged meeting",
+    "pl": "umówione spotkanie lub wizyta",
+    "nl_definition": "Een afgesproken ontmoeting op een bepaald tijdstip.",
+    "level": "A1",
+    "theme": "health",
+    "example": [
+      "Ik heb een [[afspraak]] bij de huisarts.",
+      "I have an appointment with the GP.",
+      "Mam umówioną wizytę u lekarza rodzinnego."
+    ],
+    "sense_index": 1
+  },
+  {
+    "ref": "S40",
+    "lemma": "een afspraak maken",
+    "pos": "phrase",
+    "en": "make an appointment",
+    "pl": "umówić spotkanie lub wizytę",
+    "nl_definition": "Een tijdstip voor een ontmoeting afspreken.",
+    "level": "A1",
+    "theme": "health",
+    "example": [
+      "Ik wil [[een afspraak maken]].",
+      "I would like to make an appointment.",
+      "Chcę umówić wizytę."
+    ],
+    "components": [
+      "een",
+      "afspraak",
+      "maken"
+    ]
+  },
+  {
+    "ref": "S41",
+    "lemma": "huisarts",
+    "pos": "noun",
+    "en": "GP; family doctor",
+    "pl": "lekarz rodzinny",
+    "nl_definition": "Een arts bij wie je voor algemene medische zorg terechtkunt.",
+    "level": "A1",
+    "theme": "health",
+    "example": [
+      "Ik heb een afspraak bij de [[huisarts]].",
+      "I have an appointment with the GP.",
+      "Mam umówioną wizytę u lekarza rodzinnego."
+    ],
+    "image": "context_required"
+  },
+  {
+    "ref": "S42",
+    "lemma": "ziek",
+    "pos": "adj",
+    "en": "ill; unwell",
+    "pl": "chory",
+    "nl_definition": "Niet gezond door een ziekte of aandoening.",
+    "level": "A1",
+    "theme": "health",
+    "example": [
+      "Ik ben [[ziek]].",
+      "I am ill.",
+      "Jestem chora/chory."
+    ]
+  },
+  {
+    "ref": "S43",
+    "lemma": "het spijt me",
+    "pos": "phrase",
+    "en": "I am sorry, expressing an apology",
+    "pl": "przepraszam, wyrażając przeprosiny",
+    "nl_definition": "Spijt uitdrukken over iets waarvoor je je verontschuldigt.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "[[Het spijt me]], ik ben laat.",
+      "I am sorry, I am late.",
+      "Przepraszam, spóźniłam się/spóźniłem się."
+    ],
+    "components": [
+      "het",
+      "spijten",
+      "me"
+    ]
+  },
+  {
+    "ref": "S44",
+    "lemma": "gemeente",
+    "pos": "noun",
+    "en": "municipality as the local authority",
+    "pl": "gmina jako organ administracji lokalnej",
+    "nl_definition": "Het lokale bestuur waarmee inwoners gemeentelijke zaken regelen.",
+    "level": "A2",
+    "theme": "services",
+    "example": [
+      "Ik heb een afspraak bij de [[gemeente]].",
+      "I have an appointment with the municipal authority.",
+      "Mam umówioną wizytę w urzędzie gminy."
+    ],
+    "note": "Institutional/local-authority use; Polish urząd gminy translates the appointment situation, not every gemeente occurrence."
+  },
+  {
+    "ref": "S45",
+    "lemma": "formulier",
+    "pos": "noun",
+    "en": "form to fill in",
+    "pl": "formularz do wypełnienia",
+    "nl_definition": "Een document met velden waarin je gegevens invult.",
+    "level": "A1",
+    "theme": "services",
+    "example": [
+      "Ik vul het [[formulier]] in.",
+      "I am filling in the form.",
+      "Wypełniam formularz."
+    ],
+    "image": "context_required"
+  },
+  {
+    "ref": "S46",
+    "lemma": "invullen",
+    "pos": "verb",
+    "en": "fill in a form or its fields",
+    "pl": "wypełniać, wypełnić formularz lub jego pola",
+    "nl_definition": "Gegevens in de daarvoor bestemde velden schrijven.",
+    "level": "A1",
+    "theme": "services",
+    "particle": "in",
+    "base": "vullen",
+    "example": [
+      "Ik [[vul]] het formulier [[in]].",
+      "I am filling in the form.",
+      "Wypełniam formularz."
+    ],
+    "extra_examples": [
+      [
+        "Ik wil het formulier [[invullen]].",
+        "I want to fill in the form.",
+        "Chcę wypełnić formularz."
+      ]
+    ]
+  },
+  {
+    "ref": "S47",
+    "lemma": "maar",
+    "pos": "conj",
+    "en": "but; linking contrasting statements",
+    "pl": "ale; łączy przeciwstawne stwierdzenia",
+    "nl_definition": "Twee uitspraken met elkaar verbinden die een tegenstelling vormen.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "Het huis is klein, [[maar]] de tuin is groot.",
+      "The house is small, but the garden is big.",
+      "Dom jest mały, ale ogród jest duży."
+    ]
+  },
+  {
+    "ref": "S48",
+    "lemma": "omdat",
+    "pos": "conj",
+    "en": "because; introduces a reason",
+    "pl": "ponieważ, bo; wprowadza przyczynę",
+    "nl_definition": "Een reden of oorzaak in een bijzin aangeven.",
+    "level": "A2",
+    "theme": "communication",
+    "example": [
+      "Ik kom niet [[omdat]] ik ziek ben.",
+      "I am not coming because I am ill.",
+      "Nie przyjdę, ponieważ jestem chora/chory."
+    ],
+    "note": "The dependent clause ends in ben here; prerequisites include subordinate-clause word order."
+  },
+  {
+    "ref": "S49",
+    "lemma": "bank",
+    "pos": "noun",
+    "en": "sofa; couch",
+    "pl": "kanapa",
+    "nl_definition": "Een zitmeubel voor meerdere personen, meestal met rugleuning en zachte zitting.",
+    "level": "A1",
+    "theme": "home",
+    "record_index": 0,
+    "sense_index": 1,
+    "example": [
+      "De [[bank]] in het huis is groot.",
+      "The sofa in the house is big.",
+      "Kanapa w domu jest duża."
+    ],
+    "image": "single_referent"
+  },
+  {
+    "ref": "S50",
+    "lemma": "bank",
+    "pos": "noun",
+    "en": "bank; financial institution",
+    "pl": "bank jako instytucja finansowa",
+    "nl_definition": "Een instelling die onder meer geld bewaart en betalingen verzorgt.",
+    "level": "A2",
+    "theme": "shopping",
+    "record_index": 1,
+    "sense_index": 0,
+    "example": [
+      "Mijn geld staat op een rekening bij de [[bank]].",
+      "My money is in an account at the bank.",
+      "Moje pieniądze są na koncie w banku."
+    ],
+    "note": "Requires the account sense of rekening as a glossed support item; do not use bill sense S25."
+  },
+  {
+    "ref": "S51",
+    "lemma": "kind",
+    "pos": "noun",
+    "en": "child; a young person",
+    "pl": "dziecko jako młoda osoba",
+    "nl_definition": "Een mens die nog niet volwassen is.",
+    "level": "A1",
+    "theme": "social",
+    "sense_index": 0,
+    "example": [
+      "Het [[kind]] is ziek.",
+      "The child is ill.",
+      "Dziecko jest chore."
+    ],
+    "image": "context_required"
+  },
+  {
+    "ref": "S52",
+    "lemma": "meisje",
+    "pos": "noun",
+    "en": "girl; young female person",
+    "pl": "dziewczynka, dziewczyna",
+    "nl_definition": "Een jong vrouwelijk persoon.",
+    "level": "A1",
+    "theme": "social",
+    "record_index": 1,
+    "sense_index": 0,
+    "example": [
+      "Het [[meisje]] heeft een fiets.",
+      "The girl has a bicycle.",
+      "Dziewczynka ma rower."
+    ],
+    "image": "context_required",
+    "note": "Grammatical het does not describe a person's social gender; lexicalized diminutive."
+  },
+  {
+    "ref": "S53",
+    "lemma": "pinnen",
+    "pos": "verb",
+    "en": "pay by debit card",
+    "pl": "płacić kartą debetową",
+    "nl_definition": "Met een betaalpas betalen.",
+    "level": "A1",
+    "theme": "shopping",
+    "sense_index": 0,
+    "register": "Netherlands",
+    "example": [
+      "Ik wil [[pinnen]].",
+      "I would like to pay by debit card.",
+      "Chcę zapłacić kartą debetową."
+    ],
+    "note": "This target excludes withdrawing cash; do not imply that entering a PIN is always necessary."
+  },
+  {
+    "ref": "S54",
+    "lemma": "inschrijven",
+    "display": "zich inschrijven",
+    "pos": "verb",
+    "en": "register oneself; enrol",
+    "pl": "zapisać się, zarejestrować się",
+    "nl_definition": "Jezelf laten opnemen in een register of op een deelnemerslijst.",
+    "level": "A2",
+    "theme": "services",
+    "particle": "in",
+    "base": "schrijven",
+    "reflexive": true,
+    "example": [
+      "Ik [[schrijf]] [[me]] [[in]].",
+      "I am registering.",
+      "Zapisuję się."
+    ],
+    "extra_examples": [
+      [
+        "Ik wil [[me]] [[inschrijven]].",
+        "I want to register.",
+        "Chcę się zapisać."
+      ],
+      [
+        "U [[schrijft]] [[zich]] [[in]].",
+        "You are registering.",
+        "Zapisuje się pan/pani."
+      ]
+    ]
+  },
+  {
+    "ref": "S55",
+    "lemma": "even",
+    "pos": "adv",
+    "en": "briefly; for a moment in a request",
+    "pl": "na chwilę, na moment, w prośbie",
+    "nl_definition": "Aangeven dat iets kort duurt, vaak om een verzoek te verzachten.",
+    "level": "A1",
+    "theme": "communication",
+    "example": [
+      "Kunt u [[even]] komen?",
+      "Could you come for a moment?",
+      "Czy może pan/pani przyjść na chwilę?"
+    ],
+    "note": "Do not import Polish równy/parzysty from adjective even; discourse softening is context-dependent.",
+    "sense_index": 2
+  },
+  {
+    "ref": "S56",
+    "lemma": "alsjeblieft",
+    "pos": "intj",
+    "en": "please, informal request",
+    "pl": "proszę, w nieformalnej prośbie",
+    "nl_definition": "Een verzoek op een vriendelijke, informele manier uitdrukken.",
+    "level": "A1",
+    "theme": "communication",
+    "register": "informal",
+    "example": [
+      "Kun je [[alsjeblieft]] komen?",
+      "Can you come, please?",
+      "Czy możesz przyjść, proszę?"
+    ],
+    "source_pos": "adv"
+  },
+  {
+    "ref": "S57",
+    "lemma": "alsjeblieft",
+    "pos": "intj",
+    "en": "here you are, when handing something over",
+    "pl": "proszę, gdy coś komuś podajemy",
+    "nl_definition": "Een uiting bij het aanbieden of overhandigen van iets.",
+    "level": "A1",
+    "theme": "communication",
+    "register": "informal",
+    "example": [
+      "[[Alsjeblieft]], je sleutel.",
+      "Here you are, your key.",
+      "Proszę, twój klucz."
+    ],
+    "source_pos": "adv",
+    "source_sense_status": "source_gloss_does_not_cover_handing_over_yet"
+  },
+  {
+    "ref": "S58",
+    "lemma": "half drie",
+    "pos": "phrase",
+    "en": "half past two; 2:30",
+    "pl": "wpół do trzeciej; 2:30",
+    "nl_definition": "Dertig minuten voor drie uur.",
+    "level": "A1",
+    "theme": "time",
+    "example": [
+      "De afspraak is om [[half drie]].",
+      "The appointment is at half past two.",
+      "Spotkanie jest o wpół do trzeciej."
+    ],
+    "components": [
+      "half",
+      "drie"
+    ],
+    "note": "Date/part of day chooses 02:30 or 14:30; the phrase alone does not distinguish morning from afternoon."
+  },
+  {
+    "ref": "S59",
+    "lemma": "deksel",
+    "pos": "noun",
+    "en": "lid of a container",
+    "pl": "pokrywka, wieczko pojemnika",
+    "nl_definition": "Een los of beweegbaar voorwerp waarmee je een opening van een bak of pot afsluit.",
+    "level": "A2",
+    "theme": "home",
+    "example": [
+      "Waar is het [[deksel]]?",
+      "Where is the lid?",
+      "Gdzie jest pokrywka?"
+    ],
+    "image": "single_referent",
+    "note": "Both de and het are valid; accepting one must not make the other a learner error."
+  },
+  {
+    "ref": "S60",
+    "lemma": "slim",
+    "pos": "adj",
+    "en": "clever; intelligent",
+    "pl": "mądry, bystry",
+    "nl_definition": "Goed kunnen begrijpen en oplossingen kunnen bedenken.",
+    "level": "A1",
+    "theme": "social",
+    "example": [
+      "Het kind is [[slim]].",
+      "The child is clever.",
+      "Dziecko jest bystre."
+    ],
+    "note": "Dutch slim in this sense is not English slim meaning thin; Polish szczupły is not an accepted meaning."
+  }
+]

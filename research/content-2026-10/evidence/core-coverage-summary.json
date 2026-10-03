@@ -1,0 +1,58 @@
+{
+  "baseline": "core-target-candidates-0.2",
+  "candidate_count": 5000,
+  "distinct_lemmas": 3328,
+  "headword_matched_candidates": 2120,
+  "headword_missing_candidates": 2880,
+  "confirmed_sense_coverage": null,
+  "limitation": "A headword match is an upper-bound candidate signal, not verified sense coverage. No full 5,000-sense coverage percentage is claimed.",
+  "stages": {
+    "A1": 600,
+    "A2": 900,
+    "B1": 1500,
+    "B2": 2000
+  },
+  "pilot_missing_lemmas": [
+    {
+      "ref": "S04",
+      "lemma": "dank u wel"
+    },
+    {
+      "ref": "S08",
+      "lemma": "kunt u dat herhalen"
+    },
+    {
+      "ref": "S27",
+      "lemma": "geen probleem"
+    },
+    {
+      "ref": "S33",
+      "lemma": "hoe laat"
+    },
+    {
+      "ref": "S34",
+      "lemma": "op tijd"
+    },
+    {
+      "ref": "S35",
+      "lemma": "tot ziens"
+    },
+    {
+      "ref": "S40",
+      "lemma": "een afspraak maken"
+    },
+    {
+      "ref": "S43",
+      "lemma": "het spijt me"
+    },
+    {
+      "ref": "S53",
+      "lemma": "pinnen"
+    },
+    {
+      "ref": "S58",
+      "lemma": "half drie"
+    }
+  ],
+  "seed_lemmas_outside_baseline": 873
+}

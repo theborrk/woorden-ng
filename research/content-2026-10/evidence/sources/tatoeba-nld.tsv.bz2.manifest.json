@@ -1,0 +1,10 @@
+{
+  "file": "tatoeba-nld.tsv.bz2",
+  "url": "https://downloads.tatoeba.org/exports/per_language/nld/nld_sentences.tsv.bz2",
+  "retrieved_at": "2026-10-03T00:17:38.422107+00:00",
+  "status": 200,
+  "content_type": "application/octet-stream",
+  "last_modified": "Sat, 26 Sep 2026 06:31:06 GMT",
+  "bytes": 2497641,
+  "sha256": "7d29316502fd45e1bd7e75bde6be02da742211044deec906a50bab5c85452e51"
+}

@@ -1,0 +1,32 @@
+{
+  "result": "pass",
+  "checks": {
+    "count": 1,
+    "identity": 70,
+    "crosslinks": 194,
+    "frequency_pos": 60,
+    "locales": 310,
+    "provenance": 1129,
+    "ipa_source_support": 78,
+    "morphology": 161,
+    "spans": 349,
+    "task_contract": 65,
+    "release_gate": 383,
+    "hash": 60,
+    "form_source_support": 341,
+    "form_filters": 322,
+    "audit_accounting": 3895,
+    "legacy_preservation": 1946,
+    "candidate_accounting": 2
+  },
+  "errors": [],
+  "warnings": [],
+  "entries": 60,
+  "examples": 65,
+  "form_records": 320,
+  "sourced_ipa_entries": 54,
+  "curated_release_eligible_entries": 0,
+  "independent_review": "not_run",
+  "audio_qa": "not_run",
+  "note": "This validates this delivery, not repository npm verify or linguistic accuracy."
+}

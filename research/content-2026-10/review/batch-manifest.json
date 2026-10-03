@@ -1,0 +1,110 @@
+[
+  {
+    "batch_id": "woorden-starter-v0.2-01",
+    "file": "review-batch-01.json",
+    "sha256": "b91695cb1aca12cfed83d7b0a5aa618655ea0f7a5dca7fcc09f6cedaced8434d",
+    "entries": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10"
+    ],
+    "response_received": false
+  },
+  {
+    "batch_id": "woorden-starter-v0.2-02",
+    "file": "review-batch-02.json",
+    "sha256": "75a7e84aaa62d76185aeb791b51b7f193dfd731f2c0bf455c549d0d80218dcba",
+    "entries": [
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20"
+    ],
+    "response_received": false
+  },
+  {
+    "batch_id": "woorden-starter-v0.2-03",
+    "file": "review-batch-03.json",
+    "sha256": "30dbd67a9d6f967366eab52ecd0806cf83ae1dce377df08ae33de6cb6936caaa",
+    "entries": [
+      "S21",
+      "S22",
+      "S23",
+      "S24",
+      "S25",
+      "S26",
+      "S27",
+      "S28",
+      "S29",
+      "S30"
+    ],
+    "response_received": false
+  },
+  {
+    "batch_id": "woorden-starter-v0.2-04",
+    "file": "review-batch-04.json",
+    "sha256": "38e75e0c313815e9188ff1a70b18f5ba323e04d48b58fe85d5f5ca7135112b57",
+    "entries": [
+      "S31",
+      "S32",
+      "S33",
+      "S34",
+      "S35",
+      "S36",
+      "S37",
+      "S38",
+      "S39",
+      "S40"
+    ],
+    "response_received": false
+  },
+  {
+    "batch_id": "woorden-starter-v0.2-05",
+    "file": "review-batch-05.json",
+    "sha256": "4898f4eac40b77a3b948983208ed624d97069fb7f3886171bedcfb11e99f4f53",
+    "entries": [
+      "S41",
+      "S42",
+      "S43",
+      "S44",
+      "S45",
+      "S46",
+      "S47",
+      "S48",
+      "S49",
+      "S50"
+    ],
+    "response_received": false
+  },
+  {
+    "batch_id": "woorden-starter-v0.2-06",
+    "file": "review-batch-06.json",
+    "sha256": "24368b2caa8f35dbb9baeb8baff9f7e7287a5f24be543d65d2bea517ba0fe128",
+    "entries": [
+      "S51",
+      "S52",
+      "S53",
+      "S54",
+      "S55",
+      "S56",
+      "S57",
+      "S58",
+      "S59",
+      "S60"
+    ],
+    "response_received": false
+  }
+]

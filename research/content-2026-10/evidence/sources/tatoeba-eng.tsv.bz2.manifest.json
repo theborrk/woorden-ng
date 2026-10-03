@@ -1,0 +1,10 @@
+{
+  "file": "tatoeba-eng.tsv.bz2",
+  "url": "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv.bz2",
+  "retrieved_at": "2026-10-03T00:17:38.884325+00:00",
+  "status": 200,
+  "content_type": "application/octet-stream",
+  "last_modified": "Sat, 26 Sep 2026 06:31:06 GMT",
+  "bytes": 24887945,
+  "sha256": "f0568ae34496f8a03758ce6821b68da04b1fe67a9300de8d26d50494ae5aceab"
+}

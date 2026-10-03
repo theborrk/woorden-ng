@@ -1,0 +1,10 @@
+{
+  "file": "small_nl.msgpack.gz",
+  "url": "https://raw.githubusercontent.com/rspeer/wordfreq/master/wordfreq/data/small_nl.msgpack.gz",
+  "retrieved_at": "2026-10-03T00:22:24.178111+00:00",
+  "status": 200,
+  "content_type": "application/octet-stream",
+  "last_modified": null,
+  "bytes": 132025,
+  "sha256": "ae0d64f10e9d11898b2b9481c0b20698ec40c79b8025edfdd70856bd593ad4b0"
+}

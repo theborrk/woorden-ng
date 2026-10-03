@@ -1,0 +1,1712 @@
+[
+  {
+    "fixture_ref": "S01",
+    "entry_id": "604c9517-d603-45ca-b859-4e98dd122cbf",
+    "content_sha256": "1ef00b4a4ed71fab8320b8778fdff9f98755df0ea3cb94d556661bc862520439",
+    "source_ids": [
+      "en:24",
+      "nl:11",
+      "nt2lex:ik",
+      "pl:136",
+      "s1506",
+      "subtlex:ik"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S02",
+    "entry_id": "faa0d8d3-bbb2-4a6f-ae8b-8c8825241803",
+    "content_sha256": "5d6c5a5c0f86c6ce860363c39076ea53fd585c59de54c35b64ef6611c150724f",
+    "source_ids": [
+      "en:40",
+      "nl:80",
+      "nt2lex:zijn",
+      "pl:132",
+      "pl:133",
+      "s120",
+      "subtlex:zijn",
+      "zijn-v-1",
+      "zijn-v-2",
+      "zijn-v-3",
+      "zijn-v-4",
+      "zijn-v-5",
+      "zijn-v-6",
+      "zijn-v-7",
+      "zijn-v-8",
+      "zijn-v-9"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S03",
+    "entry_id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
+    "content_sha256": "3be060496214ce524f196216fcdaf748fddfcd1474eea246662c2e68a15fa952",
+    "source_ids": [
+      "en:1318",
+      "nl:17",
+      "nt2lex:goed",
+      "pl:582",
+      "s353",
+      "subtlex:goed"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S04",
+    "entry_id": "de6f4380-8bbc-4ebb-8852-418ee312edda",
+    "content_sha256": "1e55d6b05d1b85bc9873b2cc6e19b9e1b3edb9a37aa5e2d6d098e2135db06268",
+    "source_ids": [
+      "en:1876"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S05",
+    "entry_id": "8e094be1-35f7-42b5-8dbf-ba6ed3afb567",
+    "content_sha256": "26df4988e65305e6431b2cf98d028a75edca2f8a541bdbe75f82b91d7c9d3fd4",
+    "source_ids": [
+      "en:203",
+      "nl:525",
+      "nl:526",
+      "nt2lex:u",
+      "pl:19",
+      "s1834",
+      "subtlex:u"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S06",
+    "entry_id": "ff49fcaa-a55f-4ff6-bd55-6a1a99535bd9",
+    "content_sha256": "d91103e00c70b461df49d08b87d5167422bc85d8b63c23ac3ddbd9431cc51499",
+    "source_ids": [
+      "begrijpen-v-1",
+      "begrijpen-v-2",
+      "begrijpen-v-3",
+      "en:1101",
+      "nl:1330",
+      "nt2lex:begrijpen",
+      "pl:214",
+      "s202",
+      "subtlex:begrijpen"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S07",
+    "entry_id": "fe21dcb7-b84a-4f1d-9893-f87e3334f6a2",
+    "content_sha256": "4aec56a289467737f0d9c189716e1870fb221e0bfeba3fc544a8568990a1605e",
+    "source_ids": [
+      "en:37",
+      "nl:458",
+      "nt2lex:niet",
+      "pl:636",
+      "s882",
+      "subtlex:niet"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S08",
+    "entry_id": "86106c24-7587-4f0d-b1b2-3d1e14505a48",
+    "content_sha256": "b318c9578dbd5043b3f158f9ec706b0f66685ecadf47cfe4a711283fd039ca71",
+    "source_ids": [],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "Whole-entry IPA unavailable in inspected sources; no model-created IPA substituted.",
+      "Productive expression assembled from sourced components; whole-expression grammatical/naturalness review required.",
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S09",
+    "entry_id": "d66ba490-4dcc-482e-885b-cf97a000a036",
+    "content_sha256": "69e6418f29bcbefb36d55a7aa4f4bbf19ac9d900f8c51f245a4f249650af858c",
+    "source_ids": [
+      "en:175",
+      "hebben-v-1",
+      "hebben-v-2",
+      "hebben-v-3",
+      "hebben-v-4",
+      "hebben-v-5",
+      "hebben-v-6",
+      "hebben-v-7",
+      "nl:56",
+      "nl:57",
+      "nt2lex:hebben",
+      "pl:469",
+      "pl:470",
+      "s121",
+      "subtlex:hebben"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S10",
+    "entry_id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+    "content_sha256": "e0ba92254db1c22970dcd427889e48f5537faa66a947b6153c7584fe8d41198e",
+    "source_ids": [
+      "en:864",
+      "nl:484",
+      "nt2lex:huis",
+      "pl:541",
+      "s267",
+      "subtlex:huis"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S11",
+    "entry_id": "2499fd26-e310-4c4a-9c8e-3c6f20fb2b7f",
+    "content_sha256": "2692e00e0d7bbc63373573ee48ec5027bd988233867db93f78e5382cde7c3811",
+    "source_ids": [
+      "en:1239",
+      "nl:429",
+      "nt2lex:sleutel",
+      "pl:404",
+      "s276",
+      "subtlex:sleutel"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S12",
+    "entry_id": "411865da-19cb-4f06-a2a3-2b98d7dbb17f",
+    "content_sha256": "013d575a14be982fa44a11850361635dafd3a62abb9ff81b9e23e9b1ce0d5a2b",
+    "source_ids": [
+      "en:54",
+      "nl:1984",
+      "nt2lex:open",
+      "pl:289",
+      "s1654",
+      "subtlex:open"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S13",
+    "entry_id": "45dfcc3e-11c7-4ca6-9ae9-9e2f60ec4766",
+    "content_sha256": "b0adb69da91f172ce34694457d46d9cec27759d7cbad88c721cf7c1c23f80c57",
+    "source_ids": [
+      "en:564",
+      "nl:260",
+      "nt2lex:deur",
+      "pl:581",
+      "s273",
+      "subtlex:deur"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S14",
+    "entry_id": "697b8cfe-3ec9-476c-a218-de733918e163",
+    "content_sha256": "3c467e676532ed557811222e377df43e08a2593d104e332ffc7ca423d8bbf987",
+    "source_ids": [
+      "en:1111",
+      "komen-v-1",
+      "komen-v-10",
+      "komen-v-11",
+      "komen-v-12",
+      "komen-v-2",
+      "komen-v-3",
+      "komen-v-4",
+      "komen-v-5",
+      "komen-v-6",
+      "komen-v-8",
+      "komen-v-9",
+      "nl:114",
+      "nt2lex:komen",
+      "pl:631",
+      "s129",
+      "subtlex:komen"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S15",
+    "entry_id": "fb608dce-2477-4c01-8e82-429c735c2b44",
+    "content_sha256": "7a56380f21eeac7c5cd33f700f4b7feb93eb7dd42d98573bde0fe77bcda84be6",
+    "source_ids": [
+      "en:1553",
+      "nt2lex:geen",
+      "s883",
+      "subtlex:geen"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S16",
+    "entry_id": "ecb2bb56-8abf-4cfc-b99f-8ecf13e037b1",
+    "content_sha256": "d5360dda91a4ae33e932586464046b11432763d81d9eae04b4a21593eabfd214",
+    "source_ids": [
+      "en:863",
+      "nl:73",
+      "nt2lex:groot",
+      "pl:493",
+      "s351",
+      "subtlex:groot"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S17",
+    "entry_id": "44616c77-d26a-478e-81e2-5e2da164559f",
+    "content_sha256": "db4f26ef36131c9b2e60cf4131f39c0763ec890d7a92c27fd80692c21fca6bca",
+    "source_ids": [
+      "en:2887",
+      "nl:240",
+      "nt2lex:water",
+      "pl:110",
+      "s287",
+      "subtlex:water"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S18",
+    "entry_id": "95e00b85-88cd-47d1-a2fa-b83f4bdbc454",
+    "content_sha256": "0ce05366e37ea450933504c3b291513965d643ea7b97cde5237fa56780af26b2",
+    "source_ids": [
+      "en:151",
+      "nl:1423",
+      "nt2lex:winkel",
+      "pl:902",
+      "s293",
+      "subtlex:winkel"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S19",
+    "entry_id": "7480f746-b6d8-4140-b273-76d2819d90cd",
+    "content_sha256": "4187b5bf0dd17f52e1cdb526c94b3827ecbf82f6a26909d9364cbcd085d5e441",
+    "source_ids": [
+      "en:1279",
+      "kopen-v-1",
+      "nl:1549",
+      "nt2lex:kopen",
+      "pl:633",
+      "s136",
+      "subtlex:kopen"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S20",
+    "entry_id": "166db6bb-70aa-462f-8d4c-612be41927ee",
+    "content_sha256": "672d83deb387d2886d5f4804ecec08fea43af2cea55f26c016a9789ce737c6b4",
+    "source_ids": [
+      "en:401",
+      "nl:947",
+      "nt2lex:brood",
+      "pl:182",
+      "s296",
+      "subtlex:brood"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S21",
+    "entry_id": "f9e88132-0317-495d-9457-4a3366baefb4",
+    "content_sha256": "2d8934ebb8579ded2bbf6ec4a24b297fe6ee530bb93418ccb797f879f4d8a38b",
+    "source_ids": [
+      "en:1285",
+      "nl:1292",
+      "nt2lex:willen",
+      "pl:231",
+      "s126",
+      "subtlex:willen",
+      "willen-v-1",
+      "willen-v-2",
+      "willen-v-3"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S22",
+    "entry_id": "18f52fe5-d7e9-466d-8692-bc550d72435e",
+    "content_sha256": "c6e23e0469fe4b2d2a1e2b81ab8ca240f5796c25337e49e51f5297313c93e4e6",
+    "source_ids": [
+      "betalen-v-1",
+      "betalen-v-2",
+      "betalen-v-3",
+      "en:1081",
+      "nl:199",
+      "nt2lex:betalen",
+      "pl:226",
+      "s389",
+      "subtlex:betalen"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S23",
+    "entry_id": "0488f95a-4377-4d82-9b20-8f7260bb44d7",
+    "content_sha256": "01d95fc18e88725222fe5ce185914f281ca733f0d202a0d188ffbe0af8c48d9f",
+    "source_ids": [
+      "en:709",
+      "nl:585",
+      "nt2lex:geld",
+      "pl:488",
+      "s288",
+      "subtlex:geld"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S24",
+    "entry_id": "67a5bb85-6c16-43c5-8845-9ffcca3bf967",
+    "content_sha256": "7335dd37515746c74dfd440474cce8ec95d1b0e42ae3c6496ca885d0aa1a3edd",
+    "source_ids": [
+      "en:531",
+      "nl:1286",
+      "nt2lex:duur",
+      "pl:948",
+      "s367",
+      "subtlex:duur"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S25",
+    "entry_id": "a3628a63-a17f-4b86-b95f-dcfaf66e58f8",
+    "content_sha256": "9b913030aa6dd28f72821329015d02022779cccaca0193cf7e4e48dbac43a7e8",
+    "source_ids": [
+      "en:2083",
+      "nl:857",
+      "nt2lex:rekening",
+      "s14",
+      "subtlex:rekening"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S26",
+    "entry_id": "1c862226-363a-42a7-aca5-4d9dade68563",
+    "content_sha256": "4f6f0c3968d0af2ad3104154ca717031a836db58f106cefdcdf14e8072e8e250",
+    "source_ids": [
+      "en:833",
+      "nl:86",
+      "nt2lex:klein",
+      "pl:151",
+      "s352",
+      "subtlex:klein"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S27",
+    "entry_id": "028ec104-03e8-4482-8505-52665a5b3e6a",
+    "content_sha256": "030bce60f980af600b9b7ad7460e1ec2ec7bd2a13f69806b4830717fee5454dc",
+    "source_ids": [
+      "en:2898"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "Whole-entry IPA unavailable in inspected sources; no model-created IPA substituted.",
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S28",
+    "entry_id": "0e0bc84b-dcea-40c7-b7be-4d73198b4bcc",
+    "content_sha256": "2d4fff5c979839f34c3934f8c58aa4e778fb81227b359146d2210788dac7a260",
+    "source_ids": [
+      "en:609",
+      "gaan-v-1",
+      "gaan-v-10",
+      "gaan-v-11",
+      "gaan-v-12",
+      "gaan-v-13",
+      "gaan-v-14",
+      "gaan-v-15",
+      "gaan-v-16",
+      "gaan-v-17",
+      "gaan-v-2",
+      "gaan-v-3",
+      "gaan-v-4",
+      "gaan-v-5",
+      "gaan-v-7",
+      "gaan-v-8",
+      "gaan-v-9",
+      "nl:616",
+      "nt2lex:gaan",
+      "pl:471",
+      "pl:472",
+      "s128",
+      "subtlex:gaan"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S29",
+    "entry_id": "c9f003aa-bd0a-4182-9e66-eb9baa1f453a",
+    "content_sha256": "e881dd904e9beedae571a916924bd74cd00921e84e85ecbf9010a0ef8c031d39",
+    "source_ids": [
+      "en:1951",
+      "nl:166",
+      "nt2lex:fiets",
+      "pl:589",
+      "s278",
+      "subtlex:fiets"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S30",
+    "entry_id": "d01a3e72-d7ab-4d46-8ba0-564094c29b41",
+    "content_sha256": "97390576ed21059ab01aa230056b242ac6928dd7210cb95b44fec5e62ced408f",
+    "source_ids": [
+      "en:942",
+      "nl:253",
+      "nt2lex:waar",
+      "s406",
+      "subtlex:waar"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S31",
+    "entry_id": "bb370801-05b9-4f02-abd3-a61df353ff4e",
+    "content_sha256": "2cb5f44ada42366a26494023c3557d2c8857d40a88abf3b364a871177921288e",
+    "source_ids": [
+      "en:455",
+      "kunnen-v-1",
+      "kunnen-v-2",
+      "kunnen-v-3",
+      "kunnen-v-4",
+      "nl:1649",
+      "nt2lex:kunnen",
+      "pl:898",
+      "s123",
+      "subtlex:kunnen"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S32",
+    "entry_id": "84f744f8-ffaa-4bae-976d-c5d3ea491f1e",
+    "content_sha256": "e63523abffedc8f04185fcc95e19ab7d510b8cd91bd2dd316d3de230ee47a630",
+    "source_ids": [
+      "en:2696",
+      "meenemen-v-1",
+      "meenemen-v-2",
+      "meenemen-v-3",
+      "nl:2617",
+      "nt2lex:meenemen",
+      "s855",
+      "subtlex:meenemen"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S33",
+    "entry_id": "687efd18-ac8d-4cdf-a8df-9a896f4a4503",
+    "content_sha256": "62a02468b7e1709b7636a56f2f6c6181a43b7b6a4014e555ddf63061b2349cb7",
+    "source_ids": [
+      "en:2895"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "Whole-entry IPA unavailable in inspected sources; no model-created IPA substituted.",
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S34",
+    "entry_id": "056085f3-7973-4d66-9c8a-c843ff6e5b2f",
+    "content_sha256": "bdab9cbab82b628c4869e7da1f01b384f827d684d132f551f312d418c75b891c",
+    "source_ids": [
+      "nl:3125",
+      "nt2lex:op tijd"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S35",
+    "entry_id": "1e884684-306c-4da8-812c-4ba2d9264a7e",
+    "content_sha256": "2965011fb64d242704cf60ee43add4b50c5ad55ff6b8e3b86d26737e2499e103",
+    "source_ids": [
+      "en:1873"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S36",
+    "entry_id": "6aa6a64a-4f12-491b-ba4d-5785c7006856",
+    "content_sha256": "eb8b0b7642931fae001116c76d2ac1ccad403265205dc1cf8cbd0ec1e138948b",
+    "source_ids": [
+      "en:1653",
+      "nl:2759",
+      "nt2lex:opstaan",
+      "opstaan-v-1",
+      "opstaan-v-2",
+      "opstaan-v-3",
+      "pl:1244",
+      "s852",
+      "subtlex:opstaan"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "NL source table includes combined zijn, hebben; ODWN gives zijn. Pilot get-out-of-bed sense selects zijn; external reviewer must confirm scope, not flatten table.",
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S37",
+    "entry_id": "c3ea192d-421a-4835-96a3-26d04701c801",
+    "content_sha256": "a6b3b22476cbdbecb20fea15f75f267741040cee0b190a583acd85dc35337e02",
+    "source_ids": [
+      "en:1033",
+      "nl:394",
+      "nl:395",
+      "nt2lex:werk",
+      "pl:563",
+      "s289",
+      "subtlex:werk"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S38",
+    "entry_id": "306f99d6-da43-436a-b7ca-0a3949e9584d",
+    "content_sha256": "bec5ada4b7f44ea105e3ca707a7a0d5697a418479438a0f4e97bdaaccaa64bf5",
+    "source_ids": [
+      "en:1500",
+      "nl:1138",
+      "nt2lex:wanneer",
+      "s407",
+      "subtlex:wanneer"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S39",
+    "entry_id": "abfd9a0e-7a42-4f1c-92b4-1e9718832b8c",
+    "content_sha256": "312aaa359bac02c0816ff3dbe3379edcb859e61dc55f3410d6f686c196c4b9d4",
+    "source_ids": [
+      "en:1185",
+      "nl:2343",
+      "nt2lex:afspraak",
+      "pl:1078",
+      "s0",
+      "subtlex:afspraak"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S40",
+    "entry_id": "757ce5b1-8d73-44ab-94c5-65a2d19a015e",
+    "content_sha256": "8e416ba3f43887e33381ba5da0941b954af26810a45dd475fa334293bcc0b12b",
+    "source_ids": [],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "Whole-entry IPA unavailable in inspected sources; no model-created IPA substituted.",
+      "Productive expression assembled from sourced components; whole-expression grammatical/naturalness review required.",
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S41",
+    "entry_id": "3a807fe1-59d3-4ace-b587-5f049407a79f",
+    "content_sha256": "63ba9f4840a0366bd8db1b232486a20016a06d6b393291934856aac07857be35",
+    "source_ids": [
+      "en:1995",
+      "nl:2407",
+      "nt2lex:huisarts",
+      "s1499",
+      "subtlex:huisarts"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S42",
+    "entry_id": "78cf3192-4b32-475c-a818-c62b0e4fd4c6",
+    "content_sha256": "6f3787641d2e87dae5d93bd29166c9b973b1deaa46eb870c9bed5b901e30a559",
+    "source_ids": [
+      "en:1138",
+      "nl:1584",
+      "nt2lex:ziek",
+      "pl:1033",
+      "s377",
+      "subtlex:ziek"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S43",
+    "entry_id": "dd7af13d-25db-4209-8f45-33b16422a71a",
+    "content_sha256": "d08704cf89f0df6c2ba65866d966138b11ac5dace87993c08727060d94042846",
+    "source_ids": [
+      "en:2952"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S44",
+    "entry_id": "534d519b-d3ce-4b7c-a367-f5e2a2f54fb4",
+    "content_sha256": "f56ba534f2c9b45f3e8a5021f42acfa159c5c5d9d7d4e77bbcd21937e56b56c3",
+    "source_ids": [
+      "en:2543",
+      "nl:1163",
+      "nt2lex:gemeente",
+      "pl:998",
+      "s1455",
+      "subtlex:gemeente"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S45",
+    "entry_id": "35486ab7-f610-4523-b93a-9d4231a58534",
+    "content_sha256": "06d355c0e7579c372cac359f865a35a7d5d061d33f2271467448e34c0bd18665",
+    "source_ids": [
+      "en:2722",
+      "nl:1998",
+      "nt2lex:formulier",
+      "s1432",
+      "subtlex:formulier"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S46",
+    "entry_id": "99c04348-74c1-4b67-8ba8-4ac497493507",
+    "content_sha256": "7aefde20b33bb2f2d1d3efa57c6950a92390ff3d11d6836dc36fb3856d16e5bf",
+    "source_ids": [
+      "en:1886",
+      "invullen-v-1",
+      "invullen-v-2",
+      "invullen-v-3",
+      "nl:3057",
+      "nt2lex:invullen",
+      "s1268",
+      "subtlex:invullen"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S47",
+    "entry_id": "fdbe7fb4-b92d-4e38-bc42-8c767d6734b1",
+    "content_sha256": "49db8cb2b2e963afefbd0afde9283aa5c65e98a46ab1ee36299a94dd83726412",
+    "source_ids": [
+      "en:1020",
+      "nl:479",
+      "nt2lex:maar",
+      "s887",
+      "subtlex:maar"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S48",
+    "entry_id": "8f4202a4-3f4d-473a-b924-b357c8ee3d24",
+    "content_sha256": "ad0d84d6dc5c0560c8fd260884eda3d28bf18ad53f3967632f45a90ba4665d26",
+    "source_ids": [
+      "en:1965",
+      "nl:1637",
+      "nt2lex:omdat",
+      "pl:693",
+      "s118",
+      "subtlex:omdat"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S49",
+    "entry_id": "a940d12d-8a48-4b5b-8f9a-f8db1e615c41",
+    "content_sha256": "ddb0f2dcf024cfb4be6e011dd04bbca22667f9f385de151dbfd9a779c3e602af",
+    "source_ids": [
+      "en:52",
+      "en:53",
+      "nl:311",
+      "nt2lex:bank",
+      "pl:90",
+      "s949",
+      "subtlex:bank"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S50",
+    "entry_id": "8fb280b7-75cb-495d-b8b1-b95523e729e2",
+    "content_sha256": "adf35e76ef26be2f3190331e419f93eaa95ad452d4511134742ea3b9aa453ca2",
+    "source_ids": [
+      "en:52",
+      "en:53",
+      "nl:311",
+      "nt2lex:bank",
+      "pl:90",
+      "s949",
+      "subtlex:bank"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S51",
+    "entry_id": "94f0cfac-22ac-4a37-9767-1820badf0762",
+    "content_sha256": "1db9a9bcab19716e9c92c1c69a6634bc624ee2c6c34e5dc99d96b6106ff1af7f",
+    "source_ids": [
+      "en:124",
+      "nl:1052",
+      "nt2lex:kind",
+      "pl:292",
+      "s233",
+      "subtlex:kind"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S52",
+    "entry_id": "fccefac8-1bdd-4537-a038-044dd762e938",
+    "content_sha256": "d75ae5dc4162993185ca72fa9294a320925dbb23f3169c5705f5855900f2eb58",
+    "source_ids": [
+      "en:1176",
+      "nl:579",
+      "nt2lex:meisje",
+      "pl:607",
+      "s1595",
+      "subtlex:meisje"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S53",
+    "entry_id": "c83b4100-d631-418c-8b76-24744c3cf306",
+    "content_sha256": "81575ede8d0e4b9febfd64d18223c071327a19c3177f74793b61381bc1ff27eb",
+    "source_ids": [
+      "en-supplement:10278",
+      "nt2lex:pinnen",
+      "pinnen-v-1",
+      "pinnen-v-2",
+      "pinnen-v-3",
+      "subtlex:pinnen",
+      "web-pinnen"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "Whole-entry IPA unavailable in inspected sources; no model-created IPA substituted.",
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S54",
+    "entry_id": "0a6d113b-bbbf-4a2d-b399-4d9f475138cc",
+    "content_sha256": "4fe1394b63bff6e98708ff35fb7efca5baa4721f2237ae2f90b2eef9b1f08890",
+    "source_ids": [
+      "en:2068",
+      "inschrijven-v-1",
+      "inschrijven-v-2",
+      "nl:2755",
+      "nt2lex:inschrijven",
+      "s1204",
+      "subtlex:inschrijven"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S55",
+    "entry_id": "350401e4-82ba-4e3e-912a-16d5f726e0e3",
+    "content_sha256": "50ee067beb643b1129ea038dc51f41a3062106ef6c48ccd9b92cf864c7a16b29",
+    "source_ids": [
+      "en:554",
+      "nl:2384",
+      "nt2lex:even",
+      "s1420",
+      "subtlex:even"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S56",
+    "entry_id": "55e92d2d-1f63-43e8-acbd-994640c405c8",
+    "content_sha256": "01344ad5f2bb51f50269ce2aa6ec8e4e483ac6a79f3ffe84cda5ec30258e9229",
+    "source_ids": [
+      "en:1221",
+      "nl:1950",
+      "nt2lex:alsjeblieft",
+      "s1309",
+      "subtlex:alsjeblieft",
+      "web-alsjeblieft-pos"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "ANW interjection versus Wiktionary adverb is a source taxonomy difference; normalized POS chosen explicitly. IPA conventions/stress differ between sources; preserve sourced value for review.",
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S57",
+    "entry_id": "46c25afa-338d-4e75-be4c-65f96f0312f7",
+    "content_sha256": "7c40cb0a9f0e5e8ce0e4abff0a6b6ec47b6f949e7cccf69781a021f7525d4b90",
+    "source_ids": [
+      "en:1221",
+      "nl:1950",
+      "nt2lex:alsjeblieft",
+      "s1309",
+      "subtlex:alsjeblieft",
+      "web-alsjeblieft-pos",
+      "web-alsjeblieft-sense",
+      "web-here-you-are"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "ANW interjection versus Wiktionary adverb is a source taxonomy difference; normalized POS chosen explicitly. IPA conventions/stress differ between sources; preserve sourced value for review.",
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S58",
+    "entry_id": "b5b1bfca-7565-4561-a09e-2166baf0ab17",
+    "content_sha256": "5dbd221f3c47ee3d25e9e01e4351d356c85c3ab83ca680d4e57ea507350b83fc",
+    "source_ids": [
+      "web-half-drie"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "Whole-entry IPA unavailable in inspected sources; no model-created IPA substituted.",
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S59",
+    "entry_id": "258f003a-43ad-4033-a1c8-5bdfff96a3f8",
+    "content_sha256": "b0a72965a1502ad5d7c41a6fb98065dd1aa5250438e35dc2b3da7c8d59937772",
+    "source_ids": [
+      "en:1063",
+      "nl:572",
+      "nt2lex:deksel",
+      "pl:996",
+      "s1392",
+      "subtlex:deksel",
+      "web-deksel"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  },
+  {
+    "fixture_ref": "S60",
+    "entry_id": "5e635fe9-21a6-4da8-8677-4890d8be4f83",
+    "content_sha256": "8233864554e00f8c7b735161c5f24c2555de00cd146d5481ef0e8f6d0d3bd185",
+    "source_ids": [
+      "en:143",
+      "nl:2041",
+      "nt2lex:slim",
+      "s500",
+      "subtlex:slim"
+    ],
+    "automated_checks": [
+      "schema",
+      "identity",
+      "source_form_surfaces",
+      "source_IPA",
+      "locales",
+      "span_roundtrip",
+      "form_target_link",
+      "publication_blocked"
+    ],
+    "author_self_check": "performed_same_vendor_not_independent",
+    "reviewer_B_verdict": "not_run",
+    "unresolved_doubts": [
+      "All generated meanings, examples and PL/EN translations await independent vendor review."
+    ]
+  }
+]

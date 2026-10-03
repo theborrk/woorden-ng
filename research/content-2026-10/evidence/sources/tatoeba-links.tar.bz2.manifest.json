@@ -1,0 +1,10 @@
+{
+  "file": "tatoeba-links.tar.bz2",
+  "url": "https://downloads.tatoeba.org/exports/links.tar.bz2",
+  "retrieved_at": "2026-10-03T00:17:42.263244+00:00",
+  "status": 200,
+  "content_type": "application/octet-stream",
+  "last_modified": "Sat, 26 Sep 2026 06:15:33 GMT",
+  "bytes": 149869480,
+  "sha256": "cf088722034f27371fa725ffb97ee5fa26cb17884176e2b069534a13ae4d862e"
+}

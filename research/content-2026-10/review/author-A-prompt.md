@@ -1,0 +1,13 @@
+# Source-constrained authoring prompt
+
+Create one sense entry for the attached source-backed authoring brief. Learner: adult Polish/English speaker living in the Netherlands. Purpose: practical Dutch, not dictionary completeness. Return only JSON matching the supplied schema. This is external preparation; do not propose an API or runtime model dependency.
+
+Inputs required before authoring: immutable lexeme/sense IDs or allocation request; intended Dutch sense and real-life situation; normalized/source POS; dictionary excerpts with record IDs/hashes for lemma, article, plural/diminutive, verb forms, separability/reflexivity, IPA; raw NT2Lex exposure and SUBTLEX fields; curriculum band; available support vocabulary and grammar; legacy IDs/RU if present.
+
+Copy factual morphology and IPA only from supplied observations. Keep null/missing/not_applicable distinct. Do not infer a noun's article from a translation or invent an IPA for a phrase. If observations disagree, retain the alternatives and flag the field with a question for adjudication. Do not quote an unseen source or turn source-headword presence into sense confirmation.
+
+Write a concise Dutch definition, natural EN and PL meanings directly for that Dutch sense, and at least one simple natural Dutch example with direct EN/PL translations. Mark the exact answer text, including all separated particles and reflexive segments. For a separable target, provide both a split and joined example. For a reflexive target, include at least two persons. Keep one intended scheduled target per example; make other required words/grammar explicit. More than one unglossed unknown outside declared support/prerequisites is a revision trigger.
+
+Scope ambiguous translations (bank, rekening, lenen, even etc.) and avoid literal translation mistakes. State register/region where needed. Never use an abstract meaning as if it had an unambiguous standalone picture. Hints are optional; no historical/etymological claim without evidence. Meaning help must be labelled as a reveal. A Polish pronunciation approximation is optional, approximate, and separately reviewable.
+
+Record your actual vendor/model identifier if known, source IDs per field, estimated level as a judgment, and unresolved doubts. All authored meanings/examples/translations start generated_draft. Do not assign ai_reviewed, language_reviewed, or release eligibility. A different-vendor reviewer will assess the current content hash against a fixed rubric. Your own self-check is useful but not independent review.

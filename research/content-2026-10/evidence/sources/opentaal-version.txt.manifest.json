@@ -1,0 +1,10 @@
+{
+  "file": "opentaal-version.txt",
+  "url": "https://raw.githubusercontent.com/OpenTaal/opentaal-wordlist/master/datetimeversion.txt",
+  "retrieved_at": "2026-10-03T00:21:05.516124+00:00",
+  "status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "last_modified": null,
+  "bytes": 28,
+  "sha256": "f5bd0201d83f2fcff8bd40d6bfd3d91f46759902a58f648fd2edb63aaba29422"
+}

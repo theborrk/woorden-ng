@@ -1,0 +1,10 @@
+{
+  "file": "tatoeba-pol.tsv.bz2",
+  "url": "https://downloads.tatoeba.org/exports/per_language/pol/pol_sentences.tsv.bz2",
+  "retrieved_at": "2026-10-03T00:17:40.669074+00:00",
+  "status": 200,
+  "content_type": "application/octet-stream",
+  "last_modified": "Sat, 26 Sep 2026 06:31:06 GMT",
+  "bytes": 1737448,
+  "sha256": "dba8a41db6e098bd0b6d12386118cf3dfe9514ea2246e24d9923cd1c4d404d52"
+}

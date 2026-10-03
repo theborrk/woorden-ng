@@ -1,0 +1,10 @@
+{
+  "file": "apertium-nld.dix",
+  "url": "https://raw.githubusercontent.com/apertium/apertium-nld/master/apertium-nld.nld.dix",
+  "retrieved_at": "2026-10-03T13:31:26.958297+00:00",
+  "status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "last_modified": null,
+  "bytes": 2682892,
+  "sha256": "2d14839e0e32f0b057460fa20689060d370eb178b16a51495c00f2b4403250c4"
+}

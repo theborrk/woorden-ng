@@ -50,8 +50,60 @@ complete (and `--strict-refs` on) from day one, with detail added just in time.
 - M0 (baseline and integration spikes) is written out: T-001 to T-009.
 - M1 to M11 start as plan tasks (T-010 to T-014) that hold the blueprint IDs until Codex breaks them
   down, milestone by milestone, using what the spikes found.
+- Content work that can start early is written out as T-100 to T-122 (see [Content backlog](#content-backlog)).
 - `required-refs.json` lists every in-scope F, W, T and I ID from the blueprint; `check:tasks` runs
   with `--strict-refs`, so a task can't silently drop one.
+
+## Content backlog
+
+T-100 to T-122 come from the content research of October 2026 (`docs/content/`, data in
+`research/content-2026-10/`, decision in ADR 0005). They break down part of W18–W21 ahead of the M5
+plan (T-012): source importers, the entry validator, draft import, reviewer packets, review
+evidence, the pack compiler, the 60-entry starter pilot, coverage and audio.
+
+| Task  | Title                                                              | Size | Depends on                 |
+| ----- | ------------------------------------------------------------------ | ---- | -------------------------- |
+| T-100 | Pin source downloads and expose an inspectable manifest            | S    | —                          |
+| T-101 | Import NT2Lex exposure with explicit sense links                   | M    | T-100                      |
+| T-102 | Import SUBTLEX surface and lemma frequency separately              | M    | T-100                      |
+| T-103 | Import explicit ODWN article and morphology observations           | M    | T-100                      |
+| T-104 | Import English-edition Dutch forms and IPA from Kaikki             | M    | T-100                      |
+| T-105 | Join Dutch and Polish dictionary observations by sense             | M    | T-103, T-104               |
+| T-106 | Add advisory OpenTaal spelling checks                              | S    | T-100                      |
+| T-107 | Retrieve Tatoeba candidates with direct EN and PL links            | M    | T-100                      |
+| T-108 | Rank a situation block with visible score components               | M    | T-101, T-102               |
+| T-109 | Import all legacy audit decisions without losing provenance        | M    | T-103, T-104, T-106        |
+| T-110 | Validate one sense entry with explicit spans and provenance        | M    | —                          |
+| T-111 | Import external draft batches idempotently                         | M    | T-110                      |
+| T-112 | Export resumable source-linked reviewer packets                    | S    | T-105, T-111               |
+| T-113 | Validate independent review evidence and disagreement states       | M    | T-112                      |
+| T-114 | Compile packs from task and locale eligibility                     | M    | T-113                      |
+| T-115 | Load the first starter slice into a content inspection view        | M    | T-111                      |
+| T-116 | Load the remaining representative starter cases                    | M    | T-115                      |
+| T-117 | Report curriculum coverage and content changes honestly            | M    | T-108, T-109, T-114, T-116 |
+| T-118 | Import and QA one downloadable audio slice                         | M    | T-100, T-114               |
+| T-119 | Probe local Dutch TTS and expose explicit fallback states          | M    | T-118                      |
+| T-120 | Admit the pilot only after the actual external review              | S    | T-113, T-114, T-116        |
+| T-121 | Add an optional Apertium conflict check                            | S    | T-103, T-104               |
+| T-122 | Export source-constrained authoring briefs for external generation | S    | T-103, T-104, T-108, T-110 |
+
+Two tracks start in parallel: sources (T-100, then T-101 to T-104, T-106 and T-107) and entries
+(T-110, T-111, T-115). The research Python scripts are prototypes to port to the repository's
+Node tooling (`tools/content/`), not dependencies.
+
+**Source downloads (owner prerequisite for T-100 to T-107, T-118 and T-121).** The pinned files are
+hosted outside the Codex environment's default allowlist. Before starting these tasks, add to the
+environment's internet access: `cental.uclouvain.be` (NT2Lex), `osf.io` and the file host its
+downloads redirect to (SUBTLEX-NL), `raw.githubusercontent.com` (ODWN, OpenTaal, Apertium),
+`kaikki.org` (Wiktionary extracts) and `downloads.tatoeba.org` (Tatoeba); for T-118 also
+`upload.wikimedia.org`. Downloads go to the ignored `.cache/content-sources/` and are never
+committed; tests use small committed excerpts and never touch the network. The largest files are
+about 260 MB (Kaikki) and 150 MB (Tatoeba links).
+
+**Language review (ADR 0005).** Content becomes `ai_reviewed` only through an actual review by a
+different vendor from the author: the drafts were written with OpenAI models, so Claude reviews them.
+That review runs outside the app and outside Codex tasks: see
+`research/content-2026-10/review/RUNBOOK.md`. No task may fabricate or simulate a review response.
 
 ## Deferred
 

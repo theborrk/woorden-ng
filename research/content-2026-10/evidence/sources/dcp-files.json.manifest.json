@@ -1,0 +1,10 @@
+{
+  "file": "dcp-files.json",
+  "url": "https://api.osf.io/v2/nodes/5fk8d/files/osfstorage/",
+  "retrieved_at": "2026-10-03T00:21:05.513609+00:00",
+  "status": 200,
+  "content_type": "application/vnd.api+json; charset=utf-8",
+  "last_modified": null,
+  "bytes": 19662,
+  "sha256": "1beb01109e58fe13548d650b2acabd2dbb73e5e7a4dfa799b775b18848aff0d6"
+}

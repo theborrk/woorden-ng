@@ -7,6 +7,9 @@
 //   node scripts/check-tasks.mjs --ledger       print the backlog as a Markdown ledger table
 //   node scripts/check-tasks.mjs --json         machine-readable summary (used by agents)
 //
+// It also checks that ADR numbers in docs/adr are unique: tasks run in parallel, and two of them
+// can each add "the next" ADR. CI then fails on whichever merges second, which renumbers its ADR.
+//
 // Optional traceability: a task's `refs: [W04, F13, T61]` front-matter list names the
 // requirements/work packages/tests it implements. If docs/tasks/required-refs.json exists
 // ({"refs": ["W01", ...]}), every listed ref must be covered by at least one task.
@@ -166,6 +169,21 @@ export function validateTasks(files, requiredRefs = []) {
 }
 
 /** Markdown ledger: one row per task with type, status, size, refs and dependencies. */
+/** Errors for ADR files (`0004-title.md`) that share a number with another ADR. */
+export function duplicateAdrNumbers(names) {
+  const byNumber = new Map();
+  for (const name of names) {
+    const match = /^(\d{4})-.+\.md$/.exec(name);
+    if (match) byNumber.set(match[1], [...(byNumber.get(match[1]) ?? []), name]);
+  }
+  return [...byNumber.values()]
+    .filter((files) => files.length > 1)
+    .map(
+      (files) =>
+        `docs/adr: ${files.join(' and ')} share a number; give the newer one the next free number`,
+    );
+}
+
 export function ledgerMarkdown(tasks) {
   const rows = [...tasks]
     .sort((a, b) => (a.id ?? '').localeCompare(b.id ?? ''))
@@ -191,6 +209,8 @@ function main(argv) {
     ? JSON.parse(readFileSync(requiredPath, 'utf8')).refs
     : [];
   const result = validateTasks(files, requiredRefs);
+  const adrDir = join(process.cwd(), 'docs', 'adr');
+  if (existsSync(adrDir)) result.errors.push(...duplicateAdrNumbers(readdirSync(adrDir).sort()));
   const { errors, tasks, ready, uncoveredRefs, plannedOnlyRefs } = result;
   const strictRefs = argv.includes('--strict-refs');
 

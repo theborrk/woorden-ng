@@ -30,7 +30,7 @@ In:
 
 - Compare at least two maintained Capacitor SQLite plugins (Capacitor 8 support, maintenance,
   license, transaction API, migrations, Android ABIs and Google Play's 16 KB page-size requirement,
-  size) in `docs/adr/0004-native-sqlite-plugin.md`, and pin the choice.
+  size) in `docs/adr/0006-native-sqlite-plugin.md`, and pin the choice.
 - Install it with `npm install`, run `npm run android:sync`, and commit the `android/` changes.
 - A minimal adapter in `src/infrastructure/db/android/`, wired only from `src/targets/android.ts`,
   using the same spike schema as T-004 where practical.
@@ -61,7 +61,7 @@ Out (do not do in this task):
 - [x] AC6: The Android app has no WebView-storage fallback: when the plugin is unavailable, the
       adapter fails visibly instead of storing data elsewhere (unit), and plugin imports outside the
       allowed folders fail lint (lint)
-- [x] AC7: ADR 0004 records the choice, versions, license, ABIs and page-size compliance (review)
+- [x] AC7: ADR 0006 records the choice, versions, license, ABIs and page-size compliance (review)
 
 ## Implementation evidence
 
@@ -69,7 +69,7 @@ Out (do not do in this task):
   against the debug APK. Device execution is pending the PR gate; no emulator was run locally.
 - AC6: `src/infrastructure/db/android/spike.test.ts`, `native-bridge.test.ts` and
   `scripts/native-plugin-boundary.test.mjs`.
-- AC7: `docs/adr/0004-native-sqlite-plugin.md`, including the inspected AAR/ELF evidence and
+- AC7: `docs/adr/0006-native-sqlite-plugin.md`, including the inspected AAR/ELF evidence and
   the remaining signed-release packaging/device checks.
 - Findings and W06/W47 follow-up: `docs/architecture/spikes/storage-android.md`.
 

@@ -4,7 +4,7 @@
 
 The Android target opens `woorden_spike_startup` through `@capacitor-community/sqlite` **8.1.1**,
 with Capacitor core/Android/CLI **8.5.2** and native SQLCipher **4.17.0**. See
-[ADR 0004](../../adr/0004-native-sqlite-plugin.md) for alternatives, license, size, ABI and 16 KB
+[ADR 0006](../../adr/0006-native-sqlite-plugin.md) for alternatives, license, size, ABI and 16 KB
 evidence. This is an isolated M0 schema; W06 must choose the final database name and schema.
 
 T-004 is still `todo` in this baseline, so there is no existing web schema or contract suite to

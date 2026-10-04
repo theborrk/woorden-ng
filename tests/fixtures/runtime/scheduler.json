@@ -1,0 +1,25 @@
+{
+  "formatVersion": 1,
+  "kind": "scheduler_envelope",
+  "scheduler": {
+    "engine": "ts-fsrs",
+    "packageVersion": "5.4.2",
+    "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+    "serializationVersion": 1,
+    "nativeCard": {
+      "due": "2026-01-01T12:10:00.000Z",
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "elapsed_days": 0,
+      "scheduled_days": 0,
+      "reps": 1,
+      "lapses": 0,
+      "learning_steps": 1,
+      "state": 1,
+      "last_review": "2026-01-01T12:00:00.000Z"
+    },
+    "rawDueAt": 1767269400000,
+    "phase": "learning",
+    "scheduledDays": 0
+  }
+}

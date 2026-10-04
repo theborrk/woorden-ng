@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_id": "opentaal-version-2.20.23",
+  "url": "https://raw.githubusercontent.com/OpenTaal/opentaal-wordlist/master/datetimeversion.txt",
+  "retrieved_at": "2026-10-03T00:21:05.516124+00:00",
+  "bytes": 28,
+  "sha256": "f5bd0201d83f2fcff8bd40d6bfd3d91f46759902a58f648fd2edb63aaba29422",
+  "format": "utf-8-lines",
+  "version": "2.20.23",
+  "lineage": ["OpenTaal"]
+}

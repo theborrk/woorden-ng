@@ -32,11 +32,14 @@
     "android:sync": "npm run build:android && cap sync android",
     "rename-app": "node scripts/rename-app.mjs",
     "test:repositories:web": "vitest run tests/integration/repositories/web.test.ts",
-    "content:odwn": "node tools/content/import-odwn.mjs"
+    "content:odwn": "node tools/content/import-odwn.mjs",
+    "content:sources": "node tools/content/inspect-source.mjs",
+    "content:spelling": "node tools/content/opentaal-spelling.mjs"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "8.1.1",
     "@capacitor/android": "^8.5.2",
+    "@capacitor/app": "^8.1.2",
     "@capacitor/core": "^8.5.2",
     "@js-temporal/polyfill": "0.5.1",
     "dexie": "4.2.1",

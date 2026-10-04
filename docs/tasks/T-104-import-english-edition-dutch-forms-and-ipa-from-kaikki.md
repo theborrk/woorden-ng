@@ -1,7 +1,7 @@
 ---
 id: T-104
 title: Import English-edition Dutch forms and IPA from Kaikki
-status: todo
+status: done
 size: M
 depends_on: [T-100]
 type: task
@@ -33,9 +33,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given opstaan, when extracted, then joined and split forms remain distinguishable while table-tags/class/template rows never become forms. (unit)
-- [ ] AC2: Given regional/archaic or underspecified variants, when a default form is requested, then the importer requires a scoped choice rather than accepting every table cell. (unit)
-- [ ] AC3: Given a word with no IPA, when imported, then IPA is missing and no synthesized transcription is inserted. (unit)
+- [x] AC1: Given opstaan, when extracted, then joined and split forms remain distinguishable while table-tags/class/template rows never become forms. (unit; `tools/content/import-kaikki-en.test.mjs`)
+- [x] AC2: Given regional/archaic or underspecified variants, when a default form is requested, then the importer requires a scoped choice rather than accepting every table cell. (unit; `tools/content/import-kaikki-en.test.mjs`)
+- [x] AC3: Given a word with no IPA, when imported, then IPA is missing and no synthesized transcription is inserted. (unit; `tools/content/import-kaikki-en.test.mjs`)
 
 ## Notes for the implementer
 

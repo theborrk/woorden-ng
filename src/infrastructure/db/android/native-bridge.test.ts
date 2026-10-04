@@ -43,6 +43,7 @@ vi.mock('@capacitor-community/sqlite', () => ({
     run: mocks.run,
   },
 }));
+vi.mock('@capacitor/app', () => ({ App: { getInfo: vi.fn() } }));
 
 describe('native target initialization', () => {
   beforeEach(() => {
@@ -70,6 +71,7 @@ describe('native target initialization', () => {
           name: 'Woorden',
           platform: 'android',
           updates: target,
+          appInfo: target.appInfo,
           storage: target,
         }),
       ),

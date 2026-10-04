@@ -1,0 +1,74 @@
+{
+  "kind": "tutor_session_package",
+  "schemaVersion": 1,
+  "sessionId": "da9f6d06-601b-48fa-9df1-f38420a80b70",
+  "profileId": "455a8798-24af-40b3-8f31-bb09bb69e482",
+  "createdAt": 1790985600000,
+  "contentRevision": "fixture-lesson-1",
+  "preferences": {
+    "interfaceLocale": "en",
+    "explanationLocale": "pl",
+    "cueLocale": "pl"
+  },
+  "lessons": [
+    {
+      "senseId": "7f619fdb-e8e6-4d91-a4bf-5f522e6f185a",
+      "taskId": "1514d2c0-839d-4a1e-b10a-e6c7885e0b3b",
+      "explanation": {
+        "en": "het huis — the house",
+        "pl": "het huis — dom"
+      },
+      "supports": [
+        {
+          "id": "b7d52d6e-4f56-41d9-b5f1-c799e9eb2458",
+          "kind": "mnemonic",
+          "explanation": {
+            "en": "Picture a house while learning huis.",
+            "pl": "Wyobraź sobie dom, ucząc się słowa huis."
+          },
+          "origin": "authored",
+          "reviewStatus": "unreviewed",
+          "selected": true
+        }
+      ],
+      "cuePolicy": {
+        "family": "translation",
+        "locale": "pl",
+        "primaryCue": {
+          "en": "house",
+          "pl": "dom"
+        },
+        "primaryCueReplayAllowed": false
+      },
+      "helpPolicy": {
+        "version": 1,
+        "graduatedHints": [
+          {
+            "id": "399921f2-c7ee-4bbf-b9da-1a094510d67b",
+            "kind": "sound_onset",
+            "explanation": {
+              "en": "First sound: h",
+              "pl": "Pierwszy dźwięk: h"
+            }
+          },
+          {
+            "id": "6146f4c1-274c-4ac3-99fc-6810ddda2f30",
+            "kind": "letters",
+            "explanation": {
+              "en": "Initial letters: hu",
+              "pl": "Pierwsze litery: hu"
+            }
+          },
+          {
+            "id": "ac8a37a1-6768-4cfd-9e3b-9e1463d396d9",
+            "kind": "full_answer",
+            "explanation": {
+              "en": "Answer: het huis",
+              "pl": "Odpowiedź: het huis"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

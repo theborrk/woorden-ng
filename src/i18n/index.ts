@@ -23,6 +23,11 @@ const en = {
   placeholder: 'This screen is being prepared. Learning features will arrive in a future update.',
   language: 'Interface language',
   session: 'Your language choice applies to this tab session.',
+  about: 'About',
+  version: 'Version',
+  build: 'Build',
+  appInfoLoading: 'Loading app information…',
+  appInfoError: 'App information is unavailable. Open Settings again to retry.',
   storageError: 'Native storage is unavailable. Data cannot be saved. Restart the app to retry.',
   languageError:
     'The language could not be saved for this session. You can still use it until you reload.',
@@ -47,6 +52,12 @@ const pl: typeof en = {
     'Ten ekran jest w przygotowaniu. Funkcje nauki pojawią się w przyszłej aktualizacji.',
   language: 'Język interfejsu',
   session: 'Wybrany język obowiązuje w tej sesji karty.',
+  about: 'O aplikacji',
+  version: 'Wersja',
+  build: 'Kompilacja',
+  appInfoLoading: 'Wczytywanie informacji o aplikacji…',
+  appInfoError:
+    'Informacje o aplikacji są niedostępne. Otwórz ponownie Ustawienia, aby spróbować jeszcze raz.',
   storageError:
     'Pamięć natywna jest niedostępna. Nie można zapisać danych. Uruchom aplikację ponownie, aby spróbować jeszcze raz.',
   languageError:

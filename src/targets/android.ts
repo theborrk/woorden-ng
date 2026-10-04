@@ -1,4 +1,5 @@
 import type { TargetServices } from './types';
+import { androidAppInfo } from '../platform/android/app-info';
 import { nativeSqliteBridge, isNativeDebugBuild } from '../infrastructure/db/android/native-bridge';
 import { openSpikeDatabase } from '../infrastructure/db/android/spike';
 
@@ -8,6 +9,7 @@ import { openSpikeDatabase } from '../infrastructure/db/android/spike';
  */
 export const target: TargetServices = {
   name: 'android',
+  appInfo: androidAppInfo,
   async initialize() {
     await openSpikeDatabase(nativeSqliteBridge, 'woorden_spike_startup');
     if (isNativeDebugBuild()) {

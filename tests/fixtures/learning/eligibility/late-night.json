@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-02T01:00:00+02:00",
+  "rawDueAt": "2026-10-03T01:00:00+02:00",
+  "timeZone": "Europe/Amsterdam",
+  "boundary": "06:00",
+  "phase": "review",
+  "scheduledDays": 1,
+  "window": {
+    "start": "10:30",
+    "end": "11:00"
+  }
+}

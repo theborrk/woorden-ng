@@ -1,0 +1,40 @@
+{
+  "evidence": {
+    "version": 1,
+    "asOf": 1790942400000,
+    "task": {
+      "id": "10000000-0000-4000-8000-000000000001",
+      "senseId": "10000000-0000-4000-8000-000000000002",
+      "cueFamily": "translation",
+      "cueLocale": "pl",
+      "primaryCueReplayAllowed": false
+    },
+    "currentAttempt": null,
+    "introducedAt": 1790841600000,
+    "introducedStudyDate": "2026-10-01",
+    "exposureHistory": "complete",
+    "exposures": [
+      {
+        "id": "10000000-0000-4000-8000-000000000003",
+        "shownAt": 1790942340000,
+        "studyDate": "2026-10-02",
+        "targetSenseIds": ["10000000-0000-4000-8000-000000000002"],
+        "taskId": "10000000-0000-4000-8000-000000000001",
+        "attemptId": null,
+        "reason": "recap",
+        "resourceId": "10000000-0000-4000-8000-000000000004",
+        "phase": "outside_attempt"
+      }
+    ],
+    "attempts": []
+  },
+  "eligibility": {
+    "version": 1,
+    "reviewedAt": "2026-10-02T11:00:00Z",
+    "rawDueAt": "2026-10-02T11:10:00Z",
+    "timeZone": "Europe/Amsterdam",
+    "boundary": "06:00",
+    "phase": "review",
+    "scheduledDays": 0
+  }
+}

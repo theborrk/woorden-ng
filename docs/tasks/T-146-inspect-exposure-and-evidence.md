@@ -1,7 +1,7 @@
 ---
 id: T-146
 title: Inspect exposure gates and delayed recall evidence
-status: todo
+status: done
 size: M
 depends_on: [T-143]
 type: task
@@ -32,10 +32,10 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given teaching, word-detail support or recap exposure before a check, when inspected, then the relevant gate shifts by one/ten minutes as configured and the raw scheduler remains unchanged (unit and integration).
-- [ ] AC2: Given allowed primary-cue replay or feedback after a locked response, when projected, then primary replay adds no help gate and feedback does not rewrite that response but affects the next clean gap (unit).
-- [ ] AC3: Given clean successes on one then two later study days with at least six elapsed hours, when projected, then later recall then maintaining appear only on the observed task family (unit).
-- [ ] AC4: Given same-day/short-gap/assisted success or missing exposure history, when projected, then no delayed independent label is invented and the actual gap/uncertainty stays visible (unit and integration).
+- [x] AC1: Given teaching, word-detail support or recap exposure before a check, when inspected, then the relevant gate shifts by one/ten minutes as configured and the raw scheduler remains unchanged (unit and integration).
+- [x] AC2: Given allowed primary-cue replay or feedback after a locked response, when projected, then primary replay adds no help gate and feedback does not rewrite that response but affects the next clean gap (unit).
+- [x] AC3: Given clean successes on one then two later study days with at least six elapsed hours, when projected, then later recall then maintaining appear only on the observed task family (unit).
+- [x] AC4: Given same-day/short-gap/assisted success or missing exposure history, when projected, then no delayed independent label is invented and the actual gap/uncertainty stays visible (unit and integration).
 
 ## Notes for the implementer
 

@@ -394,3 +394,36 @@ blocked, while eligible written tasks can compile.
 The delivered 60-entry research pack can be inspected with this command too: its curated output
 has zero eligible entries and explicit missing-check/source blockers. It receives no fabricated
 review, source observations, media or release status from compilation.
+
+## Small local audio slices (T-118)
+
+```sh
+npm run content:media -- audio-manifest.json checked-state.json local-audio new-audio-pack
+npm run content:compile -- checked-state.json --id PACK_UUID --version VERSION --evidence evidence.json --media new-audio-pack/media.json --output new-pack.json
+```
+
+`content:media` reads local files only; source URLs are attribution, never automatic downloads.
+Copy the emitted directory for offline use. Approved assets live at `assets/<sha256>.wav`;
+`resolveAudio(directory, sha256)` rechecks the bytes and container before replay. The output directory
+must be new; failures remove partial output and never overwrite an existing pack. `report.json`
+lists candidates, missing downloads and concrete blockers; `media.json` retains all supplied provenance.
+No approved production recordings are bundled yet. Test tones are synthetic fixtures and prove only
+software behavior.
+
+The input is `{ "schema_version": "woorden-audio-manifest-1", "assets": [...] }`. Each asset
+has `id`, `entry_id`, current entry `content_sha256`, `target` (`lemma`, `form`, or `example`),
+`target_id` for a form/example, exact NFC `text`, `voice` (speaker or engine/version), `region`
+(`nl-NL`, `nl-BE`, `unspecified`), `source_url`, `sha256`, `mime`, `duration_ms`, `size_bytes`,
+`license`, `attribution`, and optional relative `file`. Include synthesis parameters as provenance
+when applicable. Only uncompressed PCM `audio/wav` is supported for this first slice; other formats
+remain blocked. RIFF/chunk lengths, frame layout, duration (within 1 ms), size and checksum are
+verified. Paths cannot escape the input directory, including through symlinks.
+
+Pronunciation QA is a separate operator-owned record: `pronunciation_qa` with `status: "passed"`,
+`reviewer`, `run_ref`, and the exact `sha256`, `text`, `content_sha256` listened to. Missing or stale
+QA leaves even valid downloaded bytes candidate-only. A checksum does not establish pronunciation,
+and an importer cannot confer approval from a source URL or producer `qa`/`available` flag.
+Only approved bytes are packaged. An entry edit requires a new scoped assessment. The compiler
+requires verified downloaded audio matching the lemma cue for its current sense-level listening
+and spelling tasks. Form/example audio can be inspected and packaged but does not enable those
+contracts. Written task eligibility is independent of audio availability.

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_id": "subtlex-nl-full-research-excerpt",
+  "url": "https://osf.io/download/2dcvs/",
+  "retrieved_at": "2026-10-03T00:18:39.244004+00:00",
+  "bytes": 6732,
+  "sha256": "6262cfd864e9cc186773b6502fe1792da56a7a2a1b7ad37814cb166574a886d8",
+  "format": "xlsx",
+  "version": "research excerpt reconstructed from worksheet row 19813",
+  "lineage": ["SUBTLEX-NL"]
+}

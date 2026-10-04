@@ -32,7 +32,8 @@
     "android:sync": "npm run build:android && cap sync android",
     "rename-app": "node scripts/rename-app.mjs",
     "test:repositories:web": "vitest run tests/integration/repositories/web.test.ts",
-    "content:sources": "node tools/content/inspect-source.mjs"
+    "content:sources": "node tools/content/inspect-source.mjs",
+    "content:subtlex": "node tools/content/import-subtlex.mjs"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "8.1.1",
@@ -60,6 +61,7 @@
     "@vitest/coverage-v8": "^5.0.3",
     "eslint": "^10.11.0",
     "eslint-config-prettier": "^10.1.8",
+    "exceljs": "4.4.0",
     "fake-indexeddb": "6.2.5",
     "globals": "^17.13.0",
     "happy-dom": "^20.14.5",

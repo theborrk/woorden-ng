@@ -1,0 +1,21 @@
+{
+  "kind": "external_practice_observation",
+  "schemaVersion": 1,
+  "id": "81ac02d6-1e60-4f38-9ea1-9c2d90c8d09f",
+  "sessionId": "da9f6d06-601b-48fa-9df1-f38420a80b70",
+  "profileId": "455a8798-24af-40b3-8f31-bb09bb69e482",
+  "senseId": "7f619fdb-e8e6-4d91-a4bf-5f522e6f185a",
+  "taskId": "1514d2c0-839d-4a1e-b10a-e6c7885e0b3b",
+  "contentRevision": "fixture-lesson-1",
+  "occurredAt": 1790985660000,
+  "reportingSource": {
+    "id": "fixture-reporter",
+    "kind": "external_tutor_report"
+  },
+  "reportedOutcome": "correct",
+  "helpUsed": {
+    "status": "unknown"
+  },
+  "payloadVersion": 1,
+  "payloadHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+}

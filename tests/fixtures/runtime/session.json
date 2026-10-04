@@ -1,0 +1,19 @@
+{
+  "formatVersion": 1,
+  "kind": "session",
+  "sessionVersion": 1,
+  "id": "3890441f-3620-49d1-8708-7be2d97ac043",
+  "profileId": "d1522c5a-2419-4a35-9f72-85d98d097774",
+  "intent": "scheduled",
+  "budget": {
+    "maxAttempts": 30,
+    "maxNewConcepts": 5,
+    "maxDurationMs": 900000
+  },
+  "seed": "fixed-session-seed",
+  "completedAttemptIds": [],
+  "currentDraftId": "a5fccf01-fd6c-4f46-8f62-0e299aff6c2e",
+  "status": "interrupted",
+  "createdAt": 1767268790000,
+  "updatedAt": 1767268800000
+}

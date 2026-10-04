@@ -1,7 +1,7 @@
 ---
 id: T-123
 title: Inspect validated runtime and learning records
-status: todo
+status: done
 size: M
 depends_on: []
 type: task
@@ -38,13 +38,13 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given valid versioned profile/task/session/event fixtures, when the inspector runs, then
+- [x] AC1: Given valid versioned profile/task/session/event fixtures, when the inspector runs, then
       it prints stable IDs and canonical bytes/hashes across key order and EN/PL/RU text (unit and integration).
-- [ ] AC2: Given an unknown version, unsafe timestamp, invalid enum or missing event context, when
+- [x] AC2: Given an unknown version, unsafe timestamp, invalid enum or missing event context, when
       validated, then it reports the offending field and exits unsuccessfully (unit and integration).
-- [ ] AC3: Given PL-cued history and EN interface preferences, when preferences round-trip through
+- [x] AC3: Given PL-cued history and EN interface preferences, when preferences round-trip through
       validation, then cue locale, historical prompt context and scheduler/eligibility fields remain distinct (unit).
-- [ ] AC4: Given assistance/exposure events sharing an attempt ID, when validated, then only a final
+- [x] AC4: Given assistance/exposure events sharing an attempt ID, when validated, then only a final
       committed attempt has a commit key and external claims cannot masquerade as study events (unit).
 
 ## Notes for the implementer

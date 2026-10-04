@@ -1,0 +1,25 @@
+{
+  "formatVersion": 1,
+  "eventVersion": 1,
+  "profileId": "d1522c5a-2419-4a35-9f72-85d98d097774",
+  "deviceId": "cf3e0b7b-b353-41ea-bb40-c899c8db8245",
+  "deviceSequence": 1,
+  "occurredAt": 1767268800000,
+  "timeZone": "Europe/Amsterdam",
+  "studyDate": "2026-01-01",
+  "kind": "introduction",
+  "id": "24b5a09f-8556-4859-a0a9-1f43b41c213f",
+  "sessionId": "3890441f-3620-49d1-8708-7be2d97ac043",
+  "senseId": "604c9517-d603-45ca-b859-4e98dd122cbf",
+  "promptContext": {
+    "contextVersion": 1,
+    "promptId": "e45bc075-0726-4434-a6d5-86401f8fef93",
+    "answerIds": ["604c9517-d603-45ca-b859-4e98dd122cbf"],
+    "cueLocale": "pl",
+    "promptText": "ja — I — я",
+    "answerTexts": ["ik"],
+    "contentVersion": "starter-1",
+    "gradingContractId": "fba4b677-044f-4f9c-b3c4-5e03b166f3b0",
+    "gradingContractVersion": 1
+  }
+}

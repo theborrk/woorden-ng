@@ -66,7 +66,7 @@ export default defineConfig(({ mode }) => {
               // 'prompt': a new version waits until the user accepts the update banner (src/sw.ts).
               registerType: 'prompt',
               injectRegister: false,
-              includeAssets: ['favicon.svg', 'apple-touch-icon-180x180.png'],
+              includeAssets: ['favicon.png', 'apple-touch-icon-180x180.png'],
               manifest: {
                 id: base,
                 name: APP.name,

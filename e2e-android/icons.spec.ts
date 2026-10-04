@@ -1,56 +1,43 @@
 import { APP } from '../app.config';
+import { findOrScrollLauncherTile, type LauncherBounds } from './support/launcher';
 import { expect, PACKAGE, snapDevice, test } from './support/device';
 
 test('AC2: debug APK launcher shows the husky on Delft blue', async ({ app, device }) => {
   await expect(app.getByRole('heading', { level: 1 })).toHaveText(APP.name);
   const { bounds, screenshot } =
     await test.step('capture the installed icon in the launcher app list', async () => {
-      await device.shell('input keyevent KEYCODE_HOME');
+      await device.shell(
+        'am start -W -a android.intent.action.MAIN -c android.intent.category.HOME',
+      );
       const size = (await device.shell('wm size')).toString().match(/Physical size: (\d+)x(\d+)/);
       if (!size) throw new Error('Cannot determine launcher dimensions');
       const width = Number(size[1]),
         height = Number(size[2]);
-      // The shared fixture omits Playwright's native driver; shell input/UI dumps need no driver.
-      await device.shell(
-        `input swipe ${width / 2} ${Math.round(height * 0.85)} ${width / 2} ${Math.round(height * 0.2)} 250`,
-      );
-      const label = APP.name
-        .replaceAll('&', '&amp;')
-        .replaceAll('"', '&quot;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;');
-      let tile: string | undefined;
-      await expect
-        .poll(
-          async () => {
-            await device.shell('uiautomator dump /sdcard/woorden-launcher.xml');
-            const xml = (await device.shell('cat /sdcard/woorden-launcher.xml')).toString();
-            tile = xml
-              .match(/<node\b[^>]*>/g)
-              ?.find(
-                (node) =>
-                  node.includes(`text="${label}"`) && /package="[^"]*launcher[^"]*"/.test(node),
+      // The shared fixture omits Playwright's native driver; use shell input and UI dumps.
+      const found: { bounds: LauncherBounds | undefined } = { bounds: undefined };
+      try {
+        await expect
+          .poll(
+            async () => {
+              found.bounds = await findOrScrollLauncherTile(
+                (command) => device.shell(command),
+                APP.name,
+                { width, height },
               );
-            return tile !== undefined;
-          },
-          {
-            timeout: 20_000,
-            message: 'Installed Woorden tile is visible in the launcher app list',
-          },
-        )
-        .toBe(true);
-      const coordinates = tile?.match(/bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"/);
-      if (!coordinates) throw new Error('Launcher tile has no screenshot bounds');
-      const x = Number(coordinates[1]),
-        y = Number(coordinates[2]);
-      const bounds = {
-        x,
-        y,
-        width: Number(coordinates[3]) - x,
-        height: Number(coordinates[4]) - y,
-      };
+              return found.bounds;
+            },
+            {
+              timeout: 20_000,
+              message: 'Installed Woorden tile is visible in the launcher app list',
+            },
+          )
+          .toBeDefined();
+      } finally {
+        await snapDevice(device, 'husky launcher app list');
+      }
+      if (!found.bounds) throw new Error('Launcher tile has no screenshot bounds');
+      const bounds = found.bounds;
       const screenshot = (await device.screenshot()).toString('base64');
-      await snapDevice(device, 'husky launcher app list');
       return { bounds, screenshot };
     });
   // Image.decode() needs rendering frames, which a background Android WebView suspends.

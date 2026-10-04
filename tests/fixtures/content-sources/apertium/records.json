@@ -1,0 +1,38 @@
+[
+  {
+    "excerpt_line": 4,
+    "source_line": 10762,
+    "record_sha256": "c4636ed3f6ca4af2c222ad0dcbbea0a88d54a05f97ae351b96e2611a272f3e50",
+    "source_sha256": "2d14839e0e32f0b057460fa20689060d370eb178b16a51495c00f2b4403250c4"
+  },
+  {
+    "excerpt_line": 5,
+    "source_line": 16901,
+    "record_sha256": "3384a7a5b33b857087c4a0b9a0183923908c7869a5b6ae91ac9af84c099c7840",
+    "source_sha256": "2d14839e0e32f0b057460fa20689060d370eb178b16a51495c00f2b4403250c4"
+  },
+  {
+    "excerpt_line": 6,
+    "source_line": 21963,
+    "record_sha256": "9bde457e7ded60553f0f3438a81fa8f3cc919aec6460edbe430cf755e4e1c088",
+    "source_sha256": "2d14839e0e32f0b057460fa20689060d370eb178b16a51495c00f2b4403250c4"
+  },
+  {
+    "excerpt_line": 7,
+    "source_line": 29794,
+    "record_sha256": "b868839d01a35af81b1eaa0bced7c5df5e3cc7407a52773fbfb6491e737360b2",
+    "source_sha256": "2d14839e0e32f0b057460fa20689060d370eb178b16a51495c00f2b4403250c4"
+  },
+  {
+    "excerpt_line": 8,
+    "source_line": 29795,
+    "record_sha256": "4a2c82e2936ddf75a33a4cceaf6eaeff6e4ce1a12bd91b0f316ed035cf8df5a7",
+    "source_sha256": "2d14839e0e32f0b057460fa20689060d370eb178b16a51495c00f2b4403250c4"
+  },
+  {
+    "excerpt_line": 9,
+    "source_line": 29796,
+    "record_sha256": "9bf43c24245a9d49084a74435c6546896a1549b82a49a4ed11726a13cea98e91",
+    "source_sha256": "2d14839e0e32f0b057460fa20689060d370eb178b16a51495c00f2b4403250c4"
+  }
+]

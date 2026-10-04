@@ -34,6 +34,7 @@
     "android:sync": "npm run build:android && cap sync android",
     "rename-app": "node scripts/rename-app.mjs",
     "test:repositories:web": "vitest run tests/integration/repositories/web.test.ts tests/integration/repositories/learning-web.test.ts",
+    "content:apertium": "node tools/content/import-apertium.mjs",
     "content:odwn": "node tools/content/import-odwn.mjs",
     "content:validate-entry": "node tools/content/validate-entry.mjs",
     "content:sources": "node tools/content/inspect-source.mjs",

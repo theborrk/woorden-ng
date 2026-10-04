@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_id": "apertium-nld-2026-10-03",
+  "url": "https://raw.githubusercontent.com/apertium/apertium-nld/master/apertium-nld.nld.dix",
+  "retrieved_at": "2026-10-03T13:31:26.958297+00:00",
+  "bytes": 2682892,
+  "sha256": "2d14839e0e32f0b057460fa20689060d370eb178b16a51495c00f2b4403250c4",
+  "format": "XML",
+  "version": "2026-10-03 research snapshot",
+  "lineage": ["Apertium Dutch; upstream lexical lineage not assessed"]
+}

@@ -1,16 +1,16 @@
 ---
-id: T-119
-title: Probe local Dutch TTS and expose explicit fallback states
+id: T-112
+title: Export a sample-check packet for a generation batch
 status: todo
-size: M
-depends_on: [T-118]
+size: S
+depends_on: [T-111]
 type: task
-refs: [W21, F08, T43]
+refs: [W19, F08, T50]
 ---
 
 ## Goal
 
-A learner can tell whether a usable local Dutch voice is available and can continue with written practice when it is not.
+A contributor can turn a generation batch into one compact sample-check packet for a different-vendor model, reproducibly.
 
 ## Context
 
@@ -24,18 +24,20 @@ A learner can tell whether a usable local Dutch voice is available and can conti
 
 In:
 
-- Implement platform adapter capability probes using locale, Android network-required flag and browser voice locality.
-- Expose unavailable/download-needed/tested-local states and record actual-device offline smoke-test results.
+- A `content:sample` command: given a batch manifest (entry IDs and hashes) and a seed, select the sample of ADR 0005 section 3 (whole batch at 20 entries or fewer; otherwise 10 seeded random entries plus up to 10 risk entries, with the risk category of each).
+- Write the packet: the sampled entries without author verdicts or self-checks, only the source facts each entry asserts (not whole source records), the five exercise rules, the three questions and the response format; plus the batch manifest with every entry hash.
+- A JSON Schema for the sample-check response (batch ID, reviewer vendor and run reference, seed, one verdict per sampled entry: `pass`, `fix` with JSON Patch operations, or `unsure` with a reason).
 
 Out (do not do in this task):
 
-- Installing Android SDK locally, silently calling online TTS, pronunciation grading or runtime AI.
+- Invoking a provider, fabricating a response or requiring a Dutch-speaking human.
+- Importing responses or changing statuses (T-113).
 
 ## Acceptance criteria
 
-- [ ] AC1: Given no Dutch/local voice, when requested, then no wrong-language or silent network fallback occurs and a clear repair action appears. (unit, e2e)
-- [ ] AC2: Given a selected voice on a real device in airplane mode, when the QA phrase set plays, then actual results and engine/version are recorded. (device test on the CI emulator for the probe and its states; the owner runs the airplane-mode phrase set on a real phone with the debug APK and the PR records the result)
-- [ ] AC3: Given an untested voice, when capability is displayed, then availability is not labelled pronunciation-approved. (unit)
+- [ ] AC1: Given the same batch and seed, when exported twice, then the sample and the packet bytes are identical; a different seed changes only the random part. (unit)
+- [ ] AC2: Given a batch of 20 entries or fewer, when exported, then every entry is sampled; given a larger batch, then 10 random entries and at most 10 risk entries are sampled and each risk entry names its category. (unit)
+- [ ] AC3: Given the 60-entry pilot, when exported, then the packet contains no author verdict or self-check field and is at most a tenth of the size of the six research packets together. (integration)
 
 ## Notes for the implementer
 

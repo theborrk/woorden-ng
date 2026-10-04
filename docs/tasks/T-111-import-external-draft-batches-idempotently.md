@@ -34,7 +34,7 @@ Out (do not do in this task):
 ## Acceptance criteria
 
 - [ ] AC1: Given the same batch twice, when imported, then canonical IDs and counts remain unchanged. (unit)
-- [ ] AC2: Given a batch claiming language_reviewed or ai_reviewed without separate evidence, when imported, then it stays draft or is rejected with a reason. (unit)
+- [ ] AC2: Given a batch claiming language_reviewed, batch_checked or ai_reviewed without a recorded sample check, when imported, then it stays draft (language check not_run) or is rejected with a reason. (unit)
 - [ ] AC3: Given an edited definition, when reimported, then revision/hash changes and affected reviews are invalidated. (unit)
 
 ## Notes for the implementer
@@ -43,4 +43,4 @@ Keep this one reviewable PR. Port/reuse the research algorithms in the repositor
 
 ## Notes for the reviewer
 
-Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. Content review in Claude must be an actual separately recorded operation on the exact payload; a code review alone does not imply all Dutch text passed the language rubric.
+Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. A language check is an actual, recorded sample check of a generation batch (ADR 0005); a code review alone does not check the Dutch.

@@ -8,7 +8,7 @@ they disagree, the ADRs win.
 | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
 | [`blueprint.md`](blueprint.md)                                                           | Product scope (F01–F14), architecture, contracts, tests (T01–T75), work packages (W01–W51) |
 | [`../adr/0006-native-sqlite-plugin.md`](../adr/0006-native-sqlite-plugin.md) | Native SQLite plugin for Android storage (T-005) |
-| [`../adr/0005-source-and-ai-content-review.md`](../adr/0005-source-and-ai-content-review.md) | **Content review without a Dutch speaker:** source-verified facts plus an independent review by a different AI vendor replace section 14.2's human language review |
+| [`../adr/0005-source-and-ai-content-review.md`](../adr/0005-source-and-ai-content-review.md) | **Content quality without a Dutch speaker:** source-verified facts, exercise rules and one sampled different-vendor check per batch replace section 14.2's human language review |
 | [`../content/`](../content/) | Content research: curriculum, entry format, sources, verification pipeline, legacy audit (data in `research/content-2026-10/`) |
 | [`../adr/0004-react-shell-and-localization.md`](../adr/0004-react-shell-and-localization.md) | React shell, hash routes and EN/PL interface localization (T-006) |
 | [`../adr/0003-woorden-scope-and-adaptation.md`](../adr/0003-woorden-scope-and-adaptation.md) | **Scope change: no data migration from the old app**, and how the blueprint maps onto this repository |
@@ -26,8 +26,9 @@ they disagree, the ADRs win.
   Nothing is imported from the old app's storage or backup files. The 1,946 seed entries are still
   carried over as content. See ADR 0003 for everything this changes.
 - **Section 14.2 (human language review) is replaced by ADR 0005.** Nobody on the project speaks
-  Dutch: facts must be `source_verified` against a pinned source, and language quality is
-  `ai_reviewed` only by a model from a different vendor than the author, on the current content hash.
+  Dutch: facts must be `source_verified` against a pinned source, exercises follow fixed rules the
+  validator enforces, and each generation batch gets one sampled check by a model from a different
+  vendor than the author. Learners can report problems from the app.
 - **IDs are the backbone.** Tasks name the blueprint IDs they implement in `refs`, and
   `docs/tasks/required-refs.json` lists every in-scope F, W, T and I ID, so CI proves nothing is
   forgotten.

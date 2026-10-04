@@ -1,5 +1,7 @@
 # Woorden NG content recommendations
 
+> **Update 2026-10-04:** the review policy recommended below (a full different-vendor review of every entry) was replaced after its first batch by exercise rules, one sampled check per generation batch and learner reports. See [ADR 0005](../adr/0005-source-and-ai-content-review.md) and [`verification-pipeline.md`](verification-pipeline.md). The rest of this report is unchanged research.
+
 Use a **sense-based practical curriculum**, with source-backed grammar and externally reviewed EN/PL content. The original seed is useful raw material, but its sequence, coarse POS tags, polysemy and missing Polish/examples make it unsuitable as a finished course. Keep it immutable as provenance while building curated sense entries over it.
 
 ## Recommended decisions

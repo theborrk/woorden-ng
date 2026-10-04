@@ -1,4 +1,5 @@
 import { Dexie } from 'dexie';
+import { learningStores } from './learning-schema.ts';
 import type { DexieOptions, Table } from 'dexie';
 import type {
   Installation,
@@ -21,6 +22,13 @@ export class ProfileDatabase extends Dexie implements LearningUnitOfWork {
   constructor(name = profileDatabaseName, options?: DexieOptions) {
     super(name, options);
     this.version(1).stores({ profiles: 'id', preferences: 'profileId', metadata: 'id' });
+    this.version(2)
+      .stores({ ...learningStores })
+      .upgrade(async (transaction) => {
+        const metadata = transaction.table<Installation, string>('metadata');
+        const old = await metadata.get('installation');
+        if (old) await metadata.put({ ...installationRecord(old, '$'), webSchemaVersion: 2 });
+      });
   }
   private execute<T>(
     mode: 'r' | 'rw',

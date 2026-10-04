@@ -1,7 +1,7 @@
 ---
 id: T-129
 title: Commit prepared learning records atomically on web
-status: todo
+status: done
 size: M
 depends_on: [T-126]
 type: task
@@ -37,13 +37,13 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a prepared event/transition, when committed then reopened, then event, scheduler,
+- [x] AC1: Given a prepared event/transition, when committed then reopened, then event, scheduler,
       eligibility, counters, outbox and watermark are all present or all unchanged on injected failure (integration).
-- [ ] AC2: Given duplicate, stale-revision or same-revision/different-base commands, when submitted,
+- [x] AC2: Given duplicate, stale-revision or same-revision/different-base commands, when submitted,
       then there is at most one accepted transition and conflicting commands leave the draft intact (integration).
-- [ ] AC3: Given exposure/help rows and equal-time records across profiles, when written/queried,
+- [x] AC3: Given exposure/help rows and equal-time records across profiles, when written/queried,
       then absent commit keys coexist and profile-filtered ordering and canonical bytes are deterministic (integration).
-- [ ] AC4: Given a stale projection version, when rebuilt from retained ordered events/checkpoints,
+- [x] AC4: Given a stale projection version, when rebuilt from retained ordered events/checkpoints,
       then queries match the incremental result without changing history or scheduling again (integration).
 
 ## Notes for the implementer

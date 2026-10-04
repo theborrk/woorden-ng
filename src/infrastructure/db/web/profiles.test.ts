@@ -37,7 +37,7 @@ it('I18: AC1 real Dexie profile, installation ID, versions and preferences survi
   expect(saved.preferences.revision).toBe(1);
   expect(saved.installation.deviceId).toBe(initial.installation.deviceId);
   expect(saved.installation).toMatchObject({
-    webSchemaVersion: 1,
+    webSchemaVersion: 2,
     logicalFormatVersion: 1,
     projectionVersion: 1,
   });

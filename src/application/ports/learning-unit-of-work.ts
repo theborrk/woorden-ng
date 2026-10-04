@@ -5,7 +5,7 @@ export interface Installation {
   id: 'installation';
   deviceId: string;
   activeProfileId: string | null;
-  webSchemaVersion: 1;
+  webSchemaVersion: 1 | 2;
   logicalFormatVersion: 1;
   projectionVersion: 1;
 }

@@ -1,5 +1,27 @@
 # Local source inspection
 
+## Starter draft inspection (T-115)
+
+Library displays S01–S10 from `content/inspection/starter-s01-s10.json`. Refresh or check the
+inspection artifact with:
+
+```sh
+node tools/content/import-starter-inspection.mjs --write
+npx prettier --write content/inspection/starter-s01-s10.json
+node tools/content/import-starter-inspection.mjs --check
+```
+
+The import checks issued sense/lexeme/form/example IDs and semantic hashes and retains the
+research entries verbatim, including original Russian mappings. Its separate inspection assessment
+is unreviewed, structurally unchecked and release-blocked. The research's source statuses are
+displayed as assertions with field provenance/citations, not adopted production verification.
+The original source records needed by T-111's stricter boundary are not bundled with this slice.
+This inspection artifact is not a canonical draft state or curated pack; it cannot enable study,
+approved audio or publication. No model, audio service or old-app progress is used. S08's absent
+whole-expression IPA remains unavailable, with no generated phonetics.
+
+## Source files
+
 `content:sources` records original file bytes without downloads or lexical extraction. For an
 initial pin, provide JSON metadata with `source_id`, `url`, `retrieved_at`, `format`, `version`
 and `lineage`, as in `tests/fixtures/content-sources/metadata.json`:
@@ -228,6 +250,35 @@ exported for inspection without becoming checked or eligible. Rehashing content 
 Use `tools/content/schemas/sample-check-response.schema.json` for responses; `fix` requires a
 question/problem type and JSON Patch add/remove/replace operations, and `unsure` requires a reason.
 T-113 checks exact sample/hash/seed/vendor binding and imports actual responses. No provider is called.
+
+## Sample-check response imports (T-113)
+
+```sh
+npm run content:import-sample -- response.json --packet packet.json --state draft-state.json --dry-run
+npm run content:import-sample -- response.json --packet packet.json --state draft-state.json --output checked-state.json
+```
+
+The packet and state are operator-owned outputs of T-112 and T-111. The importer regenerates the
+packet against current entries, checks its stored batch manifest, and requires exactly one response
+per sampled ID/hash with the original seed. Unknown author vendors, same-vendor reviews (ignoring
+case and surrounding whitespace), stale entries, changed packets and incomplete responses fail
+before any output. Vendor names are recorded provenance, not cryptographic identity verification.
+
+The report gives the batch outcome, systematic problem types, risk meaning errors and every
+entry's language-check state. Repeated problem types fail the batch. A wrong meaning/translation
+in a risk category also fails: R1–R5 do not cover semantic errors. Failed batches receive no check
+approval; prior check evidence remains in the append-only log. Passing batches assign sampled
+passes `ai_reviewed`, unsampled entries `batch_checked`, fixes `revision_requested`, and uncertain
+entries `uncertain` and `flagged`. Existing rejected/superseded dispositions remain intact.
+Patches are attached as evidence and never applied automatically. Release stays `blocked` until
+the separate compiler calculates task/locale eligibility.
+
+The new state retains exact UTF-8 response text, its raw-byte SHA-256, the packet and the import
+result under `sample_checks`. Reimporting identical bytes on unchanged entries leaves the state
+and report unchanged; edited entries reject stale replay. Later draft edits archive old evidence
+and reset only the edited entry to `not_run`. Dry-run writes nothing; saved imports exclusively
+create a new file and refuse to overwrite prior state. Tests use synthetic responses only and do
+not confer checks on the research pilot.
 
 ## SUBTLEX-NL frequency import (T-102)
 

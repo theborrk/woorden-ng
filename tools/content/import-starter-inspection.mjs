@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { digest, payloadHash, registry } from './validate-entry.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
-const source = readFileSync(resolve(root, 'research/content-2026-10/content/starter-pack.json'));
+const source = readFileSync(resolve(root, 'content/pilot/pilot.json'));
 const pack = JSON.parse(source);
 
 export function inspectionSlice(entries, count = 10) {

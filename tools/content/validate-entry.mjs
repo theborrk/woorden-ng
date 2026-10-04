@@ -4,6 +4,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
+import { exerciseFindings } from './exercise-rules.mjs';
 
 const readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
 const directory = dirname(fileURLToPath(import.meta.url));
@@ -96,7 +97,11 @@ export function validateEntry(entry, { records = {}, claims = [], allocations = 
     )
   )
     return { valid: false, errors: ['schema: invalid evidence bundle'] };
-  const errors = [];
+  const findings = exerciseFindings(entry);
+  const errors = findings.map(
+    (finding) =>
+      `${finding.rule}:${finding.fixture_ref}:${finding.entry_id}:${finding.example_id ?? 'entry'}:${finding.field}: ${finding.message}`,
+  );
   const check = (ok, message) => {
     if (!ok) errors.push(message);
   };
@@ -319,7 +324,7 @@ export function validateEntry(entry, { records = {}, claims = [], allocations = 
     entry.review.statuses.ai_review === 'not_run' && entry.review.statuses.release === 'blocked',
     'review: independent review import is required; draft cannot self-certify',
   );
-  return { valid: errors.length === 0, errors };
+  return { valid: errors.length === 0, errors, ...(findings.length ? { findings } : {}) };
 }
 
 export function inspectEligibility(entry, validation) {

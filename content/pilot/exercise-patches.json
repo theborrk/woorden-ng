@@ -1,0 +1,701 @@
+{
+  "S02": [
+    {
+      "rule": "R1",
+      "op": "replace",
+      "path": "/examples/0/context/en",
+      "value": "be (present tense)"
+    },
+    {
+      "rule": "R1",
+      "op": "replace",
+      "path": "/examples/0/context/pl",
+      "value": "być (czas teraźniejszy)"
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "be, linking a person or thing to a description",
+          "pl": "być, łączyć osobę lub rzecz z opisem"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    }
+  ],
+  "S03": [
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/forms/20"
+    },
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/examples/0/target_form_ids/1"
+    }
+  ],
+  "S04": [
+    {
+      "rule": "R2",
+      "op": "replace",
+      "path": "/examples/0/context/en",
+      "value": "thank you (formal)"
+    },
+    {
+      "rule": "R2",
+      "op": "replace",
+      "path": "/examples/0/context/pl",
+      "value": "dziękuję (forma grzecznościowa)"
+    },
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["Dank u"],
+        "case_sensitive": false
+      }
+    },
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["Hartelijk dank"],
+        "case_sensitive": false
+      }
+    },
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["Bedankt"],
+        "case_sensitive": false
+      }
+    }
+  ],
+  "S06": [
+    {
+      "rule": "R1",
+      "op": "replace",
+      "path": "/examples/0/context/en",
+      "value": "understand the meaning (present tense)"
+    },
+    {
+      "rule": "R1",
+      "op": "replace",
+      "path": "/examples/0/context/pl",
+      "value": "rozumieć znaczenie (czas teraźniejszy)"
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["snap"],
+        "case_sensitive": false
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "understand the meaning",
+          "pl": "rozumieć znaczenie"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    }
+  ],
+  "S07": [
+    {
+      "rule": "R5",
+      "op": "replace",
+      "path": "/sense/meanings/en/0",
+      "value": "not (negation within a sentence)"
+    },
+    {
+      "rule": "R5",
+      "op": "replace",
+      "path": "/sense/meanings/pl/0",
+      "value": "nie (przeczenie w zdaniu)"
+    },
+    {
+      "rule": "R5",
+      "op": "replace",
+      "path": "/examples/0/context",
+      "value": {
+        "en": "not (negation within a sentence)",
+        "pl": "nie (przeczenie w zdaniu)"
+      }
+    },
+    {
+      "rule": "R5",
+      "op": "replace",
+      "path": "/hints/en",
+      "value": "not (negation within a sentence)"
+    },
+    {
+      "rule": "R5",
+      "op": "replace",
+      "path": "/hints/pl",
+      "value": "nie (przeczenie w zdaniu)"
+    }
+  ],
+  "S08": [
+    {
+      "rule": "R2",
+      "op": "replace",
+      "path": "/examples/0/context/en",
+      "value": "could you repeat that? (formal)"
+    },
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["Zou u dat kunnen herhalen"],
+        "case_sensitive": false
+      }
+    },
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["Kunt u het herhalen"],
+        "case_sensitive": false
+      }
+    },
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["Kunt u dat nog een keer zeggen"],
+        "case_sensitive": false
+      }
+    }
+  ],
+  "S09": [
+    {
+      "rule": "R3",
+      "op": "replace",
+      "path": "/examples/0/context/en",
+      "value": "have (present tense)"
+    },
+    {
+      "rule": "R3",
+      "op": "replace",
+      "path": "/examples/0/context/pl",
+      "value": "mieć (czas teraźniejszy)"
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "have",
+          "pl": "mieć"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    }
+  ],
+  "S12": [
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/forms/20"
+    },
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/examples/0/target_form_ids/4"
+    },
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/examples/0/target_form_ids/3"
+    },
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/examples/0/target_form_ids/2"
+    },
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/examples/0/target_form_ids/1"
+    },
+    {
+      "rule": "R3",
+      "op": "replace",
+      "path": "/examples/0/context",
+      "value": {
+        "en": "not closed",
+        "pl": "niezamknięty"
+      }
+    }
+  ],
+  "S14": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "come; move towards the relevant place",
+          "pl": "przychodzić lub przyjeżdżać do danego miejsca"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    }
+  ],
+  "S16": [
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/forms/20"
+    },
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/examples/0/target_form_ids/1"
+    }
+  ],
+  "S17": [
+    {
+      "rule": "R3",
+      "op": "replace",
+      "path": "/examples/0/context",
+      "value": {
+        "en": "the clear liquid people drink",
+        "pl": "przezroczysta ciecz, którą pijemy"
+      }
+    }
+  ],
+  "S19": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "buy",
+          "pl": "kupować, kupić"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    }
+  ],
+  "S21": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "want to do something",
+          "pl": "chcieć coś zrobić"
+        },
+        "tense": "infinitive after present-tense willen",
+        "person": "ik"
+      }
+    }
+  ],
+  "S22": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "pay",
+          "pl": "płacić, zapłacić"
+        },
+        "tense": "infinitive after present-tense willen",
+        "person": "ik"
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["afrekenen"],
+        "case_sensitive": false
+      }
+    }
+  ],
+  "S24": [
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/forms/20"
+    },
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/examples/0/target_form_ids/1"
+    }
+  ],
+  "S26": [
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/forms/20"
+    },
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/examples/0/target_form_ids/1"
+    }
+  ],
+  "S27": [
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/self_graded",
+      "value": true
+    }
+  ],
+  "S28": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "go; move to a destination",
+          "pl": "iść lub jechać do celu"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    }
+  ],
+  "S31": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "can; be able to do something",
+          "pl": "móc, potrafić coś zrobić"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    }
+  ],
+  "S32": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "take along",
+          "pl": "zabrać ze sobą"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/1/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "take along",
+          "pl": "zabrać ze sobą"
+        },
+        "tense": "infinitive after present-tense willen",
+        "person": "ik"
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["breng", "mee"],
+        "case_sensitive": false
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/1/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["meebrengen"],
+        "case_sensitive": false
+      }
+    }
+  ],
+  "S33": [
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/self_graded",
+      "value": true
+    }
+  ],
+  "S34": [
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/self_graded",
+      "value": true
+    }
+  ],
+  "S35": [
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/self_graded",
+      "value": true
+    }
+  ],
+  "S36": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "get up out of bed",
+          "pl": "wstawać z łóżka"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/1/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "get up out of bed",
+          "pl": "wstawać z łóżka"
+        },
+        "tense": "infinitive after present-tense willen",
+        "person": "ik"
+      }
+    }
+  ],
+  "S40": [
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/self_graded",
+      "value": true
+    }
+  ],
+  "S42": [
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/forms/20"
+    },
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/examples/0/target_form_ids/1"
+    }
+  ],
+  "S43": [
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/self_graded",
+      "value": true
+    }
+  ],
+  "S46": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "fill in a form or its fields",
+          "pl": "wypełniać, wypełnić formularz lub jego pola"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/1/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "fill in a form or its fields",
+          "pl": "wypełniać, wypełnić formularz lub jego pola"
+        },
+        "tense": "infinitive after present-tense willen",
+        "person": "ik"
+      }
+    }
+  ],
+  "S50": [
+    {
+      "rule": "R3",
+      "op": "replace",
+      "path": "/examples/0/context",
+      "value": {
+        "en": "financial institution",
+        "pl": "instytucja finansowa"
+      }
+    }
+  ],
+  "S53": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "pay by debit card",
+          "pl": "płacić kartą debetową"
+        },
+        "tense": "infinitive after present-tense willen",
+        "person": "ik"
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["met de pin betalen"],
+        "case_sensitive": false
+      }
+    }
+  ],
+  "S54": [
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "register oneself; enrol",
+          "pl": "zapisać się, zarejestrować się"
+        },
+        "tense": "present",
+        "person": "ik"
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/1/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "register oneself; enrol",
+          "pl": "zapisać się, zarejestrować się"
+        },
+        "tense": "infinitive after present-tense willen",
+        "person": "ik"
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/2/cue",
+      "value": {
+        "mode": "fill_in",
+        "gloss": {
+          "en": "register oneself; enrol",
+          "pl": "zapisać się, zarejestrować się"
+        },
+        "tense": "present",
+        "person": "u"
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/0/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["meld", "me", "aan"],
+        "case_sensitive": false
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/1/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["me", "aanmelden"],
+        "case_sensitive": false
+      }
+    },
+    {
+      "rule": "R1",
+      "op": "add",
+      "path": "/examples/2/accepted_answers/-",
+      "value": {
+        "ordered_segments": ["meldt", "zich", "aan"],
+        "case_sensitive": false
+      }
+    }
+  ],
+  "S58": [
+    {
+      "rule": "R2",
+      "op": "add",
+      "path": "/examples/0/self_graded",
+      "value": true
+    }
+  ],
+  "S60": [
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/forms/20"
+    },
+    {
+      "rule": "R4",
+      "op": "remove",
+      "path": "/examples/0/target_form_ids/1"
+    }
+  ]
+}

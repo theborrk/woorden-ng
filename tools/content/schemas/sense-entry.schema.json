@@ -107,7 +107,7 @@
           "$ref": "#/$defs/id"
         },
         "surface": {
-          "$ref": "#/$defs/text"
+          "type": "string"
         },
         "features": {
           "type": "object",
@@ -209,7 +209,8 @@
               "case_sensitive": {
                 "type": "boolean"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "context": {
@@ -229,6 +230,31 @@
         },
         "prerequisites": {
           "type": "object"
+        },
+        "cue": {
+          "type": "object",
+          "required": ["mode", "gloss"],
+          "properties": {
+            "mode": {
+              "enum": ["fill_in", "production"]
+            },
+            "gloss": {
+              "$ref": "#/$defs/locales"
+            },
+            "tense": {
+              "$ref": "#/$defs/text"
+            },
+            "person": {
+              "$ref": "#/$defs/text"
+            },
+            "adjective_use": {
+              "enum": ["predicative", "attributive"]
+            }
+          },
+          "additionalProperties": false
+        },
+        "self_graded": {
+          "type": "boolean"
         }
       },
       "additionalProperties": false

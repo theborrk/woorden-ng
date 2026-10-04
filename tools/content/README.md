@@ -351,6 +351,25 @@ numeric cells remain numbers in raw evidence; they are not coerced into string l
 Leading-hyphen lemma cells saved upstream as formula/error artifacts are retained as raw
 objects and cannot match a string lemma query. They are not evaluated or repaired.
 
+### Exercise rules (ADR 0005)
+
+Examples may carry a structured `cue` with `mode: "fill_in" | "production"`, localized `gloss`,
+`tense` and `person` (required for linked verb answers), and optional `adjective_use`. Whole-sentence
+production and multiword phrase cloze answers need at least two distinct accepted alternatives or
+`self_graded: true`. The first accepted answer still matches the ordered NFC/UTF-16 answer spans;
+additional answers are authored alternatives, not a claim that the validator can judge synonyms.
+
+R1–R5 findings appear in the existing `errors` array and a structured `findings` array with `rule`,
+`entry_id`, `fixture_ref`, nullable `example_id`, JSON-pointer `field` and `message`. R3 compares
+normalized whole words/sequences in both legacy `context` and `cue.gloss` against accepted answers,
+listed forms and the lemma. The explicit S09 possess/posiadać conflict is scoped to its immutable
+sense ID from `research/content-2026-10/review/responses/work-01/S09.json`; no other cross-language
+synonym is inferred. R4 rejects empty/dash surfaces and attributive form links when the structured
+cue or linked source tags identify a predicative example. R5 detects the recorded English/Polish
+meta wording in learner meanings. These bounded checks cannot establish naturalness or complete
+alternative coverage. Passing them never changes language/release status; pilot corrections remain
+T-169 work. Cue/self-grading changes are part of the payload hash and invalidate prior hash evidence.
+
 ## Task/locale pack compilation (T-114)
 
 ```sh

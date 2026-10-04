@@ -350,3 +350,47 @@ Missing, non-numeric or error caches fail numeric validation. Numeral lemmas sto
 numeric cells remain numbers in raw evidence; they are not coerced into string lemma joins.
 Leading-hyphen lemma cells saved upstream as formula/error artifacts are retained as raw
 objects and cannot match a string lemma query. They are not evaluated or repaired.
+
+## Task/locale pack compilation (T-114)
+
+```sh
+npm run content:compile -- checked-state.json --id PACK_UUID --version PACK_VERSION --evidence evidence.json --output new-pack.json
+```
+
+The version and opaque pack UUID are contributor supplied; retain the ID across versions and
+allocate a new version when adopting changed content. Output creation is exclusive. The artifact
+contains a curated `pack`, its `manifest`, a per-entry/task/locale blocker `report`, and complete
+`excluded` records outside the curated pack. Inputs and research content remain unchanged.
+The manifest binds canonical pack bytes, every entry's semantic and full-record hash, task
+references and the entry/compiler schema versions. Object keys are canonically sorted for hashes;
+entry/media ordering is deterministic. No time, model call, installation or automatic publishing
+is involved. Consumers must use the emitted task list rather than infer eligibility from a field
+on an entry. Retained source records and disabled candidate fields are reference data.
+
+The compiler rechecks structural/identity contracts with T-110 and validates required facts against
+separately supplied exact pinned observations. A missing optional source fact blocks its dependent
+task, not written recall. EN and PL decisions are separate; no translation fallback is invented.
+Written tasks require a sourced lemma and a meaning. Article tasks additionally require a sourced
+accepted article set; form/cloze variants reference only supported forms and complete examples for
+the requested locale. Missing optional IPA/media does not disable written tasks.
+
+Language approval comes from T-113 receipts, not producer strings: raw response, packet, stored
+result/hash and the latest check event must agree on the current payload. Retained archived batch
+revisions allow an unchanged sibling to keep its check after another entry is edited. An edited
+payload, failed/fix/uncertain check or flagged/rejected/superseded disposition cannot authorize
+curated tasks. Invalid receipt evidence is reported explicitly. The pure `taskEligibility` function
+receives independently verified validation and a hash-bound language-check assessment; the compiler
+establishes those assessments before calling it. Full source text, IDs and provenance are retained.
+
+Listening/spelling require a separate audio QA assessment and picture naming a referent-image
+assessment. Entry URLs, approved flags, mnemonic images and untested TTS never suffice. Optional
+`--media QA.json` accepts an operator-owned array with `id`, `kind` (`audio` or `referent_image`),
+`entry_id`, current `content_sha256`, asset `sha256`, `available:true`, `qa:"passed"`, `qa_run_ref`
+and `license`. Selected assessments enter the hash-bound pack. These are supplied QA evidence;
+T-118 owns actual media acquisition/checksum/text/playback verification. This compiler neither
+checks audio pronunciation from bytes nor fabricates QA. With no such evidence those tasks stay
+blocked, while eligible written tasks can compile.
+
+The delivered 60-entry research pack can be inspected with this command too: its curated output
+has zero eligible entries and explicit missing-check/source blockers. It receives no fabricated
+review, source observations, media or release status from compilation.

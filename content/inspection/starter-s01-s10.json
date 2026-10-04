@@ -1,7 +1,7 @@
 {
   "schema_version": "woorden-starter-inspection-1",
   "inspection_only": true,
-  "source_artifact_sha256": "d5e8f6eb577b41ccf32d6e404107855f5681158fce0518e969c40da21091c246",
+  "source_artifact_sha256": "b3f1c7fa462272e1c381c69809a0cd7ab3b58be94dcd5df7f8a1fc6447b75214",
   "assessment": {
     "origin": "generated_draft",
     "structure": "unchecked",
@@ -399,7 +399,7 @@
       "schema_version": "woorden-content-research-0.2",
       "id": "faa0d8d3-bbb2-4a6f-ae8b-8c8825241803",
       "fixture_ref": "S02",
-      "revision": 1,
+      "revision": 2,
       "lexeme": {
         "id": "0a167f0b-fa77-4b4a-b084-10e2dfb7952a",
         "lemma": "zijn",
@@ -612,8 +612,8 @@
             }
           ],
           "context": {
-            "en": "be, linking a person or thing to a description",
-            "pl": "być, łączyć osobę lub rzecz z opisem"
+            "en": "be (present tense)",
+            "pl": "być (czas teraźniejszy)"
           },
           "task_contract": {
             "primary_target": "sense_in_context",
@@ -629,6 +629,15 @@
             "source_sentence_id": null,
             "direct_translation_from": "nl",
             "reviewer_B": "not_run"
+          },
+          "cue": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "be, linking a person or thing to a description",
+              "pl": "być, łączyć osobę lub rzecz z opisem"
+            },
+            "tense": "present",
+            "person": "ik"
           }
         }
       ],
@@ -991,7 +1000,8 @@
           "ai_review": "not_run",
           "release": "blocked",
           "release_blockers": ["independent_vendor_review_missing"],
-          "user_private_opt_in": false
+          "user_private_opt_in": false,
+          "language_check": "not_run"
         },
         "risk_categories": ["irregular_or_modal"],
         "verification_log": [
@@ -1035,19 +1045,27 @@
             "verdict": "pass",
             "content_sha256": "5d6c5a5c0f86c6ce860363c39076ea53fd585c59de54c35b64ef6611c150724f",
             "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          },
+          {
+            "stage": "exercise_rule_authoring",
+            "actor": "OpenAI Codex",
+            "verdict": "revised_draft",
+            "independent": false,
+            "content_sha256": "b1e2afd6fbdf4d1a0329e4657a277a7eba07fd6a6f52f8466259f63bcd78f92d",
+            "rules": ["R1"]
           }
         ],
         "unresolved_doubts": [
           "All generated meanings, examples and PL/EN translations await independent vendor review."
         ]
       },
-      "content_sha256": "5d6c5a5c0f86c6ce860363c39076ea53fd585c59de54c35b64ef6611c150724f"
+      "content_sha256": "b1e2afd6fbdf4d1a0329e4657a277a7eba07fd6a6f52f8466259f63bcd78f92d"
     },
     {
       "schema_version": "woorden-content-research-0.2",
       "id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
       "fixture_ref": "S03",
-      "revision": 1,
+      "revision": 2,
       "lexeme": {
         "id": "b3473bde-629d-4da6-a075-ed36a452bcbe",
         "lemma": "goed",
@@ -1354,19 +1372,6 @@
           "status": "source_verified",
           "grading_enabled": false,
           "scope": "Select grammatical context; no automatic acceptance across degrees."
-        },
-        {
-          "id": "4007bceb-b4c4-42ef-b16f-cba16af6a1c1",
-          "surface": "-",
-          "features": {
-            "kind": "adjective",
-            "source_tags": ["partitive", "superlative"]
-          },
-          "source_ids": ["en:1318"],
-          "source_selector": "/forms/22",
-          "status": "source_verified",
-          "grading_enabled": false,
-          "scope": "Select grammatical context; no automatic acceptance across degrees."
         }
       ],
       "examples": [
@@ -1386,10 +1391,7 @@
           ],
           "offset_unit": "UTF-16-code-units",
           "target_sense_id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
-          "target_form_ids": [
-            "cafedea7-004c-4bc1-a0dd-c1f96d00d0d2",
-            "ca8c7e30-0c1c-47ee-95b9-0186fc31acc6"
-          ],
+          "target_form_ids": ["cafedea7-004c-4bc1-a0dd-c1f96d00d0d2"],
           "accepted_answers": [
             {
               "ordered_segments": ["goed"],
@@ -1680,7 +1682,8 @@
           "ai_review": "not_run",
           "release": "blocked",
           "release_blockers": ["independent_vendor_review_missing"],
-          "user_private_opt_in": false
+          "user_private_opt_in": false,
+          "language_check": "not_run"
         },
         "risk_categories": [],
         "verification_log": [
@@ -1710,19 +1713,27 @@
             "verdict": "pass",
             "content_sha256": "3be060496214ce524f196216fcdaf748fddfcd1474eea246662c2e68a15fa952",
             "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          },
+          {
+            "stage": "exercise_rule_authoring",
+            "actor": "OpenAI Codex",
+            "verdict": "revised_draft",
+            "independent": false,
+            "content_sha256": "55de5145f1c8aea798c6b06ce331cf19eeb7c78792a3f18693c2b5ea9bf33023",
+            "rules": ["R4"]
           }
         ],
         "unresolved_doubts": [
           "All generated meanings, examples and PL/EN translations await independent vendor review."
         ]
       },
-      "content_sha256": "3be060496214ce524f196216fcdaf748fddfcd1474eea246662c2e68a15fa952"
+      "content_sha256": "55de5145f1c8aea798c6b06ce331cf19eeb7c78792a3f18693c2b5ea9bf33023"
     },
     {
       "schema_version": "woorden-content-research-0.2",
       "id": "de6f4380-8bbc-4ebb-8852-418ee312edda",
       "fixture_ref": "S04",
-      "revision": 1,
+      "revision": 2,
       "lexeme": {
         "id": "515e4737-77b3-4229-b2f4-c6c748485eab",
         "lemma": "dank u wel",
@@ -1800,11 +1811,23 @@
             {
               "ordered_segments": ["Dank u wel"],
               "case_sensitive": false
+            },
+            {
+              "ordered_segments": ["Dank u"],
+              "case_sensitive": false
+            },
+            {
+              "ordered_segments": ["Hartelijk dank"],
+              "case_sensitive": false
+            },
+            {
+              "ordered_segments": ["Bedankt"],
+              "case_sensitive": false
             }
           ],
           "context": {
-            "en": "thank you, polite",
-            "pl": "dziękuję, forma uprzejma"
+            "en": "thank you (formal)",
+            "pl": "dziękuję (forma grzecznościowa)"
           },
           "task_contract": {
             "primary_target": "sense_in_context",
@@ -1990,7 +2013,8 @@
           "ai_review": "not_run",
           "release": "blocked",
           "release_blockers": ["independent_vendor_review_missing"],
-          "user_private_opt_in": false
+          "user_private_opt_in": false,
+          "language_check": "not_run"
         },
         "risk_categories": ["formula_or_pragmatics"],
         "verification_log": [
@@ -2020,13 +2044,21 @@
             "verdict": "pass",
             "content_sha256": "1e55d6b05d1b85bc9873b2cc6e19b9e1b3edb9a37aa5e2d6d098e2135db06268",
             "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          },
+          {
+            "stage": "exercise_rule_authoring",
+            "actor": "OpenAI Codex",
+            "verdict": "revised_draft",
+            "independent": false,
+            "content_sha256": "f8183b4c9a63026d23a091ac1453f5c48366fe0868540fb338d3d64befcc4ae8",
+            "rules": ["R2"]
           }
         ],
         "unresolved_doubts": [
           "All generated meanings, examples and PL/EN translations await independent vendor review."
         ]
       },
-      "content_sha256": "1e55d6b05d1b85bc9873b2cc6e19b9e1b3edb9a37aa5e2d6d098e2135db06268"
+      "content_sha256": "f8183b4c9a63026d23a091ac1453f5c48366fe0868540fb338d3d64befcc4ae8"
     },
     {
       "schema_version": "woorden-content-research-0.2",
@@ -2440,7 +2472,7 @@
       "schema_version": "woorden-content-research-0.2",
       "id": "ff49fcaa-a55f-4ff6-bd55-6a1a99535bd9",
       "fixture_ref": "S06",
-      "revision": 1,
+      "revision": 2,
       "lexeme": {
         "id": "e612c1f0-4bdc-40af-a33b-4ea18567e493",
         "lemma": "begrijpen",
@@ -2640,11 +2672,15 @@
             {
               "ordered_segments": ["begrijp"],
               "case_sensitive": false
+            },
+            {
+              "ordered_segments": ["snap"],
+              "case_sensitive": false
             }
           ],
           "context": {
-            "en": "understand the meaning",
-            "pl": "rozumieć znaczenie"
+            "en": "understand the meaning (present tense)",
+            "pl": "rozumieć znaczenie (czas teraźniejszy)"
           },
           "task_contract": {
             "primary_target": "sense_in_context",
@@ -2660,6 +2696,15 @@
             "source_sentence_id": null,
             "direct_translation_from": "nl",
             "reviewer_B": "not_run"
+          },
+          "cue": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "understand the meaning",
+              "pl": "rozumieć znaczenie"
+            },
+            "tense": "present",
+            "person": "ik"
           }
         }
       ],
@@ -2937,7 +2982,8 @@
           "ai_review": "not_run",
           "release": "blocked",
           "release_blockers": ["independent_vendor_review_missing"],
-          "user_private_opt_in": false
+          "user_private_opt_in": false,
+          "language_check": "not_run"
         },
         "risk_categories": [],
         "verification_log": [
@@ -2974,19 +3020,27 @@
             "verdict": "pass",
             "content_sha256": "d91103e00c70b461df49d08b87d5167422bc85d8b63c23ac3ddbd9431cc51499",
             "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          },
+          {
+            "stage": "exercise_rule_authoring",
+            "actor": "OpenAI Codex",
+            "verdict": "revised_draft",
+            "independent": false,
+            "content_sha256": "b68597fb3a6531d201ae1bd1fad699ab46bddd307951f33efe46288f7843f764",
+            "rules": ["R1"]
           }
         ],
         "unresolved_doubts": [
           "All generated meanings, examples and PL/EN translations await independent vendor review."
         ]
       },
-      "content_sha256": "d91103e00c70b461df49d08b87d5167422bc85d8b63c23ac3ddbd9431cc51499"
+      "content_sha256": "b68597fb3a6531d201ae1bd1fad699ab46bddd307951f33efe46288f7843f764"
     },
     {
       "schema_version": "woorden-content-research-0.2",
       "id": "fe21dcb7-b84a-4f1d-9893-f87e3334f6a2",
       "fixture_ref": "S07",
-      "revision": 1,
+      "revision": 2,
       "lexeme": {
         "id": "3486570d-5073-428c-b2bc-246973770aba",
         "lemma": "niet",
@@ -3027,8 +3081,8 @@
         "lexeme_id": "3486570d-5073-428c-b2bc-246973770aba",
         "definition_nl": "Een ontkenning uitdrukken.",
         "meanings": {
-          "en": ["not; negate the statement in this context"],
-          "pl": ["nie; zaprzeczenie zdania w tym kontekście"]
+          "en": ["not (negation within a sentence)"],
+          "pl": ["nie (przeczenie w zdaniu)"]
         },
         "register": "neutral",
         "source_sense": {
@@ -3067,8 +3121,8 @@
             }
           ],
           "context": {
-            "en": "not; negate the statement in this context",
-            "pl": "nie; zaprzeczenie zdania w tym kontekście"
+            "en": "not (negation within a sentence)",
+            "pl": "nie (przeczenie w zdaniu)"
           },
           "task_contract": {
             "primary_target": "sense_in_context",
@@ -3133,8 +3187,8 @@
         "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
       },
       "hints": {
-        "en": "not; negate the statement in this context",
-        "pl": "nie; zaprzeczenie zdania w tym kontekście",
+        "en": "not (negation within a sentence)",
+        "pl": "nie (przeczenie w zdaniu)",
         "role": "meaning_reveal",
         "invented_mnemonic": null,
         "etymology": null
@@ -3329,7 +3383,8 @@
           "ai_review": "not_run",
           "release": "blocked",
           "release_blockers": ["independent_vendor_review_missing"],
-          "user_private_opt_in": false
+          "user_private_opt_in": false,
+          "language_check": "not_run"
         },
         "risk_categories": [],
         "verification_log": [
@@ -3359,19 +3414,27 @@
             "verdict": "pass",
             "content_sha256": "4aec56a289467737f0d9c189716e1870fb221e0bfeba3fc544a8568990a1605e",
             "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          },
+          {
+            "stage": "exercise_rule_authoring",
+            "actor": "OpenAI Codex",
+            "verdict": "revised_draft",
+            "independent": false,
+            "content_sha256": "717c05c1ad1229cf746efefdc37c6376f7270da1450d30f4e9af3a3f0952fce2",
+            "rules": ["R5"]
           }
         ],
         "unresolved_doubts": [
           "All generated meanings, examples and PL/EN translations await independent vendor review."
         ]
       },
-      "content_sha256": "4aec56a289467737f0d9c189716e1870fb221e0bfeba3fc544a8568990a1605e"
+      "content_sha256": "717c05c1ad1229cf746efefdc37c6376f7270da1450d30f4e9af3a3f0952fce2"
     },
     {
       "schema_version": "woorden-content-research-0.2",
       "id": "86106c24-7587-4f0d-b1b2-3d1e14505a48",
       "fixture_ref": "S08",
-      "revision": 1,
+      "revision": 2,
       "lexeme": {
         "id": "05b66fa2-41e9-4141-980d-b5c5f2cc1dc4",
         "lemma": "kunt u dat herhalen",
@@ -3432,10 +3495,22 @@
             {
               "ordered_segments": ["Kunt u dat herhalen"],
               "case_sensitive": false
+            },
+            {
+              "ordered_segments": ["Zou u dat kunnen herhalen"],
+              "case_sensitive": false
+            },
+            {
+              "ordered_segments": ["Kunt u het herhalen"],
+              "case_sensitive": false
+            },
+            {
+              "ordered_segments": ["Kunt u dat nog een keer zeggen"],
+              "case_sensitive": false
             }
           ],
           "context": {
-            "en": "could you repeat that?",
+            "en": "could you repeat that? (formal)",
             "pl": "czy może pan/pani to powtórzyć?"
           },
           "task_contract": {
@@ -3612,7 +3687,8 @@
           "ai_review": "not_run",
           "release": "blocked",
           "release_blockers": ["independent_vendor_review_missing"],
-          "user_private_opt_in": false
+          "user_private_opt_in": false,
+          "language_check": "not_run"
         },
         "risk_categories": ["formula_or_pragmatics"],
         "verification_log": [
@@ -3642,6 +3718,14 @@
             "verdict": "pass",
             "content_sha256": "b318c9578dbd5043b3f158f9ec706b0f66685ecadf47cfe4a711283fd039ca71",
             "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          },
+          {
+            "stage": "exercise_rule_authoring",
+            "actor": "OpenAI Codex",
+            "verdict": "revised_draft",
+            "independent": false,
+            "content_sha256": "065f0460170dd429d05b1d0a2b296dee0b41c0f19d17691292dcbd2183561483",
+            "rules": ["R2"]
           }
         ],
         "unresolved_doubts": [
@@ -3650,13 +3734,13 @@
           "All generated meanings, examples and PL/EN translations await independent vendor review."
         ]
       },
-      "content_sha256": "b318c9578dbd5043b3f158f9ec706b0f66685ecadf47cfe4a711283fd039ca71"
+      "content_sha256": "065f0460170dd429d05b1d0a2b296dee0b41c0f19d17691292dcbd2183561483"
     },
     {
       "schema_version": "woorden-content-research-0.2",
       "id": "d66ba490-4dcc-482e-885b-cf97a000a036",
       "fixture_ref": "S09",
-      "revision": 1,
+      "revision": 2,
       "lexeme": {
         "id": "604850dc-2e18-4fc8-b4a1-466e8dc35ad6",
         "lemma": "hebben",
@@ -3867,8 +3951,8 @@
             }
           ],
           "context": {
-            "en": "have; possess or have available",
-            "pl": "mieć; posiadać lub mieć do dyspozycji"
+            "en": "have (present tense)",
+            "pl": "mieć (czas teraźniejszy)"
           },
           "task_contract": {
             "primary_target": "sense_in_context",
@@ -3884,6 +3968,15 @@
             "source_sentence_id": null,
             "direct_translation_from": "nl",
             "reviewer_B": "not_run"
+          },
+          "cue": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "have",
+              "pl": "mieć"
+            },
+            "tense": "present",
+            "person": "ik"
           }
         }
       ],
@@ -4224,7 +4317,8 @@
           "ai_review": "not_run",
           "release": "blocked",
           "release_blockers": ["independent_vendor_review_missing"],
-          "user_private_opt_in": false
+          "user_private_opt_in": false,
+          "language_check": "not_run"
         },
         "risk_categories": [],
         "verification_log": [
@@ -4267,13 +4361,21 @@
             "verdict": "pass",
             "content_sha256": "69e6418f29bcbefb36d55a7aa4f4bbf19ac9d900f8c51f245a4f249650af858c",
             "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          },
+          {
+            "stage": "exercise_rule_authoring",
+            "actor": "OpenAI Codex",
+            "verdict": "revised_draft",
+            "independent": false,
+            "content_sha256": "f32022b0cd83f7d8b407ec2be3f1564f2142cf4956b5dae9346959f93844a9cd",
+            "rules": ["R3", "R1"]
           }
         ],
         "unresolved_doubts": [
           "All generated meanings, examples and PL/EN translations await independent vendor review."
         ]
       },
-      "content_sha256": "69e6418f29bcbefb36d55a7aa4f4bbf19ac9d900f8c51f245a4f249650af858c"
+      "content_sha256": "f32022b0cd83f7d8b407ec2be3f1564f2142cf4956b5dae9346959f93844a9cd"
     },
     {
       "schema_version": "woorden-content-research-0.2",

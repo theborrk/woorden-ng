@@ -53,6 +53,12 @@ function fixture(count = 25, ref = 'S01') {
         const original = pilot.entries.find((e) => e.fixture_ref === ref);
         entry.forms = [structuredClone(original.forms.find((f) => f.surface === 'neem mee'))];
         entry.examples = [structuredClone(original.examples[0])];
+        entry.examples[0].cue = {
+          mode: 'fill_in',
+          gloss: structuredClone(entry.examples[0].context),
+          tense: 'present',
+          person: 'first singular',
+        };
         entry.examples[0].target_sense_id = entry.id;
         entry.examples[0].target_form_ids = [entry.forms[0].id];
         entry.lexeme.morphology.verb.forms = [entry.forms[0].id];

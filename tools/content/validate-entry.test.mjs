@@ -24,6 +24,12 @@ function fixture() {
   const form = entry.forms.find((f) => f.surface === 'neem mee');
   entry.forms = [form];
   entry.examples = [entry.examples[0]];
+  entry.examples[0].cue = {
+    mode: 'fill_in',
+    gloss: { en: 'take along', pl: 'zabrać ze sobą' },
+    tense: 'present',
+    person: 'ik',
+  };
   entry.lexeme.morphology.verb.split_form_ids = [form.id];
   entry.lexeme.morphology.verb.forms = [form.id];
   entry.lexeme.pronunciation.ipa = [];

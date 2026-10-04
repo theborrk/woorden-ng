@@ -1,7 +1,7 @@
 ---
 id: T-168
 title: Enforce the exercise rules in the entry validator
-status: todo
+status: done
 size: M
 depends_on: [T-110]
 type: task
@@ -42,12 +42,12 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the batch 01 cases (S02 "Ik ___ ziek." without a tense cue, S04 one accepted
+- [x] AC1: Given the batch 01 cases (S02 "Ik ___ ziek." without a tense cue, S04 one accepted
       answer, S08 a single-string sentence, S09 the cue "possess"), when validated, then each fails
       with the matching rule ID, and the corrected versions pass. (unit)
-- [ ] AC2: Given S03 with the form "-" and S07 with "in this context" in its meanings, when
+- [x] AC2: Given S03 with the form "-" and S07 with "in this context" in its meanings, when
       validated, then R4 and R5 findings name the entry and field. (unit)
-- [ ] AC3: Given an entry with three accepted answers or a self-graded sentence, when validated,
+- [x] AC3: Given an entry with three accepted answers or a self-graded sentence, when validated,
       then it passes and the answer-span round trip of T-110 still holds for the first answer. (unit)
 
 ## Notes for the implementer

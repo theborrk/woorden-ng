@@ -164,3 +164,55 @@ Missing optional IPA does not block written tasks. No locale fallback or content
 The research starter pack remains unchanged and unreviewed. Its omitted source archives and
 broad research source tags are insufficient evidence for this stricter import boundary; missing
 observations produce explicit errors rather than inheriting the prototype's blanket fact status.
+
+## SUBTLEX-NL frequency import (T-102)
+
+Download the two pinned workbooks into ignored `.cache/content-sources/`. The pins in
+`tools/content/pins/subtlex-{full,cd2}.json` preserve the research snapshot's URL, retrieval
+instant, byte size and hash using T-100's manifest schema. Downloads are a separate contributor
+operation; the importer and tests never access the network.
+
+```sh
+npm --silent run content:subtlex -- .cache/content-sources/subtlex-full.xlsx .cache/content-sources/subtlex-cd2.xlsx --queries queries.json
+```
+
+`queries.json` is an array such as
+`[{"surface":"pinnen","lemma":"pinnen","pos":"verb"}]`. Omit `--queries` for counts only.
+Each file must match its pin, exact 17-column header, typed numeric/text fields, CD threshold
+and data row count (437,503 / 150,357). Rows stream; shared strings are cached by the XLSX reader.
+Only requested surface rows and dominant-lemma rows are retained. Successful stdout is one JSON
+report containing both manifests, counts, units, raw lookup observations and a separate list of
+unmatched or ambiguous joins. `pos_ambiguous` flags multiple reported surface POS or other
+observed dominant POS for the requested lemma, even when the dominant-POS join matches. Any failure exits nonzero with stderr and no partial report.
+
+Surface counts, CD and Zipf remain separate from lemma/POS counts. `FREQlemma` is preserved as
+raw evidence, never added across inflections or used as a substitute for the dominant lemma/POS
+count. Lemma queries use a unique matching `dominant.pos.lemma.freq` total; differing totals or
+missing values yield unknown. Scoring additionally requires the exact surface observation's
+dominant lemma and mapped POS to match the request. Unknown/unmapped POS, missing dominant
+fields and mismatches leave scoring lemma fields null while retaining surface evidence.
+The conservative POS map follows the research prototype: noun N, verb WW, adj/adjective ADJ,
+adv/adverb BW, pron/det VNW, conj VG; other POS remain unmapped. No sense frequency is inferred.
+
+Each observation's `record_sha256` hashes `JSON.stringify` of the raw field object with keys sorted
+(empty cells are null), encoded as UTF-8. It retains the research record hash for the preserved `pinnen` observation and binds values
+independently of worksheet location.
+`worksheet_row` is the row in the imported file, not a claimed original row of an excerpt.
+Dot-delimited POS and frequency strings are preserved verbatim.
+
+The offline fixtures `subtlex-excerpt.xlsx` and `subtlex-cd2-excerpt.xlsx` are direct cuts
+of the pinned workbooks: the original header and `pinnen` row (19813 / 19887).
+`tests/fixtures/content-sources/subtlex-excerpt.records.json` maps excerpt row 2 to each
+original row and retains its canonical field hash and full snapshot hash. Extraction copies
+worksheet cells, including cached formula results, and referenced shared strings from the
+original XLSX XML, then repackages them with row coordinates and string indices remapped.
+It does not recreate values from the research JSON. The adjacent manifests pin each compact
+XLSX and identify its bulk snapshot in lineage; `subtlex-records.json` retains the original
+research values for comparison. Synthetic inflection/conflict workbooks exist only in test
+temporary directories. Full-file counts are proved separately by the CLI report in the PR.
+
+The full workbook's Zipf formulas are read as their cached numeric results, never evaluated.
+Missing, non-numeric or error caches fail numeric validation. Numeral lemmas stored as finite
+numeric cells remain numbers in raw evidence; they are not coerced into string lemma joins.
+Leading-hyphen lemma cells saved upstream as formula/error artifacts are retained as raw
+objects and cannot match a string lemma query. They are not evaluated or repaired.

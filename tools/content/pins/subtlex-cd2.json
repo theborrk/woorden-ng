@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_id": "subtlex-nl-cd2-2026-10",
+  "url": "https://osf.io/download/e8y5b/",
+  "retrieved_at": "2026-10-03T00:18:39.245138+00:00",
+  "bytes": 12941041,
+  "sha256": "74a67cf88cf8f4245701e679b13e28ccdc45b836a131e72f34e377a8200129bc",
+  "format": "xlsx",
+  "version": "OSF snapshot pinned 2026-10-03",
+  "lineage": ["SUBTLEX-NL"]
+}

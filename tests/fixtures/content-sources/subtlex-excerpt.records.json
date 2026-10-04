@@ -1,0 +1,14 @@
+{
+  "full": {
+    "source_sha256": "6a43c784b30a9dc097f8d903b22c830dac631654efed430c86f2f9ec0a7cdd05",
+    "excerpt_worksheet_row": 2,
+    "source_worksheet_row": 19813,
+    "record_sha256": "f386cd00e9fef1ad5e200f5fff2f0385edbc8adebedd9d21b0afabf7e0ba85b9"
+  },
+  "cd2": {
+    "source_sha256": "74a67cf88cf8f4245701e679b13e28ccdc45b836a131e72f34e377a8200129bc",
+    "excerpt_worksheet_row": 2,
+    "source_worksheet_row": 19887,
+    "record_sha256": "f386cd00e9fef1ad5e200f5fff2f0385edbc8adebedd9d21b0afabf7e0ba85b9"
+  }
+}

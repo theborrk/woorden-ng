@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_id": "subtlex-nl-cd2-direct-excerpt",
+  "url": "https://osf.io/download/e8y5b/",
+  "retrieved_at": "2026-10-04T16:06:03.025136+00:00",
+  "bytes": 5205,
+  "sha256": "be125dcce597254777bc55e82fe2da76284ace4803d5870c60a76262930c0f47",
+  "format": "xlsx",
+  "version": "direct pinned-workbook excerpt: header and worksheet row 19887",
+  "lineage": ["SUBTLEX-NL", "74a67cf88cf8f4245701e679b13e28ccdc45b836a131e72f34e377a8200129bc"]
+}

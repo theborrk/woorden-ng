@@ -1,16 +1,16 @@
 ---
-id: T-119
-title: Probe local Dutch TTS and expose explicit fallback states
+id: T-120
+title: Admit the starter pilot after one sample check
 status: todo
-size: M
-depends_on: [T-118]
+size: S
+depends_on: [T-113, T-114, T-116, T-169]
 type: task
-refs: [W21, F08, T43]
+refs: [W19, W20, F04, F08, T50]
 ---
 
 ## Goal
 
-A learner can tell whether a usable local Dutch voice is available and can continue with written practice when it is not.
+The 60-entry starter pilot moves from research draft to eligible written tasks after it follows the exercise rules and passes one recorded sample check.
 
 ## Context
 
@@ -24,18 +24,17 @@ A learner can tell whether a usable local Dutch voice is available and can conti
 
 In:
 
-- Implement platform adapter capability probes using locale, Android network-required flag and browser voice locality.
-- Expose unavailable/download-needed/tested-local states and record actual-device offline smoke-test results.
+- Run the pilot as one generation batch through T-112 (packet) and T-113 (import), using the actual sample-check response committed under `research/content-2026-10/review/sample-checks/`.
+- Apply the outcome: patch `fix` entries (a patched entry returns to not_run and is checked in the next fix batch), keep `uncertain` entries flagged, compile with T-114 and report exactly which entries and task families became eligible.
 
 Out (do not do in this task):
 
-- Installing Android SDK locally, silently calling online TTS, pronunciation grading or runtime AI.
+- Simulated or self-written responses, blanket status edits, or admitting entries the check did not cover.
 
 ## Acceptance criteria
 
-- [ ] AC1: Given no Dutch/local voice, when requested, then no wrong-language or silent network fallback occurs and a clear repair action appears. (unit, e2e)
-- [ ] AC2: Given a selected voice on a real device in airplane mode, when the QA phrase set plays, then actual results and engine/version are recorded. (device test on the CI emulator for the probe and its states; the owner runs the airplane-mode phrase set on a real phone with the debug APK and the PR records the result)
-- [ ] AC3: Given an untested voice, when capability is displayed, then availability is not labelled pronunciation-approved. (unit)
+- [ ] AC1: Given no committed sample-check response, when admission runs, then nothing becomes eligible and the blocker names the missing response. (integration)
+- [ ] AC2: Given the actual passing response on the current hashes, when admitted, then only applicable task families of batch_checked or ai_reviewed entries become eligible and every revision_requested or uncertain entry stays out with its reason. (integration)
 
 ## Notes for the implementer
 
@@ -44,3 +43,5 @@ Keep this one reviewable PR. Port/reuse the research algorithms in the repositor
 ## Notes for the reviewer
 
 Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. A language check is an actual, recorded sample check of a generation batch (ADR 0005); a code review alone does not check the Dutch.
+
+Check input: the sample check is run outside the app, in one Claude Code session, following `research/content-2026-10/review/SAMPLE-CHECK.md`, once T-112 and T-169 are merged.

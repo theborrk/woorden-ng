@@ -3,7 +3,7 @@ id: T-122
 title: Export source-constrained authoring briefs for external generation
 status: todo
 size: S
-depends_on: [T-103, T-104, T-108, T-110]
+depends_on: [T-103, T-104, T-108, T-168]
 type: task
 refs: [W19, W20, F04, F08, T50]
 ---
@@ -26,6 +26,7 @@ In:
 
 - Export a small source-backed authoring brief and the copy-ready author-A prompt, with immutable input hashes.
 - Include missing/conflicted factual fields, direct PL/EN translation requirements and examples/answer-span constraints.
+- Include the exercise rules R1–R5 (ADR 0005) and T-168's validator findings, so drafts arrive rule-compliant.
 
 Out (do not do in this task):
 
@@ -42,4 +43,4 @@ Keep this one reviewable PR. Port/reuse the research algorithms in the repositor
 
 ## Notes for the reviewer
 
-Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. Content review in Claude must be an actual separately recorded operation on the exact payload; a code review alone does not imply all Dutch text passed the language rubric.
+Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. A language check is an actual, recorded sample check of a generation batch (ADR 0005); a code review alone does not check the Dutch.

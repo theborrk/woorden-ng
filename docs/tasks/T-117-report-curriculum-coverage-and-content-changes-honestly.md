@@ -35,7 +35,7 @@ Out (do not do in this task):
 
 - [ ] AC1: Given the provisional 5,000-candidate baseline, when coverage runs, then 2,120 headword matches and 2,880 misses are labelled candidate counts, not verified sense coverage. (integration)
 - [ ] AC2: Given a sense split or article change, when diffed, then progress-impacting/new-app identity consequences and invalidated checks are visible. (unit)
-- [ ] AC3: Given no B review, when reporting agreement, then the result is unknown/not_run with denominator zero. (unit)
+- [ ] AC3: Given batches without a sample check, when coverage runs, then their entries are reported as language check not_run, separately from batch_checked and ai_reviewed, with sampled/total denominators per batch. (unit)
 
 ## Notes for the implementer
 
@@ -43,4 +43,4 @@ Keep this one reviewable PR. Port/reuse the research algorithms in the repositor
 
 ## Notes for the reviewer
 
-Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. Content review in Claude must be an actual separately recorded operation on the exact payload; a code review alone does not imply all Dutch text passed the language rubric.
+Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. A language check is an actual, recorded sample check of a generation batch (ADR 0005); a code review alone does not check the Dutch.

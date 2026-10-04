@@ -44,7 +44,7 @@ Out (do not do in this task):
       then history resolves to the same identity and retained prompt revision, not a positional ID (unit and integration).
 - [ ] AC3: Given alias, retirement or meaning-split annotations, when resolved, then original rows
       remain inspectable and a new sense receives no copied measured mastery (unit).
-- [ ] AC4: Given a legacy entry missing PL or independent review, when opened in Library, then original
+- [ ] AC4: Given a legacy entry missing PL or a language check, when opened in Library, then original
       RU/EN, annotations and missing/provisional status are visible without an approval claim (e2e).
 
 ## Notes for the implementer

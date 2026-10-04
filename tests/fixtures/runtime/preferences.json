@@ -1,0 +1,23 @@
+{
+  "formatVersion": 1,
+  "kind": "preferences",
+  "preferencesVersion": 1,
+  "profileId": "d1522c5a-2419-4a35-9f72-85d98d097774",
+  "revision": 3,
+  "updatedAt": 1767268800000,
+  "interfaceLocale": "en",
+  "cueLocale": "pl",
+  "timeZone": "Europe/Amsterdam",
+  "studyDayBoundaryMinutes": 360,
+  "dailyNewConceptBudget": 5,
+  "dailyReviewBudget": 30,
+  "goal": "Read / czytać / читать",
+  "capabilities": {
+    "audio": true,
+    "microphone": false
+  },
+  "consent": {
+    "diagnostics": false,
+    "experiments": false
+  }
+}

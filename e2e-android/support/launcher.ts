@@ -13,7 +13,11 @@ export function launcherTileBounds(xml: string, name: string): LauncherBounds | 
         /package="[^"]*launcher[^"]*"/.test(node) &&
         (node.includes(`text="${label}"`) || node.includes(`content-desc="${label}"`)),
     );
-  const coordinates = tile?.match(/bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"/);
+  return nodeBounds(tile);
+}
+
+function nodeBounds(node: string | undefined): LauncherBounds | undefined {
+  const coordinates = node?.match(/bounds="\[(\d+),(\d+)\]\[(\d+),(\d+)\]"/);
   if (!coordinates) return undefined;
   const x = Number(coordinates[1]),
     y = Number(coordinates[2]);
@@ -22,7 +26,18 @@ export function launcherTileBounds(xml: string, name: string): LauncherBounds | 
   return width > 0 && height > 0 ? { x, y, width, height } : undefined;
 }
 
-/** Each unsuccessful observation advances the drawer, including opening it from HOME. */
+function systemUiWaitBounds(xml: string): LauncherBounds | undefined {
+  const nodes = xml.match(/<node\b[^>]*>/g) ?? [];
+  const isSystemDialog = (node: string) => node.includes('package="android"');
+  const interrupted = nodes.some(
+    (node) => isSystemDialog(node) && node.includes(`text="System UI isn't responding"`),
+  );
+  return interrupted
+    ? nodeBounds(nodes.find((node) => isSystemDialog(node) && node.includes('text="Wait"')))
+    : undefined;
+}
+
+/** Recover the emulator's System UI dialog or advance the drawer until the real tile appears. */
 export async function findOrScrollLauncherTile(
   shell: (command: string) => Promise<Buffer>,
   name: string,
@@ -32,6 +47,15 @@ export async function findOrScrollLauncherTile(
   const xml = (await shell('cat /sdcard/woorden-launcher.xml')).toString();
   if (!xml.includes('<hierarchy')) {
     throw new Error(`Launcher UI dump failed: ${dump.toString().trim()} ${xml.trim()}`);
+  }
+  // A cold emulator can show a System UI ANR modal over HOME. Wait keeps System UI running;
+  // never dismiss an ANR belonging to the app under test or accept a tile behind the modal.
+  const wait = systemUiWaitBounds(xml);
+  if (wait) {
+    await shell(
+      `input tap ${Math.round(wait.x + wait.width / 2)} ${Math.round(wait.y + wait.height / 2)}`,
+    );
+    return undefined;
   }
   const bounds = launcherTileBounds(xml, name);
   if (!bounds) {

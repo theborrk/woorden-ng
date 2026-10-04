@@ -1,5 +1,27 @@
 # Local source inspection
 
+## Starter draft inspection (T-115)
+
+Library displays S01–S10 from `content/inspection/starter-s01-s10.json`. Refresh or check the
+inspection artifact with:
+
+```sh
+node tools/content/import-starter-inspection.mjs --write
+npx prettier --write content/inspection/starter-s01-s10.json
+node tools/content/import-starter-inspection.mjs --check
+```
+
+The import checks issued sense/lexeme/form/example IDs and semantic hashes and retains the
+research entries verbatim, including original Russian mappings. Its separate inspection assessment
+is unreviewed, structurally unchecked and release-blocked. The research's source statuses are
+displayed as assertions with field provenance/citations, not adopted production verification.
+The original source records needed by T-111's stricter boundary are not bundled with this slice.
+This inspection artifact is not a canonical draft state or curated pack; it cannot enable study,
+approved audio or publication. No model, audio service or old-app progress is used. S08's absent
+whole-expression IPA remains unavailable, with no generated phonetics.
+
+## Source files
+
 `content:sources` records original file bytes without downloads or lexical extraction. For an
 initial pin, provide JSON metadata with `source_id`, `url`, `retrieved_at`, `format`, `version`
 and `lineage`, as in `tests/fixtures/content-sources/metadata.json`:

@@ -1,7 +1,7 @@
 ---
 id: T-012
 title: Plan the tasks for milestones M5 and M6
-status: todo
+status: done
 size: M
 depends_on: [T-001, T-011]
 type: plan
@@ -67,13 +67,13 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Every ID in this plan's `refs` appears in the `refs` of at least one new task: with this
+- [x] AC1: Every ID in this plan's `refs` appears in the `refs` of at least one new task: with this
       plan set to `done`, `npm run check:tasks` still passes (verify)
-- [ ] AC2: Every new task is size S or M, a vertical slice, and has Given/When/Then criteria naming
+- [x] AC2: Every new task is size S or M, a vertical slice, and has Given/When/Then criteria naming
       the test type (unit, integration, e2e, device test) that proves them (review)
-- [ ] AC3: Native work (plugins, permissions) sits in tasks of its own, and every native task has a
+- [x] AC3: Native work (plugins, permissions) sits in tasks of its own, and every native task has a
       device test criterion (review)
-- [ ] AC4: Dependencies are minimal and correct, so at least three tasks can start in parallel
+- [x] AC4: Dependencies are minimal and correct, so at least three tasks can start in parallel
       without touching the same files (review)
 
 ## Notes for the implementer
@@ -89,3 +89,25 @@ Out (do not do in this task):
 ## Notes for the reviewer
 
 Apply `docs/agents/plan-red-team.md`. Coverage and test quality are the main risks.
+
+## Planned slices and evidence
+
+T-172–T-189 complete the remaining M5–M6 work. T-175 reuses imports/sample packets and
+check results; T-176 accounts for every original row and T-177 scales bounded curriculum
+batches. T-172/T-178/T-179 handle media and data-only artifact publication. T-173/T-174
+expose risky rule/span contracts before the focused article/listening/spelling/form/cloze,
+picture and situation UI. T-186 owns activation budgets and T-188 varied confusion contexts.
+T-189 isolates native audio interruption behavior with CI-only device criteria. Runtime
+pack downloads, staged installation and native executable updates remain with M9.
+
+T-172, T-173 and T-174 can start together from completed T-110. Their primary directories
+are disjoint; they do not edit manifests or shared barrels. Other dependencies reuse M4
+transactions, planner, typing and audio services. T-120 remains the admitted starter path
+through T-159; no draft fixture grants production eligibility. Actual Dutch sample checks,
+visual QA and physical-phone voice QA remain external evidence, following ADR 0005.
+
+Run `node --test docs/tasks/T-012-plan-m5-m6.test.mjs` for AC1–AC4 structural evidence
+(unchanged refs, bounded/testable slices, native isolation, nonredundant graph and three
+ready disjoint inspectors), plus `npm run check:tasks`, `npm run verify` and
+`npm run test:e2e:web`. These supplement semantic review under plan-red-team.md;
+new implementation tasks remain unchecked until their actual tests pass.

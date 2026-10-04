@@ -198,8 +198,9 @@ export function ledgerMarkdown(tasks) {
   ].join('\n');
 }
 
-function main(argv) {
-  const dir = join(process.cwd(), 'docs', 'tasks');
+/** Reads and validates docs/tasks under `root` (also used by scripts/next-task.mjs). */
+export function loadBacklog(root = process.cwd()) {
+  const dir = join(root, 'docs', 'tasks');
   const files = readdirSync(dir)
     .filter((name) => /^T-\d{3}-.+\.md$/.test(name))
     .sort()
@@ -208,7 +209,11 @@ function main(argv) {
   const requiredRefs = existsSync(requiredPath)
     ? JSON.parse(readFileSync(requiredPath, 'utf8')).refs
     : [];
-  const result = validateTasks(files, requiredRefs);
+  return { requiredRefs, result: validateTasks(files, requiredRefs) };
+}
+
+function main(argv) {
+  const { requiredRefs, result } = loadBacklog();
   const adrDir = join(process.cwd(), 'docs', 'adr');
   if (existsSync(adrDir)) result.errors.push(...duplicateAdrNumbers(readdirSync(adrDir).sort()));
   const { errors, tasks, ready, uncoveredRefs, plannedOnlyRefs } = result;

@@ -11,6 +11,15 @@ Run npm run verify and npm run test:e2e:web until both pass, then open a pull re
 "T-xxx: <summary>" using .github/pull_request_template.md (first line "Task: T-xxx").
 ```
 
+## Work through the backlog
+
+Start two to four Codex tasks with this prompt; each claims ready tasks one after another and opens
+one pull request per task (see [`codex-worker.md`](codex-worker.md)):
+
+```text
+Work as a backlog worker: follow docs/agents/codex-worker.md. Complete up to 4 tasks.
+```
+
 ## Address Claude's review
 
 Open the PR, copy the **Fix brief for Codex** block from Claude's summary comment, and send it in

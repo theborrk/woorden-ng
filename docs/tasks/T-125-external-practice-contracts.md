@@ -1,7 +1,7 @@
 ---
 id: T-125
 title: Validate provider-neutral lesson packages and external claims
-status: todo
+status: done
 size: S
 depends_on: []
 type: task
@@ -37,13 +37,13 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a current lesson fixture with PL/EN explanations and graduated hints, when
+- [x] AC1: Given a current lesson fixture with PL/EN explanations and graduated hints, when
       inspected, then all stable IDs, revision, cue policy and support context survive validation (unit and integration).
-- [ ] AC2: Given an observation with unknown help and repeated IDs, when classified, then unknown
+- [x] AC2: Given an observation with unknown help and repeated IDs, when classified, then unknown
       stays explicit, identical duplicates are idempotent and differing hashes are conflicts (unit).
-- [ ] AC3: Given an observation carrying attempt_committed or scheduler-state fields, when
+- [x] AC3: Given an observation carrying attempt_committed or scheduler-state fields, when
       validated, then it is rejected and cannot enter the graded-attempt contract (unit).
-- [ ] AC4: Given missing IDs, timestamps, versions or reporting source, when the inspector runs,
+- [x] AC4: Given missing IDs, timestamps, versions or reporting source, when the inspector runs,
       then it reports validation failure without requiring any network/provider configuration (integration).
 
 ## Notes for the implementer

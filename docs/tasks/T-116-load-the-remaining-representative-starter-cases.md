@@ -1,7 +1,7 @@
 ---
 id: T-116
 title: Load the remaining representative starter cases
-status: todo
+status: done
 size: M
 depends_on: [T-115]
 type: task
@@ -34,9 +34,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the complete fixture, when validated, then 60 senses and 65 translated examples are accounted for and all answer spans round-trip. (integration)
-- [ ] AC2: Given bank and alsjeblieft, when switching senses, then meanings/examples change while canonical shared identity remains consistent. (e2e)
-- [ ] AC3: Given meenemen/opstaan/invullen/inschrijven, when inspected, then joined and discontinuous/reflexive targets remain explicit. (unit)
+- [x] AC1: Given the complete fixture, when validated, then 60 senses and 65 translated examples are accounted for and all answer spans round-trip. (integration)
+- [x] AC2: Given bank and alsjeblieft, when switching senses, then meanings/examples change while canonical shared identity remains consistent. (e2e)
+- [x] AC3: Given meenemen/opstaan/invullen/inschrijven, when inspected, then joined and discontinuous/reflexive targets remain explicit. (unit)
 
 ## Notes for the implementer
 

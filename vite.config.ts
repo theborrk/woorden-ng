@@ -89,7 +89,10 @@ export default defineConfig(({ mode }) => {
                 ],
               },
               workbox: {
-                globPatterns: ['**/*.{js,css,html,svg,png,ico,webmanifest}'],
+                globPatterns: [
+                  '**/*.{js,css,html,svg,png,ico,webmanifest}',
+                  'assets/starter-s01-s60-*.json',
+                ],
                 navigateFallback: 'index.html',
                 // CI publishes review screenshots under <base>__review/ on preview deployments only.
                 navigateFallbackDenylist: [/\/__review\//],

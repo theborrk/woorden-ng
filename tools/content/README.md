@@ -2,8 +2,16 @@
 
 ## Starter draft inspection (T-115)
 
-Library displays S01–S10 from `content/inspection/starter-s01-s10.json`. Refresh or check the
-inspection artifact with:
+Library displays S01–S60 from `content/inspection/starter-s01-s60.json` (T-116). Refresh or check
+the complete inspection artifact with:
+
+```sh
+node tools/content/import-starter-inspection.mjs --write --all
+npx prettier --write content/inspection/starter-s01-s60.json
+node tools/content/import-starter-inspection.mjs --check --all
+```
+
+The original S01–S10 artifact remains available with the default commands:
 
 ```sh
 node tools/content/import-starter-inspection.mjs --write
@@ -19,6 +27,17 @@ The original source records needed by T-111's stricter boundary are not bundled 
 This inspection artifact is not a canonical draft state or curated pack; it cannot enable study,
 approved audio or publication. No model, audio service or old-app progress is used. S08's absent
 whole-expression IPA remains unavailable, with no generated phonetics.
+
+The full fixture accounts for 60 senses and 65 EN/PL-translated examples. Import checks each
+NFC/UTF-16 answer span, its ordered segments and issued target-form references. Example details
+expose the original joined, discontinuous and reflexive answer contracts. Shared `bank` and
+`alsjeblieft` lexeme/form groups collect source IDs while retaining each sense's original
+observation and hash; meanings, examples and sense identities remain separate. This grouping
+does not resolve conflicting research assertions or grant review approval.
+
+The full fixture ships as a bundled JSON asset, loaded with a visible failure/retry state.
+The web service worker precaches that asset for offline inspection; the Android bundle includes
+it locally. Keeping fixed research data outside JavaScript preserves the app's script-size budget.
 
 ## Source files
 

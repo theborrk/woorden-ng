@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
 import slice from '../content/inspection/starter-s01-s10.json' with { type: 'json' };
+import complete from '../content/inspection/starter-s01-s60.json' with { type: 'json' };
 import { snap } from './support/review';
 
 test('T43: AC1 all ten unreviewed starter senses expose locales, examples and research source states', async ({
@@ -8,7 +9,7 @@ test('T43: AC1 all ten unreviewed starter senses expose locales, examples and re
   await page.setViewportSize({ width: 360, height: 740 });
   await page.goto('./#/library');
   await expect(page.getByRole('heading', { name: 'Draft content inspection' })).toBeVisible();
-  await expect(page.getByLabel('Draft sense').locator('option')).toHaveCount(10);
+  await expect(page.getByLabel('Draft sense').locator('option')).toHaveCount(60);
   for (const entry of slice.entries) {
     await page.getByLabel('Draft sense').selectOption(entry.id);
     const article = page.getByTestId('inspection-entry');
@@ -61,6 +62,66 @@ test('T43: AC1 all ten unreviewed starter senses expose locales, examples and re
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await snap(page, 'starter draft inspection English');
 });
+
+for (const lemma of ['bank', 'alsjeblieft']) {
+  test(`W20: AC2 ${lemma} sense switching changes meanings/examples while retaining canonical shared identity`, async ({
+    page,
+    context,
+  }) => {
+    await page.setViewportSize({ width: 360, height: 740 });
+    await page.goto('./#/library');
+    await expect(page.getByLabel('Draft sense').locator('option')).toHaveCount(60);
+    const senses = complete.entries.filter((entry) => entry.lexeme.lemma === lemma);
+    const canonical = complete.shared_entities.lexemes.find((entry) => entry.lemma === lemma);
+    if (senses.length !== 2 || !canonical) throw new Error('Missing shared-sense fixture');
+    await page.evaluate(async () => {
+      await navigator.serviceWorker.ready;
+    });
+    await context.setOffline(true);
+    await page.reload();
+    for (const sense of senses) {
+      await page.getByLabel('Draft sense').selectOption(sense.id);
+      await expect(page.getByTestId('inspection-entry')).toHaveAttribute('data-entry-id', sense.id);
+      await expect(page.getByTestId('inspection-entry')).toHaveAttribute(
+        'data-lexeme-id',
+        canonical.id,
+      );
+      await expect(page.getByTestId('inspection-definition')).toHaveText(sense.sense.definition_nl);
+      for (const locale of ['en', 'pl'] as const)
+        await expect(page.getByTestId(`inspection-meanings-${locale}`).locator('li')).toHaveText(
+          sense.sense.meanings[locale],
+        );
+      await expect(page.getByTestId('inspection-example').locator('[lang="nl"]')).toHaveText(
+        sense.examples.map((e) => e.nl),
+      );
+      const shared = page
+        .getByTestId('inspection-entry')
+        .locator('details')
+        .filter({
+          has: page.getByText('Shared lexeme and form evidence — research assertions', {
+            exact: true,
+          }),
+        });
+      await shared.locator('summary').click();
+      await expect(page.getByTestId('inspection-shared-evidence')).toHaveText(
+        JSON.stringify(
+          {
+            lexeme: canonical,
+            forms: complete.shared_entities.forms.filter((form) => form.lexeme_id === canonical.id),
+          },
+          null,
+          2,
+        ),
+      );
+      await shared.locator('summary').click();
+      await expect(page.getByTestId('inspection-review')).toContainText('Release: blocked');
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
+      true,
+    );
+    await snap(page, `${lemma} shared senses offline`);
+  });
+}
 
 test('T43: AC2 missing whole-expression IPA stays unavailable offline in the Polish inspection view', async ({
   page,

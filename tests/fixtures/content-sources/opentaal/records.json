@@ -1,0 +1,32 @@
+[
+  {
+    "excerpt_line": 1,
+    "source_line": 4423,
+    "original_spelling": "aan weerszijden",
+    "sha256": "dcd0da35a95b44e707709a3f6c5f25f890d9628c619cc33dd69d99266fe60f6e"
+  },
+  {
+    "excerpt_line": 2,
+    "source_line": 17444,
+    "original_spelling": "Amsterdam",
+    "sha256": "a106a66e41a69461cd4d69e7c9f5809a054a4de22c25f4e3751874d122815e0b"
+  },
+  {
+    "excerpt_line": 3,
+    "source_line": 72289,
+    "original_spelling": "coöperatie",
+    "sha256": "66bd678e790ee779f1c7d4c4d93e9c0c325a2cc297ad65d4c3b57cd6731e4808"
+  },
+  {
+    "excerpt_line": 4,
+    "source_line": 154849,
+    "original_spelling": "huis",
+    "sha256": "7ac75ebc18ae007d94fd8c0b48679228758522c8897074bed13d12ef6225f8dd"
+  },
+  {
+    "excerpt_line": 5,
+    "source_line": 411383,
+    "original_spelling": "zorgverzekering",
+    "sha256": "e1724a407a9627f1ddc76ac4d71364e726fc91dfff7e05d6450e505ff846f4fe"
+  }
+]

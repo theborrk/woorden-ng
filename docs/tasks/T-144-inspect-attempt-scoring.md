@@ -1,7 +1,7 @@
 ---
 id: T-144
 title: Inspect assistance-aware attempt classification
-status: todo
+status: done
 size: M
 depends_on: []
 type: task
@@ -31,10 +31,10 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given an incorrect or omitted initial response followed by a hint and correct retry, when classified, then initial failure remains and exactly one Again is proposed for a valid eligible trial (unit and integration).
-- [ ] AC2: Given a correct response locked before feedback versus full reveal before responding, when classified, then the former stays independent and the latter records omission/reveal with Again (unit).
-- [ ] AC3: Given a primary referent image or permitted primary audio replay versus an extra mnemonic image/sound hint, when classified, then only the extra support prevents unaided evidence (unit).
-- [ ] AC4: Given long pauses, explicit effort/Easy choices, unavailable audio, invalid input, early practice or a standalone probe, when classified, then time alone never sets Hard/Again and non-scheduled or technical cases propose no transition (unit and integration).
+- [x] AC1: Given an incorrect or omitted initial response followed by a hint and correct retry, when classified, then initial failure remains and exactly one Again is proposed for a valid eligible trial (unit and integration).
+- [x] AC2: Given a correct response locked before feedback versus full reveal before responding, when classified, then the former stays independent and the latter records omission/reveal with Again (unit).
+- [x] AC3: Given a primary referent image or permitted primary audio replay versus an extra mnemonic image/sound hint, when classified, then only the extra support prevents unaided evidence (unit).
+- [x] AC4: Given long pauses, explicit effort/Easy choices, unavailable audio, invalid input, early practice or a standalone probe, when classified, then time alone never sets Hard/Again and non-scheduled or technical cases propose no transition (unit and integration).
 
 ## Notes for the implementer
 

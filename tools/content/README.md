@@ -1,5 +1,46 @@
 # Local source inspection
 
+## Starter draft inspection (T-115)
+
+Library displays S01–S60 from `content/inspection/starter-s01-s60.json` (T-116). Refresh or check
+the complete inspection artifact with:
+
+```sh
+node tools/content/import-starter-inspection.mjs --write --all
+npx prettier --write content/inspection/starter-s01-s60.json
+node tools/content/import-starter-inspection.mjs --check --all
+```
+
+The original S01–S10 artifact remains available with the default commands:
+
+```sh
+node tools/content/import-starter-inspection.mjs --write
+npx prettier --write content/inspection/starter-s01-s10.json
+node tools/content/import-starter-inspection.mjs --check
+```
+
+The import checks issued sense/lexeme/form/example IDs and semantic hashes and retains the
+research entries verbatim, including original Russian mappings. Its separate inspection assessment
+is unreviewed, structurally unchecked and release-blocked. The research's source statuses are
+displayed as assertions with field provenance/citations, not adopted production verification.
+The original source records needed by T-111's stricter boundary are not bundled with this slice.
+This inspection artifact is not a canonical draft state or curated pack; it cannot enable study,
+approved audio or publication. No model, audio service or old-app progress is used. S08's absent
+whole-expression IPA remains unavailable, with no generated phonetics.
+
+The full fixture accounts for 60 senses and 65 EN/PL-translated examples. Import checks each
+NFC/UTF-16 answer span, its ordered segments and issued target-form references. Example details
+expose the original joined, discontinuous and reflexive answer contracts. Shared `bank` and
+`alsjeblieft` lexeme/form groups collect source IDs while retaining each sense's original
+observation and hash; meanings, examples and sense identities remain separate. This grouping
+does not resolve conflicting research assertions or grant review approval.
+
+The full fixture ships as a bundled JSON asset, loaded with a visible failure/retry state.
+The web service worker precaches that asset for offline inspection; the Android bundle includes
+it locally. Keeping fixed research data outside JavaScript preserves the app's script-size budget.
+
+## Source files
+
 `content:sources` records original file bytes without downloads or lexical extraction. For an
 initial pin, provide JSON metadata with `source_id`, `url`, `retrieved_at`, `format`, `version`
 and `lineage`, as in `tests/fixtures/content-sources/metadata.json`:
@@ -204,6 +245,60 @@ Imports reject producer language/release approvals (`language_reviewed`, `batch_
 T-110's validator. Imported drafts never become curated content; actual sample checks and pack
 compilation belong to T-113/T-114. The research pack is not automatically imported or activated.
 
+## Sample-check packets (T-112)
+
+```sh
+npm run content:sample -- manifest.json --entries draft-state.json --seed 42 --output new-packet.json
+```
+
+Use one T-111 batch manifest (from `state.batches`) and its canonical entries, either an entry array
+or an object with `entries`. All manifest hashes must match current payloads. The output file must
+be new; stdout contains the same compact JSON bytes. Export does not alter content or check states.
+
+Batches of at most 20 entries are sampled entirely. Larger batches have ten entries ranked by
+SHA-256 of `<integer seed>:<stable ID>`, plus a fixed selection of up to ten risk entries, covering
+risk kinds first and then filling by ID. A random/risk overlap appears once with both selection
+roles; changing the seed leaves the risk selection fixed. Risk categories cover shared lemmas,
+separable/reflexive verbs, alternative articles, fixed expressions, declared whole-sentence tasks,
+and the explicit `polish_false_friend` risk marker. These are sampling labels, not language verdicts.
+
+The packet includes all batch hashes, sampled drafts, asserted source values with scoped citations,
+rules R1–R5, the three questions and the response format. Source records, author verdicts and
+self-check metadata are omitted; citations alone do not prove a fact. Research drafts can be
+exported for inspection without becoming checked or eligible. Rehashing content is not validation.
+Use `tools/content/schemas/sample-check-response.schema.json` for responses; `fix` requires a
+question/problem type and JSON Patch add/remove/replace operations, and `unsure` requires a reason.
+T-113 checks exact sample/hash/seed/vendor binding and imports actual responses. No provider is called.
+
+## Sample-check response imports (T-113)
+
+```sh
+npm run content:import-sample -- response.json --packet packet.json --state draft-state.json --dry-run
+npm run content:import-sample -- response.json --packet packet.json --state draft-state.json --output checked-state.json
+```
+
+The packet and state are operator-owned outputs of T-112 and T-111. The importer regenerates the
+packet against current entries, checks its stored batch manifest, and requires exactly one response
+per sampled ID/hash with the original seed. Unknown author vendors, same-vendor reviews (ignoring
+case and surrounding whitespace), stale entries, changed packets and incomplete responses fail
+before any output. Vendor names are recorded provenance, not cryptographic identity verification.
+
+The report gives the batch outcome, systematic problem types, risk meaning errors and every
+entry's language-check state. Repeated problem types fail the batch. A wrong meaning/translation
+in a risk category also fails: R1–R5 do not cover semantic errors. Failed batches receive no check
+approval; prior check evidence remains in the append-only log. Passing batches assign sampled
+passes `ai_reviewed`, unsampled entries `batch_checked`, fixes `revision_requested`, and uncertain
+entries `uncertain` and `flagged`. Existing rejected/superseded dispositions remain intact.
+Patches are attached as evidence and never applied automatically. Release stays `blocked` until
+the separate compiler calculates task/locale eligibility.
+
+The new state retains exact UTF-8 response text, its raw-byte SHA-256, the packet and the import
+result under `sample_checks`. Reimporting identical bytes on unchanged entries leaves the state
+and report unchanged; edited entries reject stale replay. Later draft edits archive old evidence
+and reset only the edited entry to `not_run`. Dry-run writes nothing; saved imports exclusively
+create a new file and refuse to overwrite prior state. Tests use synthetic responses only and do
+not confer checks on the research pilot.
+
 ## SUBTLEX-NL frequency import (T-102)
 
 Download the two pinned workbooks into ignored `.cache/content-sources/`. The pins in
@@ -274,3 +369,47 @@ cue or linked source tags identify a predicative example. R5 detects the recorde
 meta wording in learner meanings. These bounded checks cannot establish naturalness or complete
 alternative coverage. Passing them never changes language/release status; pilot corrections remain
 T-169 work. Cue/self-grading changes are part of the payload hash and invalidate prior hash evidence.
+
+## Task/locale pack compilation (T-114)
+
+```sh
+npm run content:compile -- checked-state.json --id PACK_UUID --version PACK_VERSION --evidence evidence.json --output new-pack.json
+```
+
+The version and opaque pack UUID are contributor supplied; retain the ID across versions and
+allocate a new version when adopting changed content. Output creation is exclusive. The artifact
+contains a curated `pack`, its `manifest`, a per-entry/task/locale blocker `report`, and complete
+`excluded` records outside the curated pack. Inputs and research content remain unchanged.
+The manifest binds canonical pack bytes, every entry's semantic and full-record hash, task
+references and the entry/compiler schema versions. Object keys are canonically sorted for hashes;
+entry/media ordering is deterministic. No time, model call, installation or automatic publishing
+is involved. Consumers must use the emitted task list rather than infer eligibility from a field
+on an entry. Retained source records and disabled candidate fields are reference data.
+
+The compiler rechecks structural/identity contracts with T-110 and validates required facts against
+separately supplied exact pinned observations. A missing optional source fact blocks its dependent
+task, not written recall. EN and PL decisions are separate; no translation fallback is invented.
+Written tasks require a sourced lemma and a meaning. Article tasks additionally require a sourced
+accepted article set; form/cloze variants reference only supported forms and complete examples for
+the requested locale. Missing optional IPA/media does not disable written tasks.
+
+Language approval comes from T-113 receipts, not producer strings: raw response, packet, stored
+result/hash and the latest check event must agree on the current payload. Retained archived batch
+revisions allow an unchanged sibling to keep its check after another entry is edited. An edited
+payload, failed/fix/uncertain check or flagged/rejected/superseded disposition cannot authorize
+curated tasks. Invalid receipt evidence is reported explicitly. The pure `taskEligibility` function
+receives independently verified validation and a hash-bound language-check assessment; the compiler
+establishes those assessments before calling it. Full source text, IDs and provenance are retained.
+
+Listening/spelling require a separate audio QA assessment and picture naming a referent-image
+assessment. Entry URLs, approved flags, mnemonic images and untested TTS never suffice. Optional
+`--media QA.json` accepts an operator-owned array with `id`, `kind` (`audio` or `referent_image`),
+`entry_id`, current `content_sha256`, asset `sha256`, `available:true`, `qa:"passed"`, `qa_run_ref`
+and `license`. Selected assessments enter the hash-bound pack. These are supplied QA evidence;
+T-118 owns actual media acquisition/checksum/text/playback verification. This compiler neither
+checks audio pronunciation from bytes nor fabricates QA. With no such evidence those tasks stay
+blocked, while eligible written tasks can compile.
+
+The delivered 60-entry research pack can be inspected with this command too: its curated output
+has zero eligible entries and explicit missing-check/source blockers. It receives no fabricated
+review, source observations, media or release status from compilation.

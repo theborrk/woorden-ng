@@ -120,6 +120,42 @@ select {
   border-radius: 0.375rem;
 }
 
+.content-inspection {
+  overflow-wrap: anywhere;
+}
+
+.content-inspection h4 {
+  font-size: 1.25rem;
+}
+
+.content-inspection h5 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.content-inspection summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 0.75rem 0;
+}
+
+.content-inspection pre {
+  white-space: pre-wrap;
+  font-size: 0.875rem;
+}
+
+.content-inspection dd {
+  margin: 0.25rem 0 1rem;
+}
+
+.draft-label {
+  display: inline-block;
+  border: 1px solid var(--muted);
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: 600;
+}
+
 input,
 button {
   min-height: 44px;

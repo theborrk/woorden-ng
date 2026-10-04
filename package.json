@@ -33,14 +33,17 @@
     "verify": "npm run lint && npm run format:check && npm run typecheck && npm run test:unit && npm run check:tasks && npm run --if-present content:validate",
     "android:sync": "npm run build:android && cap sync android",
     "rename-app": "node scripts/rename-app.mjs",
-    "test:repositories:web": "vitest run tests/integration/repositories/web.test.ts",
+    "test:repositories:web": "vitest run tests/integration/repositories/web.test.ts tests/integration/repositories/learning-web.test.ts",
     "content:odwn": "node tools/content/import-odwn.mjs",
     "content:validate-entry": "node tools/content/validate-entry.mjs",
     "content:sources": "node tools/content/inspect-source.mjs",
     "content:nt2lex": "node tools/content/import-nt2lex.mjs",
     "content:spelling": "node tools/content/opentaal-spelling.mjs",
     "content:subtlex": "node tools/content/import-subtlex.mjs",
-    "content:import-drafts": "node tools/content/import-drafts.mjs"
+    "content:import-drafts": "node tools/content/import-drafts.mjs",
+    "content:sample": "node tools/content/sample-check.mjs",
+    "content:import-sample": "node tools/content/import-sample-check.mjs",
+    "content:compile": "node tools/content/compile-pack.mjs"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "8.1.1",

@@ -125,6 +125,12 @@ describe('external draft batch imports', () => {
     entry.examples = [entry.examples[0]];
     const example = entry.examples[0];
     example.id = randomUUID();
+    example.cue = {
+      mode: 'fill_in',
+      gloss: structuredClone(example.context),
+      tense: 'present',
+      person: 'first singular',
+    };
     example.target_sense_id = entry.id;
     example.target_form_ids = [form.id];
     entry.lexeme.morphology.verb.forms = [form.id];

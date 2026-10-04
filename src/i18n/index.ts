@@ -5,6 +5,31 @@ export type Language = 'en' | 'pl';
 export const languageKey = 'woorden-ng.interface-language';
 
 const en = {
+  inspectionTitle: 'Draft content inspection',
+  inspectionNotice:
+    'Sixty research drafts for inspection only. They are not eligible for study or curated publication.',
+  inspectionSense: 'Draft sense',
+  inspectionDraft: 'Unreviewed draft',
+  inspectionReview: 'Language check: not run. Structure: unchecked. Release: blocked.',
+  inspectionSourcesNotice:
+    'Source states below are research assertions. Production source evidence has not been validated for this slice; a source claim is not language approval.',
+  inspectionAudioMissing: 'Approved audio unavailable. Listening tasks are unavailable.',
+  inspectionDefinition: 'Dutch definition',
+  inspectionMeanings: 'Meanings',
+  inspectionExamples: 'Examples',
+  inspectionExample: 'Draft example',
+  inspectionIPA: 'Source IPA',
+  inspectionIPAMissing: 'Whole-expression IPA unavailable. No generated phonetics.',
+  inspectionFacts: 'Source facts and forms — research assertions',
+  inspectionProvenance: 'Field provenance — research assertions',
+  inspectionCitations: 'Source citations',
+  inspectionClaim: 'Research status',
+  inspectionNoSource: 'No source recorded',
+  inspectionIdentity: 'Identity and original payload hash',
+  inspectionUnavailable: 'Draft content is unavailable.',
+  inspectionLoading: 'Loading draft content…',
+  inspectionAnswerContract: 'Answer spans and task contract',
+  inspectionSharedEvidence: 'Shared lexeme and form evidence — research assertions',
   profiles: 'Local profile',
   profileName: 'New profile name',
   createProfile: 'Create profile',
@@ -52,6 +77,33 @@ const en = {
     'The language could not be saved for this session. You can still use it until you reload.',
 };
 const pl: typeof en = {
+  inspectionTitle: 'Przegląd treści roboczych',
+  inspectionNotice:
+    'Sześćdziesiąt szkiców badawczych tylko do przeglądu. Nie kwalifikują się do nauki ani publikacji w zatwierdzonym pakiecie.',
+  inspectionSense: 'Znaczenie robocze',
+  inspectionDraft: 'Niesprawdzony szkic',
+  inspectionReview:
+    'Kontrola językowa: nie przeprowadzono. Struktura: niesprawdzona. Publikacja: zablokowana.',
+  inspectionSourcesNotice:
+    'Poniższe stany źródeł pochodzą z badań. Dowody źródłowe dla tej części nie zostały zweryfikowane do użytku w aplikacji; powołanie się na źródło nie jest zatwierdzeniem językowym.',
+  inspectionAudioMissing: 'Zatwierdzone nagranie niedostępne. Zadania ze słuchu są niedostępne.',
+  inspectionDefinition: 'Definicja niderlandzka',
+  inspectionMeanings: 'Znaczenia',
+  inspectionExamples: 'Przykłady',
+  inspectionExample: 'Przykład roboczy',
+  inspectionIPA: 'IPA ze źródła',
+  inspectionIPAMissing:
+    'IPA całego wyrażenia jest niedostępne. Nie wygenerowano zapisu fonetycznego.',
+  inspectionFacts: 'Fakty źródłowe i formy — deklaracje z badań',
+  inspectionProvenance: 'Pochodzenie pól — deklaracje z badań',
+  inspectionCitations: 'Cytowane źródła',
+  inspectionClaim: 'Status z badań',
+  inspectionNoSource: 'Nie zapisano źródła',
+  inspectionIdentity: 'Tożsamość i skrót oryginalnej treści',
+  inspectionUnavailable: 'Treść robocza jest niedostępna.',
+  inspectionLoading: 'Wczytywanie treści roboczych…',
+  inspectionAnswerContract: 'Fragmenty odpowiedzi i kontrakt zadania',
+  inspectionSharedEvidence: 'Wspólne dowody leksemu i form — deklaracje z badań',
   profiles: 'Profil lokalny',
   profileName: 'Nazwa nowego profilu',
   createProfile: 'Utwórz profil',

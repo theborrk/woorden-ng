@@ -5,6 +5,7 @@ import { I18nextProvider } from 'react-i18next';
 import { App } from '../../../app/App';
 import { createLocalization } from '../../../i18n';
 import { target } from '../../../targets/android';
+import { NativeProfileDatabase } from './profiles';
 import { nativeSqliteBridge } from './native-bridge';
 
 const mocks = vi.hoisted(() => ({
@@ -124,13 +125,30 @@ describe('native target initialization', () => {
   });
 
   it('configures the native busy timeout through the result-bearing query API', async () => {
-    await target.initialize();
+    await new NativeProfileDatabase(nativeSqliteBridge).initialize();
     expect(mocks.query).toHaveBeenCalledWith({
-      database: 'woorden_spike_startup',
+      database: 'woorden_ng',
       readonly: false,
       statement: 'PRAGMA busy_timeout = 3000;',
       values: [],
     });
-    expect(mocks.execute).not.toHaveBeenCalled();
+    expect(mocks.execute).toHaveBeenCalledExactlyOnceWith(
+      expect.objectContaining({ statements: 'PRAGMA foreign_keys = ON;', transaction: false }),
+    );
   });
+});
+
+it('I20: native profile queries bind parameters and recovery opens a read-only connection', async () => {
+  const connection = await nativeSqliteBridge.connect('woorden_ng_recovery', true);
+  await connection.query('SELECT record FROM preferences WHERE profileId = ?;', ['profile-id']);
+  expect(mocks.query).toHaveBeenLastCalledWith({
+    database: 'woorden_ng_recovery',
+    readonly: true,
+    statement: 'SELECT record FROM preferences WHERE profileId = ?;',
+    values: ['profile-id'],
+  });
+  expect(mocks.create).toHaveBeenLastCalledWith(
+    expect.objectContaining({ database: 'woorden_ng_recovery', readonly: true, version: 1 }),
+  );
+  await connection.close();
 });

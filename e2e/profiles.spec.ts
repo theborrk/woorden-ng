@@ -100,3 +100,28 @@ test('I18: AC4 validation and rejected IndexedDB writes retain edits for retry',
   await expect(page.getByLabel('Time zone')).toHaveValue('Europe/Amsterdam');
   await snap(page, 'profile retry committed');
 });
+
+test('I22: T-127 AC4 separate PWA installations have distinct stores and explain manual transfer', async ({
+  page,
+  browser,
+}) => {
+  await page.goto('./#/settings');
+  await expect(page.getByTestId('installation-id')).toBeVisible();
+  const first = await page.getByTestId('installation-id').textContent();
+  const isolated = await browser.newContext();
+  try {
+    const other = await isolated.newPage();
+    await other.goto(new URL('./#/settings', page.url()).href);
+    await expect(other.getByTestId('installation-id')).toBeVisible();
+    expect(await other.getByTestId('installation-id').textContent()).not.toBe(first);
+    await expect(
+      other.getByText(
+        /Another browser or Android installation has separate data; transfer requires a backup/,
+      ),
+    ).toBeVisible();
+    await snap(other, 'separate-installation-identity');
+  } finally {
+    await isolated.close();
+  }
+  await snap(page, 'pwa-installation-identity');
+});

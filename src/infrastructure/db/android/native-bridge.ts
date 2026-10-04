@@ -12,8 +12,8 @@ function checkChanges(result: capSQLiteChanges): void {
 export const nativeSqliteBridge: NativeSqliteBridge = {
   isAvailable: () =>
     Capacitor.getPlatform() === 'android' && Capacitor.isPluginAvailable('CapacitorSQLite'),
-  async connect(database) {
-    const options = { database, readonly: false };
+  async connect(database, readonly = false) {
+    const options = { database, readonly };
     // App-owned transactional migrations use user_version; do not register the plugin's
     // file-copy upgrade mechanism (it is unsuitable for copying a live WAL database).
     await CapacitorSQLite.createConnection({
@@ -44,9 +44,9 @@ export const nativeSqliteBridge: NativeSqliteBridge = {
           await CapacitorSQLite.run({ ...options, statement, values, transaction: false }),
         );
       },
-      async query(statement) {
+      async query(statement, values = []) {
         // Android requires the values field even for parameterless PRAGMAs/SELECTs.
-        const result = await CapacitorSQLite.query({ ...options, statement, values: [] });
+        const result = await CapacitorSQLite.query({ ...options, statement, values });
         const rows: unknown = result.values;
         if (!Array.isArray(rows) || rows.some((row: unknown) => !row || typeof row !== 'object')) {
           throw new Error('Native SQLite returned invalid rows.');

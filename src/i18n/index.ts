@@ -5,6 +5,17 @@ export type Language = 'en' | 'pl';
 export const languageKey = 'woorden-ng.interface-language';
 
 const en = {
+  installationId: 'Installation ID',
+  recoveryTitle: 'Local storage recovery',
+  recoveryPreserved:
+    'The original database is preserved. Retry opening it; no alternative store is used.',
+  recoveryNewer:
+    'This database needs a newer app. Install a compatible update. This version cannot export or downgrade it.',
+  recoveryExport: 'Export local profiles',
+  recoveryExportNotice:
+    'Read-only profile recovery JSON. Copy and save it locally. It contains profile names and preferences; it is not a complete portable study backup.',
+  recoveryExportError: 'Profile export failed. Original data is preserved.',
+
   inspectionTitle: 'Draft content inspection',
   inspectionNotice:
     'Sixty research drafts for inspection only. They are not eligible for study or curated publication.',
@@ -77,6 +88,17 @@ const en = {
     'The language could not be saved for this session. You can still use it until you reload.',
 };
 const pl: typeof en = {
+  installationId: 'Identyfikator instalacji',
+  recoveryTitle: 'Odzyskiwanie pamięci lokalnej',
+  recoveryPreserved:
+    'Oryginalna baza danych została zachowana. Spróbuj otworzyć ją ponownie; aplikacja nie używa innego magazynu.',
+  recoveryNewer:
+    'Ta baza wymaga nowszej aplikacji. Zainstaluj zgodną aktualizację. Ta wersja nie może jej wyeksportować ani obniżyć wersji.',
+  recoveryExport: 'Eksportuj profile lokalne',
+  recoveryExportNotice:
+    'JSON do odzyskiwania profili, tylko do odczytu. Skopiuj i zapisz lokalnie. Zawiera nazwy profili i preferencje; nie jest pełną przenośną kopią nauki.',
+  recoveryExportError: 'Eksport profili nie powiódł się. Oryginalne dane zachowano.',
+
   inspectionTitle: 'Przegląd treści roboczych',
   inspectionNotice:
     'Sześćdziesiąt szkiców badawczych tylko do przeglądu. Nie kwalifikują się do nauki ani publikacji w zatwierdzonym pakiecie.',

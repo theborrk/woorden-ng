@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pinned local source manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_id",
+    "url",
+    "retrieved_at",
+    "bytes",
+    "sha256",
+    "format",
+    "version",
+    "lineage"
+  ],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "source_id": { "type": "string", "pattern": "^\\S+$" },
+    "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+    "retrieved_at": { "type": "string", "format": "date-time" },
+    "bytes": { "type": "integer", "minimum": 0, "maximum": 9007199254740991 },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "format": { "type": "string", "pattern": "\\S" },
+    "version": { "type": "string", "pattern": "\\S" },
+    "lineage": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "\\S" }
+    }
+  }
+}

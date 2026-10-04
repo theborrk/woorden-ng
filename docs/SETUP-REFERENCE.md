@@ -28,11 +28,11 @@ this page is the reference to come back to.
 Repository-level switches for what runs on pull requests. Edit the file in a PR (it's a protected
 file, so Codex won't change it unasked).
 
-| Key                | Values                                | Effect                                                                                                                                              |
-| ------------------ | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `androidOnEveryPr` | `false` (default), `true`             | `true` builds the debug APK on every PR (an Android compile gate). `false` builds it only when native files change                                  |
-| `deviceTests`      | `affected` (default), `always`, `off` | When the emulator job runs: on PRs that touch native or storage code (the `native` and `persistence` path lists in `ci.yml`), on every PR, or never |
-| `emulatorApiLevel` | Android API level, e.g. `35`          | The emulator's Android version for device tests                                                                                                     |
+| Key                | Values                                          | Effect                                                                                                                                                                                                                                                                                         |
+| ------------------ | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `androidOnEveryPr` | `false` (default), `true`                       | `true` builds the debug APK on every PR (an Android compile gate). `false` builds it only when native files change                                                                                                                                                                             |
+| `deviceTests`      | `affected` (default), `native`, `always`, `off` | When the emulator job runs on PRs: when they touch native or storage code (the `native` and `persistence` path lists in `ci.yml`), only when they change native code itself (`native_code`), on every PR, or never. Releases run them unless `off`; Actions → Device tests runs them on demand |
+| `emulatorApiLevel` | Android API level, e.g. `35`                    | The emulator's Android version for device tests                                                                                                                                                                                                                                                |
 
 Device tests only run once `package.json` defines `test:e2e:android` or `test:repositories:android`.
 Every published release also runs them, on a debug build of the release tag, before the signed files

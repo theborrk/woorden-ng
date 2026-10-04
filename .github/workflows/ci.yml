@@ -56,6 +56,18 @@ jobs:
               - 'scripts/device-tests.sh'
               - '.github/workflows/android-build.yml'
               - '.github/workflows/android-device-tests.yml'
+            # Native code itself (deviceTests "native" in .github/ci-policy.json): unlike `native`
+            # above, dependency and lockfile changes don't count.
+            native_code:
+              - 'android/**'
+              - 'capacitor.config.ts'
+              - 'src/targets/android.ts'
+              - 'src/platform/android/**'
+              - 'src/infrastructure/db/android/**'
+              - 'e2e-android/**'
+              - 'playwright.android.config.ts'
+              - 'scripts/device-tests.sh'
+              - '.github/workflows/android-device-tests.yml'
             # Storage code and its contracts: device tests also run when these change (deviceTests
             # "affected" in .github/ci-policy.json). Match the paths to docs/architecture.
             persistence:
@@ -68,6 +80,7 @@ jobs:
         id: plan
         env:
           NATIVE: ${{ steps.filter.outputs.native }}
+          NATIVE_CODE: ${{ steps.filter.outputs.native_code }}
           PERSISTENCE: ${{ steps.filter.outputs.persistence }}
         run: |
           set -euo pipefail
@@ -86,6 +99,7 @@ jobs:
             case "$device_mode" in
               always) device=true ;;
               affected) if [[ "$NATIVE" == "true" || "$PERSISTENCE" == "true" ]]; then device=true; fi ;;
+              native) if [[ "$NATIVE_CODE" == "true" ]]; then device=true; fi ;;
             esac
           fi
           if [[ "$device" == "true" ]]; then android=true; fi

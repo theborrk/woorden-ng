@@ -153,9 +153,10 @@ these names.
   - `launchApp(device, { clearData: false })` restarts the app and keeps its data;
   - `snapDevice(device, name)` saves a screenshot of the device screen.
 
-  CI runs them in the "Android device tests" job when native or storage code changes (see
-  `.github/ci-policy.json`). You cannot run them, so keep them small, reuse the fixtures, make sure
-  `npm run typecheck` passes, and work from the CI summary comment when they fail.
+  CI runs them in the "Android device tests" job as `.github/ci-policy.json` (`deviceTests`)
+  says: here, on pull requests that change native code, on every release and on demand. You
+  cannot run them, so keep them small, reuse the fixtures, make sure `npm run typecheck` passes,
+  and work from the CI summary comment when they fail.
 
 - No fixed waits (`waitForTimeout`). Use Playwright's auto-waiting and `expect.poll`.
 - Tests are deterministic and run without internet: mock network calls with `page.route`.

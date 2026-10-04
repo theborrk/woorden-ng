@@ -60,8 +60,11 @@ end-to-end tests are expected to pass under `/woorden/` as well as `/` (section 
 `.github/ci-policy.json` sets:
 
 - `androidOnEveryPr: true`: the Android compile runs on every pull request.
-- `deviceTests: "affected"`: native repository and bridge tests run on pull requests that touch
-  native or storage code, and on every release (the Release workflow).
+- `deviceTests: "native"` (changed from `"affected"` on 2026-10-04): the emulator job runs only on
+  pull requests that change native code itself (the `native_code` paths in `ci.yml`), on every
+  release, and on demand (Actions → Device tests). Under `"affected"` it ran on about two thirds of
+  pull requests, mostly for dependency or shared storage changes that the web repository tests
+  already cover, and each run added about seven minutes plus a rerun after every update from main.
 - `emulatorApiLevel: 36`: the current target SDK. The declared minimum SDK (24) can't be covered by
   CI emulators, because old system images ship a WebView too old for the app and can't update it.
   W36/W50 decide how the minimum is verified (raise `minSdk`, a Play-enabled image, or a physical

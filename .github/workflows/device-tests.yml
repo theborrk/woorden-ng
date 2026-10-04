@@ -1,0 +1,50 @@
+name: Device tests
+
+# On demand: Actions > Device tests > Run workflow. Builds a debug APK of the chosen branch (main by
+# default) and runs the device tests on the emulator. Pull requests run them only when they change
+# native code, and every release runs them (deviceTests in .github/ci-policy.json), so use this
+# every few merges, or before a release, to catch native regressions early.
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Branch, tag or commit to test
+        type: string
+        default: main
+
+permissions:
+  contents: read
+
+jobs:
+  policy:
+    name: Read CI policy
+    runs-on: ubuntu-latest
+    outputs:
+      emulator-api: ${{ steps.plan.outputs.emulator-api }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
+      - id: plan
+        run: |
+          set -euo pipefail
+          policy='{}'
+          if [[ -f .github/ci-policy.json ]]; then policy="$(cat .github/ci-policy.json)"; fi
+          echo "emulator-api=$(jq -r '.emulatorApiLevel // 35' <<<"$policy")" | tee -a "$GITHUB_OUTPUT"
+
+  debug-apk:
+    name: Debug APK
+    uses: ./.github/workflows/android-build.yml
+    with:
+      build-type: debug
+      ref: ${{ inputs.ref }}
+      version-label: ${{ inputs.ref }}
+
+  device-tests:
+    name: Device tests
+    needs: [policy, debug-apk]
+    uses: ./.github/workflows/android-device-tests.yml
+    with:
+      apk-name: ${{ needs.debug-apk.outputs.apk-name }}
+      api-level: ${{ needs.policy.outputs.emulator-api }}
+      ref: ${{ inputs.ref }}

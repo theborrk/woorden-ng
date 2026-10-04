@@ -5,6 +5,8 @@ import type { TargetServices } from '../targets/types';
 import { languageKey } from '../i18n';
 import { routeFromHash, routes } from './routes';
 import type { AppInfo } from '../application/ports/app-info';
+import { Profiles } from '../features/settings/profiles/Profiles';
+import type { ProfileService } from '../application/profiles/service';
 import { About } from '../features/settings/About';
 
 export interface AppProps {
@@ -14,6 +16,7 @@ export interface AppProps {
   appInfo: AppInfo;
   storage?: Pick<TargetServices, 'initialize'>;
   initialLanguageError?: boolean;
+  profiles?: ProfileService;
 }
 
 export function App({
@@ -22,6 +25,7 @@ export function App({
   updates,
   appInfo,
   storage,
+  profiles,
   initialLanguageError = false,
 }: AppProps) {
   const { t, i18n } = useTranslation();
@@ -120,31 +124,36 @@ export function App({
           {t(route)}
         </h2>
         <p>{t('placeholder')}</p>
+        {profiles && <Profiles service={profiles} visible={route === 'settings'} />}
         {route === 'settings' && (
           <>
-            <label htmlFor="interface-language">{t('language')}</label>
-            <select
-              id="interface-language"
-              value={i18n.resolvedLanguage}
-              onChange={(event) => {
-                const language = event.target.value === 'pl' ? 'pl' : 'en';
-                void i18n.changeLanguage(language);
-                try {
-                  window.sessionStorage.setItem(languageKey, language);
-                  setLanguageError(false);
-                } catch {
-                  setLanguageError(true);
-                }
-              }}
-            >
-              <option value="en" lang="en">
-                English
-              </option>
-              <option value="pl" lang="pl">
-                Polski
-              </option>
-            </select>
-            <p>{t('session')}</p>
+            {!profiles && (
+              <>
+                <label htmlFor="interface-language">{t('language')}</label>
+                <select
+                  id="interface-language"
+                  value={i18n.resolvedLanguage}
+                  onChange={(event) => {
+                    const language = event.target.value === 'pl' ? 'pl' : 'en';
+                    void i18n.changeLanguage(language);
+                    try {
+                      window.sessionStorage.setItem(languageKey, language);
+                      setLanguageError(false);
+                    } catch {
+                      setLanguageError(true);
+                    }
+                  }}
+                >
+                  <option value="en" lang="en">
+                    English
+                  </option>
+                  <option value="pl" lang="pl">
+                    Polski
+                  </option>
+                </select>
+                <p>{t('session')}</p>
+              </>
+            )}
             <About appInfo={appInfo} />
           </>
         )}

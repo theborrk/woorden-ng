@@ -1,7 +1,7 @@
 ---
 id: T-111
 title: Import external draft batches idempotently
-status: todo
+status: done
 size: M
 depends_on: [T-110]
 type: task
@@ -33,9 +33,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the same batch twice, when imported, then canonical IDs and counts remain unchanged. (unit)
-- [ ] AC2: Given a batch claiming language_reviewed, batch_checked or ai_reviewed without a recorded sample check, when imported, then it stays draft (language check not_run) or is rejected with a reason. (unit)
-- [ ] AC3: Given an edited definition, when reimported, then revision/hash changes and affected reviews are invalidated. (unit)
+- [x] AC1: Given the same batch twice, when imported, then canonical IDs and counts remain unchanged. (unit)
+- [x] AC2: Given a batch claiming language_reviewed, batch_checked or ai_reviewed without a recorded sample check, when imported, then it stays draft (language check not_run) or is rejected with a reason. (unit)
+- [x] AC3: Given an edited definition, when reimported, then revision/hash changes and affected reviews are invalidated. (unit)
 
 ## Notes for the implementer
 

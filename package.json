@@ -32,7 +32,8 @@
     "android:sync": "npm run build:android && cap sync android",
     "rename-app": "node scripts/rename-app.mjs",
     "test:repositories:web": "vitest run tests/integration/repositories/web.test.ts",
-    "content:sources": "node tools/content/inspect-source.mjs"
+    "content:sources": "node tools/content/inspect-source.mjs",
+    "content:nt2lex": "node tools/content/import-nt2lex.mjs"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "8.1.1",

@@ -1,4 +1,4 @@
-import { Temporal } from './temporal';
+import { Temporal } from './temporal.ts';
 
 export interface OneStudyDayEligibility {
   dueStudyDate: string;

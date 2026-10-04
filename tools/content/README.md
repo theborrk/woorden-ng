@@ -204,6 +204,31 @@ Imports reject producer language/release approvals (`language_reviewed`, `batch_
 T-110's validator. Imported drafts never become curated content; actual sample checks and pack
 compilation belong to T-113/T-114. The research pack is not automatically imported or activated.
 
+## Sample-check packets (T-112)
+
+```sh
+npm run content:sample -- manifest.json --entries draft-state.json --seed 42 --output new-packet.json
+```
+
+Use one T-111 batch manifest (from `state.batches`) and its canonical entries, either an entry array
+or an object with `entries`. All manifest hashes must match current payloads. The output file must
+be new; stdout contains the same compact JSON bytes. Export does not alter content or check states.
+
+Batches of at most 20 entries are sampled entirely. Larger batches have ten entries ranked by
+SHA-256 of `<integer seed>:<stable ID>`, plus a fixed selection of up to ten risk entries, covering
+risk kinds first and then filling by ID. A random/risk overlap appears once with both selection
+roles; changing the seed leaves the risk selection fixed. Risk categories cover shared lemmas,
+separable/reflexive verbs, alternative articles, fixed expressions, declared whole-sentence tasks,
+and the explicit `polish_false_friend` risk marker. These are sampling labels, not language verdicts.
+
+The packet includes all batch hashes, sampled drafts, asserted source values with scoped citations,
+rules R1–R5, the three questions and the response format. Source records, author verdicts and
+self-check metadata are omitted; citations alone do not prove a fact. Research drafts can be
+exported for inspection without becoming checked or eligible. Rehashing content is not validation.
+Use `tools/content/schemas/sample-check-response.schema.json` for responses; `fix` requires a
+question/problem type and JSON Patch add/remove/replace operations, and `unsure` requires a reason.
+T-113 checks exact sample/hash/seed/vendor binding and imports actual responses. No provider is called.
+
 ## SUBTLEX-NL frequency import (T-102)
 
 Download the two pinned workbooks into ignored `.cache/content-sources/`. The pins in

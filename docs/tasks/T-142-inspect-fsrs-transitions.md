@@ -1,7 +1,7 @@
 ---
 id: T-142
 title: Inspect deterministic FSRS transitions and interval previews
-status: todo
+status: done
 size: M
 depends_on: [T-002, T-123]
 type: task
@@ -32,10 +32,10 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the pinned New/Learning/Review/Relearning fixtures and fixed instants, when inspected, then all four native ratings match the fixtures and identical preview/rating inputs yield identical results without mutation (unit and integration).
-- [ ] AC2: Given the native 365/366/367-day maximum-edge proposals, when the versioned cap is applied, then effective intervals never exceed 365 days and preview/rating retain identical native proposals and capped results (unit).
-- [ ] AC3: Given a serialized valid card or malformed native fields, when deserialized, then the reused T-123 validator accepts an exact date/number round-trip or rejects the snapshot before any scheduler call (unit).
-- [ ] AC4: Given a preview followed by time/state change, when evaluated at the new captured instant/state, then the inspector recomputes the proposal and cannot apply the stale preview (unit and integration).
+- [x] AC1: Given the pinned New/Learning/Review/Relearning fixtures and fixed instants, when inspected, then all four native ratings match the fixtures and identical preview/rating inputs yield identical results without mutation (unit and integration).
+- [x] AC2: Given the native 365/366/367-day maximum-edge proposals, when the versioned cap is applied, then effective intervals never exceed 365 days and preview/rating retain identical native proposals and capped results (unit).
+- [x] AC3: Given a serialized valid card or malformed native fields, when deserialized, then the reused T-123 validator accepts an exact date/number round-trip or rejects the snapshot before any scheduler call (unit).
+- [x] AC4: Given a preview followed by time/state change, when evaluated at the new captured instant/state, then the inspector recomputes the proposal and cannot apply the stale preview (unit and integration).
 
 ## Notes for the implementer
 

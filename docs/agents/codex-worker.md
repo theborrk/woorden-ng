@@ -21,6 +21,20 @@ opened pull requests for the number of tasks you were asked for, or until there 
 
 1. **Start from the latest main.** `git fetch origin`, `git switch --detach origin/main`, then
    `npm ci` (other pull requests may have added dependencies since your last task).
+2. **Claim a task.** `npm run next:task -- --claim`. It prints the claimed task ID and file and
+   leaves you on its branch `task/T-xxx`, created from origin/main. If it prints `NONE`, run
+   `npm run next:task` to see why, wait ten minutes (`sleep 600`; other workers' pull requests may
+   merge and unblock tasks) and try once more; if it is still `NONE`, stop.
+3. **Implement it** exactly as AGENTS.md's task protocol says: read the task file and the
+   architecture sections it links to again, implement only its Scope, prove every acceptance
+   criterion with a test, run `npm run verify` and `npm run test:e2e:web` until both pass, set the
+   task to `done` and tick the criteria you proved. Plan tasks (`type: plan`) produce task files,
+   as their own criteria say.
+4. **Open its pull request.** Commit on `task/T-xxx`, push it, and open the pull request with
+   `gh pr create` from `.github/pull_request_template.md`: title `T-xxx: summary`, first body line
+   `Task: T-xxx`. The empty "Claim T-xxx" commit is fine; merges are squashed.
+5. **Move on.** Don't wait for CI, Claude's review or the merge. Fixes for CI failures, review
+   findings and merge conflicts reach Codex through `@codex` comments on the pull request.
 
 Rules for a worker:
 

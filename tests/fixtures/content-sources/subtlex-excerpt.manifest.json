@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "source_id": "subtlex-nl-full-research-excerpt",
+  "source_id": "subtlex-nl-full-direct-excerpt",
   "url": "https://osf.io/download/2dcvs/",
-  "retrieved_at": "2026-10-03T00:18:39.244004+00:00",
-  "bytes": 6732,
-  "sha256": "6262cfd864e9cc186773b6502fe1792da56a7a2a1b7ad37814cb166574a886d8",
+  "retrieved_at": "2026-10-04T16:06:02.227574+00:00",
+  "bytes": 5633,
+  "sha256": "34e4d38263dd3849a31e14d625004dddeec355061a308f4cd6b1577cc21df2db",
   "format": "xlsx",
-  "version": "research excerpt reconstructed from worksheet row 19813",
-  "lineage": ["SUBTLEX-NL"]
+  "version": "direct pinned-workbook excerpt: header and worksheet row 19813",
+  "lineage": ["SUBTLEX-NL", "6a43c784b30a9dc097f8d903b22c830dac631654efed430c86f2f9ec0a7cdd05"]
 }

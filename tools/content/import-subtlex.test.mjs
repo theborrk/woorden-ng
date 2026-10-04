@@ -42,46 +42,119 @@ function observation(data, row = 2) {
   return { worksheet_row: row, record_sha256: 'synthetic-test-observation', data };
 }
 
-it('W18: AC1 streams the preserved excerpt, counts every row and preserves typed values and quoted POS/count lists', async () => {
-  expect(records).toEqual(
-    JSON.parse(
-      readFileSync('research/content-2026-10/evidence/pilot-frequency-supplement.json', 'utf8'),
-    ),
-  );
-  const pilot = JSON.parse(
-    readFileSync('research/content-2026-10/content/starter-pack.json', 'utf8'),
-  );
-  const source = pilot.entries.flatMap((e) => e.sources).find((s) => s.id === 'subtlex:pinnen');
-  expect(source.record_sha256).toBe(
-    'f386cd00e9fef1ad5e200f5fff2f0385edbc8adebedd9d21b0afabf7e0ba85b9',
-  );
-  const result = await importWorkbook(file, pin, [query], { expectedRows: 1, minimumCD: 2 });
-  expect(result.rows).toBe(1);
-  expect(result.minimum_cd).toBe(52);
-  expect(result.rows_cd1).toBe(0);
-  expect(result.manifest).toEqual(pin);
-  expect(result.observations).toEqual([
-    {
-      worksheet_row: 2,
+it.each([
+  ['full', file, pin, 19813],
+  [
+    'cd2',
+    `${dir}subtlex-cd2-excerpt.xlsx`,
+    JSON.parse(readFileSync(`${dir}subtlex-cd2-excerpt.manifest.json`, 'utf8')),
+    19887,
+  ],
+])(
+  'W18: AC1 streams the direct %s excerpt, counts every row and preserves typed values and quoted POS/count lists',
+  async (kind, excerpt, excerptPin, originalRow) => {
+    expect(records).toEqual(
+      JSON.parse(
+        readFileSync('research/content-2026-10/evidence/pilot-frequency-supplement.json', 'utf8'),
+      ),
+    );
+    const pilot = JSON.parse(
+      readFileSync('research/content-2026-10/content/starter-pack.json', 'utf8'),
+    );
+    const source = pilot.entries.flatMap((e) => e.sources).find((s) => s.id === 'subtlex:pinnen');
+    expect(source.record_sha256).toBe(
+      'f386cd00e9fef1ad5e200f5fff2f0385edbc8adebedd9d21b0afabf7e0ba85b9',
+    );
+    const provenance = JSON.parse(readFileSync(`${dir}subtlex-excerpt.records.json`, 'utf8'))[kind];
+    const production = JSON.parse(readFileSync(`tools/content/pins/subtlex-${kind}.json`, 'utf8'));
+    expect(excerptPin.lineage).toContain(production.sha256);
+    expect(provenance).toEqual({
+      source_sha256: production.sha256,
+      excerpt_worksheet_row: 2,
+      source_worksheet_row: originalRow,
       record_sha256: source.record_sha256,
-      data: fields,
-    },
-  ]);
-  expect(result.observations[0].data['all.pos']).toBe('.WW.N.SPEC.');
-  expect(result.observations[0].data['all.pos.freq']).toBe('.54.2.1.');
-  expect(result.observations[0].data['all.pos.lemma.freq']).toBe('.94.98.1.');
-  expect(result.units.FREQcount).toBe('surface-form token count');
-  expect(result.units.SUBTLEXWF).toBe('surface-form occurrences per million words');
-  expect(result.units.SUBTLEXCD).toBe(
-    'percentage of subtitle contexts containing the surface form',
-  );
-  const unselected = await importWorkbook(file, pin);
-  expect(unselected.rows).toBe(1);
-  expect(unselected.observations).toEqual([]);
-  await expect(importWorkbook(file, pin, [], { expectedRows: 437503 })).rejects.toThrow(
-    'row count mismatch',
-  );
+    });
+    const result = await importWorkbook(excerpt, excerptPin, [query], {
+      expectedRows: 1,
+      minimumCD: 2,
+    });
+    expect(result.rows).toBe(1);
+    expect(result.minimum_cd).toBe(52);
+    expect(result.rows_cd1).toBe(0);
+    expect(result.manifest).toEqual(excerptPin);
+    expect(result.observations).toEqual([
+      {
+        worksheet_row: 2,
+        record_sha256: source.record_sha256,
+        data: fields,
+      },
+    ]);
+    expect(result.observations[0].data['all.pos']).toBe('.WW.N.SPEC.');
+    expect(result.observations[0].data['all.pos.freq']).toBe('.54.2.1.');
+    expect(result.observations[0].data['all.pos.lemma.freq']).toBe('.94.98.1.');
+    expect(result.units.FREQcount).toBe('surface-form token count');
+    expect(result.units.SUBTLEXWF).toBe('surface-form occurrences per million words');
+    expect(result.units.SUBTLEXCD).toBe(
+      'percentage of subtitle contexts containing the surface form',
+    );
+    const unselected = await importWorkbook(excerpt, excerptPin);
+    expect(unselected.rows).toBe(1);
+    expect(unselected.observations).toEqual([]);
+    await expect(importWorkbook(excerpt, excerptPin, [], { expectedRows: 437503 })).rejects.toThrow(
+      'row count mismatch',
+    );
+  },
+);
+
+it('W18: preserves cached numeric formula evidence and rejects absent or invalid caches', async () => {
+  const values = headers.map((h) => fields[h]);
+  const zipf = headers.indexOf('Zipf');
+  values[zipf] = { formula: 'LOG10(1.3035) + 3', result: fields.Zipf };
+  const { target, expected } = await workbook([values]);
+  const result = await importWorkbook(target, expected, [query]);
+  expect(result.observations[0].data).toEqual(fields);
+  for (const invalid of [
+    { formula: '1 + 1' },
+    { formula: '1 + 1', result: '2' },
+    { formula: '1 / 0', result: { error: '#DIV/0!' } },
+  ]) {
+    values[zipf] = invalid;
+    expect(() => parseFields(values)).toThrow('numeric field: Zipf');
+  }
 });
+
+it('F04: preserves numeric numeral lemmas without guessing a string lemma join', async () => {
+  const numeral = { ...fields, Word: '1', 'dominant.pos.lemma': 1, 'dominant.pos': 'TW' };
+  const numeralQuery = { surface: '1', lemma: '1', pos: 'verb' };
+  const { target, expected } = await workbook([headers.map((h) => numeral[h])]);
+  const result = await importWorkbook(target, expected, [numeralQuery]);
+  expect(result.observations[0].data).toEqual(numeral);
+  expect(lookup(result.observations, numeralQuery)).toMatchObject({
+    join_status: 'lemma_mismatch',
+    scoring_input: { surface_count: 57, lemma_count: null },
+  });
+  for (const invalid of [Infinity, NaN, true, { text: '1' }]) {
+    expect(() =>
+      parseFields(headers.map((h) => (h === 'dominant.pos.lemma' ? invalid : fields[h]))),
+    ).toThrow('text field: dominant.pos.lemma');
+  }
+});
+
+it.each([{ formula: '-ie' }, { formula: '-4-0-5-4-3-4', result: -20 }, { error: '#NAME?' }])(
+  'F04: retains source lemma artifact %j without interpreting it as a scoring lemma',
+  async (artifact) => {
+    const data = { ...fields, 'dominant.pos.lemma': artifact };
+    const values = headers.map((h) => data[h]);
+    expect(parseFields(values)).toEqual(data);
+    const { target, expected } = await workbook([values]);
+    const imported = await importWorkbook(target, expected, [query]);
+    expect(imported.observations[0].data).toEqual(data);
+    expect(lookup(imported.observations, query)).toMatchObject({
+      join_status: 'lemma_mismatch',
+      scoring_input: { surface_count: 57, lemma_count: null },
+    });
+  },
+);
 
 it('W18: validates headers, typed fields, thresholds and completeness even in unselected rows', async () => {
   const values = headers.map((h) => fields[h]);

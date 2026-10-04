@@ -200,11 +200,19 @@ independently of worksheet location.
 `worksheet_row` is the row in the imported file, not a claimed original row of an excerpt.
 Dot-delimited POS and frequency strings are preserved verbatim.
 
-The full OSF downloads currently redirect to a host blocked by this environment's policy.
-`tests/fixtures/content-sources/subtlex-records.json` preserves the available research observation
-of full-workbook row 19813 (`pinnen`); `subtlex-excerpt.xlsx` reconstructs its header and cell
-values for offline parser tests. It is **not** a byte-cut workbook excerpt or proof of either
-full-file count. Synthetic inflection/conflict workbooks are created only in test temporary
-directories. Replace the reconstructed fixture with direct pinned-file excerpts and retain their
-record hashes when the downloads become available; run the full command and paste its report
-into the PR before marking AC1 complete.
+The offline fixtures `subtlex-excerpt.xlsx` and `subtlex-cd2-excerpt.xlsx` are direct cuts
+of the pinned workbooks: the original header and `pinnen` row (19813 / 19887).
+`tests/fixtures/content-sources/subtlex-excerpt.records.json` maps excerpt row 2 to each
+original row and retains its canonical field hash and full snapshot hash. Extraction copies
+worksheet cells, including cached formula results, and referenced shared strings from the
+original XLSX XML, then repackages them with row coordinates and string indices remapped.
+It does not recreate values from the research JSON. The adjacent manifests pin each compact
+XLSX and identify its bulk snapshot in lineage; `subtlex-records.json` retains the original
+research values for comparison. Synthetic inflection/conflict workbooks exist only in test
+temporary directories. Full-file counts are proved separately by the CLI report in the PR.
+
+The full workbook's Zipf formulas are read as their cached numeric results, never evaluated.
+Missing, non-numeric or error caches fail numeric validation. Numeral lemmas stored as finite
+numeric cells remain numbers in raw evidence; they are not coerced into string lemma joins.
+Leading-hyphen lemma cells saved upstream as formula/error artifacts are retained as raw
+objects and cannot match a string lemma query. They are not evaluated or repaired.

@@ -52,7 +52,7 @@ export const units = Object.freeze({
   'all.pos.lemma.freq': 'verbatim dot-delimited lemma/POS token counts',
 });
 
-/** @typedef {Record<string, string | number | null>} SubtlexFields */
+/** @typedef {Record<string, string | number | null | {formula: string, result?: number} | {error: string}>} SubtlexFields */
 /** @typedef {{worksheet_row: number, record_sha256: string, data: SubtlexFields}} Observation */
 /** @typedef {{surface: string, lemma: string, pos: string}} Query */
 
@@ -60,7 +60,13 @@ export function parseFields(values) {
   if (values.length !== headers.length) throw new Error('Invalid SUBTLEX column count.');
   const data = {};
   for (const [i, name] of headers.entries()) {
-    const value = values[i] ?? null;
+    const cell = values[i] ?? null;
+    // The full pinned workbook stores Zipf as formulas. Read the cached source
+    // result without evaluating formulas; absent/non-numeric caches still fail.
+    const value =
+      (counts.has(name) || decimals.has(name)) && cell !== null && typeof cell === 'object'
+        ? cell.result
+        : cell;
     if (counts.has(name) || decimals.has(name)) {
       if (
         value !== null &&
@@ -70,7 +76,16 @@ export function parseFields(values) {
       ) {
         throw new Error(`Invalid SUBTLEX numeric field: ${name}.`);
       }
-    } else if (value !== null && typeof value !== 'string') {
+    } else if (
+      value !== null &&
+      typeof value !== 'string' &&
+      // Numeral lemmas (for example surface "1") are numeric cells in the
+      // pinned source. Preserve their type; string lemma queries do not join them.
+      !(
+        name === 'dominant.pos.lemma' &&
+        ((typeof value === 'number' && Number.isFinite(value)) || isLemmaArtifact(value))
+      )
+    ) {
       throw new Error(`Invalid SUBTLEX text field: ${name}.`);
     }
     data[name] = value;
@@ -78,6 +93,19 @@ export function parseFields(values) {
   if (!data.Word || data.FREQcount === null || data.CDcount === null)
     throw new Error('Missing SUBTLEX Word/FREQcount/CDcount.');
   return data;
+}
+
+function isLemmaArtifact(value) {
+  if (!value || typeof value !== 'object') return false;
+  // Some leading-hyphen lemmas were saved as Excel formulas/errors upstream.
+  // Retain those source artifacts verbatim, without guessing a usable lemma.
+  return (
+    (typeof value.formula === 'string' &&
+      Object.keys(value).every((k) => ['formula', 'result'].includes(k)) &&
+      (value.result === undefined ||
+        (typeof value.result === 'number' && Number.isFinite(value.result)))) ||
+    (typeof value.error === 'string' && Object.keys(value).length === 1)
+  );
 }
 
 function metadataFrom(pin) {

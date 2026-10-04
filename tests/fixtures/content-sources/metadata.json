@@ -1,0 +1,12 @@
+{
+  "source_id": "nt2lex-cgn-v01-excerpt",
+  "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+  "retrieved_at": "2026-10-03T00:17:35.523069+00:00",
+  "format": "tsv",
+  "version": "NT2Lex-CGN-v01 (header and first two data rows)",
+  "lineage": [
+    "NT2Lex",
+    "CGN",
+    "excerpt of research/content-2026-10/evidence/sources/nt2lex-basic.tsv; bulk sha256 0acae87e65a6ceb4237dcf23c5576488338570f3431ac52e159b6fce9e1a0515"
+  ]
+}

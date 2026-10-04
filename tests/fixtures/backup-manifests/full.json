@@ -1,0 +1,70 @@
+{
+  "format": "woorden.zip",
+  "formatVersion": 2,
+  "logicalVersion": 1,
+  "schemaVersions": {
+    "database": 1,
+    "content": 1
+  },
+  "appVersion": "0.0.0",
+  "exportedAt": "2026-10-03T12:00:00.000Z",
+  "profileIds": ["profile-example"],
+  "packRevisions": [
+    {
+      "packId": "starter",
+      "revision": "2026-10-02"
+    },
+    {
+      "packId": "starter",
+      "revision": "2026-10-01"
+    }
+  ],
+  "eventWatermark": [
+    {
+      "deviceId": "historical-device-b",
+      "sequence": 12
+    },
+    {
+      "deviceId": "historical-device-a",
+      "sequence": 42
+    }
+  ],
+  "settings": {
+    "uiLanguage": "en",
+    "translationLanguage": "pl",
+    "timezone": "Europe/Warsaw",
+    "studyDayBoundaryHour": 6,
+    "dailyNew": 2,
+    "autoplay": false
+  },
+  "mediaPolicy": {
+    "mode": "full",
+    "includeBundled": false
+  },
+  "files": [
+    {
+      "path": "data/events.ndjson",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "kind": "data"
+    },
+    {
+      "path": "media/personal/photo.png",
+      "size": 12,
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "kind": "media"
+    }
+  ],
+  "media": [
+    {
+      "path": "media/personal/photo.png",
+      "origin": "personal",
+      "included": true
+    },
+    {
+      "path": "media/bundled/starter.ogg",
+      "origin": "bundled",
+      "included": false
+    }
+  ]
+}

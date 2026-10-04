@@ -1,0 +1,11 @@
+{
+  "formatVersion": 1,
+  "kind": "enrollment",
+  "enrollmentVersion": 1,
+  "profileId": "d1522c5a-2419-4a35-9f72-85d98d097774",
+  "senseId": "604c9517-d603-45ca-b859-4e98dd122cbf",
+  "status": "introduced",
+  "revision": 1,
+  "updatedAt": 1767268800000,
+  "introducedStudyDate": "2026-01-01"
+}

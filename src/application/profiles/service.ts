@@ -24,7 +24,7 @@ export const installationRecord = object({
   id: enumeration('installation'),
   deviceId: id,
   activeProfileId: nullable(id),
-  webSchemaVersion: enumeration(1),
+  webSchemaVersion: enumeration(1, 2),
   logicalFormatVersion: enumeration(1),
   projectionVersion: enumeration(1),
 });
@@ -92,7 +92,7 @@ export function createProfileService(
         id: 'installation',
         deviceId: existing?.deviceId ?? allocateId(),
         activeProfileId: profile.id,
-        webSchemaVersion: 1,
+        webSchemaVersion: 2,
         logicalFormatVersion: 1,
         projectionVersion: 1,
       },

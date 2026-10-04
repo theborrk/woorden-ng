@@ -1,0 +1,15 @@
+export const learningStores = {
+  events: 'id,&[profileId+commitKey],[profileId+occurredAt],profileId',
+  taskProgress: '[profileId+id],[profileId+eligibleAt],profileId',
+  taskDefinitions: '[profileId+id],profileId',
+  enrollments: '[profileId+id],profileId',
+  sessions: '[profileId+id],profileId',
+  drafts: '[profileId+id],profileId',
+  overrides: '[profileId+id],profileId',
+  parameterSets: '[profileId+id],profileId',
+  learningHeads: '[profileId+id],profileId',
+  projectionMeta: '[profileId+id],profileId',
+  learningJournals: '[profileId+id],profileId',
+  localOutbox: '[profileId+id],profileId',
+  learningCheckpoints: '[profileId+id],profileId',
+};

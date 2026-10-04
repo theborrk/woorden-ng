@@ -1,7 +1,7 @@
 ---
 id: T-114
 title: Compile packs from task and locale eligibility
-status: todo
+status: done
 size: M
 depends_on: [T-113]
 type: task
@@ -33,9 +33,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a batch_checked written entry with absent audio, when compiled, then written tasks can appear and listening tasks cannot. (unit)
-- [ ] AC2: Given no sample check, when the delivered 60-entry pilot is compiled, then curated output contains zero eligible entries and a concrete blocker report. (integration)
-- [ ] AC3: Given content changed after its batch passed, when compiled, then the stale check cannot authorize the new payload, and a flagged or uncertain entry stays out. (unit)
+- [x] AC1: Given a batch_checked written entry with absent audio, when compiled, then written tasks can appear and listening tasks cannot. (unit)
+- [x] AC2: Given no sample check, when the delivered 60-entry pilot is compiled, then curated output contains zero eligible entries and a concrete blocker report. (integration)
+- [x] AC3: Given content changed after its batch passed, when compiled, then the stale check cannot authorize the new payload, and a flagged or uncertain entry stays out. (unit)
 
 ## Notes for the implementer
 

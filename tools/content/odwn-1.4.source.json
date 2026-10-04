@@ -1,0 +1,13 @@
+{
+  "id": "odwn-1.4",
+  "url": "https://raw.githubusercontent.com/cltl/OpenDutchWordnet/master/resources/odwn/odwn_orbn_gwg-LMF_1.4.xml.gz",
+  "retrieved_at": "2026-10-03T07:17:44.530982+00:00",
+  "bytes": 15425745,
+  "sha256": "8e3b5bc0d151ce1672575b9201fec1105d3573759572910ffbc0581a8d8acb70",
+  "format": "application/gzip+xml",
+  "version": "1.4",
+  "lineage": {
+    "source_family": "Open Dutch WordNet / RBN-Cornetto",
+    "independence": "not_assessed"
+  }
+}

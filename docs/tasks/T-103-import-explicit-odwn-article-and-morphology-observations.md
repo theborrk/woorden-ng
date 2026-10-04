@@ -1,7 +1,7 @@
 ---
 id: T-103
 title: Import explicit ODWN article and morphology observations
-status: todo
+status: done
 size: M
 depends_on: [T-100]
 type: task
@@ -33,9 +33,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given huis-n-1, when article evidence is extracted, then explicit het survives the conflicting gender-like metadata with a visible conflict note. (unit)
-- [ ] AC2: Given de/het or absent article fields, when normalized, then alternatives or missing state are retained rather than guessed. (unit)
-- [ ] AC3: Given RBN/Wiktionary/automatic provenance, when an observation is exported, then lineage is preserved and not counted as independent by project name alone. (unit)
+- [x] AC1: Given huis-n-1, when article evidence is extracted, then explicit het survives the conflicting gender-like metadata with a visible conflict note. (unit)
+- [x] AC2: Given de/het or absent article fields, when normalized, then alternatives or missing state are retained rather than guessed. (unit)
+- [x] AC3: Given RBN/Wiktionary/automatic provenance, when an observation is exported, then lineage is preserved and not counted as independent by project name alone. (unit)
 
 ## Notes for the implementer
 

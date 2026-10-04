@@ -39,7 +39,8 @@
     "content:sources": "node tools/content/inspect-source.mjs",
     "content:nt2lex": "node tools/content/import-nt2lex.mjs",
     "content:spelling": "node tools/content/opentaal-spelling.mjs",
-    "content:subtlex": "node tools/content/import-subtlex.mjs"
+    "content:subtlex": "node tools/content/import-subtlex.mjs",
+    "content:import-drafts": "node tools/content/import-drafts.mjs"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "8.1.1",

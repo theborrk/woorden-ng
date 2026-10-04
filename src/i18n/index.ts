@@ -5,6 +5,25 @@ export type Language = 'en' | 'pl';
 export const languageKey = 'woorden-ng.interface-language';
 
 const en = {
+  profiles: 'Local profile',
+  profileName: 'New profile name',
+  createProfile: 'Create profile',
+  preferences: 'Preferences',
+  cueLanguage: 'Learning language',
+  timeZone: 'Time zone',
+  dayBoundary: 'Study day starts at',
+  newBudget: 'New concepts per day',
+  savePreferences: 'Save preferences',
+  profileSaving: 'Saving or loading…',
+  profileSaved: 'Saved on this installation.',
+  profileUnsaved: 'Edit preferences, then save. Language choices save automatically.',
+  profileError:
+    'Could not save or open local data. Your edits are retained. Check the values and retry; reopen Settings to refresh a conflict.',
+  retry: 'Retry',
+  separateData:
+    'Profiles stay on this installation. Another browser or Android installation has separate data; transfer requires a backup.',
+  gentleDefaults:
+    'Gentle configuration: {{activeAcquiringTasks}} active acquiring tasks and a {{sessionMinutes}} minute session target. Study features are still being prepared.',
   today: 'Today',
   study: 'Study',
   library: 'Library',
@@ -33,6 +52,25 @@ const en = {
     'The language could not be saved for this session. You can still use it until you reload.',
 };
 const pl: typeof en = {
+  profiles: 'Profil lokalny',
+  profileName: 'Nazwa nowego profilu',
+  createProfile: 'Utwórz profil',
+  preferences: 'Preferencje',
+  cueLanguage: 'Język nauki',
+  timeZone: 'Strefa czasowa',
+  dayBoundary: 'Początek dnia nauki',
+  newBudget: 'Nowe pojęcia dziennie',
+  savePreferences: 'Zapisz preferencje',
+  profileSaving: 'Zapisywanie lub wczytywanie…',
+  profileSaved: 'Zapisano w tej instalacji.',
+  profileUnsaved: 'Zmień preferencje i zapisz. Wybór języka zapisuje się automatycznie.',
+  profileError:
+    'Nie można zapisać lub otworzyć danych lokalnych. Zmiany zachowano. Sprawdź wartości i spróbuj ponownie; otwórz Ustawienia ponownie, aby odświeżyć konflikt.',
+  retry: 'Spróbuj ponownie',
+  separateData:
+    'Profile pozostają w tej instalacji. Inna przeglądarka lub aplikacja Android ma osobne dane; przeniesienie wymaga kopii zapasowej.',
+  gentleDefaults:
+    'Łagodna konfiguracja: {{activeAcquiringTasks}} aktywnych zadań i sesja docelowa {{sessionMinutes}} minut. Funkcje nauki są w przygotowaniu.',
   today: 'Dzisiaj',
   study: 'Nauka',
   library: 'Biblioteka',

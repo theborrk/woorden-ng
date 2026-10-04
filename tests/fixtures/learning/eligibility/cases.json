@@ -1,0 +1,334 @@
+[
+  {
+    "name": "T19: AC1 late night with optional 10:30 window",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-02T01:00:00+02:00",
+      "rawDueAt": "2026-10-03T01:00:00+02:00",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 1,
+      "window": {
+        "start": "10:30",
+        "end": "11:00"
+      }
+    },
+    "expected": {
+      "dueStudyDate": "2026-10-02",
+      "eligibleAt": "2026-10-02T05:00:00Z",
+      "currentStudyDate": "2026-10-01",
+      "suggestedWindow": {
+        "startAt": "2026-10-02T08:30:00Z",
+        "endAt": "2026-10-02T09:00:00Z",
+        "suggestedAt": "2026-10-02T08:30:00Z"
+      }
+    }
+  },
+  {
+    "name": "T20: AC2 23:50 projects to next boundary",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-01T23:50:00+02:00",
+      "rawDueAt": "2026-10-02T23:50:00+02:00",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 1
+    },
+    "expected": {
+      "dueStudyDate": "2026-10-02",
+      "eligibleAt": "2026-10-02T04:00:00Z"
+    }
+  },
+  {
+    "name": "T20: AC2 just before boundary uses six elapsed hours",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-02T05:59:00+02:00",
+      "rawDueAt": "2026-10-03T05:59:00+02:00",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 1
+    },
+    "expected": {
+      "dueStudyDate": "2026-10-02",
+      "eligibleAt": "2026-10-02T09:59:00Z"
+    }
+  },
+  {
+    "name": "T20: AC2 exactly at boundary belongs to new day",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-02T06:00:00+02:00",
+      "rawDueAt": "2026-10-03T06:00:00+02:00",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 1
+    },
+    "expected": {
+      "dueStudyDate": "2026-10-03",
+      "eligibleAt": "2026-10-03T04:00:00Z",
+      "currentStudyDate": "2026-10-02"
+    }
+  },
+  {
+    "name": "T21: AC3 spring calendar day is 23 hours",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-03-28T06:00:00+01:00",
+      "rawDueAt": "2026-03-29T05:00:00Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 1
+    },
+    "expected": {
+      "dueStudyDate": "2026-03-29",
+      "eligibleAt": "2026-03-29T04:00:00Z"
+    }
+  },
+  {
+    "name": "T21: AC3 fall calendar day is 25 hours",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-24T06:00:00+02:00",
+      "rawDueAt": "2026-10-25T04:00:00Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 1
+    },
+    "expected": {
+      "dueStudyDate": "2026-10-25",
+      "eligibleAt": "2026-10-25T05:00:00Z"
+    }
+  },
+  {
+    "name": "T21: AC3 compatible gap boundary and window",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-03-28T06:00:00Z",
+      "rawDueAt": "2026-03-29T06:00:00Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "02:30",
+      "phase": "review",
+      "scheduledDays": 1,
+      "window": {
+        "start": "02:30",
+        "end": "04:00"
+      }
+    },
+    "expected": {
+      "dueStudyDate": "2026-03-29",
+      "eligibleAt": "2026-03-29T01:30:00Z",
+      "suggestedWindow": {
+        "startAt": "2026-03-29T01:30:00Z",
+        "endAt": "2026-03-29T02:00:00Z",
+        "suggestedAt": "2026-03-29T01:30:00Z"
+      }
+    }
+  },
+  {
+    "name": "T21: AC3 compatible overlap boundary and window",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-24T06:00:00Z",
+      "rawDueAt": "2026-10-25T06:00:00Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "02:30",
+      "phase": "review",
+      "scheduledDays": 1,
+      "window": {
+        "start": "02:30",
+        "end": "03:00"
+      }
+    },
+    "expected": {
+      "dueStudyDate": "2026-10-25",
+      "eligibleAt": "2026-10-25T00:30:00Z",
+      "suggestedWindow": {
+        "startAt": "2026-10-25T00:30:00Z",
+        "endAt": "2026-10-25T02:00:00Z",
+        "suggestedAt": "2026-10-25T00:30:00Z"
+      }
+    }
+  },
+  {
+    "name": "T21: AC3 leap day is retained",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2028-02-28T23:50:00+01:00",
+      "rawDueAt": "2028-02-29T22:50:00Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 1
+    },
+    "expected": {
+      "dueStudyDate": "2028-02-29",
+      "eligibleAt": "2028-02-29T05:00:00Z"
+    }
+  },
+  {
+    "name": "T21: AC3 three calendar days cross spring transition",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-03-27T10:00:00Z",
+      "rawDueAt": "2026-03-30T10:00:00Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 3
+    },
+    "expected": {
+      "dueStudyDate": "2026-03-30",
+      "eligibleAt": "2026-03-30T04:00:00Z"
+    }
+  },
+  {
+    "name": "I10: AC4 sub-day Review retains exact engine due",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-02T01:00:00Z",
+      "rawDueAt": "2026-10-02T01:10:00Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 0,
+      "window": {
+        "start": "10:30",
+        "end": "11:00"
+      }
+    },
+    "expected": {
+      "dueStudyDate": null,
+      "eligibleAt": "2026-10-02T01:10:00Z",
+      "controllingReasons": ["engine_due"]
+    }
+  },
+  {
+    "name": "I10: AC4 intraday learning keeps subsecond precision",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-02T01:00:00Z",
+      "rawDueAt": "2026-10-02T01:00:30.123Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "learning",
+      "scheduledDays": 0
+    },
+    "expected": {
+      "dueStudyDate": null,
+      "eligibleAt": "2026-10-02T01:00:30.123Z"
+    }
+  },
+  {
+    "name": "I10: AC4 exposure, sibling and postponement gates use maximum",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-02T01:00:00Z",
+      "rawDueAt": "2026-10-02T01:10:00Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 0,
+      "exposureEligibleAt": "2026-10-02T01:12:00Z",
+      "siblingEligibleAt": "2026-10-02T04:00:00Z",
+      "postponedUntil": "2026-10-02T08:00:00Z"
+    },
+    "expected": {
+      "dueStudyDate": null,
+      "eligibleAt": "2026-10-02T08:00:00Z",
+      "controllingReasons": ["postponed"]
+    }
+  },
+  {
+    "name": "T21: AC3 a midnight-crossing window includes its tail",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-02T22:50:00Z",
+      "rawDueAt": "2026-10-02T23:00:00Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 0,
+      "window": {
+        "start": "23:00",
+        "end": "02:00"
+      }
+    },
+    "expected": {
+      "dueStudyDate": null,
+      "eligibleAt": "2026-10-02T23:00:00Z",
+      "suggestedWindow": {
+        "startAt": "2026-10-02T21:00:00Z",
+        "endAt": "2026-10-03T00:00:00Z",
+        "suggestedAt": "2026-10-02T23:00:00Z"
+      }
+    }
+  },
+  {
+    "name": "T21: AC3 review windows have half-open ends",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2026-10-02T23:50:00Z",
+      "rawDueAt": "2026-10-03T00:00:00Z",
+      "timeZone": "Europe/Amsterdam",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 0,
+      "window": {
+        "start": "23:00",
+        "end": "02:00"
+      }
+    },
+    "expected": {
+      "dueStudyDate": null,
+      "eligibleAt": "2026-10-03T00:00:00Z",
+      "suggestedWindow": {
+        "startAt": "2026-10-03T21:00:00Z",
+        "endAt": "2026-10-04T00:00:00Z",
+        "suggestedAt": "2026-10-03T21:00:00Z"
+      }
+    }
+  },
+  {
+    "name": "T21: AC3 skipped Apia date advances to first nonempty day",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2011-12-29T12:00:00-10:00",
+      "rawDueAt": "2011-12-30T22:00:00Z",
+      "timeZone": "Pacific/Apia",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 1
+    },
+    "expected": {
+      "dueStudyDate": "2011-12-31",
+      "eligibleAt": "2011-12-30T16:00:00Z",
+      "currentStudyDate": "2011-12-29",
+      "nominalDueStudyDate": "2011-12-30"
+    }
+  },
+  {
+    "name": "T21: AC3 post-skip early morning still belongs to last nonempty day",
+    "input": {
+      "version": 1,
+      "reviewedAt": "2011-12-31T01:00:00+14:00",
+      "rawDueAt": "2011-12-31T11:00:00Z",
+      "timeZone": "Pacific/Apia",
+      "boundary": "06:00",
+      "phase": "review",
+      "scheduledDays": 1
+    },
+    "expected": {
+      "dueStudyDate": "2011-12-31",
+      "eligibleAt": "2011-12-30T17:00:00Z",
+      "currentStudyDate": "2011-12-29",
+      "nominalDueStudyDate": "2011-12-30"
+    }
+  }
+]

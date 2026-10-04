@@ -8,6 +8,7 @@ import type { AppInfo } from '../application/ports/app-info';
 import { Profiles } from '../features/settings/profiles/Profiles';
 import type { ProfileService } from '../application/profiles/service';
 import { About } from '../features/settings/About';
+import { ContentInspection } from '../features/content-inspection/ContentInspection';
 
 export interface AppProps {
   name: string;
@@ -123,7 +124,7 @@ export function App({
         <h2 id="screen-title" tabIndex={-1} ref={heading}>
           {t(route)}
         </h2>
-        <p>{t('placeholder')}</p>
+        {route === 'library' ? <ContentInspection /> : <p>{t('placeholder')}</p>}
         {profiles && <Profiles service={profiles} visible={route === 'settings'} />}
         {route === 'settings' && (
           <>

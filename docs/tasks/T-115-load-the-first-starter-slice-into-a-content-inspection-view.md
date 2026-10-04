@@ -1,7 +1,7 @@
 ---
 id: T-115
 title: Load the first starter slice into a content inspection view
-status: todo
+status: done
 size: M
 depends_on: [T-111]
 type: task
@@ -33,8 +33,8 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given S01–S10, when opened in the inspection view, then all locales/examples/source states are visible and no unreviewed badge implies approval. (e2e)
-- [ ] AC2: Given a missing whole-expression IPA, when rendered, then the UI shows an honest unavailable state without generated phonetics. (e2e)
+- [x] AC1: Given S01–S10, when opened in the inspection view, then all locales/examples/source states are visible and no unreviewed badge implies approval. (e2e)
+- [x] AC2: Given a missing whole-expression IPA, when rendered, then the UI shows an honest unavailable state without generated phonetics. (e2e)
 
 ## Notes for the implementer
 

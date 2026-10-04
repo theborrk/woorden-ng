@@ -1,0 +1,15 @@
+{
+  "formatVersion": 1,
+  "kind": "task_definition",
+  "taskVersion": 1,
+  "id": "68171558-2bcd-4549-8b68-3085b484d8a6",
+  "senseId": "604c9517-d603-45ca-b859-4e98dd122cbf",
+  "lexemeId": "83a132bd-4a30-446b-ba01-c10164a6689c",
+  "skill": "productive",
+  "cueFamily": "translation",
+  "cueLocale": "pl",
+  "gradingContractId": "fba4b677-044f-4f9c-b3c4-5e03b166f3b0",
+  "gradingContractVersion": 1,
+  "contentVersion": "starter-1",
+  "promptVariantIds": ["e45bc075-0726-4434-a6d5-86401f8fef93"]
+}

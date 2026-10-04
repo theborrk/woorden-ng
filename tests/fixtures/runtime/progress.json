@@ -1,0 +1,41 @@
+{
+  "formatVersion": 1,
+  "kind": "task_progress",
+  "progressVersion": 1,
+  "profileId": "d1522c5a-2419-4a35-9f72-85d98d097774",
+  "taskId": "68171558-2bcd-4549-8b68-3085b484d8a6",
+  "activation": "active",
+  "revision": 4,
+  "updatedAt": 1767268800000,
+  "scheduler": {
+    "engine": "ts-fsrs",
+    "packageVersion": "5.4.2",
+    "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+    "serializationVersion": 1,
+    "nativeCard": {
+      "due": "2026-01-01T12:10:00.000Z",
+      "stability": 2.3065,
+      "difficulty": 2.11810397,
+      "elapsed_days": 0,
+      "scheduled_days": 0,
+      "reps": 1,
+      "lapses": 0,
+      "learning_steps": 1,
+      "state": 1,
+      "last_review": "2026-01-01T12:00:00.000Z"
+    },
+    "rawDueAt": 1767269400000,
+    "phase": "learning",
+    "scheduledDays": 0
+  },
+  "eligibility": {
+    "eligibleAt": 1767290400000,
+    "dueStudyDate": "2026-01-01",
+    "projectedInTimeZone": "Europe/Amsterdam",
+    "reasons": ["engine_due", "minimum_gap"],
+    "policyVersion": "eligibility-1"
+  },
+  "evidenceStatus": "acquiring",
+  "lastAttemptId": "7d8c8c21-a769-497a-bab7-40ae81704507",
+  "lastAnswerExposureAt": 1767268799000
+}

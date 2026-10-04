@@ -12,6 +12,7 @@ import {
   validateTasks,
 } from './check-tasks.mjs';
 import { escapeHtml, galleryHtml } from './review-gallery.mjs';
+import { claimedIds, rankReady, taskIdOfBranch } from './next-task.mjs';
 import { renameApp, validateAppId } from './rename-app.mjs';
 import gate from './lib/review-gate.cjs';
 import orchestrator from './lib/orchestrator.cjs';
@@ -330,5 +331,51 @@ describe('orchestrator', () => {
     expect(
       orchestrator.ciFailureAction({ codexAutoFix: false }, { hasToken: true, earlierRequests: 0 }),
     ).toBe('none');
+  });
+});
+
+describe('next-task', () => {
+  it('reads task IDs from branch names', () => {
+    expect(taskIdOfBranch('task/T-123')).toBe('T-123');
+    expect(taskIdOfBranch('codex/t-103-odwn-explicit-morphology')).toBe('T-103');
+    expect(taskIdOfBranch('feat/t-007-native-app-info')).toBe('T-007');
+    expect(taskIdOfBranch('device-tests-native-only')).toBeNull();
+    expect(taskIdOfBranch('npm-chromium')).toBeNull();
+  });
+
+  it('ignores claims that stayed empty for too long', () => {
+    const ids = claimedIds([
+      { name: 'task/T-001', claimOnly: true, ageHours: 1 },
+      { name: 'task/T-002', claimOnly: true, ageHours: 5 },
+      { name: 'task/T-003', claimOnly: false, ageHours: 50 },
+    ]);
+    expect([...ids].sort()).toEqual(['T-001', 'T-003']);
+  });
+
+  it('ranks unclaimed ready tasks by how many open tasks they unblock', () => {
+    const t = (id, dependsOn = [], status = 'todo') => ({ id, dependsOn, status, title: id });
+    const tasks = [
+      t('T-001'),
+      t('T-002'),
+      t('T-003', ['T-002']),
+      t('T-004', ['T-003']),
+      t('T-005'),
+    ];
+    const ready = [t('T-001'), t('T-002'), t('T-005')];
+    const ranked = rankReady(tasks, ready, new Set(['T-005']));
+    expect(ranked.map((r) => [r.id, r.unblocks])).toEqual([
+      ['T-002', 2],
+      ['T-001', 0],
+    ]);
+  });
+
+  it('puts plan tasks first', () => {
+    const tasks = [
+      { id: 'T-001', dependsOn: [], status: 'todo' },
+      { id: 'T-002', dependsOn: ['T-001'], status: 'todo' },
+      { id: 'T-010', dependsOn: [], status: 'todo', type: 'plan' },
+    ];
+    const ranked = rankReady(tasks, [tasks[0], tasks[2]], new Set());
+    expect(ranked.map((r) => r.id)).toEqual(['T-010', 'T-001']);
   });
 });

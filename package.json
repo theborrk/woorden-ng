@@ -29,6 +29,7 @@
     "test:repositories:android": "playwright test --config playwright.android.config.ts --grep @repositories",
     "content:validate": "node tools/content/extract-legacy-seed.mjs --validate",
     "check:tasks": "node scripts/check-tasks.mjs --strict-refs",
+    "next:task": "node scripts/next-task.mjs",
     "verify": "npm run lint && npm run format:check && npm run typecheck && npm run test:unit && npm run check:tasks && npm run --if-present content:validate",
     "android:sync": "npm run build:android && cap sync android",
     "rename-app": "node scripts/rename-app.mjs",

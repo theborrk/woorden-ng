@@ -35,6 +35,11 @@ work is split into small tasks in [`docs/tasks/`](docs/tasks/).
 You implement **one task per pull request**, from a spec in `docs/tasks/`. You do not merge, and you
 do not edit the process files listed under [Protected files](#protected-files).
 
+When the prompt asks you to work as a **backlog worker**, follow
+[`docs/agents/codex-worker.md`](docs/agents/codex-worker.md): claim the next ready task with
+`npm run next:task -- --claim`, open its pull request, and continue with the next one. Each task
+still gets its own branch and pull request.
+
 ## Hard rules (breaking one is a blocking review finding)
 
 1. **One task per PR, nothing outside its Scope.** Spotted something else worth doing? Write it under
@@ -77,6 +82,7 @@ do not edit the process files listed under [Protected files](#protected-files).
 | Dev server                                  | `npm run dev`                                                      |
 | Fix formatting                              | `npm run format`                                                   |
 | Validate the backlog, show ready tasks      | `npm run check:tasks` (`-- --ledger` prints a table)               |
+| Ready tasks nobody has claimed (workers)    | `npm run next:task` (`-- --claim` claims the best one)             |
 | After adding or updating a Capacitor plugin | `npm run android:sync`, then commit `android/` too                 |
 
 CI also runs these scripts as soon as `package.json` defines them, so adding one switches it on:

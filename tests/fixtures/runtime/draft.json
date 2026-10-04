@@ -1,0 +1,40 @@
+{
+  "formatVersion": 1,
+  "kind": "attempt_draft",
+  "draftVersion": 1,
+  "id": "a5fccf01-fd6c-4f46-8f62-0e299aff6c2e",
+  "profileId": "d1522c5a-2419-4a35-9f72-85d98d097774",
+  "sessionId": "3890441f-3620-49d1-8708-7be2d97ac043",
+  "attemptId": "7d8c8c21-a769-497a-bab7-40ae81704507",
+  "taskId": "68171558-2bcd-4549-8b68-3085b484d8a6",
+  "promptVariantId": "e45bc075-0726-4434-a6d5-86401f8fef93",
+  "contentVersion": "starter-1",
+  "gradingContractVersion": 1,
+  "promptContext": {
+    "contextVersion": 1,
+    "promptId": "e45bc075-0726-4434-a6d5-86401f8fef93",
+    "answerIds": ["604c9517-d603-45ca-b859-4e98dd122cbf"],
+    "cueLocale": "pl",
+    "promptText": "ja — I — я",
+    "answerTexts": ["ik"],
+    "contentVersion": "starter-1",
+    "gradingContractId": "fba4b677-044f-4f9c-b3c4-5e03b166f3b0",
+    "gradingContractVersion": 1
+  },
+  "status": "response_locked",
+  "createdAt": 1767268795000,
+  "updatedAt": 1767268800000,
+  "inputMode": "typed",
+  "mode": "scheduled",
+  "expectedTaskRevision": 3,
+  "parentTransitionId": "78fe889f-35ac-41f2-bf73-a076dcaa91e5",
+  "expectedStateHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "assistance": [
+    {
+      "kind": "meaning_support",
+      "shownAt": 1767268799000,
+      "phase": "before_response"
+    }
+  ],
+  "responseCommittedAt": 1767268799500
+}

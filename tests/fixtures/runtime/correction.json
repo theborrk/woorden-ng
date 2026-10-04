@@ -1,0 +1,30 @@
+{
+  "formatVersion": 1,
+  "eventVersion": 1,
+  "profileId": "d1522c5a-2419-4a35-9f72-85d98d097774",
+  "deviceId": "cf3e0b7b-b353-41ea-bb40-c899c8db8245",
+  "deviceSequence": 1,
+  "occurredAt": 1767268800000,
+  "timeZone": "Europe/Amsterdam",
+  "studyDate": "2026-01-01",
+  "kind": "correction",
+  "id": "1a718e0b-34e9-4e7d-a7e3-88b76ab0f595",
+  "targetEventId": "095d2677-e454-40c9-88dd-517ff462e5f0",
+  "reason": "Fixture correction",
+  "result": {
+    "initial": "incorrect",
+    "final": "correct",
+    "assistance": [
+      {
+        "kind": "meaning_support",
+        "shownAt": 1767268799000,
+        "phase": "before_response"
+      }
+    ],
+    "components": {
+      "meaning": "incorrect",
+      "form": "not_tested"
+    },
+    "judgmentSource": "typed_rule"
+  }
+}

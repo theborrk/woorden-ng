@@ -32,7 +32,9 @@
     "android:sync": "npm run build:android && cap sync android",
     "rename-app": "node scripts/rename-app.mjs",
     "test:repositories:web": "vitest run tests/integration/repositories/web.test.ts",
-    "content:validate-entry": "node tools/content/validate-entry.mjs"
+    "content:validate-entry": "node tools/content/validate-entry.mjs",
+    "content:sources": "node tools/content/inspect-source.mjs",
+    "content:spelling": "node tools/content/opentaal-spelling.mjs"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "8.1.1",

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_id": "opentaal-wordlist-2.20.23",
+  "url": "https://raw.githubusercontent.com/OpenTaal/opentaal-wordlist/master/wordlist.txt",
+  "retrieved_at": "2026-10-03T00:17:35.525013+00:00",
+  "bytes": 5104598,
+  "sha256": "12e5fb5e3c73840b583b30016926d1f63a75e9bf1652a3a6634b2ba7c49ad7be",
+  "format": "utf-8-lines",
+  "version": "2.20.23",
+  "lineage": ["OpenTaal"]
+}

@@ -1,0 +1,14 @@
+{
+  "formatVersion": 1,
+  "eventVersion": 1,
+  "profileId": "d1522c5a-2419-4a35-9f72-85d98d097774",
+  "deviceId": "cf3e0b7b-b353-41ea-bb40-c899c8db8245",
+  "deviceSequence": 1,
+  "occurredAt": 1767268800000,
+  "timeZone": "Europe/Amsterdam",
+  "studyDate": "2026-01-01",
+  "kind": "undo",
+  "id": "cf98d20d-df74-4ac4-a2e4-5b5cde0c56e0",
+  "targetEventId": "095d2677-e454-40c9-88dd-517ff462e5f0",
+  "reason": "Fixture undo"
+}

@@ -51,3 +51,12 @@ reports per-task/cue-family recall evidence with actual gaps and uncertainty. Se
 for the diagnostic envelope, retained historical labels, primary-replay exception and versioned
 policy. Eligibility after a ten-minute Review exposure gate remains distinct from six-hour delayed
 recall. Input files, scheduler state and content are never written.
+
+## Retained schedule replay
+
+Run `node tools/learning/replay-schedule.ts tests/fixtures/learning/replay/history.json`.
+The versioned interpreter verifies full recorded transitions using their captured
+instants and resolved parameter identities; incompatibility preserves the original
+input and blocks output schedules. Optional future steps preview activation and
+rollback without changing history. See `tests/fixtures/learning/replay/README.md`
+for the input contract and retained fixture provenance.

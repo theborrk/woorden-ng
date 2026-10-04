@@ -1,8 +1,8 @@
 ---
 id: T-112
 title: Export a sample-check packet for a generation batch
-status: todo
-size: S
+status: done
+size: M
 depends_on: [T-111]
 type: task
 refs: [W19, F08, T50]
@@ -35,9 +35,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the same batch and seed, when exported twice, then the sample and the packet bytes are identical; a different seed changes only the random part. (unit)
-- [ ] AC2: Given a batch of 20 entries or fewer, when exported, then every entry is sampled; given a larger batch, then 10 random entries and at most 10 risk entries are sampled and each risk entry names its category. (unit)
-- [ ] AC3: Given the 60-entry pilot, when exported, then the packet contains no author verdict or self-check field and is at most a tenth of the size of the six research packets together. (integration)
+- [x] AC1: Given the same batch and seed, when exported twice, then the sample and the packet bytes are identical; a different seed changes only the random part. (unit)
+- [x] AC2: Given a batch of 20 entries or fewer, when exported, then every entry is sampled; given a larger batch, then 10 random entries and at most 10 risk entries are sampled and each risk entry names its category. (unit)
+- [x] AC3: Given the 60-entry pilot, when exported, then the packet contains no author verdict or self-check field and is at most a tenth of the size of the six research packets together. (integration)
 
 ## Notes for the implementer
 
@@ -46,3 +46,5 @@ Keep this one reviewable PR. Port/reuse the research algorithms in the repositor
 ## Notes for the reviewer
 
 Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. A language check is an actual, recorded sample check of a generation batch (ADR 0005); a code review alone does not check the Dutch.
+
+Implementation sizing: the packet exporter, response schema and acceptance/integration tests fit the M budget; the original S estimate did not include the complete response contract and blinding/size checks. The task scope is unchanged.

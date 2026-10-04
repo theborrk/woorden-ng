@@ -1,7 +1,7 @@
 ---
 id: T-011
 title: Plan the tasks for milestones M3 and M4
-status: todo
+status: done
 size: M
 depends_on: [T-002, T-003, T-010]
 type: plan
@@ -100,13 +100,13 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Every ID in this plan's `refs` appears in the `refs` of at least one new task: with this
+- [x] AC1: Every ID in this plan's `refs` appears in the `refs` of at least one new task: with this
       plan set to `done`, `npm run check:tasks` still passes (verify)
-- [ ] AC2: Every new task is size S or M, a vertical slice, and has Given/When/Then criteria naming
+- [x] AC2: Every new task is size S or M, a vertical slice, and has Given/When/Then criteria naming
       the test type (unit, integration, e2e, device test) that proves them (review)
-- [ ] AC3: Native work (plugins, permissions) sits in tasks of its own, and every native task has a
+- [x] AC3: Native work (plugins, permissions) sits in tasks of its own, and every native task has a
       device test criterion (review)
-- [ ] AC4: Dependencies are minimal and correct, so at least three tasks can start in parallel
+- [x] AC4: Dependencies are minimal and correct, so at least three tasks can start in parallel
       without touching the same files (review)
 
 ## Notes for the implementer
@@ -121,3 +121,55 @@ Out (do not do in this task):
 ## Notes for the reviewer
 
 Apply `docs/agents/plan-red-team.md`. Coverage and test quality are the main risks.
+
+## Planned slices and acceptance evidence
+
+T-142–T-167 implement this plan. M3 exposes executable inspectors and real command/query
+sequences before the everyday UI; M4 connects those commands to shared PWA/Android study.
+T-123 owns runtime records, T-126/T-129 web repositories, T-127/T-130 native repositories,
+T-131 lifecycle checkpoints and T-134–T-141 backup/restore/interoperability. These are
+prerequisites to reuse, not additional implementations in this plan.
+
+T-110 remains the entry/ID contract owner; T-114 owns per-task/locale compilation. T-148
+requires T-120's actual admitted starter subset, and every subsequent starter-study task has
+that transitive prerequisite. T-118/T-119 supply approved audio and truthful local capability
+states. No new task duplicates source imports, independent review or the pack compiler; no
+unreviewed draft becomes curated study merely because its structure validates (ADR 0005).
+
+| Work                | New tasks                  | Observable result                                                                                      |
+| ------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------ |
+| W10                 | T-142, T-145, T-150        | Native/effective previews, recorded policy versions, supported replay/rollback and actual-time grading |
+| W11                 | T-143, T-146, T-147, T-150 | Calendar/window diagnostics, exposure/evidence gates and preserved timezone/clock history              |
+| W12                 | T-144, T-148–T-150         | Honest classification and durable teaching, first response, help and one atomic grade                  |
+| W13                 | T-151–T-153                | Resume/retirement, tab conflict handling and correction/undo after later reviews                       |
+| W14                 | T-154, T-159, T-160        | Skippable setup, teaching/feedback, one optional support and repair/postpone                           |
+| W15                 | T-155, T-159               | Sense-specific typed judgment and productive/receptive self-report or typed study                      |
+| W16                 | T-156–T-158                | Live fair selection, concept/active-task/time budgets and conservative reversible suggestions          |
+| W17                 | T-161–T-163                | Today/Finish, exposure-aware recap/detail and actual interruption/resume flows                         |
+| W47 (M4)            | T-163, T-164               | Real native study, semantic checkpoint recovery and first-launch offline lessons/declared audio        |
+| W49 (first release) | T-165–T-167                | Credential-gated signed artifacts, first upgrade evidence and owner internal-testing handoff           |
+
+Three risk-first tasks can start now with disjoint primary files:
+
+| Task  | Primary implementation area                                                                                | Shared-file policy                         |
+| ----- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| T-142 | `src/infrastructure/fsrs/adapter/`, `tools/learning/inspect-fsrs.ts`, `tests/fixtures/learning/fsrs/`      | No package manifest or shared barrel edits |
+| T-143 | `src/domain/time-policy/`, `tools/learning/inspect-eligibility.ts`, `tests/fixtures/learning/eligibility/` | No package manifest or shared barrel edits |
+| T-144 | `src/domain/attempt-scoring/`, `tools/learning/inspect-scoring.ts`, `tests/fixtures/learning/scoring/`     | No package manifest or shared barrel edits |
+
+Validation commands:
+
+- `node --test docs/tasks/T-011-plan-m3-m4.test.mjs`: AC1 checks every unchanged plan ref
+  in the 26 new ordinary tasks with the plan done; AC2 checks bounded scope/goals and
+  Given/When/Then test types; AC3 checks explicit native ownership/device criteria; AC4
+  checks real acyclic/nonredundant dependencies, three ready tasks and disjoint file ownership.
+  Additional assertions check T-120/repository handoffs, web/native isolation and risk contracts.
+- `npm run check:tasks`: strict full-backlog coverage with the plan done.
+- `npm run verify` and `npm run test:e2e:web`: required repository regression gates.
+
+Executable structural evidence supplements the plan-red-team review of slice size and actual
+semantics. New tasks remain unchecked until implemented. Native device runs are CI-only;
+actual Play install/track upgrade requires owner access, artifacts and separate distribution
+authorization. Missing signing/Play credentials or a preceding release must remain explicit
+blockers, never simulated success. Full content/media operations, M6 task UI, M7 support editors,
+M8 optimizer/experiments, M9 updates and M10 release/ABI hardening remain with later plans.

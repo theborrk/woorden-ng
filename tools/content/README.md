@@ -165,6 +165,45 @@ The research starter pack remains unchanged and unreviewed. Its omitted source a
 broad research source tags are insufficient evidence for this stricter import boundary; missing
 observations produce explicit errors rather than inheriting the prototype's blanket fact status.
 
+## External draft batches (T-111)
+
+Import a saved artifact with no network or model invocation:
+
+```sh
+npm run content:import-drafts -- batch.json --output draft-state-1.json --evidence evidence.json
+npm run content:import-drafts -- batch.json --state draft-state-1.json --output draft-state-2.json --evidence evidence.json
+```
+
+The constrained envelope is `{"schema_version":"woorden-draft-batch-1","batch_id":"batch-01",
+"generation":{...},"entries":[...]}`. Each entry follows the sense-entry exchange schema above.
+Generation metadata requires `vendor`, `model`, `version`, `run_ref`, `prompt_sha256` and
+`input_sha256`; use explicit `null` for unknown values, never an invented model version or hash.
+Entry-level generation metadata is retained alongside this batch provenance. Evidence is supplied
+separately as an object keyed by each entry's `fixture_ref`, with the records/claims format above.
+Missing evidence is allowed only when the entry asserts no sourced facts requiring it.
+
+`fixture_ref` is a stable allocation label (letters, digits, `.`, `_`, `:`, `-`), including the
+research's S01–S60. A new sense needs a new label. Producer UUIDs act as stable identity references:
+keep them when changing spelling, meanings or order. The importer reuses committed allocations,
+allocates opaque UUIDs once for new entities, and resolves sense/form/example links without
+rewriting source text. Shared producer lexeme IDs retain the same canonical lexeme ID. Splitting,
+merging or moving a sense to another lexeme is rejected; it needs an explicit later migration.
+
+The output is an operator-owned state containing the extended allocation registry, canonical
+draft entries, raw artifact SHA-256/byte counts, batch manifests with current entry hashes and
+archived replaced entries/review evidence. Commit the reviewed state deliberately; producer input
+cannot replace the committed registry or supply this state. The CLI writes only a new output file
+after the entire batch validates and refuses to overwrite existing files. Stdout is a change
+report with added/updated/unchanged IDs, revisions, before/after hashes and review invalidation.
+Repeat imports preserve IDs, revisions, counts and any operator-recorded checks on unchanged
+payloads. Edits increment the revision, archive the old record and reset language checks to
+`not_run`, disposition to `draft` and release to `blocked`.
+
+Imports reject producer language/release approvals (`language_reviewed`, `batch_checked`,
+`ai_reviewed`, `eligible`) and enabled grading/audio claims. Source evidence still goes through
+T-110's validator. Imported drafts never become curated content; actual sample checks and pack
+compilation belong to T-113/T-114. The research pack is not automatically imported or activated.
+
 ## SUBTLEX-NL frequency import (T-102)
 
 Download the two pinned workbooks into ignored `.cache/content-sources/`. The pins in

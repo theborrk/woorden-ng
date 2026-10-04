@@ -77,7 +77,7 @@ export function resolveProvenance(entry, pointer) {
 /** Evidence is supplied separately by a source importer, never inferred from an entry URL.
  * records: { sourceId: original JSON record }; claims: exact target/source JSON-pointer pairs.
  */
-export function validateEntry(entry, { records = {}, claims = [] } = {}) {
+export function validateEntry(entry, { records = {}, claims = [], allocations = registry } = {}) {
   if (!checkSchema(entry))
     return {
       valid: false,
@@ -106,9 +106,9 @@ export function validateEntry(entry, { records = {}, claims = [] } = {}) {
     if (!ok) errors.push(message);
   };
   const allocated = (id, prefix) =>
-    Object.entries(registry).some(([key, value]) => key.startsWith(prefix) && value === id);
+    Object.entries(allocations).some(([key, value]) => key.startsWith(prefix) && value === id);
   check(
-    registry[`sense:${entry.fixture_ref}`] === entry.id,
+    allocations[`sense:${entry.fixture_ref}`] === entry.id,
     'identity: sense ID differs from committed allocation',
   );
   check(
@@ -117,7 +117,7 @@ export function validateEntry(entry, { records = {}, claims = [] } = {}) {
   );
   check(
     allocated(entry.lexeme.id, 'lexeme:') &&
-      registry[`sense-lexeme:${entry.id}`] === entry.lexeme.id,
+      allocations[`sense-lexeme:${entry.id}`] === entry.lexeme.id,
     'identity: unallocated or wrongly linked lexeme',
   );
   const seen = new Set([entry.id, entry.lexeme.id]);

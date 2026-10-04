@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Lexicon>
+<LexicalEntry id="surrealistische-n-1" partOfSpeech="noun">
+      <Lemma writtenForm="surrealistische" />
+      <WordForms />
+      <Morphology />
+      <MorphoSyntax />
+      <Sense definition="" id="o_n-351915757" provenance="google" senseId="1" synset="eng-30-10679845-n" annotator="">
+        <SenseRelations />
+        <Semantics-noun />
+        <Pragmatics />
+      </Sense>
+    </LexicalEntry>
+    
+<LexicalEntry id="troep-n-9" partOfSpeech="noun">
+      <Lemma writtenForm="troep" />
+      <WordForms />
+      <Morphology />
+      <MorphoSyntax />
+      <Sense definition="" id="o_n-475695820" provenance="wiktionary" senseId="9" synset="eng-30-07992116-n" annotator="">
+        <SenseRelations />
+        <Semantics-noun />
+        <Pragmatics />
+      </Sense>
+    </LexicalEntry>
+    
+<LexicalEntry id="EGA-n-1" partOfSpeech="noun" formType="abbreviation">
+      <Lemma writtenForm="EGA" />
+      <WordForms>
+        <WordForm writtenForm="EGA" grammaticalNumber="singular" article="de/het" />
+      </WordForms>
+      <Morphology />
+      <MorphoSyntax pronominalAndGrammaticalGender="m_f" />
+      <Sense id="r_n-12104" senseId="1" definition="Europees Atoomagentschap" synset="odwn-10-107154992-n" provenance="cdb2.2_None" annotator="">
+        <SenseRelations />
+        <Semantics-noun reference="proper" countability="mass" semanticType="institute" />
+        <Pragmatics />
+      </Sense>
+    </LexicalEntry>
+    
+<LexicalEntry id="aaien-v-1" partOfSpeech="verb">
+      <Lemma writtenForm="aaien" mode="infinitive" />
+      <WordForms />
+      <Morphology />
+      <MorphoSyntax>
+        <auxiliaries auxiliary="hebben" />
+      </MorphoSyntax>
+      <SyntacticBehaviour valency="tri" transitivity="transitive">
+        <SyntacticSubcategorisationFrame>
+          <syntacticArgument constituent="np" function="directObject" />
+        </SyntacticSubcategorisationFrame>
+        <SyntacticSubcategorisationFrame>
+          <syntacticArgument constituent="pp" function="prepositionalObject" />
+        </SyntacticSubcategorisationFrame>
+        <SyntacticSubcategorisationFrame>
+          <syntacticArgument constituent="np" function="directObject" />
+          <syntacticArgument constituent="pp" function="prepositionalObject" />
+        </SyntacticSubcategorisationFrame>
+      </SyntacticBehaviour>
+      <Sense id="r_v-1" senseId="1" definition="strelen" synset="eng-30-01226215-v" provenance="cdb2.2_Manual+omegawiki" annotator="">
+        <SenseRelations />
+        <Sentiment polarity="positive" externalReference="VuPolarityLexAutomatic" />
+        <Semantics-verb>
+          <semanticTypes semanticType="action" />
+        </Semantics-verb>
+        <Pragmatics />
+        <SenseExamples>
+          <SenseExample id="53">
+            <canonicalForm canonicalform="iets aaien" phraseType="vp" expressionType="freeCombination" />
+            <textualForm textualform="hij aaide haar rug" phraseType="sentence" />
+            <Syntax_ex>
+              <combiWord lemma="rug" partOfSpeech="noun" />
+            </Syntax_ex>
+            <Semantics_ex />
+            <Pragmatics />
+          </SenseExample>
+          <SenseExample id="54">
+            <canonicalForm canonicalform="de hond/kat aaien" phraseType="vp" expressionType="freeCombination" />
+            <Syntax_ex>
+              <combiWord lemma="hond" partOfSpeech="noun" />
+              <combiWord lemma="kat" partOfSpeech="noun" />
+            </Syntax_ex>
+            <Semantics_ex />
+            <Pragmatics />
+          </SenseExample>
+          <SenseExample id="18381">
+            <canonicalForm canonicalform="iets/iemand [over zijn bol/door zijn haar/...] aaien" phraseType="vp" expressionType="freeCombination" />
+            <Syntax_ex>
+              <combiWord lemma="bol" partOfSpeech="noun" />
+              <combiWord lemma="haar" partOfSpeech="noun" />
+            </Syntax_ex>
+            <Semantics_ex />
+            <Pragmatics />
+          </SenseExample>
+          <SenseExample id="52">
+            <canonicalForm canonicalform="ergens over aaien" phraseType="vp" expressionType="grammaticalCollocation" />
+            <textualForm textualform="zij aaide over zijn bol" phraseType="sentence" />
+            <Semantics_ex gracol-complem="concrother" />
+            <Pragmatics />
+          </SenseExample>
+        </SenseExamples>
+      </Sense>
+    </LexicalEntry>
+    
+<LexicalEntry id="aanbakken-v-1" partOfSpeech="verb">
+      <Lemma writtenForm="aanbakken" mode="infinitive" />
+      <WordForms>
+        <WordForm writtenForm="bakte aan" tense="pastTense" />
+        <WordForm writtenForm="aangebakken" tense="pastParticiple" />
+      </WordForms>
+      <Morphology morphoType="phrasal" separability="separable" />
+      <MorphoSyntax>
+        <auxiliaries auxiliary="zijn" />
+      </MorphoSyntax>
+      <SyntacticBehaviour valency="mono" transitivity="transitive">
+        <SyntacticSubcategorisationFrame>
+          <syntacticArgument constituent="nil" function="nil" />
+        </SyntacticSubcategorisationFrame>
+      </SyntacticBehaviour>
+      <Sense id="r_v-2" senseId="1" definition="aan de pan vastbakken" synset="odwn-10-100461791-v" provenance="cdb2.2_None" annotator="">
+        <SenseRelations />
+        <Semantics-verb>
+          <semanticTypes semanticType="process" />
+        </Semantics-verb>
+        <Pragmatics />
+        <SenseExamples>
+          <SenseExample id="310">
+            <canonicalForm canonicalform="de aardappels bakken aan" phraseType="vp" expressionType="freeCombination" />
+            <Syntax_ex>
+              <combiWord lemma="aardappel" partOfSpeech="noun" />
+            </Syntax_ex>
+            <Semantics_ex />
+            <Pragmatics />
+          </SenseExample>
+          <SenseExample id="311">
+            <canonicalForm canonicalform="de pan bakt aan" phraseType="sentence" />
+            <Semantics_ex />
+            <Pragmatics />
+          </SenseExample>
+        </SenseExamples>
+      </Sense>
+    </LexicalEntry>
+    
+<LexicalEntry id="huis-n-1" partOfSpeech="noun">
+      <Lemma writtenForm="huis" />
+      <WordForms>
+        <WordForm writtenForm="huis" grammaticalNumber="singular" article="het" />
+        <WordForm writtenForm="huizen" grammaticalNumber="plural" article="de" />
+      </WordForms>
+      <Morphology />
+      <MorphoSyntax pronominalAndGrammaticalGender="m_f" />
+      <Sense id="r_n-17335" senseId="1" definition="woning" synset="eng-30-03544360-n" provenance="cdb2.2_Manual+omegawiki" annotator="">
+        <SenseRelations>
+          <SenseGroup relationType="co-relations" targetSenseId="r_n-17337" />
+        </SenseRelations>
+        <Semantics-noun reference="common" countability="count" semanticType="artefact" />
+        <Pragmatics />
+        <SenseExamples>
+          <SenseExample id="53902">
+            <canonicalForm canonicalform="een vrijstaand huis" phraseType="np" expressionType="freeCombination" />
+            <Syntax_ex>
+              <combiWord lemma="vrijstaand" partOfSpeech="adjective" />
+            </Syntax_ex>
+            <Semantics_ex />
+            <Pragmatics />
+          </SenseExample>
+          <SenseExample id="53906">
+            <canonicalForm canonicalform="een eigen huis" phraseType="np" expressionType="freeCombination" />
+            <Syntax_ex>
+              <combiWord lemma="eigen" partOfSpeech="adjective" />
+            </Syntax_ex>
+            <Semantics_ex />
+            <Pragmatics />
+          </SenseExample>
+          <SenseExample id="53895">
+            <canonicalForm canonicalform="een huis kopen/huren" phraseType="vp" expressionType="lexicalCollocation" />
+            <Syntax_ex>
+              <combiWord lemma="kopen" partOfSpeech="verb" />
+              <combiWord lemma="huren" partOfSpeech="verb" />
+            </Syntax_ex>
+            <Semantics_ex>
+              <lex-collocator collocator="oper1" />
+            </Semantics_ex>
+            <Pragmatics />
+          </SenseExample>
+          <SenseExample id="53897">
+            <canonicalForm canonicalform="een kast van een huis" phraseType="np" expressionType="lexicalCollocation" />
+            <Syntax_ex>
+              <combiWord lemma="kast" partOfSpeech="noun" />
+            </Syntax_ex>
+            <Semantics_ex definition="een enorm groot huis">
+              <lex-collocator collocator="magnus" />
+            </Semantics_ex>
+            <Pragmatics />
+          </SenseExample>
+          <SenseExample id="53907">
+            <canonicalForm canonicalform="een rijtje huizen" phraseType="np" expressionType="lexicalCollocation" />
+            <Syntax_ex>
+              <combiWord lemma="rij" partOfSpeech="noun" />
+            </Syntax_ex>
+            <Semantics_ex>
+              <lex-collocator collocator="mult" />
+            </Semantics_ex>
+            <Pragmatics />
+          </SenseExample>
+          <SenseExample id="53908">
+            <canonicalForm canonicalform="een huis bouwen" phraseType="vp" expressionType="lexicalCollocation" />
+            <Syntax_ex>
+              <combiWord lemma="bouwen" partOfSpeech="verb" />
+            </Syntax_ex>
+            <Semantics_ex>
+              <lex-collocator collocator="cause" />
+            </Semantics_ex>
+            <Pragmatics />
+          </SenseExample>
+        </SenseExamples>
+      </Sense>
+    </LexicalEntry>
+    
+</Lexicon>

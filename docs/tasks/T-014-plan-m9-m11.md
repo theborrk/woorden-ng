@@ -1,7 +1,7 @@
 ---
 id: T-014
 title: Plan the tasks for milestones M9 to M11
-status: todo
+status: done
 size: M
 depends_on: [T-011]
 type: plan
@@ -75,13 +75,13 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Every ID in this plan's `refs` appears in the `refs` of at least one new task: with this
+- [x] AC1: Every ID in this plan's `refs` appears in the `refs` of at least one new task: with this
       plan set to `done`, `npm run check:tasks` still passes (verify)
-- [ ] AC2: Every new task is size S or M, a vertical slice, and has Given/When/Then criteria naming
+- [x] AC2: Every new task is size S or M, a vertical slice, and has Given/When/Then criteria naming
       the test type (unit, integration, e2e, device test) that proves them (review)
-- [ ] AC3: Native work (plugins, permissions) sits in tasks of its own, and every native task has a
+- [x] AC3: Native work (plugins, permissions) sits in tasks of its own, and every native task has a
       device test criterion (review)
-- [ ] AC4: Dependencies are minimal and correct, so at least three tasks can start in parallel
+- [x] AC4: Dependencies are minimal and correct, so at least three tasks can start in parallel
       without touching the same files (review)
 
 ## Notes for the implementer
@@ -93,3 +93,23 @@ Out (do not do in this task):
 ## Notes for the reviewer
 
 Apply `docs/agents/plan-red-team.md`. Coverage and test quality are the main risks.
+
+## Allocation and parallel entry points
+
+T-220–T-247 own this plan. The gap after T-171 avoids the concurrent M5–M8 plans, now merged:
+T-012 already allocates T-172–T-189; T-013 allocates T-190–T-208. Gaps are intentional, not missing work.
+T-220, T-230 and T-237 can start now on completed contracts/shell tasks, with disjoint primary files.
+The first two explicitly leave package manifests untouched; T-237 owns only the browser config there.
+Native plugins/files/migrations/accessibility/releases have separate device-tested slices. Existing
+T-132/T-141/T-164–T-167 remain authoritative; new tasks extend them rather than duplicate their work.
+
+The accessibility and physical audits depend on the concrete M5–M8 repertoire and native-media/reminder slices.
+Later tasks report absent required behavior as incomplete;
+the final T-247 check inspects the entire backlog before claiming full completion. Physical checks,
+minimum-SDK verification, genuine content sample review and Play/signing access may be externally
+blocked, but their independent tooling, CI checks and runbooks still ship with precise blockers.
+No old-app progress import, runtime AI, cloud sync, Web Push or publication is authorized here.
+
+Acceptance evidence: `node --test docs/tasks/T-014-plan-m9-m11.test.mjs` checks all four plan criteria,
+coverage, native isolation, minimal real dependencies and parallel file ownership. The backlog checker
+and the normal verify/web-e2e gates remain required.

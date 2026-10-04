@@ -29,6 +29,7 @@ createRoot(root).render(
       platform: detectPlatform(target.name),
       updates: target,
       appInfo: target.appInfo,
+      ...(target.profiles ? { profiles: target.profiles } : {}),
       storage: target,
       initialLanguageError,
     }),

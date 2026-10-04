@@ -38,3 +38,16 @@ with field-specific issues and no rating; unsupported but structurally valid tri
 inspections with an explanatory no-rating reason. Missing/unreadable/malformed files report stderr
 and exit 1 while remaining files are inspected. Inputs stay unchanged. Persisted attempt lifecycle,
 real media tasks and typed matching remain separate tasks.
+
+## Exposure gates and delayed evidence (T-146)
+
+```sh
+node tools/learning/inspect-evidence.ts tests/fixtures/learning/evidence/recap.json
+```
+
+The inspector aggregates relevant exposure, projects the existing T-143 eligibility gates, and
+reports per-task/cue-family recall evidence with actual gaps and uncertainty. See
+[`tests/fixtures/learning/evidence/README.md`](../../tests/fixtures/learning/evidence/README.md)
+for the diagnostic envelope, retained historical labels, primary-replay exception and versioned
+policy. Eligibility after a ten-minute Review exposure gate remains distinct from six-hour delayed
+recall. Input files, scheduler state and content are never written.

@@ -27,7 +27,7 @@ notifications). Implementing agents cannot run an Android SDK, so anything nativ
    builds allow WebView debugging; release builds do not, so releases are tested through a debug
    build of the same tag.
 5. **CI policy file.** `.github/ci-policy.json` decides whether the APK builds on every PR and when
-   device tests run (`affected`, `always`, `off`), and pins the emulator API level.
+   device tests run (`affected`, `native`, `always`, `off`), and pins the emulator API level.
 6. **Scripts as the contract.** CI runs well-known npm script names when they exist
    (`content:validate`, `test:repositories:web`, `test:backup-interop`, `content:coverage`, the
    device scripts), so a task that adds one turns its CI gate on without editing workflows.

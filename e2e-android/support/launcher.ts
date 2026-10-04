@@ -28,8 +28,11 @@ export async function findOrScrollLauncherTile(
   name: string,
   screen: { width: number; height: number },
 ): Promise<LauncherBounds | undefined> {
-  await shell('uiautomator dump /sdcard/woorden-launcher.xml');
+  const dump = await shell('uiautomator dump /sdcard/woorden-launcher.xml');
   const xml = (await shell('cat /sdcard/woorden-launcher.xml')).toString();
+  if (!xml.includes('<hierarchy')) {
+    throw new Error(`Launcher UI dump failed: ${dump.toString().trim()} ${xml.trim()}`);
+  }
   const bounds = launcherTileBounds(xml, name);
   if (!bounds) {
     const x = Math.round(screen.width / 2);

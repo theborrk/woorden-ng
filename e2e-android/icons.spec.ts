@@ -32,6 +32,20 @@ test('AC2: debug APK launcher shows the husky on Delft blue', async ({ app, devi
             },
           )
           .toBeDefined();
+      } catch (error) {
+        const xml = (await device.shell('cat /sdcard/woorden-launcher.xml')).toString();
+        const nodes = (xml.match(/<node\b[^>]*>/g) ?? [])
+          .map((node) => ({
+            package: node.match(/package="([^"]*)"/)?.[1],
+            text: node.match(/text="([^"]*)"/)?.[1],
+            description: node.match(/content-desc="([^"]*)"/)?.[1],
+            bounds: node.match(/bounds="([^"]*)"/)?.[1],
+          }))
+          .filter((node) => node.text || node.description);
+        throw new Error(
+          `Launcher lookup failed; visible UI: ${JSON.stringify(nodes.slice(0, 30))}; dump output: ${xml.startsWith('<?xml') ? 'XML available' : xml.slice(0, 300)}`,
+          { cause: error },
+        );
       } finally {
         await snapDevice(device, 'husky launcher app list');
       }

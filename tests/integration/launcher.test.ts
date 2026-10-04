@@ -13,7 +13,9 @@ test('T-008: launcher navigation advances through HOME and drawer pages until th
   const shell = (command: string): Promise<Buffer> => {
     commands.push(command);
     return Promise.resolve(
-      Buffer.from(command.startsWith('cat ') ? (snapshots.shift() ?? '') : ''),
+      Buffer.from(
+        command.startsWith('cat ') ? `<hierarchy>${snapshots.shift() ?? ''}</hierarchy>` : '',
+      ),
     );
   };
   expect(
@@ -52,4 +54,14 @@ test('T-008: launcher lookup keeps the actual tile bounds and excludes app conte
       'Words & "ears"',
     ),
   ).toEqual({ x: 12, y: 30, width: 80, height: 120 });
+});
+
+test('T-008: a failed UI dump reports the shell error instead of polling an absent hierarchy', async () => {
+  const shell = (command: string): Promise<Buffer> =>
+    Promise.resolve(
+      Buffer.from(command.startsWith('cat ') ? 'No such file' : 'ERROR: could not get idle state.'),
+    );
+  await expect(
+    findOrScrollLauncherTile(shell, 'Woorden', { width: 1080, height: 2400 }),
+  ).rejects.toThrow('Launcher UI dump failed: ERROR: could not get idle state. No such file');
 });

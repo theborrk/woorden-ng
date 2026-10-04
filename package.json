@@ -41,7 +41,8 @@
     "content:spelling": "node tools/content/opentaal-spelling.mjs",
     "content:subtlex": "node tools/content/import-subtlex.mjs",
     "content:import-drafts": "node tools/content/import-drafts.mjs",
-    "content:sample": "node tools/content/sample-check.mjs"
+    "content:sample": "node tools/content/sample-check.mjs",
+    "content:import-sample": "node tools/content/import-sample-check.mjs"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "8.1.1",

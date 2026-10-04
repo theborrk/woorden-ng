@@ -1,7 +1,7 @@
 ---
 id: T-113
 title: Import sample-check results and batch outcomes
-status: todo
+status: done
 size: M
 depends_on: [T-112]
 type: task
@@ -35,9 +35,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a response from the author's vendor, for a stale hash, or missing a sampled entry, when imported, then it is rejected with a reason and no state changes. (unit)
-- [ ] AC2: Given a passing response, when imported, then sampled passes are ai_reviewed, unsampled entries batch_checked, fix entries revision_requested and unsure entries uncertain and flagged; given the same problem in two sampled entries, then the batch fails and no entry gains a check state. (unit)
-- [ ] AC3: Given an imported batch, when an entry is edited, then only that entry returns to not_run; importing the same response twice is idempotent. (integration)
+- [x] AC1: Given a response from the author's vendor, for a stale hash, or missing a sampled entry, when imported, then it is rejected with a reason and no state changes. (unit)
+- [x] AC2: Given a passing response, when imported, then sampled passes are ai_reviewed, unsampled entries batch_checked, fix entries revision_requested and unsure entries uncertain and flagged; given the same problem in two sampled entries, then the batch fails and no entry gains a check state. (unit)
+- [x] AC3: Given an imported batch, when an entry is edited, then only that entry returns to not_run; importing the same response twice is idempotent. (integration)
 
 ## Notes for the implementer
 

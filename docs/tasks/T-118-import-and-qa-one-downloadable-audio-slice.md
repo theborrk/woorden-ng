@@ -1,7 +1,7 @@
 ---
 id: T-118
 title: Import and QA one downloadable audio slice
-status: todo
+status: done
 size: M
 depends_on: [T-100, T-114]
 type: task
@@ -33,9 +33,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given valid approved audio, when packaged/downloaded, then replay resolves by the expected hash. (integration)
-- [ ] AC2: Given a missing/corrupt/wrong-text asset, when eligibility is evaluated, then listening is blocked and eligible written tasks remain usable. (unit)
-- [ ] AC3: Given an unlistened source URL, when imported, then it remains candidate-only. (unit)
+- [x] AC1: Given valid approved audio, when packaged/downloaded, then replay resolves by the expected hash. (integration)
+- [x] AC2: Given a missing/corrupt/wrong-text asset, when eligibility is evaluated, then listening is blocked and eligible written tasks remain usable. (unit)
+- [x] AC3: Given an unlistened source URL, when imported, then it remains candidate-only. (unit)
 
 ## Notes for the implementer
 

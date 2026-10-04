@@ -1,3 +1,4 @@
+import { usableAudio } from './media.mjs';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -70,6 +71,7 @@ export function taskEligibility(
       .filter(
         (asset) =>
           asset.kind === kind &&
+          (kind !== 'audio' || usableAudio(entry, asset)) &&
           asset.entry_id === entry.id &&
           asset.content_sha256 === entry.content_sha256 &&
           asset.available === true &&

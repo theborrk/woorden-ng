@@ -1,0 +1,1409 @@
+{
+  "generation": {
+    "vendor": "OpenAI",
+    "model": null,
+    "version": null,
+    "run_ref": "T-169 committed exercise-rule authoring",
+    "prompt_sha256": null,
+    "input_sha256": "d70b6e71656578bd7d59755f53af241f3cb100c8311c95e4ec00f3a6a25e84d4",
+    "output_sha256": "e59b60f6d30aa0b64b1285c1272b2055c728518f1af180eb109c1acbe76f0482"
+  },
+  "total": 60,
+  "changed": 33,
+  "entries": [
+    {
+      "id": "604c9517-d603-45ca-b859-4e98dd122cbf",
+      "fixture_ref": "S01",
+      "changed": false,
+      "rules": [],
+      "old_hash": "1ef00b4a4ed71fab8320b8778fdff9f98755df0ea3cb94d556661bc862520439",
+      "new_hash": "1ef00b4a4ed71fab8320b8778fdff9f98755df0ea3cb94d556661bc862520439",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "faa0d8d3-bbb2-4a6f-ae8b-8c8825241803",
+      "fixture_ref": "S02",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "5d6c5a5c0f86c6ce860363c39076ea53fd585c59de54c35b64ef6611c150724f",
+      "new_hash": "b1e2afd6fbdf4d1a0329e4657a277a7eba07fd6a6f52f8466259f63bcd78f92d",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "replace",
+          "path": "/examples/0/context/en",
+          "value": "be (present tense)"
+        },
+        {
+          "rule": "R1",
+          "op": "replace",
+          "path": "/examples/0/context/pl",
+          "value": "być (czas teraźniejszy)"
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "be, linking a person or thing to a description",
+              "pl": "być, łączyć osobę lub rzecz z opisem"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        }
+      ]
+    },
+    {
+      "id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
+      "fixture_ref": "S03",
+      "changed": true,
+      "rules": ["R4"],
+      "old_hash": "3be060496214ce524f196216fcdaf748fddfcd1474eea246662c2e68a15fa952",
+      "new_hash": "55de5145f1c8aea798c6b06ce331cf19eeb7c78792a3f18693c2b5ea9bf33023",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/forms/20"
+        },
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/examples/0/target_form_ids/1"
+        }
+      ]
+    },
+    {
+      "id": "de6f4380-8bbc-4ebb-8852-418ee312edda",
+      "fixture_ref": "S04",
+      "changed": true,
+      "rules": ["R2"],
+      "old_hash": "1e55d6b05d1b85bc9873b2cc6e19b9e1b3edb9a37aa5e2d6d098e2135db06268",
+      "new_hash": "f8183b4c9a63026d23a091ac1453f5c48366fe0868540fb338d3d64befcc4ae8",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R2",
+          "op": "replace",
+          "path": "/examples/0/context/en",
+          "value": "thank you (formal)"
+        },
+        {
+          "rule": "R2",
+          "op": "replace",
+          "path": "/examples/0/context/pl",
+          "value": "dziękuję (forma grzecznościowa)"
+        },
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["Dank u"],
+            "case_sensitive": false
+          }
+        },
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["Hartelijk dank"],
+            "case_sensitive": false
+          }
+        },
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["Bedankt"],
+            "case_sensitive": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "8e094be1-35f7-42b5-8dbf-ba6ed3afb567",
+      "fixture_ref": "S05",
+      "changed": false,
+      "rules": [],
+      "old_hash": "26df4988e65305e6431b2cf98d028a75edca2f8a541bdbe75f82b91d7c9d3fd4",
+      "new_hash": "26df4988e65305e6431b2cf98d028a75edca2f8a541bdbe75f82b91d7c9d3fd4",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "ff49fcaa-a55f-4ff6-bd55-6a1a99535bd9",
+      "fixture_ref": "S06",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "d91103e00c70b461df49d08b87d5167422bc85d8b63c23ac3ddbd9431cc51499",
+      "new_hash": "b68597fb3a6531d201ae1bd1fad699ab46bddd307951f33efe46288f7843f764",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "replace",
+          "path": "/examples/0/context/en",
+          "value": "understand the meaning (present tense)"
+        },
+        {
+          "rule": "R1",
+          "op": "replace",
+          "path": "/examples/0/context/pl",
+          "value": "rozumieć znaczenie (czas teraźniejszy)"
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["snap"],
+            "case_sensitive": false
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "understand the meaning",
+              "pl": "rozumieć znaczenie"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fe21dcb7-b84a-4f1d-9893-f87e3334f6a2",
+      "fixture_ref": "S07",
+      "changed": true,
+      "rules": ["R5"],
+      "old_hash": "4aec56a289467737f0d9c189716e1870fb221e0bfeba3fc544a8568990a1605e",
+      "new_hash": "717c05c1ad1229cf746efefdc37c6376f7270da1450d30f4e9af3a3f0952fce2",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R5",
+          "op": "replace",
+          "path": "/sense/meanings/en/0",
+          "value": "not (negation within a sentence)"
+        },
+        {
+          "rule": "R5",
+          "op": "replace",
+          "path": "/sense/meanings/pl/0",
+          "value": "nie (przeczenie w zdaniu)"
+        },
+        {
+          "rule": "R5",
+          "op": "replace",
+          "path": "/examples/0/context",
+          "value": {
+            "en": "not (negation within a sentence)",
+            "pl": "nie (przeczenie w zdaniu)"
+          }
+        },
+        {
+          "rule": "R5",
+          "op": "replace",
+          "path": "/hints/en",
+          "value": "not (negation within a sentence)"
+        },
+        {
+          "rule": "R5",
+          "op": "replace",
+          "path": "/hints/pl",
+          "value": "nie (przeczenie w zdaniu)"
+        }
+      ]
+    },
+    {
+      "id": "86106c24-7587-4f0d-b1b2-3d1e14505a48",
+      "fixture_ref": "S08",
+      "changed": true,
+      "rules": ["R2"],
+      "old_hash": "b318c9578dbd5043b3f158f9ec706b0f66685ecadf47cfe4a711283fd039ca71",
+      "new_hash": "065f0460170dd429d05b1d0a2b296dee0b41c0f19d17691292dcbd2183561483",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R2",
+          "op": "replace",
+          "path": "/examples/0/context/en",
+          "value": "could you repeat that? (formal)"
+        },
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["Zou u dat kunnen herhalen"],
+            "case_sensitive": false
+          }
+        },
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["Kunt u het herhalen"],
+            "case_sensitive": false
+          }
+        },
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["Kunt u dat nog een keer zeggen"],
+            "case_sensitive": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "d66ba490-4dcc-482e-885b-cf97a000a036",
+      "fixture_ref": "S09",
+      "changed": true,
+      "rules": ["R3", "R1"],
+      "old_hash": "69e6418f29bcbefb36d55a7aa4f4bbf19ac9d900f8c51f245a4f249650af858c",
+      "new_hash": "f32022b0cd83f7d8b407ec2be3f1564f2142cf4956b5dae9346959f93844a9cd",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R3",
+          "op": "replace",
+          "path": "/examples/0/context/en",
+          "value": "have (present tense)"
+        },
+        {
+          "rule": "R3",
+          "op": "replace",
+          "path": "/examples/0/context/pl",
+          "value": "mieć (czas teraźniejszy)"
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "have",
+              "pl": "mieć"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        }
+      ]
+    },
+    {
+      "id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+      "fixture_ref": "S10",
+      "changed": false,
+      "rules": [],
+      "old_hash": "e0ba92254db1c22970dcd427889e48f5537faa66a947b6153c7584fe8d41198e",
+      "new_hash": "e0ba92254db1c22970dcd427889e48f5537faa66a947b6153c7584fe8d41198e",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "2499fd26-e310-4c4a-9c8e-3c6f20fb2b7f",
+      "fixture_ref": "S11",
+      "changed": false,
+      "rules": [],
+      "old_hash": "2692e00e0d7bbc63373573ee48ec5027bd988233867db93f78e5382cde7c3811",
+      "new_hash": "2692e00e0d7bbc63373573ee48ec5027bd988233867db93f78e5382cde7c3811",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "411865da-19cb-4f06-a2a3-2b98d7dbb17f",
+      "fixture_ref": "S12",
+      "changed": true,
+      "rules": ["R4", "R3"],
+      "old_hash": "013d575a14be982fa44a11850361635dafd3a62abb9ff81b9e23e9b1ce0d5a2b",
+      "new_hash": "fefdea93d390539e3450d6cebed2978a218296ab5ecb48a7e6b48fc7b3ac10c6",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/forms/20"
+        },
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/examples/0/target_form_ids/4"
+        },
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/examples/0/target_form_ids/3"
+        },
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/examples/0/target_form_ids/2"
+        },
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/examples/0/target_form_ids/1"
+        },
+        {
+          "rule": "R3",
+          "op": "replace",
+          "path": "/examples/0/context",
+          "value": {
+            "en": "not closed",
+            "pl": "niezamknięty"
+          }
+        }
+      ]
+    },
+    {
+      "id": "45dfcc3e-11c7-4ca6-9ae9-9e2f60ec4766",
+      "fixture_ref": "S13",
+      "changed": false,
+      "rules": [],
+      "old_hash": "b0adb69da91f172ce34694457d46d9cec27759d7cbad88c721cf7c1c23f80c57",
+      "new_hash": "b0adb69da91f172ce34694457d46d9cec27759d7cbad88c721cf7c1c23f80c57",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "697b8cfe-3ec9-476c-a218-de733918e163",
+      "fixture_ref": "S14",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "3c467e676532ed557811222e377df43e08a2593d104e332ffc7ca423d8bbf987",
+      "new_hash": "9436e522bfb5e765f4c06d605c8566ec9d7bf49c7c179ab7c082ce283ea01e86",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "come; move towards the relevant place",
+              "pl": "przychodzić lub przyjeżdżać do danego miejsca"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fb608dce-2477-4c01-8e82-429c735c2b44",
+      "fixture_ref": "S15",
+      "changed": false,
+      "rules": [],
+      "old_hash": "7a56380f21eeac7c5cd33f700f4b7feb93eb7dd42d98573bde0fe77bcda84be6",
+      "new_hash": "7a56380f21eeac7c5cd33f700f4b7feb93eb7dd42d98573bde0fe77bcda84be6",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "ecb2bb56-8abf-4cfc-b99f-8ecf13e037b1",
+      "fixture_ref": "S16",
+      "changed": true,
+      "rules": ["R4"],
+      "old_hash": "d5360dda91a4ae33e932586464046b11432763d81d9eae04b4a21593eabfd214",
+      "new_hash": "b40af0814260f04be8cf4f006abf7e91c8825ea00c1467810ee23026e6a2c19b",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/forms/20"
+        },
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/examples/0/target_form_ids/1"
+        }
+      ]
+    },
+    {
+      "id": "44616c77-d26a-478e-81e2-5e2da164559f",
+      "fixture_ref": "S17",
+      "changed": true,
+      "rules": ["R3"],
+      "old_hash": "db4f26ef36131c9b2e60cf4131f39c0763ec890d7a92c27fd80692c21fca6bca",
+      "new_hash": "f2bd42479f68f8ff6dad8fdd30e426ae91f73c7e240e7f1cc397b12e36b691c7",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R3",
+          "op": "replace",
+          "path": "/examples/0/context",
+          "value": {
+            "en": "the clear liquid people drink",
+            "pl": "przezroczysta ciecz, którą pijemy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "95e00b85-88cd-47d1-a2fa-b83f4bdbc454",
+      "fixture_ref": "S18",
+      "changed": false,
+      "rules": [],
+      "old_hash": "0ce05366e37ea450933504c3b291513965d643ea7b97cde5237fa56780af26b2",
+      "new_hash": "0ce05366e37ea450933504c3b291513965d643ea7b97cde5237fa56780af26b2",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "7480f746-b6d8-4140-b273-76d2819d90cd",
+      "fixture_ref": "S19",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "4187b5bf0dd17f52e1cdb526c94b3827ecbf82f6a26909d9364cbcd085d5e441",
+      "new_hash": "47504cf339d800b07e9850987813843211bf50edc8f0dce8a9fabb6ecc3e1557",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "buy",
+              "pl": "kupować, kupić"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        }
+      ]
+    },
+    {
+      "id": "166db6bb-70aa-462f-8d4c-612be41927ee",
+      "fixture_ref": "S20",
+      "changed": false,
+      "rules": [],
+      "old_hash": "672d83deb387d2886d5f4804ecec08fea43af2cea55f26c016a9789ce737c6b4",
+      "new_hash": "672d83deb387d2886d5f4804ecec08fea43af2cea55f26c016a9789ce737c6b4",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "f9e88132-0317-495d-9457-4a3366baefb4",
+      "fixture_ref": "S21",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "2d8934ebb8579ded2bbf6ec4a24b297fe6ee530bb93418ccb797f879f4d8a38b",
+      "new_hash": "20a392fec75438c90b87d1ec980556f741959a4a2137fc1ffd0639c3500ffa74",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "want to do something",
+              "pl": "chcieć coś zrobić"
+            },
+            "tense": "infinitive after present-tense willen",
+            "person": "ik"
+          }
+        }
+      ]
+    },
+    {
+      "id": "18f52fe5-d7e9-466d-8692-bc550d72435e",
+      "fixture_ref": "S22",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "c6e23e0469fe4b2d2a1e2b81ab8ca240f5796c25337e49e51f5297313c93e4e6",
+      "new_hash": "563531c0556f2067c6047541861d851287460727a43a46e2d899dee382b13230",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "pay",
+              "pl": "płacić, zapłacić"
+            },
+            "tense": "infinitive after present-tense willen",
+            "person": "ik"
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["afrekenen"],
+            "case_sensitive": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "0488f95a-4377-4d82-9b20-8f7260bb44d7",
+      "fixture_ref": "S23",
+      "changed": false,
+      "rules": [],
+      "old_hash": "01d95fc18e88725222fe5ce185914f281ca733f0d202a0d188ffbe0af8c48d9f",
+      "new_hash": "01d95fc18e88725222fe5ce185914f281ca733f0d202a0d188ffbe0af8c48d9f",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "67a5bb85-6c16-43c5-8845-9ffcca3bf967",
+      "fixture_ref": "S24",
+      "changed": true,
+      "rules": ["R4"],
+      "old_hash": "7335dd37515746c74dfd440474cce8ec95d1b0e42ae3c6496ca885d0aa1a3edd",
+      "new_hash": "a2dc884aaad685d1b6c00d72e1e30c8ee797969f01bf3ce6e173c86212dc9f89",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/forms/20"
+        },
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/examples/0/target_form_ids/1"
+        }
+      ]
+    },
+    {
+      "id": "a3628a63-a17f-4b86-b95f-dcfaf66e58f8",
+      "fixture_ref": "S25",
+      "changed": false,
+      "rules": [],
+      "old_hash": "9b913030aa6dd28f72821329015d02022779cccaca0193cf7e4e48dbac43a7e8",
+      "new_hash": "9b913030aa6dd28f72821329015d02022779cccaca0193cf7e4e48dbac43a7e8",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "1c862226-363a-42a7-aca5-4d9dade68563",
+      "fixture_ref": "S26",
+      "changed": true,
+      "rules": ["R4"],
+      "old_hash": "4f6f0c3968d0af2ad3104154ca717031a836db58f106cefdcdf14e8072e8e250",
+      "new_hash": "c44bdb2cc1e5ede43542e4a8f4a8b257ded3a14b2276994049c48d3d9c7bcdb9",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/forms/20"
+        },
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/examples/0/target_form_ids/1"
+        }
+      ]
+    },
+    {
+      "id": "028ec104-03e8-4482-8505-52665a5b3e6a",
+      "fixture_ref": "S27",
+      "changed": true,
+      "rules": ["R2"],
+      "old_hash": "030bce60f980af600b9b7ad7460e1ec2ec7bd2a13f69806b4830717fee5454dc",
+      "new_hash": "7a736837e7c3b1bdbfbe335284bf4740d64319468c5324bcbefac7721943eef4",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/self_graded",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "0e0bc84b-dcea-40c7-b7be-4d73198b4bcc",
+      "fixture_ref": "S28",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "2d4fff5c979839f34c3934f8c58aa4e778fb81227b359146d2210788dac7a260",
+      "new_hash": "9b9f82a479638df8fd473a521965e62ed138fac0af54bcc0e91d9ac6603b91d9",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "go; move to a destination",
+              "pl": "iść lub jechać do celu"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c9f003aa-bd0a-4182-9e66-eb9baa1f453a",
+      "fixture_ref": "S29",
+      "changed": false,
+      "rules": [],
+      "old_hash": "e881dd904e9beedae571a916924bd74cd00921e84e85ecbf9010a0ef8c031d39",
+      "new_hash": "e881dd904e9beedae571a916924bd74cd00921e84e85ecbf9010a0ef8c031d39",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "d01a3e72-d7ab-4d46-8ba0-564094c29b41",
+      "fixture_ref": "S30",
+      "changed": false,
+      "rules": [],
+      "old_hash": "97390576ed21059ab01aa230056b242ac6928dd7210cb95b44fec5e62ced408f",
+      "new_hash": "97390576ed21059ab01aa230056b242ac6928dd7210cb95b44fec5e62ced408f",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "bb370801-05b9-4f02-abd3-a61df353ff4e",
+      "fixture_ref": "S31",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "2cb5f44ada42366a26494023c3557d2c8857d40a88abf3b364a871177921288e",
+      "new_hash": "d521241d416a7d53b404b38a9fd02b8a1c82a55d2e4d71717aec5cc122de53ac",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "can; be able to do something",
+              "pl": "móc, potrafić coś zrobić"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        }
+      ]
+    },
+    {
+      "id": "84f744f8-ffaa-4bae-976d-c5d3ea491f1e",
+      "fixture_ref": "S32",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "e63523abffedc8f04185fcc95e19ab7d510b8cd91bd2dd316d3de230ee47a630",
+      "new_hash": "5d69002b3796775d4b60ce4e2788fddfaf00b2800b727ac8ddb49cc0eda509c6",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "take along",
+              "pl": "zabrać ze sobą"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/1/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "take along",
+              "pl": "zabrać ze sobą"
+            },
+            "tense": "infinitive after present-tense willen",
+            "person": "ik"
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["breng", "mee"],
+            "case_sensitive": false
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/1/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["meebrengen"],
+            "case_sensitive": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "687efd18-ac8d-4cdf-a8df-9a896f4a4503",
+      "fixture_ref": "S33",
+      "changed": true,
+      "rules": ["R2"],
+      "old_hash": "62a02468b7e1709b7636a56f2f6c6181a43b7b6a4014e555ddf63061b2349cb7",
+      "new_hash": "4b9c6377530fe1e4c59c4ec79a8f44678ead52ca7db80f045d6478d67f8629b7",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/self_graded",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "056085f3-7973-4d66-9c8a-c843ff6e5b2f",
+      "fixture_ref": "S34",
+      "changed": true,
+      "rules": ["R2"],
+      "old_hash": "bdab9cbab82b628c4869e7da1f01b384f827d684d132f551f312d418c75b891c",
+      "new_hash": "9db4ed258d5c51e1cbaae42cd7217697895200a004c063b0660616d4527c112b",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/self_graded",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "1e884684-306c-4da8-812c-4ba2d9264a7e",
+      "fixture_ref": "S35",
+      "changed": true,
+      "rules": ["R2"],
+      "old_hash": "2965011fb64d242704cf60ee43add4b50c5ad55ff6b8e3b86d26737e2499e103",
+      "new_hash": "57914a6ba9f90d872251b7dddd8ee54febff4159e3540518a3ed99a2dc74728b",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/self_graded",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "6aa6a64a-4f12-491b-ba4d-5785c7006856",
+      "fixture_ref": "S36",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "eb8b0b7642931fae001116c76d2ac1ccad403265205dc1cf8cbd0ec1e138948b",
+      "new_hash": "d92efe6cd828ebff3d47583eccbacf1abe8b127b6deca04020dfcaef7659416d",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "get up out of bed",
+              "pl": "wstawać z łóżka"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/1/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "get up out of bed",
+              "pl": "wstawać z łóżka"
+            },
+            "tense": "infinitive after present-tense willen",
+            "person": "ik"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c3ea192d-421a-4835-96a3-26d04701c801",
+      "fixture_ref": "S37",
+      "changed": false,
+      "rules": [],
+      "old_hash": "a6b3b22476cbdbecb20fea15f75f267741040cee0b190a583acd85dc35337e02",
+      "new_hash": "a6b3b22476cbdbecb20fea15f75f267741040cee0b190a583acd85dc35337e02",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "306f99d6-da43-436a-b7ca-0a3949e9584d",
+      "fixture_ref": "S38",
+      "changed": false,
+      "rules": [],
+      "old_hash": "bec5ada4b7f44ea105e3ca707a7a0d5697a418479438a0f4e97bdaaccaa64bf5",
+      "new_hash": "bec5ada4b7f44ea105e3ca707a7a0d5697a418479438a0f4e97bdaaccaa64bf5",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "abfd9a0e-7a42-4f1c-92b4-1e9718832b8c",
+      "fixture_ref": "S39",
+      "changed": false,
+      "rules": [],
+      "old_hash": "312aaa359bac02c0816ff3dbe3379edcb859e61dc55f3410d6f686c196c4b9d4",
+      "new_hash": "312aaa359bac02c0816ff3dbe3379edcb859e61dc55f3410d6f686c196c4b9d4",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "757ce5b1-8d73-44ab-94c5-65a2d19a015e",
+      "fixture_ref": "S40",
+      "changed": true,
+      "rules": ["R2"],
+      "old_hash": "8e416ba3f43887e33381ba5da0941b954af26810a45dd475fa334293bcc0b12b",
+      "new_hash": "81eaa3d24fb4d2d16cadaaf9f7a4d68221e423cac9cee11340980b372b4106df",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/self_graded",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "3a807fe1-59d3-4ace-b587-5f049407a79f",
+      "fixture_ref": "S41",
+      "changed": false,
+      "rules": [],
+      "old_hash": "63ba9f4840a0366bd8db1b232486a20016a06d6b393291934856aac07857be35",
+      "new_hash": "63ba9f4840a0366bd8db1b232486a20016a06d6b393291934856aac07857be35",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "78cf3192-4b32-475c-a818-c62b0e4fd4c6",
+      "fixture_ref": "S42",
+      "changed": true,
+      "rules": ["R4"],
+      "old_hash": "6f3787641d2e87dae5d93bd29166c9b973b1deaa46eb870c9bed5b901e30a559",
+      "new_hash": "5d4380b37a1b1ba1e499fbacac37984f4557f8dc51b3470bb2947e7d6ee1ef97",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/forms/20"
+        },
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/examples/0/target_form_ids/1"
+        }
+      ]
+    },
+    {
+      "id": "dd7af13d-25db-4209-8f45-33b16422a71a",
+      "fixture_ref": "S43",
+      "changed": true,
+      "rules": ["R2"],
+      "old_hash": "d08704cf89f0df6c2ba65866d966138b11ac5dace87993c08727060d94042846",
+      "new_hash": "ed3bee7d4c82657188bbf5594690b6ae9723679a76944a2339930b9bbcfd6c4f",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/self_graded",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "534d519b-d3ce-4b7c-a367-f5e2a2f54fb4",
+      "fixture_ref": "S44",
+      "changed": false,
+      "rules": [],
+      "old_hash": "f56ba534f2c9b45f3e8a5021f42acfa159c5c5d9d7d4e77bbcd21937e56b56c3",
+      "new_hash": "f56ba534f2c9b45f3e8a5021f42acfa159c5c5d9d7d4e77bbcd21937e56b56c3",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "35486ab7-f610-4523-b93a-9d4231a58534",
+      "fixture_ref": "S45",
+      "changed": false,
+      "rules": [],
+      "old_hash": "06d355c0e7579c372cac359f865a35a7d5d061d33f2271467448e34c0bd18665",
+      "new_hash": "06d355c0e7579c372cac359f865a35a7d5d061d33f2271467448e34c0bd18665",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "99c04348-74c1-4b67-8ba8-4ac497493507",
+      "fixture_ref": "S46",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "7aefde20b33bb2f2d1d3efa57c6950a92390ff3d11d6836dc36fb3856d16e5bf",
+      "new_hash": "1bf043ec8dbe1a3b9c38d2d74abcc7d03cd828ba993641734fe7a05faeb77c23",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "fill in a form or its fields",
+              "pl": "wypełniać, wypełnić formularz lub jego pola"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/1/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "fill in a form or its fields",
+              "pl": "wypełniać, wypełnić formularz lub jego pola"
+            },
+            "tense": "infinitive after present-tense willen",
+            "person": "ik"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fdbe7fb4-b92d-4e38-bc42-8c767d6734b1",
+      "fixture_ref": "S47",
+      "changed": false,
+      "rules": [],
+      "old_hash": "49db8cb2b2e963afefbd0afde9283aa5c65e98a46ab1ee36299a94dd83726412",
+      "new_hash": "49db8cb2b2e963afefbd0afde9283aa5c65e98a46ab1ee36299a94dd83726412",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "8f4202a4-3f4d-473a-b924-b357c8ee3d24",
+      "fixture_ref": "S48",
+      "changed": false,
+      "rules": [],
+      "old_hash": "ad0d84d6dc5c0560c8fd260884eda3d28bf18ad53f3967632f45a90ba4665d26",
+      "new_hash": "ad0d84d6dc5c0560c8fd260884eda3d28bf18ad53f3967632f45a90ba4665d26",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "a940d12d-8a48-4b5b-8f9a-f8db1e615c41",
+      "fixture_ref": "S49",
+      "changed": false,
+      "rules": [],
+      "old_hash": "ddb0f2dcf024cfb4be6e011dd04bbca22667f9f385de151dbfd9a779c3e602af",
+      "new_hash": "ddb0f2dcf024cfb4be6e011dd04bbca22667f9f385de151dbfd9a779c3e602af",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "8fb280b7-75cb-495d-b8b1-b95523e729e2",
+      "fixture_ref": "S50",
+      "changed": true,
+      "rules": ["R3"],
+      "old_hash": "adf35e76ef26be2f3190331e419f93eaa95ad452d4511134742ea3b9aa453ca2",
+      "new_hash": "1a7283feefdc4c1ff927f9860f0e9035b115f5a0d649af25bad87e4bcd411c63",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R3",
+          "op": "replace",
+          "path": "/examples/0/context",
+          "value": {
+            "en": "financial institution",
+            "pl": "instytucja finansowa"
+          }
+        }
+      ]
+    },
+    {
+      "id": "94f0cfac-22ac-4a37-9767-1820badf0762",
+      "fixture_ref": "S51",
+      "changed": false,
+      "rules": [],
+      "old_hash": "1db9a9bcab19716e9c92c1c69a6634bc624ee2c6c34e5dc99d96b6106ff1af7f",
+      "new_hash": "1db9a9bcab19716e9c92c1c69a6634bc624ee2c6c34e5dc99d96b6106ff1af7f",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "fccefac8-1bdd-4537-a038-044dd762e938",
+      "fixture_ref": "S52",
+      "changed": false,
+      "rules": [],
+      "old_hash": "d75ae5dc4162993185ca72fa9294a320925dbb23f3169c5705f5855900f2eb58",
+      "new_hash": "d75ae5dc4162993185ca72fa9294a320925dbb23f3169c5705f5855900f2eb58",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "c83b4100-d631-418c-8b76-24744c3cf306",
+      "fixture_ref": "S53",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "81575ede8d0e4b9febfd64d18223c071327a19c3177f74793b61381bc1ff27eb",
+      "new_hash": "c26678aa3ed78fcea091493c31e407931f378acfbea1fb4f9a72c4e811c025ec",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "pay by debit card",
+              "pl": "płacić kartą debetową"
+            },
+            "tense": "infinitive after present-tense willen",
+            "person": "ik"
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["met de pin betalen"],
+            "case_sensitive": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "0a6d113b-bbbf-4a2d-b399-4d9f475138cc",
+      "fixture_ref": "S54",
+      "changed": true,
+      "rules": ["R1"],
+      "old_hash": "4fe1394b63bff6e98708ff35fb7efca5baa4721f2237ae2f90b2eef9b1f08890",
+      "new_hash": "d6686b7f0250ce854385abdc50dedf4a2f6b9d6e5a6fead2649667ff52182176",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "register oneself; enrol",
+              "pl": "zapisać się, zarejestrować się"
+            },
+            "tense": "present",
+            "person": "ik"
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/1/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "register oneself; enrol",
+              "pl": "zapisać się, zarejestrować się"
+            },
+            "tense": "infinitive after present-tense willen",
+            "person": "ik"
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/2/cue",
+          "value": {
+            "mode": "fill_in",
+            "gloss": {
+              "en": "register oneself; enrol",
+              "pl": "zapisać się, zarejestrować się"
+            },
+            "tense": "present",
+            "person": "u"
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/0/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["meld", "me", "aan"],
+            "case_sensitive": false
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/1/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["me", "aanmelden"],
+            "case_sensitive": false
+          }
+        },
+        {
+          "rule": "R1",
+          "op": "add",
+          "path": "/examples/2/accepted_answers/-",
+          "value": {
+            "ordered_segments": ["meldt", "zich", "aan"],
+            "case_sensitive": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "350401e4-82ba-4e3e-912a-16d5f726e0e3",
+      "fixture_ref": "S55",
+      "changed": false,
+      "rules": [],
+      "old_hash": "50ee067beb643b1129ea038dc51f41a3062106ef6c48ccd9b92cf864c7a16b29",
+      "new_hash": "50ee067beb643b1129ea038dc51f41a3062106ef6c48ccd9b92cf864c7a16b29",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "55e92d2d-1f63-43e8-acbd-994640c405c8",
+      "fixture_ref": "S56",
+      "changed": false,
+      "rules": [],
+      "old_hash": "01344ad5f2bb51f50269ce2aa6ec8e4e483ac6a79f3ffe84cda5ec30258e9229",
+      "new_hash": "01344ad5f2bb51f50269ce2aa6ec8e4e483ac6a79f3ffe84cda5ec30258e9229",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "46c25afa-338d-4e75-be4c-65f96f0312f7",
+      "fixture_ref": "S57",
+      "changed": false,
+      "rules": [],
+      "old_hash": "7c40cb0a9f0e5e8ce0e4abff0a6b6ec47b6f949e7cccf69781a021f7525d4b90",
+      "new_hash": "7c40cb0a9f0e5e8ce0e4abff0a6b6ec47b6f949e7cccf69781a021f7525d4b90",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "b5b1bfca-7565-4561-a09e-2166baf0ab17",
+      "fixture_ref": "S58",
+      "changed": true,
+      "rules": ["R2"],
+      "old_hash": "5dbd221f3c47ee3d25e9e01e4351d356c85c3ab83ca680d4e57ea507350b83fc",
+      "new_hash": "b8e35f8da53979356c89929814c0f72b6e5113bc819967668ed5039e7c687510",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R2",
+          "op": "add",
+          "path": "/examples/0/self_graded",
+          "value": true
+        }
+      ]
+    },
+    {
+      "id": "258f003a-43ad-4033-a1c8-5bdfff96a3f8",
+      "fixture_ref": "S59",
+      "changed": false,
+      "rules": [],
+      "old_hash": "b0a72965a1502ad5d7c41a6fb98065dd1aa5250438e35dc2b3da7c8d59937772",
+      "new_hash": "b0a72965a1502ad5d7c41a6fb98065dd1aa5250438e35dc2b3da7c8d59937772",
+      "language_check": "not_run",
+      "patches": []
+    },
+    {
+      "id": "5e635fe9-21a6-4da8-8677-4890d8be4f83",
+      "fixture_ref": "S60",
+      "changed": true,
+      "rules": ["R4"],
+      "old_hash": "8233864554e00f8c7b735161c5f24c2555de00cd146d5481ef0e8f6d0d3bd185",
+      "new_hash": "88db3e294d34c9341c93c12bdf206bf08e2345c695aefb8eddeec4ecad835dff",
+      "language_check": "not_run",
+      "patches": [
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/forms/20"
+        },
+        {
+          "rule": "R4",
+          "op": "remove",
+          "path": "/examples/0/target_form_ids/1"
+        }
+      ]
+    }
+  ],
+  "archived_forms": [
+    {
+      "entry_id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
+      "rule": "R4",
+      "reason": "source_table_placeholder",
+      "form": {
+        "id": "4007bceb-b4c4-42ef-b16f-cba16af6a1c1",
+        "surface": "-",
+        "features": {
+          "kind": "adjective",
+          "source_tags": ["partitive", "superlative"]
+        },
+        "source_ids": ["en:1318"],
+        "source_selector": "/forms/22",
+        "status": "source_verified",
+        "grading_enabled": false,
+        "scope": "Select grammatical context; no automatic acceptance across degrees."
+      }
+    },
+    {
+      "entry_id": "411865da-19cb-4f06-a2a3-2b98d7dbb17f",
+      "rule": "R4",
+      "reason": "source_table_placeholder",
+      "form": {
+        "id": "350f075d-2147-4f8e-afe9-8704ac9ec5fb",
+        "surface": "-",
+        "features": {
+          "kind": "adjective",
+          "source_tags": ["partitive", "superlative"]
+        },
+        "source_ids": ["en:54"],
+        "source_selector": "/forms/22",
+        "status": "source_verified",
+        "grading_enabled": false,
+        "scope": "Select grammatical context; no automatic acceptance across degrees."
+      }
+    },
+    {
+      "entry_id": "ecb2bb56-8abf-4cfc-b99f-8ecf13e037b1",
+      "rule": "R4",
+      "reason": "source_table_placeholder",
+      "form": {
+        "id": "e926fcd5-c403-4c50-8b01-dde0681c482d",
+        "surface": "-",
+        "features": {
+          "kind": "adjective",
+          "source_tags": ["partitive", "superlative"]
+        },
+        "source_ids": ["en:863"],
+        "source_selector": "/forms/22",
+        "status": "source_verified",
+        "grading_enabled": false,
+        "scope": "Select grammatical context; no automatic acceptance across degrees."
+      }
+    },
+    {
+      "entry_id": "67a5bb85-6c16-43c5-8845-9ffcca3bf967",
+      "rule": "R4",
+      "reason": "source_table_placeholder",
+      "form": {
+        "id": "54c7f5ec-21a3-4478-9a16-946817464634",
+        "surface": "-",
+        "features": {
+          "kind": "adjective",
+          "source_tags": ["partitive", "superlative"]
+        },
+        "source_ids": ["en:531"],
+        "source_selector": "/forms/22",
+        "status": "source_verified",
+        "grading_enabled": false,
+        "scope": "Select grammatical context; no automatic acceptance across degrees."
+      }
+    },
+    {
+      "entry_id": "1c862226-363a-42a7-aca5-4d9dade68563",
+      "rule": "R4",
+      "reason": "source_table_placeholder",
+      "form": {
+        "id": "5b151fb1-69c9-444d-80dd-bfaad34104b4",
+        "surface": "-",
+        "features": {
+          "kind": "adjective",
+          "source_tags": ["partitive", "superlative"]
+        },
+        "source_ids": ["en:833"],
+        "source_selector": "/forms/22",
+        "status": "source_verified",
+        "grading_enabled": false,
+        "scope": "Select grammatical context; no automatic acceptance across degrees."
+      }
+    },
+    {
+      "entry_id": "78cf3192-4b32-475c-a818-c62b0e4fd4c6",
+      "rule": "R4",
+      "reason": "source_table_placeholder",
+      "form": {
+        "id": "48179341-ff36-417b-9479-3645f5808b6d",
+        "surface": "-",
+        "features": {
+          "kind": "adjective",
+          "source_tags": ["partitive", "superlative"]
+        },
+        "source_ids": ["en:1138"],
+        "source_selector": "/forms/22",
+        "status": "source_verified",
+        "grading_enabled": false,
+        "scope": "Select grammatical context; no automatic acceptance across degrees."
+      }
+    },
+    {
+      "entry_id": "5e635fe9-21a6-4da8-8677-4890d8be4f83",
+      "rule": "R4",
+      "reason": "source_table_placeholder",
+      "form": {
+        "id": "d506be2a-d046-4a72-8c98-d47f0d352fde",
+        "surface": "-",
+        "features": {
+          "kind": "adjective",
+          "source_tags": ["partitive", "superlative"]
+        },
+        "source_ids": ["en:143"],
+        "source_selector": "/forms/22",
+        "status": "source_verified",
+        "grading_enabled": false,
+        "scope": "Select grammatical context; no automatic acceptance across degrees."
+      }
+    }
+  ]
+}

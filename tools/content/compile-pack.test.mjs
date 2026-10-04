@@ -304,6 +304,13 @@ it('T43: media-dependent tasks require separate current-hash QA assessments, not
     entry = f.state.entries[0];
   const audio = {
     id: 'synthetic-audio',
+    target: 'lemma',
+    text: entry.lexeme.lemma,
+    inspection: 'pcm_wav_verified',
+    download_status: 'downloaded',
+    mime: 'audio/wav',
+    duration_ms: 1000,
+    size_bytes: 16044,
     kind: 'audio',
     entry_id: entry.id,
     content_sha256: entry.content_sha256,

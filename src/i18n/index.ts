@@ -7,7 +7,7 @@ export const languageKey = 'woorden-ng.interface-language';
 const en = {
   inspectionTitle: 'Draft content inspection',
   inspectionNotice:
-    'Ten research drafts for inspection only. They are not eligible for study or curated publication.',
+    'Sixty research drafts for inspection only. They are not eligible for study or curated publication.',
   inspectionSense: 'Draft sense',
   inspectionDraft: 'Unreviewed draft',
   inspectionReview: 'Language check: not run. Structure: unchecked. Release: blocked.',
@@ -27,6 +27,9 @@ const en = {
   inspectionNoSource: 'No source recorded',
   inspectionIdentity: 'Identity and original payload hash',
   inspectionUnavailable: 'Draft content is unavailable.',
+  inspectionLoading: 'Loading draft content…',
+  inspectionAnswerContract: 'Answer spans and task contract',
+  inspectionSharedEvidence: 'Shared lexeme and form evidence — research assertions',
   profiles: 'Local profile',
   profileName: 'New profile name',
   createProfile: 'Create profile',
@@ -76,7 +79,7 @@ const en = {
 const pl: typeof en = {
   inspectionTitle: 'Przegląd treści roboczych',
   inspectionNotice:
-    'Dziesięć szkiców badawczych tylko do przeglądu. Nie kwalifikują się do nauki ani publikacji w zatwierdzonym pakiecie.',
+    'Sześćdziesiąt szkiców badawczych tylko do przeglądu. Nie kwalifikują się do nauki ani publikacji w zatwierdzonym pakiecie.',
   inspectionSense: 'Znaczenie robocze',
   inspectionDraft: 'Niesprawdzony szkic',
   inspectionReview:
@@ -98,6 +101,9 @@ const pl: typeof en = {
   inspectionNoSource: 'Nie zapisano źródła',
   inspectionIdentity: 'Tożsamość i skrót oryginalnej treści',
   inspectionUnavailable: 'Treść robocza jest niedostępna.',
+  inspectionLoading: 'Wczytywanie treści roboczych…',
+  inspectionAnswerContract: 'Fragmenty odpowiedzi i kontrakt zadania',
+  inspectionSharedEvidence: 'Wspólne dowody leksemu i form — deklaracje z badań',
   profiles: 'Profil lokalny',
   profileName: 'Nazwa nowego profilu',
   createProfile: 'Utwórz profil',

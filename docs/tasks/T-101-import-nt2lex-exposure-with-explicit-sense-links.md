@@ -1,7 +1,7 @@
 ---
 id: T-101
 title: Import NT2Lex exposure with explicit sense links
-status: todo
+status: done
 size: M
 depends_on: [T-100]
 type: task
@@ -33,9 +33,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the pinned basic/sense fixtures, when imported, then 15,227/17,743 rows are accounted for without collapsing POS or missing values. (unit on a committed excerpt; full-file counts from the import report in the PR)
-- [ ] AC2: Given a sense_se-id, when crosswalk output is inspected, then it targets ODWN LexicalEntry.id and never child Sense.id. (unit)
-- [ ] AC3: Given A1 attestation, when an entry is displayed, then it is labelled source exposure rather than automatic A1 proficiency. (unit)
+- [x] AC1: Given the pinned basic/sense fixtures, when imported, then 15,227/17,743 rows are accounted for without collapsing POS or missing values. (unit on a committed excerpt; full-file counts from the import report in the PR)
+- [x] AC2: Given a sense_se-id, when crosswalk output is inspected, then it targets ODWN LexicalEntry.id and never child Sense.id. (unit)
+- [x] AC3: Given A1 attestation, when an entry is displayed, then it is labelled source exposure rather than automatic A1 proficiency. (unit)
 
 ## Notes for the implementer
 

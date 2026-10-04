@@ -1,0 +1,27 @@
+[
+  {
+    "excerpt_line": 1,
+    "source_line": 1,
+    "sha256": "9ba130477add6356e4dd043dacb7f0e6c5253bc69a0829f5772ea1ef55176c9d"
+  },
+  {
+    "excerpt_line": 2,
+    "source_line": 2,
+    "sha256": "b03a3bd18983cf8fdb4351dc64e274a8fc6c483cff8b2f202588ac429770f88b"
+  },
+  {
+    "excerpt_line": 3,
+    "source_line": 3,
+    "sha256": "4b4e1a58617954fdade98c7f45a681e6ba85519da708d36afbd8518630d49b4f"
+  },
+  {
+    "excerpt_line": 4,
+    "source_line": 4,
+    "sha256": "e2dfe7102b65218d45c102575fa50245cc1fa3b992c3306a71be9d220b7c060e"
+  },
+  {
+    "excerpt_line": 5,
+    "source_line": 974,
+    "sha256": "06b7d8e86c42b846addec1f6c017e2bab213da0c02422b92a3985123b0086ebe"
+  }
+]

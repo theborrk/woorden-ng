@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "source_id": "NT2Lex-CGN+ODWN-v01-excerpt",
+  "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN%2BODWN-v01.tsv",
+  "retrieved_at": "2026-10-03T00:17:35.523961+00:00",
+  "bytes": 3246,
+  "sha256": "4569c848bf6ee79940705f3b0deda13f2f6fc7c11e17251088a04f4e148384b3",
+  "format": "UTF-8 TSV",
+  "version": "v01",
+  "lineage": [
+    "NT2Lex",
+    "CGN",
+    "ODWN",
+    "sha256:37dc6b6e208d271e07283c082b3bf78ca07e28cc005ca445f52e6cd4ee0bc5b5"
+  ]
+}

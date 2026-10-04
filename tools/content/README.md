@@ -30,6 +30,38 @@ provenance, not inferred factual or linguistic approval. The initial inspection 
 it cannot establish completeness without a trusted expected pin. Format-specific parsing,
 decompression and row validation belong to the later importers.
 
+## NT2Lex source exposure (T-101)
+
+Download the two snapshots to ignored `.cache/content-sources/`; their expected manifests in
+`tools/content/sources/` use T-100's schema and the research acquisition timestamps/checksums.
+The importer never downloads and requires both local files:
+
+```sh
+npm --silent run content:nt2lex -- --basic .cache/content-sources/nt2lex-basic.tsv --senses .cache/content-sources/nt2lex-senses.tsv
+```
+
+The JSON report accounts for every row by its unchanged CGN POS tag, missing metric values by
+band (A1–C1 and TOTAL), and candidate/missing ODWN links. Inspect a lemma/POS with
+`--lemma bank --pos 'N(soort)'`. Displayed entries say **source exposure**, never certified
+CEFR proficiency. `sense_se-id` targets **ODWN LexicalEntry.id**, while `sense_sy-id` is retained
+separately as a source synset ID. No ODWN existence check or semantic approval is inferred; the
+ODWN importer belongs to T-103. Basic and sense-linked observations remain separate, including
+multiple senses at the same lemma/POS.
+
+Use `--output .cache/content-sources/nt2lex-observations.json` to write all observations and
+both inspected manifests to a new file. The command refuses to overwrite and validates both
+inputs before writing. A changed pin, malformed header/row, invalid UTF-8 or invalid numeric
+metric exits with status 1 and a diagnostic. No partial lexical output is printed on failure.
+`--basic-manifest` and `--senses-manifest` select alternative expected manifests, including the
+committed offline excerpts; the defaults are the full research pins.
+
+Each observation preserves every original TSV field, numeric distributions (`-` becomes `null`,
+zero remains zero), source identity/hash, 1-based physical input line, raw record SHA-256
+**including its original newline**, and extraction version. These are source observations;
+importing grants no language review, CEFR certification, curriculum stage or ranking. The
+algorithms port the row extraction and explicit crosswalk from research `build_evidence.py`,
+`build_pilot.py` and `build_core_manifest.py` to Node without the research ranking/filtering.
+
 ## Advisory OpenTaal spelling
 
 Download the two URLs in `sources/opentaal-*.manifest.json` into the ignored
@@ -76,3 +108,59 @@ For an explicitly pinned excerpt or another local snapshot, supply both
 the same T-100 manifest validation; they are explicit pins, not an automatic update of the
 default snapshot. The committed excerpt and examples under
 `tests/fixtures/content-sources/opentaal/` run without the downloads or network.
+
+## Sense-entry validation
+
+T-110 adopts the 0.2 exchange contract in
+[`schemas/sense-entry.schema.json`](schemas/sense-entry.schema.json). Validate a **single entry**
+(not the enclosing research pack):
+
+```sh
+npm run content:validate-entry -- entry.json evidence.json
+```
+
+The command prints JSON with structural/source errors and task-family blockers for EN and PL,
+returns 0 for a valid draft or 1 for an invalid import, and never writes content or review state.
+The existing `content:validate` command still checks the immutable legacy seed. `verify` runs the
+new validator's unit tests too. No network, Python or provider service is involved.
+
+`content/id-registry.json` preserves every research allocation and adds sense-to-lexeme bindings.
+Labels are allocation metadata: spelling edits retain the issued UUID. New allocations must be
+committed deliberately; import input cannot replace the registry. The semantic hash excludes
+`review` and `content_sha256`, sorts object keys and uses compact UTF-8 JSON. NT2Lex exposure
+counts retain the prototype's float serialization, including `.0`, to preserve the starter hashes.
+
+The separately supplied evidence bundle has this shape:
+
+```json
+{
+  "records": { "dictionary-record-id": { "forms": [{ "form": "neem mee" }] } },
+  "claims": [
+    {
+      "pointer": "/forms/0/surface",
+      "source_id": "dictionary-record-id",
+      "selector": "/forms/0/form"
+    }
+  ]
+}
+```
+
+A claim must select the exact asserted value from a record whose canonical SHA-256 matches the
+entry's source manifest. Inline form/IPA selectors must agree with that selection. URLs alone
+provide no support. Source importers supply acquired observations; this validator checks support,
+not the trustworthiness of the dictionary or the operator supplying its pinned record. Authored
+interpretations cannot be promoted by citing a source gloss. For transformed/group facts, supply
+an exact scoped observation or retain draft status until the relevant source importer exists.
+JSON-pointer prefixes inherit provenance, more specific prefixes override parents, and direct
+form/IPA references override their group. Dangling pointers and source IDs fail validation.
+
+Missing meanings/translations are explicit `null` or empty meaning arrays; missing examples are
+`[]`. EN/PL keys remain required. These values do not count as coverage. The report distinguishes
+`data_ready` from curated `eligible`: T-110 validates drafts, so independent review is always a
+release blocker. Audio/image QA remains a required gate (T-118 and later media work); a URL or an
+imported approval flag cannot satisfy it. T-113/T-114 own actual review acceptance and compilation.
+Missing optional IPA does not block written tasks. No locale fallback or content is generated.
+
+The research starter pack remains unchanged and unreviewed. Its omitted source archives and
+broad research source tags are insufficient evidence for this stricter import boundary; missing
+observations produce explicit errors rather than inheriting the prototype's blanket fact status.

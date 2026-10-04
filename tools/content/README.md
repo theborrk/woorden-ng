@@ -413,3 +413,18 @@ blocked, while eligible written tasks can compile.
 The delivered 60-entry research pack can be inspected with this command too: its curated output
 has zero eligible entries and explicit missing-check/source blockers. It receives no fabricated
 review, source observations, media or release status from compilation.
+
+## Starter admission inspection (T-120, blocked on actual check)
+
+```sh
+node tools/content/admit-starter.mjs
+node tools/content/admit-starter.mjs --response research/content-2026-10/review/sample-checks/woorden-starter-rules-1.json --packet checked-packet.json --state imported-state.json --evidence pinned-evidence.json
+```
+
+The first command currently exits nonzero and names the missing committed
+response; zero entries/tasks are eligible. With a response, supply the matching
+operator-owned draft state and packet. The inspector delegates to the existing
+sample importer and task/locale compiler and reports their decisions without
+writing files. It does not construct source evidence, perform the different-vendor
+language check or apply proposed patches. The passing real-response path remains
+unverified until that external check is committed; T-120 remains incomplete.

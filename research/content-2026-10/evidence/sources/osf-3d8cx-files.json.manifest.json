@@ -1,0 +1,10 @@
+{
+  "file": "osf-3d8cx-files.json",
+  "url": "https://api.osf.io/v2/nodes/3d8cx/files/osfstorage/",
+  "retrieved_at": "2026-10-03T00:17:42.955733+00:00",
+  "status": 200,
+  "content_type": "application/vnd.api+json; charset=utf-8",
+  "last_modified": null,
+  "bytes": 6610,
+  "sha256": "50c2b2e994d6c10a8edf9eb182f3f8daf67e8f1259b75eb7af70595699e7149c"
+}

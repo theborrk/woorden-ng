@@ -1,0 +1,14 @@
+{
+  "retrieved_at": "2026-10-03",
+  "observations": [
+    {"id":"web-alsjeblieft-sense","url":"https://en.wiktionary.org/w/index.php?title=alsjeblieft&oldid=89632764","locator":"Dutch > Adverb > sense 2","fact":"The current page includes the handing-over meaning here you are, absent from the older pinned English Kaikki excerpt.","supports":["S57 meaning"],"verdict":"source_support_observed"},
+    {"id":"web-alsjeblieft-pos","url":"https://anw.ivdnt.org/article/alsjeblieft","locator":"Algemene grammaticale gegevens > Woordsoort","fact":"ANW categorizes the expression as an interjection; Wiktionary categorizes it as an adverb. Pilot uses interjection as a pedagogical normalized POS and preserves both source labels.","supports":["S56 POS","S57 POS"],"verdict":"documented_schema_mapping"},
+    {"id":"web-here-you-are","url":"https://dictionary.cambridge.org/dictionary/english-dutch/here-you-are","locator":"PASSWORD English–Dutch entry","fact":"The entry gives alsjeblieft for handing over what someone wants.","supports":["S57 meaning"],"verdict":"independent_dictionary_support"},
+    {"id":"web-half-drie","url":"https://www.omniglot.com/language/time/dutch.htm","locator":"Telling the time table: half past two","fact":"The time expression half drie denotes 2:30; morning/afternoon requires context.","supports":["S58 meaning"],"verdict":"source_support_observed"},
+    {"id":"web-deksel","url":"https://onzetaal.nl/taalloket/de-het-deksel","locator":"de/het deksel","fact":"Both de deksel and het deksel are accepted.","supports":["S59 article","legacy s1392"],"verdict":"independent_language_advice_support"},
+    {"id":"web-soort","url":"https://taaladvies.net/welk-of-welke-soort/","locator":"soort as category versus biological species","fact":"Category/kind permits de or het; species has de. The legacy category row het soort is not a demonstrated article error.","supports":["legacy s800"],"verdict":"independent_language_advice_support"},
+    {"id":"web-werken-archaic","url":"https://en.wiktionary.org/wiki/werken#Dutch","locator":"Conjugation usage note","fact":"Strong forms wrocht/gewrocht are archaic. Flattened tables must not promote them as default modern learner forms.","supports":["importer exception policy"],"verdict":"page_note_overrides_underspecified_table"},
+    {"id":"web-pinnen","url":"https://en.wiktionary.org/w/index.php?title=pinnen&oldid=87662395","locator":"Dutch verb senses, usage note and conjugation","fact":"Paying by debit card and withdrawing money are separate senses; PIN entry is not necessary in every use. Weak forms include pinde and gepind.","supports":["S53 meaning","S53 morphology"],"verdict":"source_support_observed"}
+  ],
+  "note":"Facts paraphrased from pages actually opened. This file records source observations, not an external model review. No full HTML archive was captured through the browsing tool. Raw lexical excerpt hashes are recorded separately."
+}

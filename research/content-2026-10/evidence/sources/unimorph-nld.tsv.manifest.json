@@ -1,0 +1,10 @@
+{
+  "file": "unimorph-nld.tsv",
+  "url": "https://raw.githubusercontent.com/unimorph/nld/master/nld",
+  "retrieved_at": "2026-10-03T13:31:26.959907+00:00",
+  "status": 200,
+  "content_type": "text/plain; charset=utf-8",
+  "last_modified": null,
+  "bytes": 1874427,
+  "sha256": "86f3504cc426c9beffe8566406294f7f71505d46a2bba8773bdcf2e9c5a3d750"
+}

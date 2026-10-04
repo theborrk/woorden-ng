@@ -1,0 +1,10 @@
+{
+  "file": "kaikki-nl-raw.jsonl.gz",
+  "url": "https://kaikki.org/dictionary/downloads/nl/nl-extract.jsonl.gz",
+  "retrieved_at": "2026-10-03T00:17:37.770570+00:00",
+  "status": 200,
+  "content_type": "application/octet-stream",
+  "last_modified": "Mon, 28 Sep 2026 15:20:49 GMT",
+  "bytes": 133385673,
+  "sha256": "5afbda7d0282e8288f6c251d65b7f08bf22a380195140b9e81f06eadbf046454"
+}

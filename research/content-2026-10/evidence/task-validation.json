@@ -1,0 +1,432 @@
+{
+  "errors": [],
+  "tasks": [
+    {
+      "file": "T-100-pin-source-downloads-and-expose-an-inspectable-manifest.md",
+      "id": "T-100",
+      "title": "Pin source downloads and expose an inspectable manifest",
+      "type": "task",
+      "status": "todo",
+      "size": "S",
+      "dependsOn": [],
+      "refs": [
+        "W18",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-101-import-nt2lex-exposure-with-explicit-sense-links.md",
+      "id": "T-101",
+      "title": "Import NT2Lex exposure with explicit sense links",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-100"
+      ],
+      "refs": [
+        "W18",
+        "F04",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-102-import-subtlex-surface-and-lemma-frequency-separately.md",
+      "id": "T-102",
+      "title": "Import SUBTLEX surface and lemma frequency separately",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-100"
+      ],
+      "refs": [
+        "W18",
+        "F04",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-103-import-explicit-odwn-article-and-morphology-observations.md",
+      "id": "T-103",
+      "title": "Import explicit ODWN article and morphology observations",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-100"
+      ],
+      "refs": [
+        "W18",
+        "W20",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-104-import-english-edition-dutch-forms-and-ipa-from-kaikki.md",
+      "id": "T-104",
+      "title": "Import English-edition Dutch forms and IPA from Kaikki",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-100"
+      ],
+      "refs": [
+        "W18",
+        "W20",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-105-join-dutch-and-polish-dictionary-observations-by-sense.md",
+      "id": "T-105",
+      "title": "Join Dutch and Polish dictionary observations by sense",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-103",
+        "T-104"
+      ],
+      "refs": [
+        "W18",
+        "W20",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-106-add-advisory-opentaal-spelling-checks.md",
+      "id": "T-106",
+      "title": "Add advisory OpenTaal spelling checks",
+      "type": "task",
+      "status": "todo",
+      "size": "S",
+      "dependsOn": [
+        "T-100"
+      ],
+      "refs": [
+        "W18",
+        "W20",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-107-retrieve-tatoeba-candidates-with-direct-en-and-pl-links.md",
+      "id": "T-107",
+      "title": "Retrieve Tatoeba candidates with direct EN and PL links",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-100"
+      ],
+      "refs": [
+        "W19",
+        "W20",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-108-rank-a-situation-block-with-visible-score-components.md",
+      "id": "T-108",
+      "title": "Rank a situation block with visible score components",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-101",
+        "T-102"
+      ],
+      "refs": [
+        "W18",
+        "F04",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-109-import-all-legacy-audit-decisions-without-losing-provenance.md",
+      "id": "T-109",
+      "title": "Import all legacy audit decisions without losing provenance",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-103",
+        "T-104",
+        "T-106"
+      ],
+      "refs": [
+        "W18",
+        "W20",
+        "F04",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-110-validate-one-sense-entry-with-explicit-spans-and-provenance.md",
+      "id": "T-110",
+      "title": "Validate one sense entry with explicit spans and provenance",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [],
+      "refs": [
+        "W18",
+        "W20",
+        "F08",
+        "T43",
+        "T50"
+      ]
+    },
+    {
+      "file": "T-111-import-external-draft-batches-idempotently.md",
+      "id": "T-111",
+      "title": "Import external draft batches idempotently",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-110"
+      ],
+      "refs": [
+        "W19",
+        "W20",
+        "F08",
+        "T50"
+      ]
+    },
+    {
+      "file": "T-112-export-resumable-source-linked-reviewer-packets.md",
+      "id": "T-112",
+      "title": "Export resumable source-linked reviewer packets",
+      "type": "task",
+      "status": "todo",
+      "size": "S",
+      "dependsOn": [
+        "T-105",
+        "T-111"
+      ],
+      "refs": [
+        "W19",
+        "F08",
+        "T50"
+      ]
+    },
+    {
+      "file": "T-113-validate-independent-review-evidence-and-disagreement-states.md",
+      "id": "T-113",
+      "title": "Validate independent review evidence and disagreement states",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-112"
+      ],
+      "refs": [
+        "W18",
+        "W19",
+        "F08",
+        "T50"
+      ]
+    },
+    {
+      "file": "T-114-compile-packs-from-task-and-locale-eligibility.md",
+      "id": "T-114",
+      "title": "Compile packs from task and locale eligibility",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-113"
+      ],
+      "refs": [
+        "W18",
+        "F08",
+        "T43",
+        "T50"
+      ]
+    },
+    {
+      "file": "T-115-load-the-first-starter-slice-into-a-content-inspection-view.md",
+      "id": "T-115",
+      "title": "Load the first starter slice into a content inspection view",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-111"
+      ],
+      "refs": [
+        "W20",
+        "F04",
+        "F08",
+        "T43"
+      ]
+    },
+    {
+      "file": "T-116-load-the-remaining-representative-starter-cases.md",
+      "id": "T-116",
+      "title": "Load the remaining representative starter cases",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-115"
+      ],
+      "refs": [
+        "W20",
+        "F04",
+        "F08",
+        "T43",
+        "T50"
+      ]
+    },
+    {
+      "file": "T-117-report-curriculum-coverage-and-content-changes-honestly.md",
+      "id": "T-117",
+      "title": "Report curriculum coverage and content changes honestly",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-108",
+        "T-109",
+        "T-114",
+        "T-116"
+      ],
+      "refs": [
+        "W18",
+        "W20",
+        "F04",
+        "F08",
+        "T43",
+        "T50"
+      ]
+    },
+    {
+      "file": "T-118-import-and-qa-one-downloadable-audio-slice.md",
+      "id": "T-118",
+      "title": "Import and QA one downloadable audio slice",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-100",
+        "T-114"
+      ],
+      "refs": [
+        "W21",
+        "F08",
+        "T43"
+      ]
+    },
+    {
+      "file": "T-119-probe-local-dutch-tts-and-expose-explicit-fallback-states.md",
+      "id": "T-119",
+      "title": "Probe local Dutch TTS and expose explicit fallback states",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [
+        "T-118"
+      ],
+      "refs": [
+        "W21",
+        "F08",
+        "T43"
+      ]
+    },
+    {
+      "file": "T-120-admit-the-pilot-only-after-the-actual-external-review.md",
+      "id": "T-120",
+      "title": "Admit the pilot only after the actual external review",
+      "type": "task",
+      "status": "blocked",
+      "size": "S",
+      "dependsOn": [
+        "T-113",
+        "T-114",
+        "T-116"
+      ],
+      "refs": [
+        "W19",
+        "W20",
+        "F04",
+        "F08",
+        "T50"
+      ]
+    },
+    {
+      "file": "T-121-add-an-optional-apertium-conflict-check.md",
+      "id": "T-121",
+      "title": "Add an optional Apertium conflict check",
+      "type": "task",
+      "status": "todo",
+      "size": "S",
+      "dependsOn": [
+        "T-103",
+        "T-104"
+      ],
+      "refs": [
+        "W18",
+        "W20",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-122-export-source-constrained-authoring-briefs-for-external-generation.md",
+      "id": "T-122",
+      "title": "Export source-constrained authoring briefs for external generation",
+      "type": "task",
+      "status": "todo",
+      "size": "S",
+      "dependsOn": [
+        "T-103",
+        "T-104",
+        "T-108",
+        "T-110"
+      ],
+      "refs": [
+        "W19",
+        "W20",
+        "F04",
+        "F08",
+        "T50"
+      ]
+    }
+  ],
+  "ready": [
+    {
+      "file": "T-100-pin-source-downloads-and-expose-an-inspectable-manifest.md",
+      "id": "T-100",
+      "title": "Pin source downloads and expose an inspectable manifest",
+      "type": "task",
+      "status": "todo",
+      "size": "S",
+      "dependsOn": [],
+      "refs": [
+        "W18",
+        "F08"
+      ]
+    },
+    {
+      "file": "T-110-validate-one-sense-entry-with-explicit-spans-and-provenance.md",
+      "id": "T-110",
+      "title": "Validate one sense entry with explicit spans and provenance",
+      "type": "task",
+      "status": "todo",
+      "size": "M",
+      "dependsOn": [],
+      "refs": [
+        "W18",
+        "W20",
+        "F08",
+        "T43",
+        "T50"
+      ]
+    }
+  ],
+  "uncoveredRefs": [],
+  "plannedOnlyRefs": []
+}

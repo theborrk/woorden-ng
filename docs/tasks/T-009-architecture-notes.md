@@ -1,7 +1,7 @@
 ---
 id: T-009
 title: Record resolved versions, the lockfile policy and release targets
-status: todo
+status: done
 size: S
 depends_on: [T-002, T-003, T-004, T-005]
 type: task
@@ -38,9 +38,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given `package.json`, `package-lock.json` and `android/variables.gradle`, when the notes
+- [x] AC1: Given `package.json`, `package-lock.json` and `android/variables.gradle`, when the notes
       test runs, then every version listed in `notes.md` matches them (unit)
-- [ ] AC2: The notes state the lockfile policy, the update policy and the release targets, including
+- [x] AC2: The notes state the lockfile policy, the update policy and the release targets, including
       how the minimum SDK will be verified (review)
 
 ## Notes for the implementer

@@ -1,4 +1,6 @@
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
 import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -33,11 +35,22 @@ const appMeta = {
 export default defineConfig(({ mode }) => {
   const target: Target = mode === 'android' ? 'android' : 'web';
   const base = target === 'android' ? '/' : normalizeBase(process.env.APP_BASE);
+  const version = (
+    JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8')) as {
+      version: string;
+    }
+  ).version;
+  const commit = execFileSync('git', ['rev-parse', '--short=7', 'HEAD'], {
+    cwd: fileURLToPath(new URL('.', import.meta.url)),
+    encoding: 'utf8',
+  }).trim();
 
   return {
     base,
     define: {
       __APP_TARGET__: JSON.stringify(target),
+      __APP_VERSION__: JSON.stringify(version),
+      __APP_COMMIT__: JSON.stringify(commit),
     },
     resolve: {
       alias: {

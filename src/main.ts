@@ -28,6 +28,7 @@ createRoot(root).render(
       name: APP.name,
       platform: detectPlatform(target.name),
       updates: target,
+      appInfo: target.appInfo,
       storage: target,
       initialLanguageError,
     }),

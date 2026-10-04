@@ -6,6 +6,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { debugVersion, releaseVersion } from './android-version.mjs';
 import {
   acceptanceCriteria,
+  duplicateAdrNumbers,
   ledgerMarkdown,
   parseFrontMatter,
   validateTasks,
@@ -43,6 +44,13 @@ describe('android-version', () => {
 });
 
 describe('check-tasks', () => {
+  it('reports ADR files that share a number', () => {
+    expect(duplicateAdrNumbers(['0001-a.md', '0002-b.md', 'README.md'])).toEqual([]);
+    const errors = duplicateAdrNumbers(['0004-shell.md', '0004-sqlite.md', '0005-content.md']);
+    expect(errors).toHaveLength(1);
+    expect(errors[0]).toContain('0004-shell.md and 0004-sqlite.md');
+  });
+
   const task = (id, { status = 'todo', deps = '[]', ac = '- [ ] It works', size = 'S' } = {}) => ({
     file: `${id}-example.md`,
     text: `---\nid: ${id}\ntitle: Example ${id}\nstatus: ${status}\nsize: ${size}\ndepends_on: ${deps}\n---\n\n## Goal\nx\n\n## Acceptance criteria\n${ac}\n\n## Notes\n- not a criterion\n`,

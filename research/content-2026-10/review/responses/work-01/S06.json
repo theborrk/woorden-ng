@@ -1,0 +1,76 @@
+{
+ "entry_id": "ff49fcaa-a55f-4ff6-bd55-6a1a99535bd9",
+ "fixture_ref": "S06",
+ "content_sha256": "d91103e00c70b461df49d08b87d5167422bc85d8b63c23ac3ddbd9431cc51499",
+ "dimensions": {
+  "sense_scope": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "NL 'De betekenis van iets kunnen volgen.', EN 'understand the meaning' and PL 'rozumieć znaczenie' name the same cognitive sense, which falls under en:1101 sense 0 ('to understand (concepts, ideas), to comprehend'), nl:1330 sense 0 ('met het verstand vatten, snappen') and ODWN begrijpen-v-1 ('samenhang doorzien'). It is kept apart from 'include/encompass' (en:1101 sense 1, nl:1330 senses 1-2, begrijpen-v-3) and empathic understanding of a person (nl:1330 sense 3). The definition is somewhat narrower ('meaning') than the source sense, but the example falls within both, and legacy s202 ('понимать'/'to understand') is a compatible lemma link.",
+   "source_ids": ["en:1101", "nl:1330", "begrijpen-v-1", "begrijpen-v-3", "s202"],
+   "proposed_patch": null
+  },
+  "dictionary_facts": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "IPA '/bəˈɣrɛi̯pə(n)/' is verbatim from en:1101 /sounds/0 (consistent with nl:1330 and pl:214); every form selector resolves to the claimed surface and tags (begrijpen /forms/3, begrijp /5, begreep /6, begrijpt /16, begreep /17, begrijpen /18, begrepen /19, participle begrepen /27), i.e. strong class 1 with no ge- after the unstressed prefix be-; perfect auxiliary 'hebben' is given by all three ODWN records; non-separable and non-reflexive are correct.",
+   "source_ids": ["en:1101", "nl:1330", "pl:214", "begrijpen-v-1", "begrijpen-v-2", "begrijpen-v-3"],
+   "proposed_patch": null
+  },
+  "dutch_naturalness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'Ik begrijp het niet.' is idiomatic, high-frequency and in the target sense (it is also the pl:214 example; for a formula this short, independent authoring is plausible, so the 'model_A_original' label is not misleading).",
+   "source_ids": ["pl:214", "nl:1330"],
+   "proposed_patch": null
+  },
+  "en_pl_translation": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "PL 'Nie rozumiem tego.' is natural (pl:214 renders the same sentence as 'Nie rozumiem.'), and EN 'I do not understand it.' is accurate though stiffer than 'I don't understand (it).'; both keep person, negation and present tense, and the meanings 'understand the meaning'/'rozumieć znaczenie' render the Dutch anchor directly.",
+   "source_ids": ["pl:214", "en:1101"],
+   "proposed_patch": null
+  },
+  "task_ambiguity": {
+   "verdict": "revise",
+   "severity": "major",
+   "explanation": "In the open cloze 'Ik ___ het niet.' the cue 'understand the meaning' / 'rozumieć znaczenie' admits two kinds of valid answers that only 'begrijp' does not cover. One is 'snap' ('Ik snap het niet.', very common; nl:1330 itself glosses begrijpen with 'snappen'). The other is the past tense 'begreep' ('Ik begreep het niet.'), because the cue does not fix the tense. The cue must state the tense, and 'snap' must be acknowledged without penalty (patch below).",
+   "source_ids": ["nl:1330", "en:1101"],
+   "proposed_patch": [
+    {"op": "replace", "path": "/examples/0/context/en", "value": "understand the meaning (present tense)"},
+    {"op": "replace", "path": "/examples/0/context/pl", "value": "rozumieć znaczenie (czas teraźniejszy)"},
+    {"op": "add", "path": "/examples/0/accepted_answers/-", "value": {"ordered_segments": ["snap"], "case_sensitive": false}}
+   ]
+  },
+  "span_form_contract": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "The span [3,10) slices exactly 'begrijp', and target_form_ids points to the first-person singular present 'begrijp' (6b80a313, en:1101 /forms/5), which agrees with 'Ik'; begrijpen is inseparable, so one segment covers the whole target.",
+   "source_ids": ["en:1101"],
+   "proposed_patch": null
+  },
+  "level_usefulness": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "A1, priority 6 and core are plausible for a survival phrase: the NT2Lex WW() row is F@A1 23, A2 116, B1 50, B2 13 (checked against evidence/sources/nt2lex-basic.tsv) and the SUBTLEX-NL WW lemma count is 32,272; prerequisites (S01 'ik', S07 'niet', support unit 'het') are listed and marked provisional.",
+   "source_ids": ["nt2lex:begrijpen", "subtlex:begrijpen"],
+   "proposed_patch": null
+  },
+  "register_pragmatics": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "'neutral' is correct: begrijpen is the standard, register-neutral verb (snappen being the informal one), and 'Ik begrijp het niet.' is appropriate with anyone.",
+   "source_ids": ["nl:1330"],
+   "proposed_patch": null
+  },
+  "hints_media": {
+   "verdict": "pass",
+   "severity": "none",
+   "explanation": "Hints repeat the meanings and are labelled meaning_reveal, with no invented mnemonic or etymology; the audio candidate is 'candidate_not_downloaded' with review 'not_run' (Commons path 8/89 matches the MD5 of 'Nl-begrijpen.ogg'), listening is ineligible, and the image is not recommended under a labelled model judgment.",
+   "source_ids": ["en:1101"],
+   "proposed_patch": null
+  }
+ },
+ "overall_verdict": "revise",
+ "unresolved_doubts": []
+}

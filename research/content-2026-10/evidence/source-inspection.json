@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "phase": 1,
+  "research_date": "2026-10-03",
+  "status": "sources_inspected_selection_proposed",
+  "measurement_scope": "Snapshot-specific structural and exact-headword coverage. Not a correctness audit, sense coverage measurement, or cross-vendor review.",
+  "metrics": {
+    "kaikki-en-nl-postprocessed-stats": {
+      "counts": {
+        "dutch_records": 146492,
+        "senses": 190560,
+        "records_with_ipa": 56315,
+        "records_with_forms": 65067,
+        "records_with_glosses": 146480,
+        "distinct_dutch_headwords_including_inflections": 138677,
+        "legacy_exact_headword_matches": 1915,
+        "starter_headwords_found": 46
+      },
+      "pos": {
+        "noun": 75664,
+        "adj": 13410,
+        "verb": 40464,
+        "character": 64,
+        "interfix": 9,
+        "prefix": 233,
+        "intj": 520,
+        "adv": 1726,
+        "conj": 103,
+        "article": 21,
+        "prep": 186,
+        "pron": 268,
+        "det": 163,
+        "num": 157,
+        "name": 12405,
+        "contraction": 25,
+        "phrase": 343,
+        "symbol": 1,
+        "suffix": 231,
+        "prep_phrase": 329,
+        "proverb": 139,
+        "particle": 2,
+        "circumpos": 17,
+        "circumfix": 9,
+        "punct": 2,
+        "postp": 1
+      },
+      "starter_missing": [
+        "op tijd",
+        "een afspraak maken",
+        "kunt u dat herhalen"
+      ],
+      "legacy_match_denominator": 1946,
+      "starter_headword_denominator": 49,
+      "warning": "Exact headword presence only; no sense, POS, field accuracy, or review guarantee."
+    },
+    "kaikki-nl-raw-stats": {
+      "counts": {
+        "dutch_records": 668550,
+        "senses": 773143,
+        "records_with_ipa": 112366,
+        "records_with_forms": 178885,
+        "records_with_glosses": 667822,
+        "distinct_dutch_headwords_including_inflections": 649951,
+        "legacy_exact_headword_matches": 1938,
+        "starter_headwords_found": 44
+      },
+      "pos": {
+        "adv": 2294,
+        "intj": 679,
+        "noun": 399339,
+        "article": 23,
+        "num": 2367,
+        "adj": 111047,
+        "prep": 247,
+        "pron": 291,
+        "verb": 141244,
+        "name": 9401,
+        "conj": 121,
+        "phrase": 510,
+        "abbrev": 202,
+        "postp": 6,
+        "symbol": 265,
+        "prefix": 248,
+        "suffix": 249,
+        "interfix": 6,
+        "circumfix": 7,
+        "contraction": 4
+      },
+      "starter_missing": [
+        "dank u wel",
+        "hoe laat",
+        "een afspraak maken",
+        "het spijt me",
+        "kunt u dat herhalen"
+      ],
+      "legacy_match_denominator": 1946,
+      "starter_headword_denominator": 49,
+      "warning": "Exact headword presence only; no sense, POS, field accuracy, or review guarantee."
+    },
+    "kaikki-pl-raw-stats": {
+      "counts": {
+        "dutch_records": 5760,
+        "senses": 6459,
+        "records_with_ipa": 2176,
+        "records_with_forms": 0,
+        "records_with_glosses": 5760,
+        "distinct_dutch_headwords_including_inflections": 5471,
+        "legacy_exact_headword_matches": 1144,
+        "starter_headwords_found": 37
+      },
+      "pos": {
+        "noun": 3459,
+        "prep": 34,
+        "adj": 820,
+        "adv": 169,
+        "pron": 70,
+        "det": 3,
+        "verb": 548,
+        "conj": 20,
+        "article": 3,
+        "postp": 3,
+        "particle": 4,
+        "name": 554,
+        "prefix": 5,
+        "proverb": 5,
+        "intj": 20,
+        "phrase": 9,
+        "abbrev": 7,
+        "num": 8,
+        "prep_phrase": 2,
+        "adj_phrase": 3,
+        "adv_phrase": 12,
+        "unknown": 1,
+        "contraction": 1
+      },
+      "starter_missing": [
+        "huisarts",
+        "rekening",
+        "formulier",
+        "meenemen",
+        "invullen",
+        "dank u wel",
+        "geen probleem",
+        "op tijd",
+        "hoe laat",
+        "een afspraak maken",
+        "het spijt me",
+        "kunt u dat herhalen"
+      ],
+      "legacy_match_denominator": 1946,
+      "starter_headword_denominator": 49,
+      "warning": "Exact headword presence only; no sense, POS, field accuracy, or review guarantee."
+    },
+    "nt2lex-stats": {
+      "nt2lex-basic": {
+        "rows": 15227,
+        "distinct_word_strings": 14724,
+        "rows_with_space": 459,
+        "earliest_attested_level": {
+          "B1": 4879,
+          "A1": 953,
+          "A2": 5383,
+          "C1": 371,
+          "B2": 3641
+        },
+        "legacy_exact_headword_matches": 1737
+      },
+      "nt2lex-senses": {
+        "rows": 17743,
+        "distinct_word_strings": 14724,
+        "rows_with_space": 459,
+        "rows_with_synset": 10418,
+        "earliest_attested_level": {
+          "B1": 5571,
+          "A1": 1189,
+          "A2": 6580,
+          "C1": 405,
+          "B2": 3998
+        },
+        "legacy_exact_headword_matches": 1737
+      }
+    },
+    "odwn-1.3.xml.gz-stats": {
+      "file": "odwn-1.3.xml.gz",
+      "bytes": 15315889,
+      "sha256": "2e2cad0bc8adf04fa90279a4e408afb843db10561f65330aa4dc10afab709f64",
+      "full_gzip_and_xml_valid": true,
+      "counts": {
+        "LexicalEntry": 99349,
+        "Synset": 117914,
+        "distinct_lemma_strings": 59935
+      }
+    },
+    "odwn-1.4-checked.xml.gz-stats": {
+      "file": "odwn-1.4-checked.xml.gz",
+      "bytes": 15425745,
+      "sha256": "8e3b5bc0d151ce1672575b9201fec1105d3573759572910ffbc0581a8d8acb70",
+      "full_gzip_and_xml_valid": true,
+      "counts": {
+        "LexicalEntry": 99349,
+        "Synset": 135653,
+        "distinct_lemma_strings": 59935
+      }
+    },
+    "subtlex-cd2.xlsx-stats": {
+      "rows": 150357,
+      "columns": [
+        "Word",
+        "FREQcount",
+        "CDcount",
+        "FREQlow",
+        "CDlow",
+        "FREQlemma",
+        "SUBTLEXWF",
+        "Zipf",
+        "SUBTLEXCD",
+        "Lg10CD",
+        "dominant.pos",
+        "dominant.pos.freq",
+        "dominant.pos.lemma",
+        "dominant.pos.lemma.freq",
+        "all.pos",
+        "all.pos.freq",
+        "all.pos.lemma.freq"
+      ],
+      "rows_cd1": 0,
+      "minimum_cd": 2,
+      "selected_rows": 1901,
+      "legacy_exact_surface_matches": 1902
+    },
+    "subtlex-full.xlsx-stats": {
+      "rows": 437503,
+      "columns": [
+        "Word",
+        "FREQcount",
+        "CDcount",
+        "FREQlow",
+        "CDlow",
+        "FREQlemma",
+        "SUBTLEXWF",
+        "Zipf",
+        "SUBTLEXCD",
+        "Lg10CD",
+        "dominant.pos",
+        "dominant.pos.freq",
+        "dominant.pos.lemma",
+        "dominant.pos.lemma.freq",
+        "all.pos",
+        "all.pos.freq",
+        "all.pos.lemma.freq"
+      ],
+      "rows_cd1": 287146,
+      "minimum_cd": 1,
+      "selected_rows": 1912,
+      "legacy_exact_surface_matches": 1913
+    },
+    "tatoeba-stats": {
+      "sentences": {
+        "nld": 201207,
+        "eng": 2037522,
+        "pol": 137175
+      },
+      "dutch_with_direct_en": 148508,
+      "dutch_with_direct_pl": 2775,
+      "dutch_with_both_direct_en_pl": 2273,
+      "nl_en_direct_edges": 171432,
+      "nl_pl_direct_edges": 2898,
+      "snapshot_last_modified": "2026-09-26",
+      "warning": "Direct graph links only; unreviewed pairings, no transitive inference."
+    },
+    "opentaal": {
+      "nonempty_lines": 413937,
+      "distinct_strings": 413937,
+      "version": "2023-03-10 14:03:04 2.20.23"
+    },
+    "wordfreq": {
+      "small_nl_strings": 28962,
+      "large_nl_strings": 311278,
+      "method": "Decoded MessagePack arrays; counted strings in frequency bins, excluding metadata. No API scores used."
+    },
+    "legacy_input": {
+      "entries": 1946,
+      "unique_legacy_ids": 1946,
+      "with_example": 169,
+      "with_conjugation": 163,
+      "themes": {
+        "None": 1643,
+        "sep": 77,
+        "agro": 191,
+        "slang": 35
+      },
+      "pos": {
+        "zn": 1005,
+        "ww": 412,
+        "bn": 205,
+        "bw": 54,
+        "vw": 18,
+        "ov": 252
+      },
+      "sha256": "45bf5feb19f3e9ca9b914a68796f19c4d7fd17bb13f9146bf4f5e9e561155294"
+    }
+  },
+  "downloads": [
+    {
+      "file": "creatonaut.html",
+      "url": "https://creatonaut.lingonaut.app",
+      "retrieved_at": "2026-10-03T00:21:05.516757+00:00",
+      "status": 200,
+      "content_type": "text/html",
+      "last_modified": "Thu, 13 Aug 2026 19:17:10 GMT",
+      "bytes": 3162,
+      "sha256": "0ed95b7935fa6f9669ea9c86e3a0d1b07e14c8e77ae34de32478e8da58d177ee"
+    },
+    {
+      "file": "dcp-files.json",
+      "url": "https://api.osf.io/v2/nodes/5fk8d/files/osfstorage/",
+      "retrieved_at": "2026-10-03T00:21:05.513609+00:00",
+      "status": 200,
+      "content_type": "application/vnd.api+json; charset=utf-8",
+      "last_modified": null,
+      "bytes": 19662,
+      "sha256": "1beb01109e58fe13548d650b2acabd2dbb73e5e7a4dfa799b775b18848aff0d6"
+    },
+    {
+      "file": "dcp-megastudies.xlsx",
+      "url": "https://osf.io/download/ty3c4/",
+      "retrieved_at": "2026-10-03T07:17:44.531996+00:00",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "dlp-paper.html",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6659767/",
+      "retrieved_at": "2026-10-03T00:18:39.247625+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "last_modified": null,
+      "bytes": 238296,
+      "sha256": "4e06657288553c2347e3598cf862fb1d0cb5a1412dfc9234402ec17488a1fc6f"
+    },
+    {
+      "file": "kaikki-en-nl-postprocessed.jsonl",
+      "url": "https://kaikki.org/dictionary/Dutch/kaikki.org-dictionary-Dutch.jsonl",
+      "retrieved_at": "2026-10-03T00:17:35.526498+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": "Mon, 28 Sep 2026 17:41:05 GMT",
+      "bytes": 256173808,
+      "sha256": "1f6ed26d77ded4f1538cfe5a9769e11faa90cad42c8b243f827252bef95a92a0"
+    },
+    {
+      "file": "kaikki-nl-raw.jsonl.gz",
+      "url": "https://kaikki.org/dictionary/downloads/nl/nl-extract.jsonl.gz",
+      "retrieved_at": "2026-10-03T00:17:37.770570+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": "Mon, 28 Sep 2026 15:20:49 GMT",
+      "bytes": 133385673,
+      "sha256": "5afbda7d0282e8288f6c251d65b7f08bf22a380195140b9e81f06eadbf046454"
+    },
+    {
+      "file": "kaikki-pl-raw.jsonl.gz",
+      "url": "https://kaikki.org/dictionary/downloads/pl/pl-extract.jsonl.gz",
+      "retrieved_at": "2026-10-03T00:17:37.334414+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": "Mon, 28 Sep 2026 15:21:28 GMT",
+      "bytes": 137385920,
+      "sha256": "a03dec44f783a81e6f920eefe37d8e007f452310268c040d46f463925b438aed"
+    },
+    {
+      "file": "large_nl.msgpack.gz",
+      "url": "https://raw.githubusercontent.com/rspeer/wordfreq/master/wordfreq/data/large_nl.msgpack.gz",
+      "retrieved_at": "2026-10-03T00:22:24.177441+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": null,
+      "bytes": 1661682,
+      "sha256": "cfdae01b2ccd5bc94be046645b6ba8682e65d6709beedf6ab98d7bdc5414d671"
+    },
+    {
+      "file": "nt2lex-basic.tsv",
+      "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+      "retrieved_at": "2026-10-03T00:17:35.523069+00:00",
+      "status": 200,
+      "content_type": "text/tab-separated-values; charset=utf-8",
+      "last_modified": "Fri, 04 Dec 2020 09:48:07 GMT",
+      "bytes": 3395377,
+      "sha256": "0acae87e65a6ceb4237dcf23c5576488338570f3431ac52e159b6fce9e1a0515"
+    },
+    {
+      "file": "nt2lex-paper.pdf",
+      "url": "https://aclanthology.org/W18-0514.pdf",
+      "retrieved_at": "2026-10-03T00:18:39.815988+00:00",
+      "status": 200,
+      "content_type": "application/pdf",
+      "last_modified": "Sat, 19 May 2018 05:07:29 GMT",
+      "bytes": 1114724,
+      "sha256": "7683042fe18d46a713a5b3f1159c1d4c9f3843a624d0cce52309dfc31dcedd9e"
+    },
+    {
+      "file": "nt2lex-senses.tsv",
+      "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN%2BODWN-v01.tsv",
+      "retrieved_at": "2026-10-03T00:17:35.523961+00:00",
+      "status": 200,
+      "content_type": "text/tab-separated-values; charset=utf-8",
+      "last_modified": "Fri, 04 Dec 2020 09:48:07 GMT",
+      "bytes": 4350941,
+      "sha256": "37dc6b6e208d271e07283c082b3bf78ca07e28cc005ca445f52e6cd4ee0bc5b5"
+    },
+    {
+      "file": "odwn-1.3.xml.gz",
+      "url": "https://raw.githubusercontent.com/cltl/OpenDutchWordnet/master/resources/odwn/odwn_orbn_gwg-LMF_1.3.xml.gz",
+      "retrieved_at": "2026-10-03T00:22:24.176707+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": null,
+      "bytes": 15315889,
+      "sha256": "2e2cad0bc8adf04fa90279a4e408afb843db10561f65330aa4dc10afab709f64"
+    },
+    {
+      "file": "odwn-1.4-checked.xml.gz",
+      "url": "https://raw.githubusercontent.com/cltl/OpenDutchWordnet/master/resources/odwn/odwn_orbn_gwg-LMF_1.4.xml.gz",
+      "retrieved_at": "2026-10-03T07:17:44.530982+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": null,
+      "bytes": 15425745,
+      "sha256": "8e3b5bc0d151ce1672575b9201fec1105d3573759572910ffbc0581a8d8acb70"
+    },
+    {
+      "file": "odwn-1.4.xml.gz",
+      "url": "https://raw.githubusercontent.com/cltl/OpenDutchWordnet/master/resources/odwn/odwn_orbn_gwg-LMF_1.4.xml.gz",
+      "retrieved_at": "2026-10-03T00:17:35.525613+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": null,
+      "bytes": 15425745,
+      "sha256": "8e3b5bc0d151ce1672575b9201fec1105d3573759572910ffbc0581a8d8acb70"
+    },
+    {
+      "file": "odwn-directory.json",
+      "url": "https://api.github.com/repos/cltl/OpenDutchWordnet/contents/resources/odwn",
+      "retrieved_at": "2026-10-03T00:22:24.175481+00:00",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "last_modified": "Tue, 22 Sep 2026 09:41:28 GMT",
+      "bytes": 9585,
+      "sha256": "ff78ec3be6bf9843e08e21fc73e766860029fcd886a84e6f61f21b88b5f77b1a"
+    },
+    {
+      "file": "opentaal-version.txt",
+      "url": "https://raw.githubusercontent.com/OpenTaal/opentaal-wordlist/master/datetimeversion.txt",
+      "retrieved_at": "2026-10-03T00:21:05.516124+00:00",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "bytes": 28,
+      "sha256": "f5bd0201d83f2fcff8bd40d6bfd3d91f46759902a58f648fd2edb63aaba29422"
+    },
+    {
+      "file": "opentaal-wordlist.txt",
+      "url": "https://raw.githubusercontent.com/OpenTaal/opentaal-wordlist/master/wordlist.txt",
+      "retrieved_at": "2026-10-03T00:17:35.525013+00:00",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "bytes": 5104598,
+      "sha256": "12e5fb5e3c73840b583b30016926d1f63a75e9bf1652a3a6634b2ba7c49ad7be"
+    },
+    {
+      "file": "osf-3d8cx-files.json",
+      "url": "https://api.osf.io/v2/nodes/3d8cx/files/osfstorage/",
+      "retrieved_at": "2026-10-03T00:17:42.955733+00:00",
+      "status": 200,
+      "content_type": "application/vnd.api+json; charset=utf-8",
+      "last_modified": null,
+      "bytes": 6610,
+      "sha256": "50c2b2e994d6c10a8edf9eb182f3f8daf67e8f1259b75eb7af70595699e7149c"
+    },
+    {
+      "file": "small_nl.msgpack.gz",
+      "url": "https://raw.githubusercontent.com/rspeer/wordfreq/master/wordfreq/data/small_nl.msgpack.gz",
+      "retrieved_at": "2026-10-03T00:22:24.178111+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": null,
+      "bytes": 132025,
+      "sha256": "ae0d64f10e9d11898b2b9481c0b20698ec40c79b8025edfdd70856bd593ad4b0"
+    },
+    {
+      "file": "subtlex-cd2.xlsx",
+      "url": "https://osf.io/download/e8y5b/",
+      "retrieved_at": "2026-10-03T00:18:39.245138+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": "Tue, 25 Aug 2020 11:56:47 GMT",
+      "bytes": 12941041,
+      "sha256": "74a67cf88cf8f4245701e679b13e28ccdc45b836a131e72f34e377a8200129bc"
+    },
+    {
+      "file": "subtlex-full.xlsx",
+      "url": "https://osf.io/download/2dcvs/",
+      "retrieved_at": "2026-10-03T00:18:39.244004+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": "Tue, 10 Feb 2026 14:36:11 GMT",
+      "bytes": 37710910,
+      "sha256": "6a43c784b30a9dc097f8d903b22c830dac631654efed430c86f2f9ec0a7cdd05"
+    },
+    {
+      "file": "subtlex-license.txt",
+      "url": "https://osf.io/download/w5mhg/",
+      "retrieved_at": "2026-10-03T00:18:39.245903+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": "Tue, 07 May 2024 05:23:53 GMT",
+      "bytes": 471,
+      "sha256": "1c96df5fcc840ebf7e2147ea7f13820fcda223ef78eb55cb505972dfed43248b"
+    },
+    {
+      "file": "subtlex-project.json",
+      "url": "https://api.osf.io/v2/nodes/3d8cx/",
+      "retrieved_at": "2026-10-03T00:18:39.246844+00:00",
+      "status": 200,
+      "content_type": "application/vnd.api+json; charset=utf-8",
+      "last_modified": null,
+      "bytes": 4441,
+      "sha256": "dd6c7b0a30971b460d94e3d1e8d61136bea6695ec2d35299b42ebcd8bda1222c"
+    },
+    {
+      "file": "tatoeba-eng.tsv.bz2",
+      "url": "https://downloads.tatoeba.org/exports/per_language/eng/eng_sentences.tsv.bz2",
+      "retrieved_at": "2026-10-03T00:17:38.884325+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": "Sat, 26 Sep 2026 06:31:06 GMT",
+      "bytes": 24887945,
+      "sha256": "f0568ae34496f8a03758ce6821b68da04b1fe67a9300de8d26d50494ae5aceab"
+    },
+    {
+      "file": "tatoeba-links.tar.bz2",
+      "url": "https://downloads.tatoeba.org/exports/links.tar.bz2",
+      "retrieved_at": "2026-10-03T00:17:42.263244+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": "Sat, 26 Sep 2026 06:15:33 GMT",
+      "bytes": 149869480,
+      "sha256": "cf088722034f27371fa725ffb97ee5fa26cb17884176e2b069534a13ae4d862e"
+    },
+    {
+      "file": "tatoeba-nld.tsv.bz2",
+      "url": "https://downloads.tatoeba.org/exports/per_language/nld/nld_sentences.tsv.bz2",
+      "retrieved_at": "2026-10-03T00:17:38.422107+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": "Sat, 26 Sep 2026 06:31:06 GMT",
+      "bytes": 2497641,
+      "sha256": "7d29316502fd45e1bd7e75bde6be02da742211044deec906a50bab5c85452e51"
+    },
+    {
+      "file": "tatoeba-pol.tsv.bz2",
+      "url": "https://downloads.tatoeba.org/exports/per_language/pol/pol_sentences.tsv.bz2",
+      "retrieved_at": "2026-10-03T00:17:40.669074+00:00",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "last_modified": "Sat, 26 Sep 2026 06:31:06 GMT",
+      "bytes": 1737448,
+      "sha256": "dba8a41db6e098bd0b6d12386118cf3dfe9514ea2246e24d9923cd1c4d404d52"
+    },
+    {
+      "file": "wordfreq-files.json",
+      "url": "https://api.github.com/repos/rspeer/wordfreq/contents/wordfreq/data",
+      "retrieved_at": "2026-10-03T00:21:05.514650+00:00",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "last_modified": "Fri, 02 Oct 2026 21:58:25 GMT",
+      "bytes": 58166,
+      "sha256": "41ee4945cc1d9194e0f018972a10c037842ff0b15c0f7f0af3135c56c2fd9b23"
+    },
+    {
+      "file": "wordfreq-readme.md",
+      "url": "https://raw.githubusercontent.com/rspeer/wordfreq/master/README.md",
+      "retrieved_at": "2026-10-03T00:21:05.515414+00:00",
+      "status": 200,
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "bytes": 27642,
+      "sha256": "0f1db058e1df2e6bda2db5d0ea851a7111d2390ec16a9939d971ef53ea24f684"
+    }
+  ],
+  "unverified": [
+    "CELEX archive requires login",
+    "DCP XLSX returned HTTP 429",
+    "Lingonaut public Dutch bulk export and schema",
+    "full raw English Wiktionary dump; only per-language postprocessed snapshot inspected",
+    "device TTS quality and actual offline availability",
+    "repository docs/tasks/TEMPLATE.md",
+    "different-vendor model review not performed"
+  ]
+}

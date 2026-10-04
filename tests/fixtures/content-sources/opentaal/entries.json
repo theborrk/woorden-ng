@@ -1,0 +1,36 @@
+[
+  {
+    "id": "exact-case",
+    "headword": "Amsterdam"
+  },
+  {
+    "id": "case-miss",
+    "headword": "amsterdam"
+  },
+  {
+    "id": "phrase-miss",
+    "headword": "kunt u dat herhalen"
+  },
+  {
+    "id": "compound-miss",
+    "headword": "huisartspraktijkdeur",
+    "kind": "compound"
+  },
+  {
+    "id": "digid",
+    "headword": "DigiD"
+  },
+  {
+    "id": "bsn",
+    "headword": "BSN"
+  },
+  {
+    "id": "phrase-hit",
+    "headword": "aan weerszijden"
+  },
+  {
+    "id": "compound-hit",
+    "headword": "zorgverzekering",
+    "kind": "compound"
+  }
+]

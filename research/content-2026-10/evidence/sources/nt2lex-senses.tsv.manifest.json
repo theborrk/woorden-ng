@@ -1,0 +1,10 @@
+{
+  "file": "nt2lex-senses.tsv",
+  "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN%2BODWN-v01.tsv",
+  "retrieved_at": "2026-10-03T00:17:35.523961+00:00",
+  "status": 200,
+  "content_type": "text/tab-separated-values; charset=utf-8",
+  "last_modified": "Fri, 04 Dec 2020 09:48:07 GMT",
+  "bytes": 4350941,
+  "sha256": "37dc6b6e208d271e07283c082b3bf78ca07e28cc005ca445f52e6cd4ee0bc5b5"
+}

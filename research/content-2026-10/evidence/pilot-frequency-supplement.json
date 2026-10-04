@@ -1,0 +1,24 @@
+{
+  "pinnen": {
+    "worksheet_row": 19813,
+    "data": {
+      "Word": "pinnen",
+      "FREQcount": 57,
+      "CDcount": 52,
+      "FREQlow": 54,
+      "CDlow": 50,
+      "FREQlemma": 193,
+      "SUBTLEXWF": 1.3035,
+      "Zipf": 3.118930320429692,
+      "SUBTLEXCD": 0.6444,
+      "Lg10CD": 1.7243,
+      "dominant.pos": "WW",
+      "dominant.pos.freq": 54,
+      "dominant.pos.lemma": "pinnen",
+      "dominant.pos.lemma.freq": 94,
+      "all.pos": ".WW.N.SPEC.",
+      "all.pos.freq": ".54.2.1.",
+      "all.pos.lemma.freq": ".94.98.1."
+    }
+  }
+}

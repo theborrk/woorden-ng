@@ -4,16 +4,26 @@ import type { Platform } from '../platform';
 import type { TargetServices } from '../targets/types';
 import { languageKey } from '../i18n';
 import { routeFromHash, routes } from './routes';
+import type { AppInfo } from '../application/ports/app-info';
+import { About } from '../features/settings/About';
 
 export interface AppProps {
   name: string;
   platform: Platform;
   updates: Pick<TargetServices, 'registerUpdates'>;
+  appInfo: AppInfo;
   storage?: Pick<TargetServices, 'initialize'>;
   initialLanguageError?: boolean;
 }
 
-export function App({ name, platform, updates, storage, initialLanguageError = false }: AppProps) {
+export function App({
+  name,
+  platform,
+  updates,
+  appInfo,
+  storage,
+  initialLanguageError = false,
+}: AppProps) {
   const { t, i18n } = useTranslation();
   const [route, setRoute] = useState(() => routeFromHash(window.location.hash));
   const [online, setOnline] = useState(navigator.onLine);
@@ -135,6 +145,7 @@ export function App({ name, platform, updates, storage, initialLanguageError = f
               </option>
             </select>
             <p>{t('session')}</p>
+            <About appInfo={appInfo} />
           </>
         )}
         {languageError && <p role="alert">{t('languageError')}</p>}

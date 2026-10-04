@@ -1,7 +1,7 @@
 ---
 id: T-100
 title: Pin source downloads and expose an inspectable manifest
-status: todo
+status: done
 size: S
 depends_on: []
 type: task
@@ -33,8 +33,8 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a complete local fixture, when inspected twice, then source identity and checksums are stable and printed in a reviewable report. (unit, CLI)
-- [ ] AC2: Given truncated or changed bytes, when the expected manifest is supplied, then inspection fails without adopting the new file. (unit)
+- [x] AC1: Given a complete local fixture, when inspected twice, then source identity and checksums are stable and printed in a reviewable report. (unit, CLI)
+- [x] AC2: Given truncated or changed bytes, when the expected manifest is supplied, then inspection fails without adopting the new file. (unit)
 
 ## Notes for the implementer
 

@@ -1,7 +1,7 @@
 ---
 id: T-110
 title: Validate one sense entry with explicit spans and provenance
-status: todo
+status: done
 size: M
 depends_on: []
 type: task
@@ -33,9 +33,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a discontinuous separable example, when validated, then ordered segments round-trip exactly and point to the intended form/sense. (unit)
-- [ ] AC2: Given an invented source_verified fact without evidence, when imported, then validation rejects the assertion. (unit)
-- [ ] AC3: Given missing PL/example/audio, when eligibility is inspected, then only dependent task families are blocked and no content is fabricated. (unit)
+- [x] AC1: Given a discontinuous separable example, when validated, then ordered segments round-trip exactly and point to the intended form/sense. (unit)
+- [x] AC2: Given an invented source_verified fact without evidence, when imported, then validation rejects the assertion. (unit)
+- [x] AC3: Given missing PL/example/audio, when eligibility is inspected, then only dependent task families are blocked and no content is fabricated. (unit)
 
 ## Notes for the implementer
 
@@ -44,3 +44,10 @@ Keep this one reviewable PR. Port/reuse the research algorithms in the repositor
 ## Notes for the reviewer
 
 Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. Content review in Claude must be an actual separately recorded operation on the exact payload; a code review alone does not imply all Dutch text passed the language rubric.
+
+## Implementation evidence
+
+- AC1: `tools/content/validate-entry.test.mjs`, `F08: AC1 discontinuous separable segments round-trip and link to the intended sense/form`; mutations reject bad ordering, offsets, targets and selectors.
+- AC2: the same file, `T50: AC2 importing an invented source_verified fact rejects missing, stale or wrong scoped evidence`.
+- AC3: the same file, `T43: AC3 missing PL/example/audio blocks only dependent families without fabricating content`, plus locale-specific example coverage.
+- Executed gates: `npm run verify` (217 tests) and `npm run test:e2e:web` (11 tests, matching Chromium 153 npm fallback). Research content remains unchanged and unreviewed.

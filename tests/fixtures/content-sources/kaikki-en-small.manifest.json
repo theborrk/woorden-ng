@@ -1,0 +1,7 @@
+{
+  "file": "kaikki-en-small.jsonl",
+  "bytes": 24923,
+  "sha256": "cf8d04f1e02f428c986eebd9426ac59cda4a99e7bfd9e68a66f09759c07c4ce3",
+  "excerpt_of": "tools/content/kaikki-en-nl-postprocessed.manifest.json",
+  "note": "Three Dutch verb headword records copied byte-for-byte from the pinned JSONL; source record hashes remain reproducible."
+}

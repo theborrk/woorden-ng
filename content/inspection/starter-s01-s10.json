@@ -1,0 +1,4730 @@
+{
+  "schema_version": "woorden-starter-inspection-1",
+  "inspection_only": true,
+  "source_artifact_sha256": "d5e8f6eb577b41ccf32d6e404107855f5681158fce0518e969c40da21091c246",
+  "assessment": {
+    "origin": "generated_draft",
+    "structure": "unchecked",
+    "language_check": "not_run",
+    "release": "blocked",
+    "source_evidence": "research_assertions_only"
+  },
+  "entries": [
+    {
+      "schema_version": "woorden-content-research-0.2",
+      "id": "604c9517-d603-45ca-b859-4e98dd122cbf",
+      "fixture_ref": "S01",
+      "revision": 1,
+      "lexeme": {
+        "id": "83a132bd-4a30-446b-ba01-c10164a6689c",
+        "lemma": "ik",
+        "display": "ik",
+        "pos": "pron",
+        "source_pos": "pron",
+        "variants": [],
+        "pronunciation": {
+          "ipa": [
+            {
+              "ipa": "/ɪk/",
+              "tags": ["stressed"],
+              "raw_tags": [],
+              "source_ids": ["en:24"],
+              "source_selector": "/sounds/0",
+              "status": "source_verified"
+            },
+            {
+              "ipa": "/ək/",
+              "tags": ["unstressed"],
+              "raw_tags": [],
+              "source_ids": ["en:24"],
+              "source_selector": "/sounds/1",
+              "status": "source_verified"
+            }
+          ],
+          "ipa_status": "source_verified",
+          "polish_approximation": null,
+          "polish_approximation_status": "not_produced_requires_review"
+        },
+        "morphology": {
+          "noun": null,
+          "verb": null
+        }
+      },
+      "sense": {
+        "id": "604c9517-d603-45ca-b859-4e98dd122cbf",
+        "lexeme_id": "83a132bd-4a30-446b-ba01-c10164a6689c",
+        "definition_nl": "De spreker verwijst naar zichzelf als onderwerp van de zin.",
+        "meanings": {
+          "en": ["I"],
+          "pl": ["ja"]
+        },
+        "register": "neutral",
+        "source_sense": {
+          "record_id": "en:24",
+          "index": 0,
+          "glosses": ["I; first-person singular subjective personal pronoun"],
+          "match_status": "author_selected_needs_reviewer"
+        },
+        "usage_notes": [],
+        "component_lemmas": [],
+        "confusion_links": []
+      },
+      "forms": [],
+      "examples": [
+        {
+          "id": "e45bc075-0726-4434-a6d5-86401f8fef93",
+          "nl": "Ik ben hier.",
+          "translations": {
+            "en": "I am here.",
+            "pl": "Jestem tutaj."
+          },
+          "answer_spans": [
+            {
+              "start": 0,
+              "end": 2,
+              "text": "Ik"
+            }
+          ],
+          "offset_unit": "UTF-16-code-units",
+          "target_sense_id": "604c9517-d603-45ca-b859-4e98dd122cbf",
+          "target_form_ids": [],
+          "accepted_answers": [
+            {
+              "ordered_segments": ["Ik"],
+              "case_sensitive": false
+            }
+          ],
+          "context": {
+            "en": "I",
+            "pl": "ja"
+          },
+          "task_contract": {
+            "primary_target": "sense_in_context",
+            "valid_alternative": "ungradable_prompt_repair",
+            "unrestricted_fuzzy_match": false,
+            "article_scored_separately": true,
+            "requires_independent_review": true
+          },
+          "difficulty": "A1",
+          "review_status": "generated_draft",
+          "provenance": {
+            "origin": "model_A_original",
+            "source_sentence_id": null,
+            "direct_translation_from": "nl",
+            "reviewer_B": "not_run"
+          }
+        }
+      ],
+      "cefr": {
+        "estimated": "A1",
+        "status": "editorial_estimate",
+        "source_exposure": [
+          {
+            "word": "ik",
+            "tag": "VNW(pers,pron)",
+            "frequencies": {
+              "A1": 429,
+              "A2": 3156,
+              "B1": 1854,
+              "B2": 366,
+              "C1": null
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "source": "SUBTLEX-NL full workbook",
+        "unit": "surface-form",
+        "word": "ik",
+        "zipf": 7.597064495570062,
+        "surface_count": 1744062,
+        "contextual_diversity": 8054,
+        "lemma_count": 1743944,
+        "lemma_pos": "VNW",
+        "status": "source_verified",
+        "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+      },
+      "curriculum": {
+        "stage": "A1",
+        "priority_order": 1,
+        "priority_is_lesson_schedule": false,
+        "themes": ["communication"],
+        "core": true,
+        "utility": 4,
+        "utility_reason": "Chosen for the concrete communication situation and representative fixture coverage."
+      },
+      "image_suitability": {
+        "concreteness": "low_or_abstract",
+        "concreteness_source": "model_judgment",
+        "suitability": "not_recommended_for_standalone_naming",
+        "image_status": "not_produced",
+        "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+      },
+      "hints": {
+        "en": "I",
+        "pl": "ja",
+        "role": "meaning_reveal",
+        "invented_mnemonic": null,
+        "etymology": null
+      },
+      "media": {
+        "audio_candidates": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Nl-ik.ogg",
+            "source_ids": ["en:24"],
+            "tags": [],
+            "role": "headword",
+            "status": "candidate_not_downloaded",
+            "sha256": null,
+            "license": null,
+            "review": "not_run"
+          }
+        ],
+        "approved_audio": [],
+        "listening_task_eligible": false,
+        "device_tts": "not_tested"
+      },
+      "legacy": [
+        {
+          "legacy_id": "s1506",
+          "original_ru": "я",
+          "original_en": "I",
+          "mapping": "lemma_link_requires_sense_adjudication"
+        }
+      ],
+      "provenance": {
+        "/sense": {
+          "source_ids": ["en:24"],
+          "method": "model_draft_grounded_in_source",
+          "status": "generated_draft",
+          "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+        },
+        "/lexeme/lemma": {
+          "source_ids": ["en:24"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pos": {
+          "source_ids": ["en:24"],
+          "method": "source_tag_mapping",
+          "status": "source_verified"
+        },
+        "/lexeme/pronunciation": {
+          "source_ids": ["en:24", "en:24"],
+          "method": "source_extraction",
+          "status": "source_verified",
+          "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+        },
+        "/examples": {
+          "source_ids": ["en:24"],
+          "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+          "status": "generated_draft"
+        },
+        "/forms": {
+          "source_ids": ["en:24"],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/curriculum": {
+          "source_ids": [],
+          "method": "editorial_policy_v0.2",
+          "status": "generated_draft"
+        },
+        "/frequency": {
+          "source_ids": ["subtlex:ik"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/source_exposure": {
+          "source_ids": ["nt2lex:ik"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/estimated": {
+          "source_ids": [],
+          "method": "model_A_estimate_not_certified_CEFR",
+          "status": "generated_draft"
+        },
+        "/image_suitability": {
+          "source_ids": [],
+          "method": "model_A_sense_judgment_not_norm_data",
+          "status": "generated_draft"
+        },
+        "/media": {
+          "source_ids": ["en:24"],
+          "method": "source_URL_extraction",
+          "status": "candidate_only"
+        },
+        "/legacy": {
+          "source_ids": ["s1506"],
+          "method": "exact_copy_from_immutable_seed",
+          "status": "source_verified"
+        },
+        "/review": {
+          "source_ids": [],
+          "method": "honest_execution_metadata",
+          "status": "recorded"
+        },
+        "/hints": {
+          "source_ids": [],
+          "method": "model_A_meaning_reveal",
+          "status": "generated_draft"
+        },
+        "/generation": {
+          "source_ids": [],
+          "method": "recorded_authoring_metadata",
+          "status": "recorded"
+        },
+        "/lexeme/variants": {
+          "source_ids": [],
+          "method": "no_variants_selected",
+          "status": "not_applicable"
+        },
+        "/lexeme/display": {
+          "source_ids": ["en:24"],
+          "method": "editorial_display_from_lemma_and_construction",
+          "status": "generated_draft"
+        }
+      },
+      "sources": [
+        {
+          "id": "en:24",
+          "family": "Wiktionary",
+          "edition": "en",
+          "url": "https://en.wiktionary.org/wiki/ik",
+          "excerpt_path": "evidence/sources/kaikki-en-excerpts.json",
+          "record_sha256": "9cf3638292fe5949ae556b4aac5e50088e13a50f11712845049a9b555f0290d8",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nl:11",
+          "family": "Wiktionary",
+          "edition": "nl",
+          "url": "https://nl.wiktionary.org/wiki/ik",
+          "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+          "record_sha256": "3b70a894ff19166ae59f54e54f9803b7a02ae635098b7168008e912b58b46dc8",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "pl:136",
+          "family": "Wiktionary",
+          "edition": "pl",
+          "url": "https://pl.wiktionary.org/wiki/ik",
+          "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+          "record_sha256": "e49e8de44b47e46ae177de1640a4ccd0c75f62587ed16c3f5eacc9d03532cf12",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "subtlex:ik",
+          "family": "SUBTLEX-NL",
+          "url": "https://osf.io/download/2dcvs/",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "ik/subtlex",
+          "record_sha256": "094f20f27b6788ce7709e767bcb74fd09264632b8ef787b9a923f78cc9e51ef1",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nt2lex:ik",
+          "family": "NT2Lex",
+          "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "ik/nt2",
+          "record_sha256": "b53c5da4578195803367ccaef18859c42c13d16549ba5db11efdeb3d2a82c89b",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "s1506",
+          "family": "legacy-seed",
+          "url": null,
+          "excerpt_path": "evidence/inputs/seed-v1.json",
+          "selector": "entries[legacyId=s1506]",
+          "record_sha256": "087730a915f3baae37f71e851635d9a4ef4364871db5491129b6f32d7af95e60",
+          "retrieved_at": "2026-10-03"
+        }
+      ],
+      "generation": {
+        "actor": "OpenAI Codex",
+        "vendor": "OpenAI",
+        "model_id": null,
+        "model_id_note": "Exact runtime model identifier not exposed",
+        "run_id": "woorden-research-2026-10-03",
+        "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+      },
+      "review": {
+        "statuses": {
+          "workflow": "machine_checked",
+          "source_facts": "source_verified",
+          "ai_review": "not_run",
+          "release": "blocked",
+          "release_blockers": ["independent_vendor_review_missing"],
+          "user_private_opt_in": false
+        },
+        "risk_categories": [],
+        "verification_log": [
+          {
+            "stage": "source_extraction",
+            "actor": "build_pilot.py",
+            "verdict": "observations_attached",
+            "source_ids": ["en:24", "nl:11", "pl:136"]
+          },
+          {
+            "stage": "editorial_self_check",
+            "actor": "OpenAI Codex; same author/vendor",
+            "verdict": "revised_draft",
+            "notes": [],
+            "independent": false
+          },
+          {
+            "stage": "different_vendor_review",
+            "actor": null,
+            "vendor": null,
+            "verdict": "not_run",
+            "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+          },
+          {
+            "stage": "automated_validation",
+            "actor": "tools/validate_delivery.py",
+            "verdict": "pass",
+            "content_sha256": "1ef00b4a4ed71fab8320b8778fdff9f98755df0ea3cb94d556661bc862520439",
+            "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          }
+        ],
+        "unresolved_doubts": [
+          "All generated meanings, examples and PL/EN translations await independent vendor review."
+        ]
+      },
+      "content_sha256": "1ef00b4a4ed71fab8320b8778fdff9f98755df0ea3cb94d556661bc862520439"
+    },
+    {
+      "schema_version": "woorden-content-research-0.2",
+      "id": "faa0d8d3-bbb2-4a6f-ae8b-8c8825241803",
+      "fixture_ref": "S02",
+      "revision": 1,
+      "lexeme": {
+        "id": "0a167f0b-fa77-4b4a-b084-10e2dfb7952a",
+        "lemma": "zijn",
+        "display": "zijn",
+        "pos": "verb",
+        "source_pos": "verb",
+        "variants": [],
+        "pronunciation": {
+          "ipa": [
+            {
+              "ipa": "/zɛi̯n/",
+              "tags": [],
+              "raw_tags": [],
+              "source_ids": ["en:40"],
+              "source_selector": "/sounds/0",
+              "status": "source_verified"
+            }
+          ],
+          "ipa_status": "source_verified",
+          "polish_approximation": null,
+          "polish_approximation_status": "not_produced_requires_review"
+        },
+        "morphology": {
+          "noun": null,
+          "verb": {
+            "forms": [
+              "15f7f17a-3a1e-4fad-9b44-7187aff55034",
+              "57715d8e-2333-4207-9999-1e4ce1b43612",
+              "b0e12b2d-a162-4275-9b54-3318d1cc9350",
+              "1562947a-8bc3-46b4-b488-4b79329590f9",
+              "a2955346-045f-48a6-8430-4f734e676f00",
+              "42d9d680-b7c1-4cf8-9304-5ada08c9ae65",
+              "f0d4c371-d28c-402c-84f5-d4c87c1ac293",
+              "7de08818-a59a-475e-bbcb-c416fdb39251"
+            ],
+            "perfect_auxiliaries": {
+              "values": ["zijn"],
+              "source_ids": [
+                "zijn-v-1",
+                "zijn-v-2",
+                "zijn-v-3",
+                "zijn-v-4",
+                "zijn-v-5",
+                "zijn-v-6",
+                "zijn-v-7",
+                "zijn-v-8",
+                "zijn-v-9"
+              ],
+              "status": "source_verified",
+              "scope": "Lemma observations; intended sense/construction selected by author, awaiting reviewer."
+            },
+            "separable": false,
+            "particle": null,
+            "base": null,
+            "joined_infinitive": "zijn",
+            "split_form_ids": [],
+            "reflexive": false,
+            "reflexive_pattern": null,
+            "modal_cluster_note": null
+          }
+        }
+      },
+      "sense": {
+        "id": "faa0d8d3-bbb2-4a6f-ae8b-8c8825241803",
+        "lexeme_id": "0a167f0b-fa77-4b4a-b084-10e2dfb7952a",
+        "definition_nl": "Een persoon of zaak verbinden met een eigenschap of toestand.",
+        "meanings": {
+          "en": ["be, linking a person or thing to a description"],
+          "pl": ["być, łączyć osobę lub rzecz z opisem"]
+        },
+        "register": "neutral",
+        "source_sense": {
+          "record_id": "en:40",
+          "index": 1,
+          "glosses": ["Used to connect a noun to an adjective that describes it."],
+          "match_status": "author_selected_needs_reviewer"
+        },
+        "usage_notes": [],
+        "component_lemmas": [],
+        "confusion_links": []
+      },
+      "forms": [
+        {
+          "id": "15f7f17a-3a1e-4fad-9b44-7187aff55034",
+          "surface": "zijn",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["infinitive"]
+          },
+          "source_ids": ["en:40"],
+          "source_selector": "/forms/2",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "57715d8e-2333-4207-9999-1e4ce1b43612",
+          "surface": "ben",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["first-person", "present", "singular"]
+          },
+          "source_ids": ["en:40"],
+          "source_selector": "/forms/4",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "b0e12b2d-a162-4275-9b54-3318d1cc9350",
+          "surface": "was",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["first-person", "past", "singular"]
+          },
+          "source_ids": ["en:40"],
+          "source_selector": "/forms/5",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "1562947a-8bc3-46b4-b488-4b79329590f9",
+          "surface": "is",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["present", "singular", "third-person"]
+          },
+          "source_ids": ["en:40"],
+          "source_selector": "/forms/16",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "a2955346-045f-48a6-8430-4f734e676f00",
+          "surface": "was",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["past", "singular", "third-person"]
+          },
+          "source_ids": ["en:40"],
+          "source_selector": "/forms/17",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "42d9d680-b7c1-4cf8-9304-5ada08c9ae65",
+          "surface": "zijn",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["plural", "present"]
+          },
+          "source_ids": ["en:40"],
+          "source_selector": "/forms/18",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "f0d4c371-d28c-402c-84f5-d4c87c1ac293",
+          "surface": "waren",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["past", "plural"]
+          },
+          "source_ids": ["en:40"],
+          "source_selector": "/forms/19",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "7de08818-a59a-475e-bbcb-c416fdb39251",
+          "surface": "geweest",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["participle", "past"]
+          },
+          "source_ids": ["en:40"],
+          "source_selector": "/forms/29",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        }
+      ],
+      "examples": [
+        {
+          "id": "ba61338f-d27d-4090-af5a-5f40eda05532",
+          "nl": "Ik ben ziek.",
+          "translations": {
+            "en": "I am ill.",
+            "pl": "Jestem chora/chory."
+          },
+          "answer_spans": [
+            {
+              "start": 3,
+              "end": 6,
+              "text": "ben"
+            }
+          ],
+          "offset_unit": "UTF-16-code-units",
+          "target_sense_id": "faa0d8d3-bbb2-4a6f-ae8b-8c8825241803",
+          "target_form_ids": ["57715d8e-2333-4207-9999-1e4ce1b43612"],
+          "accepted_answers": [
+            {
+              "ordered_segments": ["ben"],
+              "case_sensitive": false
+            }
+          ],
+          "context": {
+            "en": "be, linking a person or thing to a description",
+            "pl": "być, łączyć osobę lub rzecz z opisem"
+          },
+          "task_contract": {
+            "primary_target": "sense_in_context",
+            "valid_alternative": "ungradable_prompt_repair",
+            "unrestricted_fuzzy_match": false,
+            "article_scored_separately": true,
+            "requires_independent_review": true
+          },
+          "difficulty": "A1",
+          "review_status": "generated_draft",
+          "provenance": {
+            "origin": "model_A_original",
+            "source_sentence_id": null,
+            "direct_translation_from": "nl",
+            "reviewer_B": "not_run"
+          }
+        }
+      ],
+      "cefr": {
+        "estimated": "A1",
+        "status": "editorial_estimate",
+        "source_exposure": [
+          {
+            "word": "zijn",
+            "tag": "VNW(bez,det)",
+            "frequencies": {
+              "A1": 70,
+              "A2": 1461,
+              "B1": 639,
+              "B2": 264,
+              "C1": 24
+            }
+          },
+          {
+            "word": "zijn",
+            "tag": "WW()",
+            "frequencies": {
+              "A1": 591,
+              "A2": 5145,
+              "B1": 3684,
+              "B2": 1789,
+              "C1": 112
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "source": "SUBTLEX-NL full workbook",
+        "unit": "surface-form",
+        "word": "zijn",
+        "zipf": 6.897639056623649,
+        "surface_count": 348446,
+        "contextual_diversity": 8062,
+        "lemma_count": 1891414,
+        "lemma_pos": "WW",
+        "status": "source_verified",
+        "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+      },
+      "curriculum": {
+        "stage": "A1",
+        "priority_order": 2,
+        "priority_is_lesson_schedule": false,
+        "themes": ["communication"],
+        "core": true,
+        "utility": 4,
+        "utility_reason": "Chosen for the concrete communication situation and representative fixture coverage."
+      },
+      "image_suitability": {
+        "concreteness": "low_or_abstract",
+        "concreteness_source": "model_judgment",
+        "suitability": "not_recommended_for_standalone_naming",
+        "image_status": "not_produced",
+        "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+      },
+      "hints": {
+        "en": "be, linking a person or thing to a description",
+        "pl": "być, łączyć osobę lub rzecz z opisem",
+        "role": "meaning_reveal",
+        "invented_mnemonic": null,
+        "etymology": null
+      },
+      "media": {
+        "audio_candidates": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Nl-zijn.ogg",
+            "source_ids": ["en:40"],
+            "tags": [],
+            "role": "headword",
+            "status": "candidate_not_downloaded",
+            "sha256": null,
+            "license": null,
+            "review": "not_run"
+          }
+        ],
+        "approved_audio": [],
+        "listening_task_eligible": false,
+        "device_tts": "not_tested"
+      },
+      "legacy": [
+        {
+          "legacy_id": "s120",
+          "original_ru": "быть",
+          "original_en": "to be",
+          "mapping": "lemma_link_requires_sense_adjudication"
+        }
+      ],
+      "provenance": {
+        "/sense": {
+          "source_ids": ["en:40"],
+          "method": "model_draft_grounded_in_source",
+          "status": "generated_draft",
+          "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+        },
+        "/lexeme/lemma": {
+          "source_ids": ["en:40"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pos": {
+          "source_ids": ["en:40"],
+          "method": "source_tag_mapping",
+          "status": "source_verified"
+        },
+        "/lexeme/morphology/verb": {
+          "source_ids": [
+            "en:40",
+            "zijn-v-1",
+            "zijn-v-2",
+            "zijn-v-3",
+            "zijn-v-4",
+            "zijn-v-5",
+            "zijn-v-6",
+            "zijn-v-7",
+            "zijn-v-8",
+            "zijn-v-9"
+          ],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pronunciation": {
+          "source_ids": ["en:40"],
+          "method": "source_extraction",
+          "status": "source_verified",
+          "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+        },
+        "/examples": {
+          "source_ids": ["en:40"],
+          "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+          "status": "generated_draft"
+        },
+        "/forms": {
+          "source_ids": ["en:40"],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/curriculum": {
+          "source_ids": [],
+          "method": "editorial_policy_v0.2",
+          "status": "generated_draft"
+        },
+        "/frequency": {
+          "source_ids": ["subtlex:zijn"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/source_exposure": {
+          "source_ids": ["nt2lex:zijn"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/estimated": {
+          "source_ids": [],
+          "method": "model_A_estimate_not_certified_CEFR",
+          "status": "generated_draft"
+        },
+        "/image_suitability": {
+          "source_ids": [],
+          "method": "model_A_sense_judgment_not_norm_data",
+          "status": "generated_draft"
+        },
+        "/media": {
+          "source_ids": ["en:40"],
+          "method": "source_URL_extraction",
+          "status": "candidate_only"
+        },
+        "/legacy": {
+          "source_ids": ["s120"],
+          "method": "exact_copy_from_immutable_seed",
+          "status": "source_verified"
+        },
+        "/review": {
+          "source_ids": [],
+          "method": "honest_execution_metadata",
+          "status": "recorded"
+        },
+        "/hints": {
+          "source_ids": [],
+          "method": "model_A_meaning_reveal",
+          "status": "generated_draft"
+        },
+        "/generation": {
+          "source_ids": [],
+          "method": "recorded_authoring_metadata",
+          "status": "recorded"
+        },
+        "/lexeme/variants": {
+          "source_ids": [],
+          "method": "no_variants_selected",
+          "status": "not_applicable"
+        },
+        "/lexeme/display": {
+          "source_ids": ["en:40"],
+          "method": "editorial_display_from_lemma_and_construction",
+          "status": "generated_draft"
+        }
+      },
+      "sources": [
+        {
+          "id": "en:40",
+          "family": "Wiktionary",
+          "edition": "en",
+          "url": "https://en.wiktionary.org/wiki/zijn",
+          "excerpt_path": "evidence/sources/kaikki-en-excerpts.json",
+          "record_sha256": "ee1731cb018abdd638ad232a8c3ca7e081813eeb09cec4a0e2783fc1081291f1",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nl:80",
+          "family": "Wiktionary",
+          "edition": "nl",
+          "url": "https://nl.wiktionary.org/wiki/zijn",
+          "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+          "record_sha256": "c734f8ee4ae39ceae65735a1b126debb22b76509868fbf82ef7cfe1fec538170",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "pl:132",
+          "family": "Wiktionary",
+          "edition": "pl",
+          "url": "https://pl.wiktionary.org/wiki/zijn",
+          "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+          "record_sha256": "4eb3f97ad853177e8dcd35526fbe5f5b2d0eb08e2010aec0a2c35eabd95b07db",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "pl:133",
+          "family": "Wiktionary",
+          "edition": "pl",
+          "url": "https://pl.wiktionary.org/wiki/zijn",
+          "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+          "record_sha256": "4f9d64cf9d5fee9909e06704d38221e04e2a81a8fc7f5796631485c936ea90c6",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "zijn-v-1",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/odwn",
+          "record_sha256": "ba0c3140941801672a0c78536d5415f51b7d95cebee78a1d27b26a13de096100",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "zijn-v-2",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/odwn",
+          "record_sha256": "ddfe5a186a4b295b2f48f40d0291486b7cb6d1c131a80d5ab66a58a3e496b4ba",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "zijn-v-3",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/odwn",
+          "record_sha256": "49181a1ff1e2ca0f831f835103e78794cdb5c57597aab2b0a0091fdc2043cd39",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "zijn-v-4",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/odwn",
+          "record_sha256": "e46c17d02b9578cb7c8f949fe45fc0fd9ed94edf55b742b3d83248eb6fe37b78",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "zijn-v-5",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/odwn",
+          "record_sha256": "5cdcabea525d3597f289f7918ee3f5767f2959c39476e2239dc659eaa5eeb61b",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "zijn-v-6",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/odwn",
+          "record_sha256": "c9fbb184e8fe8fc13b4f8cdaec12a4a302b8ab26b960b69d6b15656bb07d617d",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "zijn-v-7",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/odwn",
+          "record_sha256": "67b3cfc488c23c53562c231f134064c74496245cf61df0ca77600c1ec6a8fc20",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "zijn-v-8",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/odwn",
+          "record_sha256": "b7fd556dde112fd6ad70ee692e6473f9ceab9c19f51842798571818dd13ccde9",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "zijn-v-9",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/odwn",
+          "record_sha256": "5f331316d49b2199a068336fffc21f82169b78668512c74ca7a9b0bb53dfd743",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "subtlex:zijn",
+          "family": "SUBTLEX-NL",
+          "url": "https://osf.io/download/2dcvs/",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/subtlex",
+          "record_sha256": "fab3c06d0ab978512a3fe35738e225cb3a4846e6bf905c1e1f918b3d1b6d2afe",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nt2lex:zijn",
+          "family": "NT2Lex",
+          "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "zijn/nt2",
+          "record_sha256": "8895529bff805d28cb93d61f96725b62525b3c2e9efbc07053a08aad6e4fd06d",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "s120",
+          "family": "legacy-seed",
+          "url": null,
+          "excerpt_path": "evidence/inputs/seed-v1.json",
+          "selector": "entries[legacyId=s120]",
+          "record_sha256": "baabf4d014464252588984f06c3e3cc526e2941f9701c7873703b4ec86471a06",
+          "retrieved_at": "2026-10-03"
+        }
+      ],
+      "generation": {
+        "actor": "OpenAI Codex",
+        "vendor": "OpenAI",
+        "model_id": null,
+        "model_id_note": "Exact runtime model identifier not exposed",
+        "run_id": "woorden-research-2026-10-03",
+        "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+      },
+      "review": {
+        "statuses": {
+          "workflow": "machine_checked",
+          "source_facts": "source_verified",
+          "ai_review": "not_run",
+          "release": "blocked",
+          "release_blockers": ["independent_vendor_review_missing"],
+          "user_private_opt_in": false
+        },
+        "risk_categories": ["irregular_or_modal"],
+        "verification_log": [
+          {
+            "stage": "source_extraction",
+            "actor": "build_pilot.py",
+            "verdict": "observations_attached",
+            "source_ids": [
+              "en:40",
+              "nl:80",
+              "pl:132",
+              "pl:133",
+              "zijn-v-1",
+              "zijn-v-2",
+              "zijn-v-3",
+              "zijn-v-4",
+              "zijn-v-5",
+              "zijn-v-6",
+              "zijn-v-7",
+              "zijn-v-8",
+              "zijn-v-9"
+            ]
+          },
+          {
+            "stage": "editorial_self_check",
+            "actor": "OpenAI Codex; same author/vendor",
+            "verdict": "revised_draft",
+            "notes": [],
+            "independent": false
+          },
+          {
+            "stage": "different_vendor_review",
+            "actor": null,
+            "vendor": null,
+            "verdict": "not_run",
+            "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+          },
+          {
+            "stage": "automated_validation",
+            "actor": "tools/validate_delivery.py",
+            "verdict": "pass",
+            "content_sha256": "5d6c5a5c0f86c6ce860363c39076ea53fd585c59de54c35b64ef6611c150724f",
+            "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          }
+        ],
+        "unresolved_doubts": [
+          "All generated meanings, examples and PL/EN translations await independent vendor review."
+        ]
+      },
+      "content_sha256": "5d6c5a5c0f86c6ce860363c39076ea53fd585c59de54c35b64ef6611c150724f"
+    },
+    {
+      "schema_version": "woorden-content-research-0.2",
+      "id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
+      "fixture_ref": "S03",
+      "revision": 1,
+      "lexeme": {
+        "id": "b3473bde-629d-4da6-a075-ed36a452bcbe",
+        "lemma": "goed",
+        "display": "goed",
+        "pos": "adj",
+        "source_pos": "adj",
+        "variants": [],
+        "pronunciation": {
+          "ipa": [
+            {
+              "ipa": "/ɣut/",
+              "tags": [],
+              "raw_tags": [],
+              "source_ids": ["en:1318"],
+              "source_selector": "/sounds/0",
+              "status": "source_verified"
+            }
+          ],
+          "ipa_status": "source_verified",
+          "polish_approximation": null,
+          "polish_approximation_status": "not_produced_requires_review"
+        },
+        "morphology": {
+          "noun": null,
+          "verb": null
+        }
+      },
+      "sense": {
+        "id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
+        "lexeme_id": "b3473bde-629d-4da6-a075-ed36a452bcbe",
+        "definition_nl": "Van voldoende of gewenste kwaliteit.",
+        "meanings": {
+          "en": ["good; satisfactory in quality"],
+          "pl": ["dobry; zadowalający pod względem jakości"]
+        },
+        "register": "neutral",
+        "source_sense": {
+          "record_id": "en:1318",
+          "index": 0,
+          "glosses": ["good (not bad)"],
+          "match_status": "author_selected_needs_reviewer"
+        },
+        "usage_notes": [],
+        "component_lemmas": [],
+        "confusion_links": []
+      },
+      "forms": [
+        {
+          "id": "c9efe923-6bf9-45d0-93f7-f6fa02f2a0a1",
+          "surface": "beter",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["comparative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/0",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "a47d6fb4-1887-4d58-979d-dab5d38c39b0",
+          "surface": "best",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["superlative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/1",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "cafedea7-004c-4bc1-a0dd-c1f96d00d0d2",
+          "surface": "goed",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["adverbial", "positive", "predicative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/4",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "e6c09bbf-5f86-4fa1-8b28-645df75dd323",
+          "surface": "beter",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["adverbial", "comparative", "predicative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/5",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "4a690933-d1de-4622-a48e-376b98a218b3",
+          "surface": "het best",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["adverbial", "predicative", "superlative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/6",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "1d16897b-be88-4475-8aac-831c9aad31cc",
+          "surface": "het beste",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["adverbial", "predicative", "superlative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/7",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "97b1e659-3f05-4961-8fed-1745916b7eda",
+          "surface": "goede",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["feminine", "indefinite", "masculine", "positive", "singular"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/8",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "6fdf1350-13bc-47ce-aac7-f401233be5a5",
+          "surface": "betere",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["comparative", "feminine", "indefinite", "masculine", "singular"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/9",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "f0357876-67b0-40c3-bb39-499ab2d46ddd",
+          "surface": "beste",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["feminine", "indefinite", "masculine", "singular", "superlative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/10",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "ca8c7e30-0c1c-47ee-95b9-0186fc31acc6",
+          "surface": "goed",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["indefinite", "neuter", "positive", "singular"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/11",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "0e551abb-b4b3-414d-8bca-5b5b4aa6daea",
+          "surface": "beter",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["comparative", "indefinite", "neuter", "singular"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/12",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "f264ddb1-63a8-4fdb-8831-b1b1ca51d82e",
+          "surface": "beste",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["indefinite", "neuter", "singular", "superlative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/13",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "174dd59a-0e8e-4b9a-aedf-45429b8ad885",
+          "surface": "goede",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["indefinite", "plural", "positive"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/14",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "7d2d5c70-2878-4343-929f-a64a2e9d7525",
+          "surface": "betere",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["comparative", "indefinite", "plural"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/15",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "a231b7ad-c60a-49f5-93ec-61492e25a8fb",
+          "surface": "beste",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["indefinite", "plural", "superlative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/16",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "4e0bfb0c-604b-4b76-ad31-ac35635ded1b",
+          "surface": "goede",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["definite", "positive"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/17",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "787e129e-983b-400d-9cb1-c2530388e909",
+          "surface": "betere",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["comparative", "definite"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/18",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "4319d409-0e0c-4e57-8999-6c060e79d48e",
+          "surface": "beste",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["definite", "superlative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/19",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "ad93a476-6c87-40b7-bbd7-a01b5637acf3",
+          "surface": "goeds",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["partitive", "positive"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/20",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "ba956c6a-be63-452c-b072-e3278b8f29b3",
+          "surface": "beters",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["comparative", "partitive"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/21",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        },
+        {
+          "id": "4007bceb-b4c4-42ef-b16f-cba16af6a1c1",
+          "surface": "-",
+          "features": {
+            "kind": "adjective",
+            "source_tags": ["partitive", "superlative"]
+          },
+          "source_ids": ["en:1318"],
+          "source_selector": "/forms/22",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Select grammatical context; no automatic acceptance across degrees."
+        }
+      ],
+      "examples": [
+        {
+          "id": "8bf1edad-a084-48fd-8470-de9ba0e4f2d0",
+          "nl": "Het brood is goed.",
+          "translations": {
+            "en": "The bread is good.",
+            "pl": "Chleb jest dobry."
+          },
+          "answer_spans": [
+            {
+              "start": 13,
+              "end": 17,
+              "text": "goed"
+            }
+          ],
+          "offset_unit": "UTF-16-code-units",
+          "target_sense_id": "d3ea5432-4fe6-40fe-beb9-19b5b8fa4c20",
+          "target_form_ids": [
+            "cafedea7-004c-4bc1-a0dd-c1f96d00d0d2",
+            "ca8c7e30-0c1c-47ee-95b9-0186fc31acc6"
+          ],
+          "accepted_answers": [
+            {
+              "ordered_segments": ["goed"],
+              "case_sensitive": false
+            }
+          ],
+          "context": {
+            "en": "good; satisfactory in quality",
+            "pl": "dobry; zadowalający pod względem jakości"
+          },
+          "task_contract": {
+            "primary_target": "sense_in_context",
+            "valid_alternative": "ungradable_prompt_repair",
+            "unrestricted_fuzzy_match": false,
+            "article_scored_separately": true,
+            "requires_independent_review": true
+          },
+          "difficulty": "A1",
+          "review_status": "generated_draft",
+          "provenance": {
+            "origin": "model_A_original",
+            "source_sentence_id": null,
+            "direct_translation_from": "nl",
+            "reviewer_B": "not_run"
+          }
+        }
+      ],
+      "cefr": {
+        "estimated": "A1",
+        "status": "editorial_estimate",
+        "source_exposure": [
+          {
+            "word": "goed",
+            "tag": "ADJ()",
+            "frequencies": {
+              "A1": 75,
+              "A2": 596,
+              "B1": 397,
+              "B2": 162,
+              "C1": 7
+            }
+          },
+          {
+            "word": "goed",
+            "tag": "N(soort)",
+            "frequencies": {
+              "A1": null,
+              "A2": null,
+              "B1": 11,
+              "B2": 6,
+              "C1": null
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "source": "SUBTLEX-NL full workbook",
+        "unit": "surface-form",
+        "word": "goed",
+        "zipf": 6.53886898606813,
+        "surface_count": 152533,
+        "contextual_diversity": 8034,
+        "lemma_count": 219524,
+        "lemma_pos": "ADJ",
+        "status": "source_verified",
+        "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+      },
+      "curriculum": {
+        "stage": "A1",
+        "priority_order": 3,
+        "priority_is_lesson_schedule": false,
+        "themes": ["communication"],
+        "core": true,
+        "utility": 4,
+        "utility_reason": "Chosen for the concrete communication situation and representative fixture coverage."
+      },
+      "image_suitability": {
+        "concreteness": "low_or_abstract",
+        "concreteness_source": "model_judgment",
+        "suitability": "not_recommended_for_standalone_naming",
+        "image_status": "not_produced",
+        "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+      },
+      "hints": {
+        "en": "good; satisfactory in quality",
+        "pl": "dobry; zadowalający pod względem jakości",
+        "role": "meaning_reveal",
+        "invented_mnemonic": null,
+        "etymology": null
+      },
+      "media": {
+        "audio_candidates": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Nl-goed_%28Belgium%29.ogg",
+            "source_ids": ["en:1318"],
+            "tags": ["Belgium"],
+            "role": "headword",
+            "status": "candidate_not_downloaded",
+            "sha256": null,
+            "license": null,
+            "review": "not_run"
+          },
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Nl-goed.ogg",
+            "source_ids": ["en:1318"],
+            "tags": ["Netherlands"],
+            "role": "headword",
+            "status": "candidate_not_downloaded",
+            "sha256": null,
+            "license": null,
+            "review": "not_run"
+          }
+        ],
+        "approved_audio": [],
+        "listening_task_eligible": false,
+        "device_tts": "not_tested"
+      },
+      "legacy": [
+        {
+          "legacy_id": "s353",
+          "original_ru": "хороший",
+          "original_en": "good",
+          "mapping": "lemma_link_requires_sense_adjudication"
+        }
+      ],
+      "provenance": {
+        "/sense": {
+          "source_ids": ["en:1318"],
+          "method": "model_draft_grounded_in_source",
+          "status": "generated_draft",
+          "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+        },
+        "/lexeme/lemma": {
+          "source_ids": ["en:1318"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pos": {
+          "source_ids": ["en:1318"],
+          "method": "source_tag_mapping",
+          "status": "source_verified"
+        },
+        "/lexeme/pronunciation": {
+          "source_ids": ["en:1318"],
+          "method": "source_extraction",
+          "status": "source_verified",
+          "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+        },
+        "/examples": {
+          "source_ids": ["en:1318"],
+          "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+          "status": "generated_draft"
+        },
+        "/forms": {
+          "source_ids": ["en:1318"],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/curriculum": {
+          "source_ids": [],
+          "method": "editorial_policy_v0.2",
+          "status": "generated_draft"
+        },
+        "/frequency": {
+          "source_ids": ["subtlex:goed"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/source_exposure": {
+          "source_ids": ["nt2lex:goed"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/estimated": {
+          "source_ids": [],
+          "method": "model_A_estimate_not_certified_CEFR",
+          "status": "generated_draft"
+        },
+        "/image_suitability": {
+          "source_ids": [],
+          "method": "model_A_sense_judgment_not_norm_data",
+          "status": "generated_draft"
+        },
+        "/media": {
+          "source_ids": ["en:1318"],
+          "method": "source_URL_extraction",
+          "status": "candidate_only"
+        },
+        "/legacy": {
+          "source_ids": ["s353"],
+          "method": "exact_copy_from_immutable_seed",
+          "status": "source_verified"
+        },
+        "/review": {
+          "source_ids": [],
+          "method": "honest_execution_metadata",
+          "status": "recorded"
+        },
+        "/hints": {
+          "source_ids": [],
+          "method": "model_A_meaning_reveal",
+          "status": "generated_draft"
+        },
+        "/generation": {
+          "source_ids": [],
+          "method": "recorded_authoring_metadata",
+          "status": "recorded"
+        },
+        "/lexeme/variants": {
+          "source_ids": [],
+          "method": "no_variants_selected",
+          "status": "not_applicable"
+        },
+        "/lexeme/display": {
+          "source_ids": ["en:1318"],
+          "method": "editorial_display_from_lemma_and_construction",
+          "status": "generated_draft"
+        }
+      },
+      "sources": [
+        {
+          "id": "en:1318",
+          "family": "Wiktionary",
+          "edition": "en",
+          "url": "https://en.wiktionary.org/wiki/goed",
+          "excerpt_path": "evidence/sources/kaikki-en-excerpts.json",
+          "record_sha256": "437384c23836cceadb094d5ce0decab0ddb9ed4b4e58168fd80e6ef4982fb8c9",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nl:17",
+          "family": "Wiktionary",
+          "edition": "nl",
+          "url": "https://nl.wiktionary.org/wiki/goed",
+          "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+          "record_sha256": "c4721c1c25797b5d314fca3359ca99ea4bbcf311e54c7f73c0774579d976798e",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "pl:582",
+          "family": "Wiktionary",
+          "edition": "pl",
+          "url": "https://pl.wiktionary.org/wiki/goed",
+          "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+          "record_sha256": "28765b5a2238820ed62b584a42a617b158c6ecae1dda79d94455d3ac90614e38",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "subtlex:goed",
+          "family": "SUBTLEX-NL",
+          "url": "https://osf.io/download/2dcvs/",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "goed/subtlex",
+          "record_sha256": "fd8b5ddd2351149209406faead81638397703c9b2d8ad919828111d1696eddc8",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nt2lex:goed",
+          "family": "NT2Lex",
+          "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "goed/nt2",
+          "record_sha256": "adb19fca4246161f5d49ae07a6a560a21b963da50574e4e6b6aaf75815ef4e5e",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "s353",
+          "family": "legacy-seed",
+          "url": null,
+          "excerpt_path": "evidence/inputs/seed-v1.json",
+          "selector": "entries[legacyId=s353]",
+          "record_sha256": "6a94fb50d28d77bb3810cbfabf629d1f03b02aaabcc1427e78d8e70f39385863",
+          "retrieved_at": "2026-10-03"
+        }
+      ],
+      "generation": {
+        "actor": "OpenAI Codex",
+        "vendor": "OpenAI",
+        "model_id": null,
+        "model_id_note": "Exact runtime model identifier not exposed",
+        "run_id": "woorden-research-2026-10-03",
+        "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+      },
+      "review": {
+        "statuses": {
+          "workflow": "machine_checked",
+          "source_facts": "source_verified",
+          "ai_review": "not_run",
+          "release": "blocked",
+          "release_blockers": ["independent_vendor_review_missing"],
+          "user_private_opt_in": false
+        },
+        "risk_categories": [],
+        "verification_log": [
+          {
+            "stage": "source_extraction",
+            "actor": "build_pilot.py",
+            "verdict": "observations_attached",
+            "source_ids": ["en:1318", "nl:17", "pl:582"]
+          },
+          {
+            "stage": "editorial_self_check",
+            "actor": "OpenAI Codex; same author/vendor",
+            "verdict": "revised_draft",
+            "notes": [],
+            "independent": false
+          },
+          {
+            "stage": "different_vendor_review",
+            "actor": null,
+            "vendor": null,
+            "verdict": "not_run",
+            "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+          },
+          {
+            "stage": "automated_validation",
+            "actor": "tools/validate_delivery.py",
+            "verdict": "pass",
+            "content_sha256": "3be060496214ce524f196216fcdaf748fddfcd1474eea246662c2e68a15fa952",
+            "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          }
+        ],
+        "unresolved_doubts": [
+          "All generated meanings, examples and PL/EN translations await independent vendor review."
+        ]
+      },
+      "content_sha256": "3be060496214ce524f196216fcdaf748fddfcd1474eea246662c2e68a15fa952"
+    },
+    {
+      "schema_version": "woorden-content-research-0.2",
+      "id": "de6f4380-8bbc-4ebb-8852-418ee312edda",
+      "fixture_ref": "S04",
+      "revision": 1,
+      "lexeme": {
+        "id": "515e4737-77b3-4229-b2f4-c6c748485eab",
+        "lemma": "dank u wel",
+        "display": "dank u wel",
+        "pos": "phrase",
+        "source_pos": "phrase",
+        "variants": [],
+        "pronunciation": {
+          "ipa": [
+            {
+              "ipa": "/ˌdɑŋk y ˈʋɛl/",
+              "tags": [],
+              "raw_tags": [],
+              "source_ids": ["en:1876"],
+              "source_selector": "/sounds/0",
+              "status": "source_verified"
+            },
+            {
+              "ipa": "[ˌdɑŋk y ˈʋɛl]",
+              "tags": ["Netherlands"],
+              "raw_tags": [],
+              "source_ids": ["en:1876"],
+              "source_selector": "/sounds/1",
+              "status": "source_verified"
+            }
+          ],
+          "ipa_status": "source_verified",
+          "polish_approximation": null,
+          "polish_approximation_status": "not_produced_requires_review"
+        },
+        "morphology": {
+          "noun": null,
+          "verb": null
+        }
+      },
+      "sense": {
+        "id": "de6f4380-8bbc-4ebb-8852-418ee312edda",
+        "lexeme_id": "515e4737-77b3-4229-b2f4-c6c748485eab",
+        "definition_nl": "Een beleefde uiting van dank.",
+        "meanings": {
+          "en": ["thank you, polite"],
+          "pl": ["dziękuję, forma uprzejma"]
+        },
+        "register": "polite",
+        "source_sense": {
+          "record_id": "en:1876",
+          "index": 0,
+          "glosses": ["thank you very much"],
+          "match_status": "author_selected_needs_reviewer"
+        },
+        "usage_notes": [],
+        "component_lemmas": [],
+        "confusion_links": []
+      },
+      "forms": [],
+      "examples": [
+        {
+          "id": "4c7c6881-3702-47e3-9444-1d13aff5e934",
+          "nl": "Dank u wel voor het water.",
+          "translations": {
+            "en": "Thank you for the water.",
+            "pl": "Dziękuję za wodę."
+          },
+          "answer_spans": [
+            {
+              "start": 0,
+              "end": 10,
+              "text": "Dank u wel"
+            }
+          ],
+          "offset_unit": "UTF-16-code-units",
+          "target_sense_id": "de6f4380-8bbc-4ebb-8852-418ee312edda",
+          "target_form_ids": [],
+          "accepted_answers": [
+            {
+              "ordered_segments": ["Dank u wel"],
+              "case_sensitive": false
+            }
+          ],
+          "context": {
+            "en": "thank you, polite",
+            "pl": "dziękuję, forma uprzejma"
+          },
+          "task_contract": {
+            "primary_target": "sense_in_context",
+            "valid_alternative": "ungradable_prompt_repair",
+            "unrestricted_fuzzy_match": false,
+            "article_scored_separately": true,
+            "requires_independent_review": true
+          },
+          "difficulty": "A1",
+          "review_status": "generated_draft",
+          "provenance": {
+            "origin": "model_A_original",
+            "source_sentence_id": null,
+            "direct_translation_from": "nl",
+            "reviewer_B": "not_run"
+          }
+        }
+      ],
+      "cefr": {
+        "estimated": "A1",
+        "status": "editorial_estimate",
+        "source_exposure": []
+      },
+      "frequency": {
+        "source": "SUBTLEX-NL full workbook",
+        "unit": "surface-form",
+        "word": "dank u wel",
+        "zipf": null,
+        "surface_count": null,
+        "contextual_diversity": null,
+        "lemma_count": null,
+        "lemma_pos": null,
+        "status": "missing",
+        "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+      },
+      "curriculum": {
+        "stage": "A1",
+        "priority_order": 4,
+        "priority_is_lesson_schedule": false,
+        "themes": ["communication"],
+        "core": true,
+        "utility": 4,
+        "utility_reason": "Chosen for the concrete communication situation and representative fixture coverage."
+      },
+      "image_suitability": {
+        "concreteness": "low_or_abstract",
+        "concreteness_source": "model_judgment",
+        "suitability": "not_recommended_for_standalone_naming",
+        "image_status": "not_produced",
+        "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+      },
+      "hints": {
+        "en": "thank you, polite",
+        "pl": "dziękuję, forma uprzejma",
+        "role": "meaning_reveal",
+        "invented_mnemonic": null,
+        "etymology": null
+      },
+      "media": {
+        "audio_candidates": [],
+        "approved_audio": [],
+        "listening_task_eligible": false,
+        "device_tts": "not_tested"
+      },
+      "legacy": [],
+      "provenance": {
+        "/sense": {
+          "source_ids": ["en:1876"],
+          "method": "model_draft_grounded_in_source",
+          "status": "generated_draft",
+          "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+        },
+        "/lexeme/lemma": {
+          "source_ids": ["en:1876"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pos": {
+          "source_ids": ["en:1876"],
+          "method": "source_tag_mapping",
+          "status": "source_verified"
+        },
+        "/lexeme/pronunciation": {
+          "source_ids": ["en:1876", "en:1876"],
+          "method": "source_extraction",
+          "status": "source_verified",
+          "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+        },
+        "/examples": {
+          "source_ids": ["en:1876"],
+          "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+          "status": "generated_draft"
+        },
+        "/forms": {
+          "source_ids": ["en:1876"],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/curriculum": {
+          "source_ids": [],
+          "method": "editorial_policy_v0.2",
+          "status": "generated_draft"
+        },
+        "/frequency": {
+          "source_ids": [],
+          "method": "source_extraction",
+          "status": "missing"
+        },
+        "/cefr/source_exposure": {
+          "source_ids": [],
+          "method": "source_extraction",
+          "status": "missing"
+        },
+        "/cefr/estimated": {
+          "source_ids": [],
+          "method": "model_A_estimate_not_certified_CEFR",
+          "status": "generated_draft"
+        },
+        "/image_suitability": {
+          "source_ids": [],
+          "method": "model_A_sense_judgment_not_norm_data",
+          "status": "generated_draft"
+        },
+        "/media": {
+          "source_ids": ["en:1876"],
+          "method": "source_URL_extraction",
+          "status": "candidate_only"
+        },
+        "/legacy": {
+          "source_ids": [],
+          "method": "exact_copy_from_immutable_seed",
+          "status": "source_verified"
+        },
+        "/review": {
+          "source_ids": [],
+          "method": "honest_execution_metadata",
+          "status": "recorded"
+        },
+        "/hints": {
+          "source_ids": [],
+          "method": "model_A_meaning_reveal",
+          "status": "generated_draft"
+        },
+        "/generation": {
+          "source_ids": [],
+          "method": "recorded_authoring_metadata",
+          "status": "recorded"
+        },
+        "/lexeme/variants": {
+          "source_ids": [],
+          "method": "no_variants_selected",
+          "status": "not_applicable"
+        },
+        "/lexeme/display": {
+          "source_ids": ["en:1876"],
+          "method": "editorial_display_from_lemma_and_construction",
+          "status": "generated_draft"
+        }
+      },
+      "sources": [
+        {
+          "id": "en:1876",
+          "family": "Wiktionary",
+          "edition": "en",
+          "url": "https://en.wiktionary.org/wiki/dank%20u%20wel",
+          "excerpt_path": "evidence/sources/kaikki-en-excerpts.json",
+          "record_sha256": "e2e0464a12aa7acfc20bab067d18296f5aaeb5007c489931cd7f44830bfaea44",
+          "retrieved_at": "2026-10-03"
+        }
+      ],
+      "generation": {
+        "actor": "OpenAI Codex",
+        "vendor": "OpenAI",
+        "model_id": null,
+        "model_id_note": "Exact runtime model identifier not exposed",
+        "run_id": "woorden-research-2026-10-03",
+        "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+      },
+      "review": {
+        "statuses": {
+          "workflow": "machine_checked",
+          "source_facts": "source_verified",
+          "ai_review": "not_run",
+          "release": "blocked",
+          "release_blockers": ["independent_vendor_review_missing"],
+          "user_private_opt_in": false
+        },
+        "risk_categories": ["formula_or_pragmatics"],
+        "verification_log": [
+          {
+            "stage": "source_extraction",
+            "actor": "build_pilot.py",
+            "verdict": "observations_attached",
+            "source_ids": ["en:1876"]
+          },
+          {
+            "stage": "editorial_self_check",
+            "actor": "OpenAI Codex; same author/vendor",
+            "verdict": "revised_draft",
+            "notes": [],
+            "independent": false
+          },
+          {
+            "stage": "different_vendor_review",
+            "actor": null,
+            "vendor": null,
+            "verdict": "not_run",
+            "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+          },
+          {
+            "stage": "automated_validation",
+            "actor": "tools/validate_delivery.py",
+            "verdict": "pass",
+            "content_sha256": "1e55d6b05d1b85bc9873b2cc6e19b9e1b3edb9a37aa5e2d6d098e2135db06268",
+            "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          }
+        ],
+        "unresolved_doubts": [
+          "All generated meanings, examples and PL/EN translations await independent vendor review."
+        ]
+      },
+      "content_sha256": "1e55d6b05d1b85bc9873b2cc6e19b9e1b3edb9a37aa5e2d6d098e2135db06268"
+    },
+    {
+      "schema_version": "woorden-content-research-0.2",
+      "id": "8e094be1-35f7-42b5-8dbf-ba6ed3afb567",
+      "fixture_ref": "S05",
+      "revision": 1,
+      "lexeme": {
+        "id": "b5785b55-31b9-47cd-aa94-814f39f6860e",
+        "lemma": "u",
+        "display": "u",
+        "pos": "pron",
+        "source_pos": "pron",
+        "variants": [],
+        "pronunciation": {
+          "ipa": [
+            {
+              "ipa": "/y/",
+              "tags": [],
+              "raw_tags": [],
+              "source_ids": ["en:203"],
+              "source_selector": "/sounds/1",
+              "status": "source_verified"
+            }
+          ],
+          "ipa_status": "source_verified",
+          "polish_approximation": null,
+          "polish_approximation_status": "not_produced_requires_review"
+        },
+        "morphology": {
+          "noun": null,
+          "verb": null
+        }
+      },
+      "sense": {
+        "id": "8e094be1-35f7-42b5-8dbf-ba6ed3afb567",
+        "lexeme_id": "b5785b55-31b9-47cd-aa94-814f39f6860e",
+        "definition_nl": "Een beleefde aanspreekvorm voor de aangesprokene.",
+        "meanings": {
+          "en": ["you, polite form of address"],
+          "pl": ["pan, pani lub państwo jako uprzejma forma zwracania się"]
+        },
+        "register": "polite",
+        "source_sense": {
+          "record_id": "en:203",
+          "index": 0,
+          "glosses": ["you (polite)"],
+          "match_status": "author_selected_needs_reviewer"
+        },
+        "usage_notes": [],
+        "component_lemmas": [],
+        "confusion_links": []
+      },
+      "forms": [],
+      "examples": [
+        {
+          "id": "963d540b-47ce-430b-9c11-6b2f560e64c3",
+          "nl": "Heeft u een afspraak?",
+          "translations": {
+            "en": "Do you have an appointment?",
+            "pl": "Czy ma pan/pani umówioną wizytę?"
+          },
+          "answer_spans": [
+            {
+              "start": 6,
+              "end": 7,
+              "text": "u"
+            }
+          ],
+          "offset_unit": "UTF-16-code-units",
+          "target_sense_id": "8e094be1-35f7-42b5-8dbf-ba6ed3afb567",
+          "target_form_ids": [],
+          "accepted_answers": [
+            {
+              "ordered_segments": ["u"],
+              "case_sensitive": false
+            }
+          ],
+          "context": {
+            "en": "you, polite form of address",
+            "pl": "pan, pani lub państwo jako uprzejma forma zwracania się"
+          },
+          "task_contract": {
+            "primary_target": "sense_in_context",
+            "valid_alternative": "ungradable_prompt_repair",
+            "unrestricted_fuzzy_match": false,
+            "article_scored_separately": true,
+            "requires_independent_review": true
+          },
+          "difficulty": "A1",
+          "review_status": "generated_draft",
+          "provenance": {
+            "origin": "model_A_original",
+            "source_sentence_id": null,
+            "direct_translation_from": "nl",
+            "reviewer_B": "not_run"
+          }
+        }
+      ],
+      "cefr": {
+        "estimated": "A1",
+        "status": "editorial_estimate",
+        "source_exposure": [
+          {
+            "word": "u",
+            "tag": "N(soort)",
+            "frequencies": {
+              "A1": null,
+              "A2": 2,
+              "B1": 1,
+              "B2": null,
+              "C1": null
+            }
+          },
+          {
+            "word": "u",
+            "tag": "VNW(pers,pron)",
+            "frequencies": {
+              "A1": 14,
+              "A2": 667,
+              "B1": 382,
+              "B2": 34,
+              "C1": 5
+            }
+          },
+          {
+            "word": "u",
+            "tag": "VNW(pr,pron)",
+            "frequencies": {
+              "A1": 6,
+              "A2": 120,
+              "B1": 65,
+              "B2": 8,
+              "C1": 1
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "source": "SUBTLEX-NL full workbook",
+        "unit": "surface-form",
+        "word": "u",
+        "zipf": 6.736844878575765,
+        "surface_count": 240625,
+        "contextual_diversity": 7417,
+        "lemma_count": 288286,
+        "lemma_pos": "VNW",
+        "status": "source_verified",
+        "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+      },
+      "curriculum": {
+        "stage": "A1",
+        "priority_order": 5,
+        "priority_is_lesson_schedule": false,
+        "themes": ["communication"],
+        "core": true,
+        "utility": 4,
+        "utility_reason": "Chosen for the concrete communication situation and representative fixture coverage."
+      },
+      "image_suitability": {
+        "concreteness": "low_or_abstract",
+        "concreteness_source": "model_judgment",
+        "suitability": "not_recommended_for_standalone_naming",
+        "image_status": "not_produced",
+        "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+      },
+      "hints": {
+        "en": "you, polite form of address",
+        "pl": "pan, pani lub państwo jako uprzejma forma zwracania się",
+        "role": "meaning_reveal",
+        "invented_mnemonic": null,
+        "etymology": null
+      },
+      "media": {
+        "audio_candidates": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Nl-u.ogg",
+            "source_ids": ["en:203"],
+            "tags": [],
+            "role": "headword",
+            "status": "candidate_not_downloaded",
+            "sha256": null,
+            "license": null,
+            "review": "not_run"
+          }
+        ],
+        "approved_audio": [],
+        "listening_task_eligible": false,
+        "device_tts": "not_tested"
+      },
+      "legacy": [
+        {
+          "legacy_id": "s1834",
+          "original_ru": "Вы/вам/вас (формальное обращение)",
+          "original_en": "you (formal)",
+          "mapping": "lemma_link_requires_sense_adjudication"
+        }
+      ],
+      "provenance": {
+        "/sense": {
+          "source_ids": ["en:203"],
+          "method": "model_draft_grounded_in_source",
+          "status": "generated_draft",
+          "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+        },
+        "/lexeme/lemma": {
+          "source_ids": ["en:203"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pos": {
+          "source_ids": ["en:203"],
+          "method": "source_tag_mapping",
+          "status": "source_verified"
+        },
+        "/lexeme/pronunciation": {
+          "source_ids": ["en:203"],
+          "method": "source_extraction",
+          "status": "source_verified",
+          "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+        },
+        "/examples": {
+          "source_ids": ["en:203"],
+          "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+          "status": "generated_draft"
+        },
+        "/forms": {
+          "source_ids": ["en:203"],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/curriculum": {
+          "source_ids": [],
+          "method": "editorial_policy_v0.2",
+          "status": "generated_draft"
+        },
+        "/frequency": {
+          "source_ids": ["subtlex:u"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/source_exposure": {
+          "source_ids": ["nt2lex:u"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/estimated": {
+          "source_ids": [],
+          "method": "model_A_estimate_not_certified_CEFR",
+          "status": "generated_draft"
+        },
+        "/image_suitability": {
+          "source_ids": [],
+          "method": "model_A_sense_judgment_not_norm_data",
+          "status": "generated_draft"
+        },
+        "/media": {
+          "source_ids": ["en:203"],
+          "method": "source_URL_extraction",
+          "status": "candidate_only"
+        },
+        "/legacy": {
+          "source_ids": ["s1834"],
+          "method": "exact_copy_from_immutable_seed",
+          "status": "source_verified"
+        },
+        "/review": {
+          "source_ids": [],
+          "method": "honest_execution_metadata",
+          "status": "recorded"
+        },
+        "/hints": {
+          "source_ids": [],
+          "method": "model_A_meaning_reveal",
+          "status": "generated_draft"
+        },
+        "/generation": {
+          "source_ids": [],
+          "method": "recorded_authoring_metadata",
+          "status": "recorded"
+        },
+        "/lexeme/variants": {
+          "source_ids": [],
+          "method": "no_variants_selected",
+          "status": "not_applicable"
+        },
+        "/lexeme/display": {
+          "source_ids": ["en:203"],
+          "method": "editorial_display_from_lemma_and_construction",
+          "status": "generated_draft"
+        }
+      },
+      "sources": [
+        {
+          "id": "en:203",
+          "family": "Wiktionary",
+          "edition": "en",
+          "url": "https://en.wiktionary.org/wiki/u",
+          "excerpt_path": "evidence/sources/kaikki-en-excerpts.json",
+          "record_sha256": "f1ed5a8da290d9bf6c7a111dc5975cea25aa899db8bab2708b7ab20640030299",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nl:525",
+          "family": "Wiktionary",
+          "edition": "nl",
+          "url": "https://nl.wiktionary.org/wiki/u",
+          "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+          "record_sha256": "cceb2af7b95445382d2ad441780dfeb365bb119dc09f7dfa83f870e109fc0b97",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nl:526",
+          "family": "Wiktionary",
+          "edition": "nl",
+          "url": "https://nl.wiktionary.org/wiki/u",
+          "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+          "record_sha256": "9d1d4b93fdcb2531ee9d48ea051a6a72841e8ca944e0fad18a3120f0dcc0eb29",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "pl:19",
+          "family": "Wiktionary",
+          "edition": "pl",
+          "url": "https://pl.wiktionary.org/wiki/u",
+          "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+          "record_sha256": "514ef192d9c41002272abc50e1dc3e7bd5c156076d699b7ecd2eb2d35ae41f23",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "subtlex:u",
+          "family": "SUBTLEX-NL",
+          "url": "https://osf.io/download/2dcvs/",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "u/subtlex",
+          "record_sha256": "58509b9cd7d00c8d27317e08d3be129d250d0e0215854870361642d79d43d76b",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nt2lex:u",
+          "family": "NT2Lex",
+          "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "u/nt2",
+          "record_sha256": "6e4272271b6244875f1cdf1dac708e425211e991297c85206cc1c6e064f3fd26",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "s1834",
+          "family": "legacy-seed",
+          "url": null,
+          "excerpt_path": "evidence/inputs/seed-v1.json",
+          "selector": "entries[legacyId=s1834]",
+          "record_sha256": "1c3236d91a055c29818cf7a4d79c24b45216aa6c81c5980cd52212684b628686",
+          "retrieved_at": "2026-10-03"
+        }
+      ],
+      "generation": {
+        "actor": "OpenAI Codex",
+        "vendor": "OpenAI",
+        "model_id": null,
+        "model_id_note": "Exact runtime model identifier not exposed",
+        "run_id": "woorden-research-2026-10-03",
+        "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+      },
+      "review": {
+        "statuses": {
+          "workflow": "machine_checked",
+          "source_facts": "source_verified",
+          "ai_review": "not_run",
+          "release": "blocked",
+          "release_blockers": ["independent_vendor_review_missing"],
+          "user_private_opt_in": false
+        },
+        "risk_categories": [],
+        "verification_log": [
+          {
+            "stage": "source_extraction",
+            "actor": "build_pilot.py",
+            "verdict": "observations_attached",
+            "source_ids": ["en:203", "nl:525", "nl:526", "pl:19"]
+          },
+          {
+            "stage": "editorial_self_check",
+            "actor": "OpenAI Codex; same author/vendor",
+            "verdict": "revised_draft",
+            "notes": [],
+            "independent": false
+          },
+          {
+            "stage": "different_vendor_review",
+            "actor": null,
+            "vendor": null,
+            "verdict": "not_run",
+            "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+          },
+          {
+            "stage": "automated_validation",
+            "actor": "tools/validate_delivery.py",
+            "verdict": "pass",
+            "content_sha256": "26df4988e65305e6431b2cf98d028a75edca2f8a541bdbe75f82b91d7c9d3fd4",
+            "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          }
+        ],
+        "unresolved_doubts": [
+          "All generated meanings, examples and PL/EN translations await independent vendor review."
+        ]
+      },
+      "content_sha256": "26df4988e65305e6431b2cf98d028a75edca2f8a541bdbe75f82b91d7c9d3fd4"
+    },
+    {
+      "schema_version": "woorden-content-research-0.2",
+      "id": "ff49fcaa-a55f-4ff6-bd55-6a1a99535bd9",
+      "fixture_ref": "S06",
+      "revision": 1,
+      "lexeme": {
+        "id": "e612c1f0-4bdc-40af-a33b-4ea18567e493",
+        "lemma": "begrijpen",
+        "display": "begrijpen",
+        "pos": "verb",
+        "source_pos": "verb",
+        "variants": [],
+        "pronunciation": {
+          "ipa": [
+            {
+              "ipa": "/bəˈɣrɛi̯pə(n)/",
+              "tags": [],
+              "raw_tags": [],
+              "source_ids": ["en:1101"],
+              "source_selector": "/sounds/0",
+              "status": "source_verified"
+            }
+          ],
+          "ipa_status": "source_verified",
+          "polish_approximation": null,
+          "polish_approximation_status": "not_produced_requires_review"
+        },
+        "morphology": {
+          "noun": null,
+          "verb": {
+            "forms": [
+              "e73380ae-f480-4042-b76d-223f873e0b14",
+              "6b80a313-ddca-4533-86eb-1addd38caef5",
+              "20a3969b-4096-44df-b860-6d3444aa885e",
+              "554c33b6-c4f0-4bd5-9e19-6e618f223009",
+              "ce83e133-3653-4898-946c-cc4834dad682",
+              "112204aa-21a3-45d3-9e3c-40fc799dd0f0",
+              "9623ea97-4a6f-429c-8885-1e16a2f93a3b",
+              "e57de32a-9b90-44db-a569-504a1e545144"
+            ],
+            "perfect_auxiliaries": {
+              "values": ["hebben"],
+              "source_ids": ["begrijpen-v-1", "begrijpen-v-2", "begrijpen-v-3"],
+              "status": "source_verified",
+              "scope": "Lemma observations; intended sense/construction selected by author, awaiting reviewer."
+            },
+            "separable": false,
+            "particle": null,
+            "base": null,
+            "joined_infinitive": "begrijpen",
+            "split_form_ids": [],
+            "reflexive": false,
+            "reflexive_pattern": null,
+            "modal_cluster_note": null
+          }
+        }
+      },
+      "sense": {
+        "id": "ff49fcaa-a55f-4ff6-bd55-6a1a99535bd9",
+        "lexeme_id": "e612c1f0-4bdc-40af-a33b-4ea18567e493",
+        "definition_nl": "De betekenis van iets kunnen volgen.",
+        "meanings": {
+          "en": ["understand the meaning"],
+          "pl": ["rozumieć znaczenie"]
+        },
+        "register": "neutral",
+        "source_sense": {
+          "record_id": "en:1101",
+          "index": 0,
+          "glosses": ["to understand (concepts, ideas), to comprehend, to grasp"],
+          "match_status": "author_selected_needs_reviewer"
+        },
+        "usage_notes": [],
+        "component_lemmas": [],
+        "confusion_links": []
+      },
+      "forms": [
+        {
+          "id": "e73380ae-f480-4042-b76d-223f873e0b14",
+          "surface": "begrijpen",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["infinitive"]
+          },
+          "source_ids": ["en:1101"],
+          "source_selector": "/forms/3",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "6b80a313-ddca-4533-86eb-1addd38caef5",
+          "surface": "begrijp",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["first-person", "present", "singular"]
+          },
+          "source_ids": ["en:1101"],
+          "source_selector": "/forms/5",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "20a3969b-4096-44df-b860-6d3444aa885e",
+          "surface": "begreep",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["first-person", "past", "singular"]
+          },
+          "source_ids": ["en:1101"],
+          "source_selector": "/forms/6",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "554c33b6-c4f0-4bd5-9e19-6e618f223009",
+          "surface": "begrijpt",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["present", "singular", "third-person"]
+          },
+          "source_ids": ["en:1101"],
+          "source_selector": "/forms/16",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "ce83e133-3653-4898-946c-cc4834dad682",
+          "surface": "begreep",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["past", "singular", "third-person"]
+          },
+          "source_ids": ["en:1101"],
+          "source_selector": "/forms/17",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "112204aa-21a3-45d3-9e3c-40fc799dd0f0",
+          "surface": "begrijpen",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["plural", "present"]
+          },
+          "source_ids": ["en:1101"],
+          "source_selector": "/forms/18",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "9623ea97-4a6f-429c-8885-1e16a2f93a3b",
+          "surface": "begrepen",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["past", "plural"]
+          },
+          "source_ids": ["en:1101"],
+          "source_selector": "/forms/19",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "e57de32a-9b90-44db-a569-504a1e545144",
+          "surface": "begrepen",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["participle", "past"]
+          },
+          "source_ids": ["en:1101"],
+          "source_selector": "/forms/27",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        }
+      ],
+      "examples": [
+        {
+          "id": "4ab6dcdc-9b7a-4b56-ae45-4c4c9f8a187e",
+          "nl": "Ik begrijp het niet.",
+          "translations": {
+            "en": "I do not understand it.",
+            "pl": "Nie rozumiem tego."
+          },
+          "answer_spans": [
+            {
+              "start": 3,
+              "end": 10,
+              "text": "begrijp"
+            }
+          ],
+          "offset_unit": "UTF-16-code-units",
+          "target_sense_id": "ff49fcaa-a55f-4ff6-bd55-6a1a99535bd9",
+          "target_form_ids": ["6b80a313-ddca-4533-86eb-1addd38caef5"],
+          "accepted_answers": [
+            {
+              "ordered_segments": ["begrijp"],
+              "case_sensitive": false
+            }
+          ],
+          "context": {
+            "en": "understand the meaning",
+            "pl": "rozumieć znaczenie"
+          },
+          "task_contract": {
+            "primary_target": "sense_in_context",
+            "valid_alternative": "ungradable_prompt_repair",
+            "unrestricted_fuzzy_match": false,
+            "article_scored_separately": true,
+            "requires_independent_review": true
+          },
+          "difficulty": "A1",
+          "review_status": "generated_draft",
+          "provenance": {
+            "origin": "model_A_original",
+            "source_sentence_id": null,
+            "direct_translation_from": "nl",
+            "reviewer_B": "not_run"
+          }
+        }
+      ],
+      "cefr": {
+        "estimated": "A1",
+        "status": "editorial_estimate",
+        "source_exposure": [
+          {
+            "word": "begrijpen",
+            "tag": "WW()",
+            "frequencies": {
+              "A1": 23,
+              "A2": 116,
+              "B1": 50,
+              "B2": 13,
+              "C1": null
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "source": "SUBTLEX-NL full workbook",
+        "unit": "surface-form",
+        "word": "begrijpen",
+        "zipf": 5.044366894921547,
+        "surface_count": 4884,
+        "contextual_diversity": 3087,
+        "lemma_count": 32272,
+        "lemma_pos": "WW",
+        "status": "source_verified",
+        "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+      },
+      "curriculum": {
+        "stage": "A1",
+        "priority_order": 6,
+        "priority_is_lesson_schedule": false,
+        "themes": ["communication"],
+        "core": true,
+        "utility": 4,
+        "utility_reason": "Chosen for the concrete communication situation and representative fixture coverage."
+      },
+      "image_suitability": {
+        "concreteness": "low_or_abstract",
+        "concreteness_source": "model_judgment",
+        "suitability": "not_recommended_for_standalone_naming",
+        "image_status": "not_produced",
+        "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+      },
+      "hints": {
+        "en": "understand the meaning",
+        "pl": "rozumieć znaczenie",
+        "role": "meaning_reveal",
+        "invented_mnemonic": null,
+        "etymology": null
+      },
+      "media": {
+        "audio_candidates": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Nl-begrijpen.ogg",
+            "source_ids": ["en:1101"],
+            "tags": [],
+            "role": "headword",
+            "status": "candidate_not_downloaded",
+            "sha256": null,
+            "license": null,
+            "review": "not_run"
+          }
+        ],
+        "approved_audio": [],
+        "listening_task_eligible": false,
+        "device_tts": "not_tested"
+      },
+      "legacy": [
+        {
+          "legacy_id": "s202",
+          "original_ru": "понимать",
+          "original_en": "to understand",
+          "mapping": "lemma_link_requires_sense_adjudication"
+        }
+      ],
+      "provenance": {
+        "/sense": {
+          "source_ids": ["en:1101"],
+          "method": "model_draft_grounded_in_source",
+          "status": "generated_draft",
+          "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+        },
+        "/lexeme/lemma": {
+          "source_ids": ["en:1101"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pos": {
+          "source_ids": ["en:1101"],
+          "method": "source_tag_mapping",
+          "status": "source_verified"
+        },
+        "/lexeme/morphology/verb": {
+          "source_ids": ["en:1101", "begrijpen-v-1", "begrijpen-v-2", "begrijpen-v-3"],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pronunciation": {
+          "source_ids": ["en:1101"],
+          "method": "source_extraction",
+          "status": "source_verified",
+          "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+        },
+        "/examples": {
+          "source_ids": ["en:1101"],
+          "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+          "status": "generated_draft"
+        },
+        "/forms": {
+          "source_ids": ["en:1101"],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/curriculum": {
+          "source_ids": [],
+          "method": "editorial_policy_v0.2",
+          "status": "generated_draft"
+        },
+        "/frequency": {
+          "source_ids": ["subtlex:begrijpen"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/source_exposure": {
+          "source_ids": ["nt2lex:begrijpen"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/estimated": {
+          "source_ids": [],
+          "method": "model_A_estimate_not_certified_CEFR",
+          "status": "generated_draft"
+        },
+        "/image_suitability": {
+          "source_ids": [],
+          "method": "model_A_sense_judgment_not_norm_data",
+          "status": "generated_draft"
+        },
+        "/media": {
+          "source_ids": ["en:1101"],
+          "method": "source_URL_extraction",
+          "status": "candidate_only"
+        },
+        "/legacy": {
+          "source_ids": ["s202"],
+          "method": "exact_copy_from_immutable_seed",
+          "status": "source_verified"
+        },
+        "/review": {
+          "source_ids": [],
+          "method": "honest_execution_metadata",
+          "status": "recorded"
+        },
+        "/hints": {
+          "source_ids": [],
+          "method": "model_A_meaning_reveal",
+          "status": "generated_draft"
+        },
+        "/generation": {
+          "source_ids": [],
+          "method": "recorded_authoring_metadata",
+          "status": "recorded"
+        },
+        "/lexeme/variants": {
+          "source_ids": [],
+          "method": "no_variants_selected",
+          "status": "not_applicable"
+        },
+        "/lexeme/display": {
+          "source_ids": ["en:1101"],
+          "method": "editorial_display_from_lemma_and_construction",
+          "status": "generated_draft"
+        }
+      },
+      "sources": [
+        {
+          "id": "en:1101",
+          "family": "Wiktionary",
+          "edition": "en",
+          "url": "https://en.wiktionary.org/wiki/begrijpen",
+          "excerpt_path": "evidence/sources/kaikki-en-excerpts.json",
+          "record_sha256": "0bc0a8d2d07b0a82c7f9774d32a466b465247c2a80b5a2df5b60c0131354271d",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nl:1330",
+          "family": "Wiktionary",
+          "edition": "nl",
+          "url": "https://nl.wiktionary.org/wiki/begrijpen",
+          "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+          "record_sha256": "8dcb1fe8896af00711ed3d93af658bc1e8840ed90083c0a0f5dce3f8e8584c6f",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "pl:214",
+          "family": "Wiktionary",
+          "edition": "pl",
+          "url": "https://pl.wiktionary.org/wiki/begrijpen",
+          "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+          "record_sha256": "188c8b66745389191ce5c1d1ed217cae43e838ee7825789b0d2980e3483d6602",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "begrijpen-v-1",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "begrijpen/odwn",
+          "record_sha256": "6fd08b5b857603e30a184986ce8cb90b99b815a94947523099a04893d1f5f01a",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "begrijpen-v-2",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "begrijpen/odwn",
+          "record_sha256": "833b60f7e3c0839f3af06998c34f11f08236e292c2c51cf1d2180c4360c806d8",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "begrijpen-v-3",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "begrijpen/odwn",
+          "record_sha256": "ccd8ba2df08f73bbf9ceface80165ff01951b5714ef21a819042f8095fbe00a2",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "subtlex:begrijpen",
+          "family": "SUBTLEX-NL",
+          "url": "https://osf.io/download/2dcvs/",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "begrijpen/subtlex",
+          "record_sha256": "e1a26ec479d569070ee0c95de06a51831a7c54cd002b6b656f2dcdd372ba6e53",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nt2lex:begrijpen",
+          "family": "NT2Lex",
+          "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "begrijpen/nt2",
+          "record_sha256": "8bbcc54560a0795fe52ab879a9000805a85751f220dadb0b71d328c3bcbafc55",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "s202",
+          "family": "legacy-seed",
+          "url": null,
+          "excerpt_path": "evidence/inputs/seed-v1.json",
+          "selector": "entries[legacyId=s202]",
+          "record_sha256": "83a2aeb4e7c433647abdc91541a537ffdde22fadda41be80d6fb16cc456c964f",
+          "retrieved_at": "2026-10-03"
+        }
+      ],
+      "generation": {
+        "actor": "OpenAI Codex",
+        "vendor": "OpenAI",
+        "model_id": null,
+        "model_id_note": "Exact runtime model identifier not exposed",
+        "run_id": "woorden-research-2026-10-03",
+        "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+      },
+      "review": {
+        "statuses": {
+          "workflow": "machine_checked",
+          "source_facts": "source_verified",
+          "ai_review": "not_run",
+          "release": "blocked",
+          "release_blockers": ["independent_vendor_review_missing"],
+          "user_private_opt_in": false
+        },
+        "risk_categories": [],
+        "verification_log": [
+          {
+            "stage": "source_extraction",
+            "actor": "build_pilot.py",
+            "verdict": "observations_attached",
+            "source_ids": [
+              "en:1101",
+              "nl:1330",
+              "pl:214",
+              "begrijpen-v-1",
+              "begrijpen-v-2",
+              "begrijpen-v-3"
+            ]
+          },
+          {
+            "stage": "editorial_self_check",
+            "actor": "OpenAI Codex; same author/vendor",
+            "verdict": "revised_draft",
+            "notes": [],
+            "independent": false
+          },
+          {
+            "stage": "different_vendor_review",
+            "actor": null,
+            "vendor": null,
+            "verdict": "not_run",
+            "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+          },
+          {
+            "stage": "automated_validation",
+            "actor": "tools/validate_delivery.py",
+            "verdict": "pass",
+            "content_sha256": "d91103e00c70b461df49d08b87d5167422bc85d8b63c23ac3ddbd9431cc51499",
+            "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          }
+        ],
+        "unresolved_doubts": [
+          "All generated meanings, examples and PL/EN translations await independent vendor review."
+        ]
+      },
+      "content_sha256": "d91103e00c70b461df49d08b87d5167422bc85d8b63c23ac3ddbd9431cc51499"
+    },
+    {
+      "schema_version": "woorden-content-research-0.2",
+      "id": "fe21dcb7-b84a-4f1d-9893-f87e3334f6a2",
+      "fixture_ref": "S07",
+      "revision": 1,
+      "lexeme": {
+        "id": "3486570d-5073-428c-b2bc-246973770aba",
+        "lemma": "niet",
+        "display": "niet",
+        "pos": "adv",
+        "source_pos": "adv",
+        "variants": [],
+        "pronunciation": {
+          "ipa": [
+            {
+              "ipa": "/nit/",
+              "tags": ["standard"],
+              "raw_tags": [],
+              "source_ids": ["en:37"],
+              "source_selector": "/sounds/0",
+              "status": "source_verified"
+            },
+            {
+              "ipa": "/ni/",
+              "tags": ["often"],
+              "raw_tags": [],
+              "source_ids": ["en:37"],
+              "source_selector": "/sounds/1",
+              "status": "source_verified"
+            }
+          ],
+          "ipa_status": "source_verified",
+          "polish_approximation": null,
+          "polish_approximation_status": "not_produced_requires_review"
+        },
+        "morphology": {
+          "noun": null,
+          "verb": null
+        }
+      },
+      "sense": {
+        "id": "fe21dcb7-b84a-4f1d-9893-f87e3334f6a2",
+        "lexeme_id": "3486570d-5073-428c-b2bc-246973770aba",
+        "definition_nl": "Een ontkenning uitdrukken.",
+        "meanings": {
+          "en": ["not; negate the statement in this context"],
+          "pl": ["nie; zaprzeczenie zdania w tym kontekście"]
+        },
+        "register": "neutral",
+        "source_sense": {
+          "record_id": "en:37",
+          "index": 0,
+          "glosses": ["not, no, don't: used to express negation."],
+          "match_status": "author_selected_needs_reviewer"
+        },
+        "usage_notes": [],
+        "component_lemmas": [],
+        "confusion_links": []
+      },
+      "forms": [],
+      "examples": [
+        {
+          "id": "07ef4d04-c343-4413-8b5f-7332e2871158",
+          "nl": "Ik begrijp het niet.",
+          "translations": {
+            "en": "I do not understand it.",
+            "pl": "Nie rozumiem tego."
+          },
+          "answer_spans": [
+            {
+              "start": 15,
+              "end": 19,
+              "text": "niet"
+            }
+          ],
+          "offset_unit": "UTF-16-code-units",
+          "target_sense_id": "fe21dcb7-b84a-4f1d-9893-f87e3334f6a2",
+          "target_form_ids": [],
+          "accepted_answers": [
+            {
+              "ordered_segments": ["niet"],
+              "case_sensitive": false
+            }
+          ],
+          "context": {
+            "en": "not; negate the statement in this context",
+            "pl": "nie; zaprzeczenie zdania w tym kontekście"
+          },
+          "task_contract": {
+            "primary_target": "sense_in_context",
+            "valid_alternative": "ungradable_prompt_repair",
+            "unrestricted_fuzzy_match": false,
+            "article_scored_separately": true,
+            "requires_independent_review": true
+          },
+          "difficulty": "A1",
+          "review_status": "generated_draft",
+          "provenance": {
+            "origin": "model_A_original",
+            "source_sentence_id": null,
+            "direct_translation_from": "nl",
+            "reviewer_B": "not_run"
+          }
+        }
+      ],
+      "cefr": {
+        "estimated": "A1",
+        "status": "editorial_estimate",
+        "source_exposure": [
+          {
+            "word": "niet",
+            "tag": "BW()",
+            "frequencies": {
+              "A1": 195,
+              "A2": 1770,
+              "B1": 1397,
+              "B2": 534,
+              "C1": 33
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "source": "SUBTLEX-NL full workbook",
+        "unit": "surface-form",
+        "word": "niet",
+        "zipf": 7.259296385631691,
+        "surface_count": 801297,
+        "contextual_diversity": 8066,
+        "lemma_count": 801268,
+        "lemma_pos": "BW",
+        "status": "source_verified",
+        "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+      },
+      "curriculum": {
+        "stage": "A1",
+        "priority_order": 7,
+        "priority_is_lesson_schedule": false,
+        "themes": ["communication"],
+        "core": true,
+        "utility": 4,
+        "utility_reason": "Chosen for the concrete communication situation and representative fixture coverage."
+      },
+      "image_suitability": {
+        "concreteness": "low_or_abstract",
+        "concreteness_source": "model_judgment",
+        "suitability": "not_recommended_for_standalone_naming",
+        "image_status": "not_produced",
+        "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+      },
+      "hints": {
+        "en": "not; negate the statement in this context",
+        "pl": "nie; zaprzeczenie zdania w tym kontekście",
+        "role": "meaning_reveal",
+        "invented_mnemonic": null,
+        "etymology": null
+      },
+      "media": {
+        "audio_candidates": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Nl-niet.ogg",
+            "source_ids": ["en:37"],
+            "tags": [],
+            "role": "headword",
+            "status": "candidate_not_downloaded",
+            "sha256": null,
+            "license": null,
+            "review": "not_run"
+          }
+        ],
+        "approved_audio": [],
+        "listening_task_eligible": false,
+        "device_tts": "not_tested"
+      },
+      "legacy": [
+        {
+          "legacy_id": "s882",
+          "original_ru": "не",
+          "original_en": "not",
+          "mapping": "lemma_link_requires_sense_adjudication"
+        }
+      ],
+      "provenance": {
+        "/sense": {
+          "source_ids": ["en:37"],
+          "method": "model_draft_grounded_in_source",
+          "status": "generated_draft",
+          "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+        },
+        "/lexeme/lemma": {
+          "source_ids": ["en:37"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pos": {
+          "source_ids": ["en:37"],
+          "method": "source_tag_mapping",
+          "status": "source_verified"
+        },
+        "/lexeme/pronunciation": {
+          "source_ids": ["en:37", "en:37"],
+          "method": "source_extraction",
+          "status": "source_verified",
+          "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+        },
+        "/examples": {
+          "source_ids": ["en:37"],
+          "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+          "status": "generated_draft"
+        },
+        "/forms": {
+          "source_ids": ["en:37"],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/curriculum": {
+          "source_ids": [],
+          "method": "editorial_policy_v0.2",
+          "status": "generated_draft"
+        },
+        "/frequency": {
+          "source_ids": ["subtlex:niet"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/source_exposure": {
+          "source_ids": ["nt2lex:niet"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/estimated": {
+          "source_ids": [],
+          "method": "model_A_estimate_not_certified_CEFR",
+          "status": "generated_draft"
+        },
+        "/image_suitability": {
+          "source_ids": [],
+          "method": "model_A_sense_judgment_not_norm_data",
+          "status": "generated_draft"
+        },
+        "/media": {
+          "source_ids": ["en:37"],
+          "method": "source_URL_extraction",
+          "status": "candidate_only"
+        },
+        "/legacy": {
+          "source_ids": ["s882"],
+          "method": "exact_copy_from_immutable_seed",
+          "status": "source_verified"
+        },
+        "/review": {
+          "source_ids": [],
+          "method": "honest_execution_metadata",
+          "status": "recorded"
+        },
+        "/hints": {
+          "source_ids": [],
+          "method": "model_A_meaning_reveal",
+          "status": "generated_draft"
+        },
+        "/generation": {
+          "source_ids": [],
+          "method": "recorded_authoring_metadata",
+          "status": "recorded"
+        },
+        "/lexeme/variants": {
+          "source_ids": [],
+          "method": "no_variants_selected",
+          "status": "not_applicable"
+        },
+        "/lexeme/display": {
+          "source_ids": ["en:37"],
+          "method": "editorial_display_from_lemma_and_construction",
+          "status": "generated_draft"
+        }
+      },
+      "sources": [
+        {
+          "id": "en:37",
+          "family": "Wiktionary",
+          "edition": "en",
+          "url": "https://en.wiktionary.org/wiki/niet",
+          "excerpt_path": "evidence/sources/kaikki-en-excerpts.json",
+          "record_sha256": "d577af7ed8ebbc098963a46e67812c5c5521842b2bd69e9dc3386d4dbcd59508",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nl:458",
+          "family": "Wiktionary",
+          "edition": "nl",
+          "url": "https://nl.wiktionary.org/wiki/niet",
+          "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+          "record_sha256": "c0e36eaa343d92a35a2f04f6f2d877a3c7fada8f4985ada1046e74021d7770d0",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "pl:636",
+          "family": "Wiktionary",
+          "edition": "pl",
+          "url": "https://pl.wiktionary.org/wiki/niet",
+          "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+          "record_sha256": "25d771026e1b68d33bc09d13aad797e4e8a0b44f3c7dc59b45759663fa794ccb",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "subtlex:niet",
+          "family": "SUBTLEX-NL",
+          "url": "https://osf.io/download/2dcvs/",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "niet/subtlex",
+          "record_sha256": "cf6d9f27121abfed028914f35382816e5e8c4d0dd65ebeb55c4c94f66f80b67b",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nt2lex:niet",
+          "family": "NT2Lex",
+          "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "niet/nt2",
+          "record_sha256": "7b516f3dff947e04eca5ed5195c29c314c7a65cb0791f1c31f272ad13db4f012",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "s882",
+          "family": "legacy-seed",
+          "url": null,
+          "excerpt_path": "evidence/inputs/seed-v1.json",
+          "selector": "entries[legacyId=s882]",
+          "record_sha256": "1d99ab374f52d5ce4d8481df4b357002479650ba4096fe25bf2e15ce60099697",
+          "retrieved_at": "2026-10-03"
+        }
+      ],
+      "generation": {
+        "actor": "OpenAI Codex",
+        "vendor": "OpenAI",
+        "model_id": null,
+        "model_id_note": "Exact runtime model identifier not exposed",
+        "run_id": "woorden-research-2026-10-03",
+        "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+      },
+      "review": {
+        "statuses": {
+          "workflow": "machine_checked",
+          "source_facts": "source_verified",
+          "ai_review": "not_run",
+          "release": "blocked",
+          "release_blockers": ["independent_vendor_review_missing"],
+          "user_private_opt_in": false
+        },
+        "risk_categories": [],
+        "verification_log": [
+          {
+            "stage": "source_extraction",
+            "actor": "build_pilot.py",
+            "verdict": "observations_attached",
+            "source_ids": ["en:37", "nl:458", "pl:636"]
+          },
+          {
+            "stage": "editorial_self_check",
+            "actor": "OpenAI Codex; same author/vendor",
+            "verdict": "revised_draft",
+            "notes": [],
+            "independent": false
+          },
+          {
+            "stage": "different_vendor_review",
+            "actor": null,
+            "vendor": null,
+            "verdict": "not_run",
+            "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+          },
+          {
+            "stage": "automated_validation",
+            "actor": "tools/validate_delivery.py",
+            "verdict": "pass",
+            "content_sha256": "4aec56a289467737f0d9c189716e1870fb221e0bfeba3fc544a8568990a1605e",
+            "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          }
+        ],
+        "unresolved_doubts": [
+          "All generated meanings, examples and PL/EN translations await independent vendor review."
+        ]
+      },
+      "content_sha256": "4aec56a289467737f0d9c189716e1870fb221e0bfeba3fc544a8568990a1605e"
+    },
+    {
+      "schema_version": "woorden-content-research-0.2",
+      "id": "86106c24-7587-4f0d-b1b2-3d1e14505a48",
+      "fixture_ref": "S08",
+      "revision": 1,
+      "lexeme": {
+        "id": "05b66fa2-41e9-4141-980d-b5c5f2cc1dc4",
+        "lemma": "kunt u dat herhalen",
+        "display": "kunt u dat herhalen",
+        "pos": "phrase",
+        "source_pos": "phrase",
+        "variants": [],
+        "pronunciation": {
+          "ipa": [],
+          "ipa_status": "missing",
+          "polish_approximation": null,
+          "polish_approximation_status": "not_produced_requires_review"
+        },
+        "morphology": {
+          "noun": null,
+          "verb": null
+        }
+      },
+      "sense": {
+        "id": "86106c24-7587-4f0d-b1b2-3d1e14505a48",
+        "lexeme_id": "05b66fa2-41e9-4141-980d-b5c5f2cc1dc4",
+        "definition_nl": "Een beleefd verzoek om iets nog een keer te zeggen.",
+        "meanings": {
+          "en": ["could you repeat that?"],
+          "pl": ["czy może pan/pani to powtórzyć?"]
+        },
+        "register": "polite",
+        "source_sense": {
+          "record_id": null,
+          "index": null,
+          "glosses": [],
+          "match_status": "author_selected_needs_reviewer"
+        },
+        "usage_notes": [],
+        "component_lemmas": ["kunnen", "u", "dat", "herhalen"],
+        "confusion_links": []
+      },
+      "forms": [],
+      "examples": [
+        {
+          "id": "845e6140-7f63-414c-b250-18cf1d782fbf",
+          "nl": "Kunt u dat herhalen?",
+          "translations": {
+            "en": "Could you repeat that?",
+            "pl": "Czy może pan/pani to powtórzyć?"
+          },
+          "answer_spans": [
+            {
+              "start": 0,
+              "end": 19,
+              "text": "Kunt u dat herhalen"
+            }
+          ],
+          "offset_unit": "UTF-16-code-units",
+          "target_sense_id": "86106c24-7587-4f0d-b1b2-3d1e14505a48",
+          "target_form_ids": [],
+          "accepted_answers": [
+            {
+              "ordered_segments": ["Kunt u dat herhalen"],
+              "case_sensitive": false
+            }
+          ],
+          "context": {
+            "en": "could you repeat that?",
+            "pl": "czy może pan/pani to powtórzyć?"
+          },
+          "task_contract": {
+            "primary_target": "sense_in_context",
+            "valid_alternative": "ungradable_prompt_repair",
+            "unrestricted_fuzzy_match": false,
+            "article_scored_separately": true,
+            "requires_independent_review": true
+          },
+          "difficulty": "A1",
+          "review_status": "generated_draft",
+          "provenance": {
+            "origin": "model_A_original",
+            "source_sentence_id": null,
+            "direct_translation_from": "nl",
+            "reviewer_B": "not_run"
+          }
+        }
+      ],
+      "cefr": {
+        "estimated": "A1",
+        "status": "editorial_estimate",
+        "source_exposure": []
+      },
+      "frequency": {
+        "source": "SUBTLEX-NL full workbook",
+        "unit": "surface-form",
+        "word": "kunt u dat herhalen",
+        "zipf": null,
+        "surface_count": null,
+        "contextual_diversity": null,
+        "lemma_count": null,
+        "lemma_pos": null,
+        "status": "missing",
+        "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+      },
+      "curriculum": {
+        "stage": "A1",
+        "priority_order": 8,
+        "priority_is_lesson_schedule": false,
+        "themes": ["communication"],
+        "core": true,
+        "utility": 4,
+        "utility_reason": "Chosen for the concrete communication situation and representative fixture coverage."
+      },
+      "image_suitability": {
+        "concreteness": "low_or_abstract",
+        "concreteness_source": "model_judgment",
+        "suitability": "not_recommended_for_standalone_naming",
+        "image_status": "not_produced",
+        "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+      },
+      "hints": {
+        "en": "could you repeat that?",
+        "pl": "czy może pan/pani to powtórzyć?",
+        "role": "meaning_reveal",
+        "invented_mnemonic": null,
+        "etymology": null
+      },
+      "media": {
+        "audio_candidates": [],
+        "approved_audio": [],
+        "listening_task_eligible": false,
+        "device_tts": "not_tested"
+      },
+      "legacy": [],
+      "provenance": {
+        "/sense": {
+          "source_ids": [],
+          "method": "model_draft_grounded_in_source",
+          "status": "generated_draft",
+          "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+        },
+        "/lexeme/lemma": {
+          "source_ids": [],
+          "method": "model_authored_expression",
+          "status": "generated_draft"
+        },
+        "/lexeme/pos": {
+          "source_ids": [],
+          "method": "source_tag_mapping",
+          "status": "generated_draft"
+        },
+        "/lexeme/pronunciation": {
+          "source_ids": [],
+          "method": "source_extraction",
+          "status": "missing",
+          "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+        },
+        "/examples": {
+          "source_ids": [],
+          "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+          "status": "generated_draft"
+        },
+        "/forms": {
+          "source_ids": [],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/curriculum": {
+          "source_ids": [],
+          "method": "editorial_policy_v0.2",
+          "status": "generated_draft"
+        },
+        "/frequency": {
+          "source_ids": [],
+          "method": "source_extraction",
+          "status": "missing"
+        },
+        "/cefr/source_exposure": {
+          "source_ids": [],
+          "method": "source_extraction",
+          "status": "missing"
+        },
+        "/cefr/estimated": {
+          "source_ids": [],
+          "method": "model_A_estimate_not_certified_CEFR",
+          "status": "generated_draft"
+        },
+        "/image_suitability": {
+          "source_ids": [],
+          "method": "model_A_sense_judgment_not_norm_data",
+          "status": "generated_draft"
+        },
+        "/media": {
+          "source_ids": [],
+          "method": "source_URL_extraction",
+          "status": "candidate_only"
+        },
+        "/legacy": {
+          "source_ids": [],
+          "method": "exact_copy_from_immutable_seed",
+          "status": "source_verified"
+        },
+        "/review": {
+          "source_ids": [],
+          "method": "honest_execution_metadata",
+          "status": "recorded"
+        },
+        "/hints": {
+          "source_ids": [],
+          "method": "model_A_meaning_reveal",
+          "status": "generated_draft"
+        },
+        "/generation": {
+          "source_ids": [],
+          "method": "recorded_authoring_metadata",
+          "status": "recorded"
+        },
+        "/lexeme/variants": {
+          "source_ids": [],
+          "method": "no_variants_selected",
+          "status": "not_applicable"
+        },
+        "/lexeme/display": {
+          "source_ids": [],
+          "method": "editorial_display_from_lemma_and_construction",
+          "status": "generated_draft"
+        }
+      },
+      "sources": [],
+      "generation": {
+        "actor": "OpenAI Codex",
+        "vendor": "OpenAI",
+        "model_id": null,
+        "model_id_note": "Exact runtime model identifier not exposed",
+        "run_id": "woorden-research-2026-10-03",
+        "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+      },
+      "review": {
+        "statuses": {
+          "workflow": "machine_checked",
+          "source_facts": "partial",
+          "ai_review": "not_run",
+          "release": "blocked",
+          "release_blockers": ["independent_vendor_review_missing"],
+          "user_private_opt_in": false
+        },
+        "risk_categories": ["formula_or_pragmatics"],
+        "verification_log": [
+          {
+            "stage": "source_extraction",
+            "actor": "build_pilot.py",
+            "verdict": "observations_attached",
+            "source_ids": []
+          },
+          {
+            "stage": "editorial_self_check",
+            "actor": "OpenAI Codex; same author/vendor",
+            "verdict": "revised_draft",
+            "notes": [],
+            "independent": false
+          },
+          {
+            "stage": "different_vendor_review",
+            "actor": null,
+            "vendor": null,
+            "verdict": "not_run",
+            "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+          },
+          {
+            "stage": "automated_validation",
+            "actor": "tools/validate_delivery.py",
+            "verdict": "pass",
+            "content_sha256": "b318c9578dbd5043b3f158f9ec706b0f66685ecadf47cfe4a711283fd039ca71",
+            "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          }
+        ],
+        "unresolved_doubts": [
+          "Whole-entry IPA unavailable in inspected sources; no model-created IPA substituted.",
+          "Productive expression assembled from sourced components; whole-expression grammatical/naturalness review required.",
+          "All generated meanings, examples and PL/EN translations await independent vendor review."
+        ]
+      },
+      "content_sha256": "b318c9578dbd5043b3f158f9ec706b0f66685ecadf47cfe4a711283fd039ca71"
+    },
+    {
+      "schema_version": "woorden-content-research-0.2",
+      "id": "d66ba490-4dcc-482e-885b-cf97a000a036",
+      "fixture_ref": "S09",
+      "revision": 1,
+      "lexeme": {
+        "id": "604850dc-2e18-4fc8-b4a1-466e8dc35ad6",
+        "lemma": "hebben",
+        "display": "hebben",
+        "pos": "verb",
+        "source_pos": "verb",
+        "variants": [],
+        "pronunciation": {
+          "ipa": [
+            {
+              "ipa": "/ˈɦɛbə(n)/",
+              "tags": [],
+              "raw_tags": [],
+              "source_ids": ["en:175"],
+              "source_selector": "/sounds/0",
+              "status": "source_verified"
+            }
+          ],
+          "ipa_status": "source_verified",
+          "polish_approximation": null,
+          "polish_approximation_status": "not_produced_requires_review"
+        },
+        "morphology": {
+          "noun": null,
+          "verb": {
+            "forms": [
+              "6f85eb9d-fd4b-4bb9-afc9-2445b8b39026",
+              "0293e1eb-ae59-4925-9e80-ca08e4245756",
+              "c92f2bac-64f7-4e75-a742-9960a46e02f0",
+              "451c3193-dac7-4bce-862b-67aff2cabf63",
+              "19883087-d049-4fbf-be0f-6265a91a48e3",
+              "8c8dcdea-64f9-4618-83b9-f3dc4f9bc0d0",
+              "db4fc10d-cc77-4c8c-95f8-f1606affb013",
+              "34d45074-ea77-4885-9706-b19dd596e032"
+            ],
+            "perfect_auxiliaries": {
+              "values": ["hebben"],
+              "source_ids": [
+                "hebben-v-1",
+                "hebben-v-2",
+                "hebben-v-3",
+                "hebben-v-4",
+                "hebben-v-5",
+                "hebben-v-6",
+                "hebben-v-7"
+              ],
+              "status": "source_verified",
+              "scope": "Lemma observations; intended sense/construction selected by author, awaiting reviewer."
+            },
+            "separable": false,
+            "particle": null,
+            "base": null,
+            "joined_infinitive": "hebben",
+            "split_form_ids": [],
+            "reflexive": false,
+            "reflexive_pattern": null,
+            "modal_cluster_note": null
+          }
+        }
+      },
+      "sense": {
+        "id": "d66ba490-4dcc-482e-885b-cf97a000a036",
+        "lexeme_id": "604850dc-2e18-4fc8-b4a1-466e8dc35ad6",
+        "definition_nl": "Iets bezitten of tot je beschikking hebben.",
+        "meanings": {
+          "en": ["have; possess or have available"],
+          "pl": ["mieć; posiadać lub mieć do dyspozycji"]
+        },
+        "register": "neutral",
+        "source_sense": {
+          "record_id": "en:175",
+          "index": 0,
+          "glosses": ["to have, to possess, own, hold"],
+          "match_status": "author_selected_needs_reviewer"
+        },
+        "usage_notes": [],
+        "component_lemmas": [],
+        "confusion_links": []
+      },
+      "forms": [
+        {
+          "id": "6f85eb9d-fd4b-4bb9-afc9-2445b8b39026",
+          "surface": "hebben",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["infinitive"]
+          },
+          "source_ids": ["en:175"],
+          "source_selector": "/forms/2",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "0293e1eb-ae59-4925-9e80-ca08e4245756",
+          "surface": "heb",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["first-person", "present", "singular"]
+          },
+          "source_ids": ["en:175"],
+          "source_selector": "/forms/4",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "c92f2bac-64f7-4e75-a742-9960a46e02f0",
+          "surface": "had",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["first-person", "past", "singular"]
+          },
+          "source_ids": ["en:175"],
+          "source_selector": "/forms/5",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "451c3193-dac7-4bce-862b-67aff2cabf63",
+          "surface": "heeft",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["present", "singular", "third-person"]
+          },
+          "source_ids": ["en:175"],
+          "source_selector": "/forms/16",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "19883087-d049-4fbf-be0f-6265a91a48e3",
+          "surface": "had",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["past", "singular", "third-person"]
+          },
+          "source_ids": ["en:175"],
+          "source_selector": "/forms/17",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "8c8dcdea-64f9-4618-83b9-f3dc4f9bc0d0",
+          "surface": "hebben",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["plural", "present"]
+          },
+          "source_ids": ["en:175"],
+          "source_selector": "/forms/18",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "db4fc10d-cc77-4c8c-95f8-f1606affb013",
+          "surface": "hadden",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["past", "plural"]
+          },
+          "source_ids": ["en:175"],
+          "source_selector": "/forms/19",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        },
+        {
+          "id": "34d45074-ea77-4885-9706-b19dd596e032",
+          "surface": "gehad",
+          "features": {
+            "kind": "verb",
+            "source_tags": ["participle", "past"]
+          },
+          "source_ids": ["en:175"],
+          "source_selector": "/forms/27",
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "Source table; match grammatical context before grading."
+        }
+      ],
+      "examples": [
+        {
+          "id": "ca351d9f-65ec-4348-8e2b-d811de44fbbc",
+          "nl": "Ik heb een fiets.",
+          "translations": {
+            "en": "I have a bicycle.",
+            "pl": "Mam rower."
+          },
+          "answer_spans": [
+            {
+              "start": 3,
+              "end": 6,
+              "text": "heb"
+            }
+          ],
+          "offset_unit": "UTF-16-code-units",
+          "target_sense_id": "d66ba490-4dcc-482e-885b-cf97a000a036",
+          "target_form_ids": ["0293e1eb-ae59-4925-9e80-ca08e4245756"],
+          "accepted_answers": [
+            {
+              "ordered_segments": ["heb"],
+              "case_sensitive": false
+            }
+          ],
+          "context": {
+            "en": "have; possess or have available",
+            "pl": "mieć; posiadać lub mieć do dyspozycji"
+          },
+          "task_contract": {
+            "primary_target": "sense_in_context",
+            "valid_alternative": "ungradable_prompt_repair",
+            "unrestricted_fuzzy_match": false,
+            "article_scored_separately": true,
+            "requires_independent_review": true
+          },
+          "difficulty": "A1",
+          "review_status": "generated_draft",
+          "provenance": {
+            "origin": "model_A_original",
+            "source_sentence_id": null,
+            "direct_translation_from": "nl",
+            "reviewer_B": "not_run"
+          }
+        }
+      ],
+      "cefr": {
+        "estimated": "A1",
+        "status": "editorial_estimate",
+        "source_exposure": [
+          {
+            "word": "hebben",
+            "tag": "WW()",
+            "frequencies": {
+              "A1": 223,
+              "A2": 2051,
+              "B1": 1597,
+              "B2": 553,
+              "C1": 37
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "source": "SUBTLEX-NL full workbook",
+        "unit": "surface-form",
+        "word": "hebben",
+        "zipf": 6.532036340527496,
+        "surface_count": 150152,
+        "contextual_diversity": 8042,
+        "lemma_count": 845402,
+        "lemma_pos": "WW",
+        "status": "source_verified",
+        "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+      },
+      "curriculum": {
+        "stage": "A1",
+        "priority_order": 9,
+        "priority_is_lesson_schedule": false,
+        "themes": ["home"],
+        "core": true,
+        "utility": 4,
+        "utility_reason": "Chosen for the concrete home situation and representative fixture coverage."
+      },
+      "image_suitability": {
+        "concreteness": "low_or_abstract",
+        "concreteness_source": "model_judgment",
+        "suitability": "not_recommended_for_standalone_naming",
+        "image_status": "not_produced",
+        "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+      },
+      "hints": {
+        "en": "have; possess or have available",
+        "pl": "mieć; posiadać lub mieć do dyspozycji",
+        "role": "meaning_reveal",
+        "invented_mnemonic": null,
+        "etymology": null
+      },
+      "media": {
+        "audio_candidates": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Nl-hebben.ogg",
+            "source_ids": ["en:175"],
+            "tags": [],
+            "role": "headword",
+            "status": "candidate_not_downloaded",
+            "sha256": null,
+            "license": null,
+            "review": "not_run"
+          }
+        ],
+        "approved_audio": [],
+        "listening_task_eligible": false,
+        "device_tts": "not_tested"
+      },
+      "legacy": [
+        {
+          "legacy_id": "s121",
+          "original_ru": "иметь",
+          "original_en": "to have",
+          "mapping": "lemma_link_requires_sense_adjudication"
+        }
+      ],
+      "provenance": {
+        "/sense": {
+          "source_ids": ["en:175"],
+          "method": "model_draft_grounded_in_source",
+          "status": "generated_draft",
+          "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+        },
+        "/lexeme/lemma": {
+          "source_ids": ["en:175"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pos": {
+          "source_ids": ["en:175"],
+          "method": "source_tag_mapping",
+          "status": "source_verified"
+        },
+        "/lexeme/morphology/verb": {
+          "source_ids": [
+            "en:175",
+            "hebben-v-1",
+            "hebben-v-2",
+            "hebben-v-3",
+            "hebben-v-4",
+            "hebben-v-5",
+            "hebben-v-6",
+            "hebben-v-7"
+          ],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pronunciation": {
+          "source_ids": ["en:175"],
+          "method": "source_extraction",
+          "status": "source_verified",
+          "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+        },
+        "/examples": {
+          "source_ids": ["en:175"],
+          "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+          "status": "generated_draft"
+        },
+        "/forms": {
+          "source_ids": ["en:175"],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/curriculum": {
+          "source_ids": [],
+          "method": "editorial_policy_v0.2",
+          "status": "generated_draft"
+        },
+        "/frequency": {
+          "source_ids": ["subtlex:hebben"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/source_exposure": {
+          "source_ids": ["nt2lex:hebben"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/estimated": {
+          "source_ids": [],
+          "method": "model_A_estimate_not_certified_CEFR",
+          "status": "generated_draft"
+        },
+        "/image_suitability": {
+          "source_ids": [],
+          "method": "model_A_sense_judgment_not_norm_data",
+          "status": "generated_draft"
+        },
+        "/media": {
+          "source_ids": ["en:175"],
+          "method": "source_URL_extraction",
+          "status": "candidate_only"
+        },
+        "/legacy": {
+          "source_ids": ["s121"],
+          "method": "exact_copy_from_immutable_seed",
+          "status": "source_verified"
+        },
+        "/review": {
+          "source_ids": [],
+          "method": "honest_execution_metadata",
+          "status": "recorded"
+        },
+        "/hints": {
+          "source_ids": [],
+          "method": "model_A_meaning_reveal",
+          "status": "generated_draft"
+        },
+        "/generation": {
+          "source_ids": [],
+          "method": "recorded_authoring_metadata",
+          "status": "recorded"
+        },
+        "/lexeme/variants": {
+          "source_ids": [],
+          "method": "no_variants_selected",
+          "status": "not_applicable"
+        },
+        "/lexeme/display": {
+          "source_ids": ["en:175"],
+          "method": "editorial_display_from_lemma_and_construction",
+          "status": "generated_draft"
+        }
+      },
+      "sources": [
+        {
+          "id": "en:175",
+          "family": "Wiktionary",
+          "edition": "en",
+          "url": "https://en.wiktionary.org/wiki/hebben",
+          "excerpt_path": "evidence/sources/kaikki-en-excerpts.json",
+          "record_sha256": "e6f5d9d7f3e952a9191cf2620a2c251ec63cc509de94da83358721dd4aa2f968",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nl:56",
+          "family": "Wiktionary",
+          "edition": "nl",
+          "url": "https://nl.wiktionary.org/wiki/hebben",
+          "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+          "record_sha256": "3e3c9f78bc01bf3b627797d81c4bb18a457df28f3732f025544f79d219d41c4d",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nl:57",
+          "family": "Wiktionary",
+          "edition": "nl",
+          "url": "https://nl.wiktionary.org/wiki/hebben",
+          "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+          "record_sha256": "09f5dbbc0be939b42924f36eab420004e96bf09a781dc9a356d9cfd7185ff6dd",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "pl:469",
+          "family": "Wiktionary",
+          "edition": "pl",
+          "url": "https://pl.wiktionary.org/wiki/hebben",
+          "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+          "record_sha256": "eda1e144b6a2ce99c31edd95784c55c0c7bfe6433d14ff2cd4a09e8597206013",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "pl:470",
+          "family": "Wiktionary",
+          "edition": "pl",
+          "url": "https://pl.wiktionary.org/wiki/hebben",
+          "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+          "record_sha256": "ff3b6b429b1714a5285948df237a89b5179180a041d6f6df0322031e9bc69413",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "hebben-v-1",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "hebben/odwn",
+          "record_sha256": "43b89542a998fddacc2fc0234a2c2c62e9bfb60c417983be34f4e88121f6df10",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "hebben-v-2",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "hebben/odwn",
+          "record_sha256": "286e91eb6715150dc843f004818271873e50a9c483138eb219dcc99741297eb1",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "hebben-v-3",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "hebben/odwn",
+          "record_sha256": "df0337e9e7e7e240d27310953eb007bd3db370d6aa77ad625dc9ca8500debbbe",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "hebben-v-4",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "hebben/odwn",
+          "record_sha256": "b16223442ef2d902e4d268d4f95dfe13482f4bf46faaab62bcc76e4a39c50794",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "hebben-v-5",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "hebben/odwn",
+          "record_sha256": "bf9b476b096c514326cdb9edf50a0bf6c985db699df8cb498283e42b727471cc",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "hebben-v-6",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "hebben/odwn",
+          "record_sha256": "7972e0cbfdfa2c6837bf25dca92984e208e6bfbcbec1e256bc655d570770f58e",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "hebben-v-7",
+          "family": "ODWN/RBN",
+          "url": "https://github.com/cltl/OpenDutchWordnet",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "hebben/odwn",
+          "record_sha256": "c5ac50696496ee3ddb9b44dd15ebe5404506cebe7e6e654915d51c287448949b",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "subtlex:hebben",
+          "family": "SUBTLEX-NL",
+          "url": "https://osf.io/download/2dcvs/",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "hebben/subtlex",
+          "record_sha256": "942ce65de31849223e26f73243020bfad453639c3a5b28cad3d02b3ac060ad91",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nt2lex:hebben",
+          "family": "NT2Lex",
+          "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "hebben/nt2",
+          "record_sha256": "a84b45b0a3fe837e9fb1e5bd941de62c01521a46f901ab935cd6fa59bf459bc1",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "s121",
+          "family": "legacy-seed",
+          "url": null,
+          "excerpt_path": "evidence/inputs/seed-v1.json",
+          "selector": "entries[legacyId=s121]",
+          "record_sha256": "f712337a5b826717892b86377e9a34c3ab1c870c998259a9771a98b5bcb9c039",
+          "retrieved_at": "2026-10-03"
+        }
+      ],
+      "generation": {
+        "actor": "OpenAI Codex",
+        "vendor": "OpenAI",
+        "model_id": null,
+        "model_id_note": "Exact runtime model identifier not exposed",
+        "run_id": "woorden-research-2026-10-03",
+        "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+      },
+      "review": {
+        "statuses": {
+          "workflow": "machine_checked",
+          "source_facts": "source_verified",
+          "ai_review": "not_run",
+          "release": "blocked",
+          "release_blockers": ["independent_vendor_review_missing"],
+          "user_private_opt_in": false
+        },
+        "risk_categories": [],
+        "verification_log": [
+          {
+            "stage": "source_extraction",
+            "actor": "build_pilot.py",
+            "verdict": "observations_attached",
+            "source_ids": [
+              "en:175",
+              "nl:56",
+              "nl:57",
+              "pl:469",
+              "pl:470",
+              "hebben-v-1",
+              "hebben-v-2",
+              "hebben-v-3",
+              "hebben-v-4",
+              "hebben-v-5",
+              "hebben-v-6",
+              "hebben-v-7"
+            ]
+          },
+          {
+            "stage": "editorial_self_check",
+            "actor": "OpenAI Codex; same author/vendor",
+            "verdict": "revised_draft",
+            "notes": [],
+            "independent": false
+          },
+          {
+            "stage": "different_vendor_review",
+            "actor": null,
+            "vendor": null,
+            "verdict": "not_run",
+            "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+          },
+          {
+            "stage": "automated_validation",
+            "actor": "tools/validate_delivery.py",
+            "verdict": "pass",
+            "content_sha256": "69e6418f29bcbefb36d55a7aa4f4bbf19ac9d900f8c51f245a4f249650af858c",
+            "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          }
+        ],
+        "unresolved_doubts": [
+          "All generated meanings, examples and PL/EN translations await independent vendor review."
+        ]
+      },
+      "content_sha256": "69e6418f29bcbefb36d55a7aa4f4bbf19ac9d900f8c51f245a4f249650af858c"
+    },
+    {
+      "schema_version": "woorden-content-research-0.2",
+      "id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+      "fixture_ref": "S10",
+      "revision": 1,
+      "lexeme": {
+        "id": "41b8a70a-349f-4d5e-aa79-7c53ea5f17eb",
+        "lemma": "huis",
+        "display": "huis",
+        "pos": "noun",
+        "source_pos": "noun",
+        "variants": [],
+        "pronunciation": {
+          "ipa": [
+            {
+              "ipa": "/ɦœy̯s/",
+              "tags": [],
+              "raw_tags": [],
+              "source_ids": ["en:864"],
+              "source_selector": "/sounds/0",
+              "status": "source_verified"
+            },
+            {
+              "ipa": "[ɦɜʏ̯s̠]",
+              "tags": ["Netherlands"],
+              "raw_tags": [],
+              "source_ids": ["en:864"],
+              "source_selector": "/sounds/1",
+              "status": "source_verified"
+            },
+            {
+              "ipa": "[ɦɐʏ̯s̠]",
+              "tags": [],
+              "raw_tags": [],
+              "source_ids": ["en:864"],
+              "source_selector": "/sounds/2",
+              "status": "source_verified"
+            },
+            {
+              "ipa": "[ɦœːs]",
+              "tags": ["Belgium"],
+              "raw_tags": [],
+              "source_ids": ["en:864"],
+              "source_selector": "/sounds/3",
+              "status": "source_verified"
+            }
+          ],
+          "ipa_status": "source_verified",
+          "polish_approximation": null,
+          "polish_approximation_status": "not_produced_requires_review"
+        },
+        "morphology": {
+          "noun": {
+            "article": {
+              "accepted": ["het"],
+              "number": "singular",
+              "status": "source_verified",
+              "source_ids": ["en:864"]
+            },
+            "countability": "count",
+            "plural": {
+              "values": ["huizen"],
+              "status": "source_verified",
+              "applies_to_selected_sense": true,
+              "note": "Primary attested plural selected; other source variants remain in raw evidence."
+            },
+            "diminutive": {
+              "values": ["huisje"],
+              "status": "source_verified",
+              "applies_to_selected_sense": true,
+              "note": "Lexeme-level form; meaning/countability can change."
+            }
+          },
+          "verb": null
+        }
+      },
+      "sense": {
+        "id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+        "lexeme_id": "41b8a70a-349f-4d5e-aa79-7c53ea5f17eb",
+        "definition_nl": "Een gebouw waarin mensen wonen.",
+        "meanings": {
+          "en": ["house; building used as a home"],
+          "pl": ["dom; budynek mieszkalny"]
+        },
+        "register": "neutral",
+        "source_sense": {
+          "record_id": "en:864",
+          "index": 0,
+          "glosses": ["a house, home; residence"],
+          "match_status": "author_selected_needs_reviewer"
+        },
+        "usage_notes": [],
+        "component_lemmas": [],
+        "confusion_links": []
+      },
+      "forms": [
+        {
+          "id": "6184446f-e2d6-4771-aedf-394ee48cd13e",
+          "surface": "huizen",
+          "features": {
+            "kind": "plural",
+            "source_tags": ["plural"]
+          },
+          "source_ids": ["en:864"],
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "lexeme; selected sense may restrict use"
+        },
+        {
+          "id": "70499fc5-1636-4a63-aff5-009860fa8e92",
+          "surface": "huisje",
+          "features": {
+            "kind": "diminutive",
+            "source_tags": ["diminutive", "neuter"]
+          },
+          "source_ids": ["en:864"],
+          "status": "source_verified",
+          "grading_enabled": false,
+          "scope": "lexeme; selected sense may restrict use"
+        }
+      ],
+      "examples": [
+        {
+          "id": "ec5a9423-b2ec-4d27-b189-1158d6f4f9a2",
+          "nl": "Het huis is klein.",
+          "translations": {
+            "en": "The house is small.",
+            "pl": "Dom jest mały."
+          },
+          "answer_spans": [
+            {
+              "start": 4,
+              "end": 8,
+              "text": "huis"
+            }
+          ],
+          "offset_unit": "UTF-16-code-units",
+          "target_sense_id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+          "target_form_ids": [],
+          "accepted_answers": [
+            {
+              "ordered_segments": ["huis"],
+              "case_sensitive": false
+            }
+          ],
+          "context": {
+            "en": "house; building used as a home",
+            "pl": "dom; budynek mieszkalny"
+          },
+          "task_contract": {
+            "primary_target": "sense_in_context",
+            "valid_alternative": "ungradable_prompt_repair",
+            "unrestricted_fuzzy_match": false,
+            "article_scored_separately": true,
+            "requires_independent_review": true
+          },
+          "difficulty": "A1",
+          "review_status": "generated_draft",
+          "provenance": {
+            "origin": "model_A_original",
+            "source_sentence_id": null,
+            "direct_translation_from": "nl",
+            "reviewer_B": "not_run"
+          }
+        }
+      ],
+      "cefr": {
+        "estimated": "A1",
+        "status": "editorial_estimate",
+        "source_exposure": [
+          {
+            "word": "huis",
+            "tag": "N(soort)",
+            "frequencies": {
+              "A1": 77,
+              "A2": 232,
+              "B1": 187,
+              "B2": 28,
+              "C1": 3
+            }
+          }
+        ]
+      },
+      "frequency": {
+        "source": "SUBTLEX-NL full workbook",
+        "unit": "surface-form",
+        "word": "huis",
+        "zipf": 5.909518775452468,
+        "surface_count": 35810,
+        "contextual_diversity": 6939,
+        "lemma_count": 37139,
+        "lemma_pos": "N",
+        "status": "source_verified",
+        "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+      },
+      "curriculum": {
+        "stage": "A1",
+        "priority_order": 10,
+        "priority_is_lesson_schedule": false,
+        "themes": ["home"],
+        "core": true,
+        "utility": 4,
+        "utility_reason": "Chosen for the concrete home situation and representative fixture coverage."
+      },
+      "image_suitability": {
+        "concreteness": "high",
+        "concreteness_source": "model_judgment",
+        "suitability": "single_referent",
+        "image_status": "not_produced",
+        "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+      },
+      "hints": {
+        "en": "house; building used as a home",
+        "pl": "dom; budynek mieszkalny",
+        "role": "meaning_reveal",
+        "invented_mnemonic": null,
+        "etymology": null
+      },
+      "media": {
+        "audio_candidates": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Nl-huis.ogg",
+            "source_ids": ["en:864"],
+            "tags": ["Netherlands"],
+            "role": "headword",
+            "status": "candidate_not_downloaded",
+            "sha256": null,
+            "license": null,
+            "review": "not_run"
+          }
+        ],
+        "approved_audio": [],
+        "listening_task_eligible": false,
+        "device_tts": "not_tested"
+      },
+      "legacy": [
+        {
+          "legacy_id": "s267",
+          "original_ru": "дом",
+          "original_en": "house",
+          "mapping": "lemma_link_requires_sense_adjudication"
+        }
+      ],
+      "provenance": {
+        "/sense": {
+          "source_ids": ["en:864"],
+          "method": "model_draft_grounded_in_source",
+          "status": "generated_draft",
+          "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+        },
+        "/lexeme/lemma": {
+          "source_ids": ["en:864"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pos": {
+          "source_ids": ["en:864"],
+          "method": "source_tag_mapping",
+          "status": "source_verified"
+        },
+        "/lexeme/morphology/noun": {
+          "source_ids": ["en:864"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/lexeme/pronunciation": {
+          "source_ids": ["en:864", "en:864", "en:864", "en:864"],
+          "method": "source_extraction",
+          "status": "source_verified",
+          "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+        },
+        "/examples": {
+          "source_ids": ["en:864"],
+          "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+          "status": "generated_draft"
+        },
+        "/forms": {
+          "source_ids": ["en:864"],
+          "method": "feature_filtered_source_extraction",
+          "status": "source_verified"
+        },
+        "/curriculum": {
+          "source_ids": [],
+          "method": "editorial_policy_v0.2",
+          "status": "generated_draft"
+        },
+        "/frequency": {
+          "source_ids": ["subtlex:huis"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/source_exposure": {
+          "source_ids": ["nt2lex:huis"],
+          "method": "source_extraction",
+          "status": "source_verified"
+        },
+        "/cefr/estimated": {
+          "source_ids": [],
+          "method": "model_A_estimate_not_certified_CEFR",
+          "status": "generated_draft"
+        },
+        "/image_suitability": {
+          "source_ids": [],
+          "method": "model_A_sense_judgment_not_norm_data",
+          "status": "generated_draft"
+        },
+        "/media": {
+          "source_ids": ["en:864"],
+          "method": "source_URL_extraction",
+          "status": "candidate_only"
+        },
+        "/legacy": {
+          "source_ids": ["s267"],
+          "method": "exact_copy_from_immutable_seed",
+          "status": "source_verified"
+        },
+        "/review": {
+          "source_ids": [],
+          "method": "honest_execution_metadata",
+          "status": "recorded"
+        },
+        "/hints": {
+          "source_ids": [],
+          "method": "model_A_meaning_reveal",
+          "status": "generated_draft"
+        },
+        "/generation": {
+          "source_ids": [],
+          "method": "recorded_authoring_metadata",
+          "status": "recorded"
+        },
+        "/lexeme/variants": {
+          "source_ids": [],
+          "method": "no_variants_selected",
+          "status": "not_applicable"
+        },
+        "/lexeme/display": {
+          "source_ids": ["en:864"],
+          "method": "editorial_display_from_lemma_and_construction",
+          "status": "generated_draft"
+        }
+      },
+      "sources": [
+        {
+          "id": "en:864",
+          "family": "Wiktionary",
+          "edition": "en",
+          "url": "https://en.wiktionary.org/wiki/huis",
+          "excerpt_path": "evidence/sources/kaikki-en-excerpts.json",
+          "record_sha256": "cad0cec165d416985620ecbcf53ad79eca9dee4936b1a1dedf88504e60aead22",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nl:484",
+          "family": "Wiktionary",
+          "edition": "nl",
+          "url": "https://nl.wiktionary.org/wiki/huis",
+          "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+          "record_sha256": "7df1f7a18b27baebeec159284421f87bc42875bdc11724ec1871112747fa3393",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "pl:541",
+          "family": "Wiktionary",
+          "edition": "pl",
+          "url": "https://pl.wiktionary.org/wiki/huis",
+          "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+          "record_sha256": "b3d7ba02ef9ed2f0e5019ffd110ed4af6bb714a618df8830aa848035851c072a",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "subtlex:huis",
+          "family": "SUBTLEX-NL",
+          "url": "https://osf.io/download/2dcvs/",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "huis/subtlex",
+          "record_sha256": "c0157fe7a6d69d636d440b9fb2c0f9a74ac8cfd74c112c26e947b640a1d857b4",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "nt2lex:huis",
+          "family": "NT2Lex",
+          "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+          "excerpt_path": "evidence/lexical-index.json",
+          "selector": "huis/nt2",
+          "record_sha256": "4f4fbe7692bddfe7b4defe026d191ae5fc14b133f668190782071733869b0f2b",
+          "retrieved_at": "2026-10-03"
+        },
+        {
+          "id": "s267",
+          "family": "legacy-seed",
+          "url": null,
+          "excerpt_path": "evidence/inputs/seed-v1.json",
+          "selector": "entries[legacyId=s267]",
+          "record_sha256": "77d569edccde63b6b48f4b7951dee4824e71bced3ffaa98ab6d9d6f07b941208",
+          "retrieved_at": "2026-10-03"
+        }
+      ],
+      "generation": {
+        "actor": "OpenAI Codex",
+        "vendor": "OpenAI",
+        "model_id": null,
+        "model_id_note": "Exact runtime model identifier not exposed",
+        "run_id": "woorden-research-2026-10-03",
+        "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+      },
+      "review": {
+        "statuses": {
+          "workflow": "machine_checked",
+          "source_facts": "source_verified",
+          "ai_review": "not_run",
+          "release": "blocked",
+          "release_blockers": ["independent_vendor_review_missing"],
+          "user_private_opt_in": false
+        },
+        "risk_categories": [],
+        "verification_log": [
+          {
+            "stage": "source_extraction",
+            "actor": "build_pilot.py",
+            "verdict": "observations_attached",
+            "source_ids": ["en:864", "nl:484", "pl:541"]
+          },
+          {
+            "stage": "editorial_self_check",
+            "actor": "OpenAI Codex; same author/vendor",
+            "verdict": "revised_draft",
+            "notes": [],
+            "independent": false
+          },
+          {
+            "stage": "different_vendor_review",
+            "actor": null,
+            "vendor": null,
+            "verdict": "not_run",
+            "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+          },
+          {
+            "stage": "automated_validation",
+            "actor": "tools/validate_delivery.py",
+            "verdict": "pass",
+            "content_sha256": "e0ba92254db1c22970dcd427889e48f5537faa66a947b6153c7584fe8d41198e",
+            "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+          }
+        ],
+        "unresolved_doubts": [
+          "All generated meanings, examples and PL/EN translations await independent vendor review."
+        ]
+      },
+      "content_sha256": "e0ba92254db1c22970dcd427889e48f5537faa66a947b6153c7584fe8d41198e"
+    }
+  ]
+}

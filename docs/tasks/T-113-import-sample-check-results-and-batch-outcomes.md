@@ -1,16 +1,16 @@
 ---
-id: T-119
-title: Probe local Dutch TTS and expose explicit fallback states
+id: T-113
+title: Import sample-check results and batch outcomes
 status: todo
 size: M
-depends_on: [T-118]
+depends_on: [T-112]
 type: task
-refs: [W21, F08, T43]
+refs: [W18, W19, F08, T50]
 ---
 
 ## Goal
 
-A learner can tell whether a usable local Dutch voice is available and can continue with written practice when it is not.
+A contributor can import an actual sample-check response and see the batch outcome and the resulting language-check state of every entry in the batch.
 
 ## Context
 
@@ -24,18 +24,20 @@ A learner can tell whether a usable local Dutch voice is available and can conti
 
 In:
 
-- Implement platform adapter capability probes using locale, Android network-required flag and browser voice locality.
-- Expose unavailable/download-needed/tested-local states and record actual-device offline smoke-test results.
+- Validate the response against T-112's schema: reviewer vendor differs from the author vendor recorded in the drafts, every sampled entry is answered once on its current hash, and the seed and batch manifest match the exported packet.
+- Compute the outcome of ADR 0005 section 3: failed when one problem type appears in two or more sampled entries, otherwise passed. On a pass: sampled `pass` entries become `ai_reviewed`, unsampled entries `batch_checked`, `fix` entries `revision_requested` with the patch attached, `unsure` entries `uncertain` and flagged. On a failure: no entry gains a check state.
+- Store the raw response, its hash and the import result; importing the same response again changes nothing.
+- Any later edit of an entry returns its language check to `not_run`.
 
 Out (do not do in this task):
 
-- Installing Android SDK locally, silently calling online TTS, pronunciation grading or runtime AI.
+- Applying patches automatically, auto-publishing, or treating vendor strings as cryptographic proof.
 
 ## Acceptance criteria
 
-- [ ] AC1: Given no Dutch/local voice, when requested, then no wrong-language or silent network fallback occurs and a clear repair action appears. (unit, e2e)
-- [ ] AC2: Given a selected voice on a real device in airplane mode, when the QA phrase set plays, then actual results and engine/version are recorded. (device test on the CI emulator for the probe and its states; the owner runs the airplane-mode phrase set on a real phone with the debug APK and the PR records the result)
-- [ ] AC3: Given an untested voice, when capability is displayed, then availability is not labelled pronunciation-approved. (unit)
+- [ ] AC1: Given a response from the author's vendor, for a stale hash, or missing a sampled entry, when imported, then it is rejected with a reason and no state changes. (unit)
+- [ ] AC2: Given a passing response, when imported, then sampled passes are ai_reviewed, unsampled entries batch_checked, fix entries revision_requested and unsure entries uncertain and flagged; given the same problem in two sampled entries, then the batch fails and no entry gains a check state. (unit)
+- [ ] AC3: Given an imported batch, when an entry is edited, then only that entry returns to not_run; importing the same response twice is idempotent. (integration)
 
 ## Notes for the implementer
 

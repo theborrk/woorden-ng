@@ -1,48 +1,130 @@
-# ADR 0005: Source-backed facts and independent AI content review
+# ADR 0005: Source-backed facts, exercise rules and sampled AI checks
 
 - **Status:** accepted
-- **Date:** 2026-10-03 (drafted by the content research; accepted by the owner on 2026-10-03, who
-  does not speak Dutch and wants all language review done by AI)
-- Supersedes: blueprint §14.2 human-only language-review rule and related wording in §14.3/W19
-- Preserves: ADR 0003; no legacy progress migration and no runtime AI/provider dependency
-- References: W18, W19, W20, W21, F04, F08, T43, T44, T50, T57
+- **Date:** 2026-10-03, revised 2026-10-04 (see "History")
+- **Decided by:** the owner, who does not speak Dutch and wants language quality handled by AI at a
+  cost that scales to thousands of words
+- **Supersedes:** blueprint §14.2's human-only language review, and the related wording in §14.3
+  and W19 ("human review packets")
+- **Preserves:** ADR 0003; no legacy progress migration; no runtime AI or provider dependency
+- **References:** W18, W19, W20, W21, F04, F08, T43, T44, T50, T57
 
 ## Context
 
-Woorden NG is prepared by AI agents for a Polish/English-speaking family. No team member can provide dependable Dutch-language review. The existing human-only `language_reviewed` requirement therefore cannot be the production path. Simply renaming agreement between two models would hide the same risk: correlated mistakes, wrong source senses, extraction artefacts and plausible but unnatural translations can survive agreement.
+Nobody on the project speaks Dutch, so the blueprint's human `language_reviewed` step can't happen.
+The content is authored by AI (OpenAI models) from dictionary sources. Three kinds of error remain
+possible:
 
-The repository already accepts externally prepared content without an AI service. The proposed change concerns evidence and release policy, not adding generation to the application. Source facts, authored language judgments and task contracts must remain distinguishable. Missing content must disable only dependent tasks (T43), and authored drafts must not self-certify (T50).
+1. **Wrong facts** (article, plural, verb form, spelling, IPA): preventable by taking every fact
+   from a pinned source and checking it automatically.
+2. **Systematic authoring errors**: one bad habit of the generator repeated in every entry.
+3. **Isolated language errors**: an unnatural sentence or an imprecise translation in one entry.
+
+The first version of this ADR answered 2 and 3 with a full nine-dimension review of every entry by
+a model from a different vendor. Its first batch (`research/content-2026-10/review/responses/`,
+S01–S10) found **no wrong fact, meaning or translation**. Its five major findings were all one
+systematic problem: fill-in-the-blank cues that don't fix the tense and accept a single answer
+although synonyms or other tenses are also correct. It took about half an hour of a reviewer
+session for ten entries; at the curriculum's 5,000 senses that is hundreds of sessions. Systematic
+problems are cheap to find with a sample and fix at the source; isolated errors are best caught
+where they show up, while studying.
 
 ## Decision
 
-Adopt the status axes, provenance contract and rubric in `docs/content/verification-pipeline.md` and `entry-specification.md`. Remove `language_reviewed` as a newly assignable status. A factual field may be `source_verified` only with a source observation, scope, record locator and pinned hash. A linguistic field/task may be `ai_reviewed` only after importing evidence of an **actual review by a different vendor** against the current semantic payload hash. The author model and same-vendor self-check cannot confer that state.
+### 1. Facts come from sources, checked by machine
 
-Use source-derived spelling, article, plural, verb-form and IPA observations. Models can interpret/select among evidenced alternatives and author definitions, direct PL/EN meanings, examples and hints. They cannot invent dictionary facts and label them verified. Source disagreements route to an explicit adjudication record or `flagged`; a model majority cannot silently erase disagreement. Different Wiktionary editions and reused frequency corpora are related sources, not independent votes.
+A factual field (article, plural, verb forms, spelling, IPA) is `source_verified` only with a cited
+source observation: scope, record locator and pinned hash. Models may choose among evidenced
+alternatives but never invent a fact and label it verified. Source disagreements are recorded as
+`conflicted` (or adjudicated with the evidence kept), never majority-voted away. Wiktionary
+editions and reused frequency corpora are related sources, not independent votes.
 
-`eligible` is calculated **per task and locale** from required source/structure/review/media coverage. Structural validation, relevant factual support, independent rubric pass and absence of unresolved critical/major issues must all hold for the exact current revision. A missing optional IPA can coexist with eligible written meaning practice. Missing PL/example/audio cannot be fabricated at runtime. A field-changing edit invalidates affected reviews and task contracts; a sense change can require a new sense ID and explicit progress mapping in the new app.
+### 2. Exercise rules, enforced by the validator
 
-Keep `legacy`, `generated_draft` and `user_private` as origin/disposition information. Legacy browsing remains distinguishable from curated learning. Private generated material is usable only through explicit user opt-in and stays visibly provisional; it never silently becomes a curated pack. Rejected/superseded entries and all original Russian text remain in provenance. Audit “drop” retires a duplicate teaching concept, not an immutable source row or history.
+Every generated entry follows these rules, and the entry validator rejects what it can detect:
 
-## Replacement text for blueprint §14.2
+- **R1 – the cue fixes the answer.** When the answer is a verb form, the cue states tense and
+  person (for example "present, ik"). The accepted answers include every common equivalent for that
+  cue: synonyms, formal and informal variants, and short forms.
+- **R2 – sentences are not graded as one string.** A whole-sentence answer either lists its common
+  variants or is self-graded (the learner compares with a model answer and marks it).
+- **R3 – no cue gives away or competes with the answer.** A cue gloss doesn't contain a word that is
+  itself a valid answer ("possess" invites "bezit").
+- **R4 – no placeholders.** No "-" or empty form stored as a form; predicative and attributive forms
+  link to the right form record.
+- **R5 – learner-facing glosses are clean.** No meta wording such as "in this context" in meanings
+  shown to the learner.
 
-> Content has separate origin, structural-validation, source-fact, AI-language-review, disposition and release states. Origins include legacy, generated_draft and user_private. Deterministic checks may assign machine_checked. Source-backed fields may be source_verified, missing, conflicted or not_applicable. Linguistic review may be not_run, ai_reviewed, revision_requested or uncertain. Unresolved disagreements are flagged; rejected and superseded records remain traceable.
->
-> ai_reviewed requires an actual review by a model from a different vendor against a fixed rubric and the current content hash, with original response artifact and reviewer/vendor metadata. Author self-check or a second same-vendor response does not meet that requirement. source_verified means that the stated value is supported by a cited, scoped observation; it is not a blanket guarantee of correctness or entry approval. Do not create new language_reviewed labels.
->
-> The compiler calculates eligibility per task and locale. Curated tasks need all required structural, factual, independent-language and media checks and no unresolved critical/major issue. Content lacking required fields disables the affected task (T43). Generated drafts cannot grant themselves review or release status (T50). Explicitly opted-in private study remains separate from curated packs. No runtime generation or silent fallback is permitted.
+When a sample check finds a new systematic problem, it becomes a new rule here and in the
+validator, and the generator brief is updated.
 
-## Consequential wording and implementation changes
+### 3. Sampled checks instead of reviewing every entry
 
-In §14.3/W19, replace “resumable human review packets” with “resumable source-linked independent review packets”; external imports cannot self-approve. Preserve commands `content:extract`, `validate`, `import-drafts`, `review`, `compile`, `coverage`, `diff` and `media`. The research authoring happened externally; a new live `content:generate` service, credentials, provider SDK, paid API or remote ASR is **out of scope**.
+Each **generation batch** (any set of entries authored or changed together) gets one **sample
+check** by a model from a different vendor than the author; for OpenAI-authored content that is
+Claude.
 
-Interpret T50 as rejection of imported approval claims lacking current-hash review evidence from the required independent vendor. Test missing reviewer, same vendor, stale hash, partial rubric, critical disagreement, duplicate import and changed source facts. Update architecture descriptions with this ADR only after it is accepted; never alter AGENTS/CLAUDE/review workflow rules as a side effect of content implementation.
+- **Sample:** batches of 20 entries or fewer are checked in full. Larger batches: 10 entries drawn
+  with a recorded random seed, plus up to 10 risk entries (several senses or homographs, separable
+  or reflexive verbs, de/het alternatives, Polish false friends, fixed expressions, whole-sentence
+  production).
+- **Three questions** per sampled entry and its examples: is a meaning or translation wrong; is the
+  Dutch ungrammatical or unnatural; would an exercise reject a correct answer or accept a wrong
+  one. Each sampled entry gets `pass`, `fix` (with a concrete correction) or `unsure`.
+- **Batch outcome:** the batch **fails** if any problem shows up in two or more sampled entries
+  (systematic: fix the rule or the generator, regenerate or patch the batch, sample again) or if a
+  wrong meaning or translation turns up in a risk entry of a kind the rules don't yet cover.
+  Otherwise it **passes**: individual `fix` entries are patched, `unsure` entries stay flagged.
+- **Evidence:** batch ID, every entry hash in the batch, the seed, the sampled entries and their
+  verdicts, the reviewer's vendor and run reference, and the outcome are committed. Nothing is
+  fabricated or simulated; the author's self-check never counts.
 
-Existing historical `language_reviewed` records must be examined: preserve any actual human-review evidence, and otherwise mark review provenance unknown. Do not automatically downgrade known reviewed facts or upgrade undocumented records. No old-app learner storage/import/migration is introduced; ADR 0003 still governs.
+### 4. Status per entry
 
-## Consequences and acceptance evidence
+| Axis           | Values                                                                       | Set by                        |
+| -------------- | ---------------------------------------------------------------------------- | ----------------------------- |
+| Origin         | `legacy`, `generated_draft`, `user_private`                                  | import                        |
+| Structure      | `unchecked`, `machine_checked`, `invalid`                                    | validator, per payload hash   |
+| Facts          | `missing`, `source_verified`, `conflicted`, `not_applicable`                 | source import, per field      |
+| Language check | `not_run`, `batch_checked`, `ai_reviewed`, `revision_requested`, `uncertain` | sample-check import           |
+| Disposition    | `draft`, `flagged`, `rejected`, `superseded`                                 | check results, reports, edits |
+| Release        | `blocked`, `eligible`                                                        | compiler, per task and locale |
 
-This makes curation possible without a Dutch-speaking person, while retaining an honest uncertainty model. It costs source engineering, reviewer time and disagreement handling. Vendor diversity reduces one kind of dependence; it does not guarantee linguistic correctness. Random source-adjudicated sampling and targeted risk checks monitor residual defects, with detection limitations published.
+- `ai_reviewed`: the entry itself was sampled and passed (or was checked after a fix).
+- `batch_checked`: the entry belongs to a batch whose sample check passed, on the hash it had then.
+- Any edit changes the hash and returns the entry to `not_run` until a later batch containing it
+  passes. A fix batch of 20 entries or fewer is checked in full, so fixes stay cheap.
+- `language_reviewed` is not assigned any more.
 
-The current pilot intentionally remains blocked: 60 model-authored entries, source extraction and deterministic checks, **no different-vendor review** yet. Its six request batches are run as described in `research/content-2026-10/review/RUNBOOK.md`. It can become a curated release only after actual review/adjudication and relevant media/prerequisite gates pass. The repository owner accepts this policy/implementation; owner approval is not represented as Dutch-language expertise.
+### 5. Eligibility
 
-Alternatives considered: retain mandatory human Dutch review (unavailable for this project); trust one model (insufficient separation); accept any two model votes (ignores source errors/correlation); source-only cards (inadequate Polish/example/task coverage). The selected policy combines source evidence, a different-vendor challenge and deterministic enforcement, with explicit unresolved status.
+The compiler calculates eligibility **per task and locale**: structure `machine_checked`, the facts
+that task needs `source_verified` (or `not_applicable`), language check `batch_checked` or
+`ai_reviewed` on the current hash, and no open `flagged` disposition. Missing PL, examples or audio
+disable only the tasks that need them (T43). Imported drafts can't grant themselves any check or
+release status (T50). Explicitly opted-in private study stays separate from curated packs.
+
+### 6. Problem reports close the loop
+
+Learners can report a problem with any word from the app. Reports are stored locally with the
+entry ID and hash and can be exported; the owner hands them to the content workflow, where fixes
+form a small fix batch (section 3). A reported entry stays usable unless the reporter hides it;
+reports never change content by themselves.
+
+## Consequences
+
+- Cost scales with the number of batches, not entries: one short session per batch.
+- Unsampled entries in a passing batch are **not individually checked**. The app says so where it
+  matters ("not individually reviewed"), and reports catch what slips through. A sample of 10 with
+  no error does not prove the error rate is low (the exact one-sided 95% bound is about 26%); the
+  rules, the source checks and the risk sample carry most of the load.
+- Vendor diversity reduces one kind of shared blind spot; it does not make a model a Dutch expert.
+- The starter pilot (S01–S60) is first brought in line with R1–R5, then checked once as a batch.
+  Batch 01 of the old full review stays as evidence and seeded the rules; batches 02–06 are not
+  run.
+
+## History
+
+- 2026-10-03: accepted with a full nine-dimension review of every entry by a different vendor.
+- 2026-10-04: after batch 01 (above), replaced by exercise rules, sampled batch checks and in-app
+  reports. The source-fact policy is unchanged.

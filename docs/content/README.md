@@ -9,7 +9,7 @@ tasks are T-100 to T-122 ("Content backlog" in [`../tasks/README.md`](../tasks/R
 | [`research-report.md`](research-report.md)                               | Findings and recommendations of the October 2026 content research        |
 | [`curriculum.md`](curriculum.md)                                         | Cumulative sense targets per stage, ranking, packs, ordering, the pilot  |
 | [`entry-specification.md`](entry-specification.md)                       | The sense entry exchange format: IDs, forms, examples, spans, provenance |
-| [`verification-pipeline.md`](verification-pipeline.md)                   | Source pinning, authoring, deterministic checks, the reviewer-B rubric   |
+| [`verification-pipeline.md`](verification-pipeline.md)                   | Source pinning, authoring, exercise rules, sample checks, status model   |
 | [`source-matrix.md`](source-matrix.md)                                   | Every source inspected: access, coverage, format, verdict                |
 | [`legacy-audit-report.md`](legacy-audit-report.md)                       | The audit of all 1,946 original entries (keep, fix, opt-in, consolidate) |
 | [`audio-policy.md`](audio-policy.md)                                     | IPA, recordings and device TTS                                           |

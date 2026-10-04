@@ -10,7 +10,7 @@ refs: [W18, F08, T43, T50]
 
 ## Goal
 
-A contributor can compile a versioned pack containing only tasks whose required data and reviews are current.
+A contributor can compile a versioned pack containing only tasks whose required data and language checks are current.
 
 ## Context
 
@@ -33,9 +33,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a reviewed written entry with absent audio, when compiled, then written tasks can appear and listening tasks cannot. (unit)
-- [ ] AC2: Given no independent review, when the delivered 60-entry pilot is compiled, then curated output contains zero eligible entries and a concrete blocker report. (integration)
-- [ ] AC3: Given changed content after review, when compiled, then stale review cannot authorize the new payload. (unit)
+- [ ] AC1: Given a batch_checked written entry with absent audio, when compiled, then written tasks can appear and listening tasks cannot. (unit)
+- [ ] AC2: Given no sample check, when the delivered 60-entry pilot is compiled, then curated output contains zero eligible entries and a concrete blocker report. (integration)
+- [ ] AC3: Given content changed after its batch passed, when compiled, then the stale check cannot authorize the new payload, and a flagged or uncertain entry stays out. (unit)
 
 ## Notes for the implementer
 
@@ -43,4 +43,4 @@ Keep this one reviewable PR. Port/reuse the research algorithms in the repositor
 
 ## Notes for the reviewer
 
-Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. Content review in Claude must be an actual separately recorded operation on the exact payload; a code review alone does not imply all Dutch text passed the language rubric.
+Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. A language check is an actual, recorded sample check of a generation batch (ADR 0005); a code review alone does not check the Dutch.

@@ -133,7 +133,7 @@ prerequisites to reuse, not additional implementations in this plan.
 T-110 remains the entry/ID contract owner; T-114 owns per-task/locale compilation. T-148
 requires T-120's actual admitted starter subset, and every subsequent starter-study task has
 that transitive prerequisite. T-118/T-119 supply approved audio and truthful local capability
-states. No new task duplicates source imports, independent review or the pack compiler; no
+states. No new task duplicates source imports, sample checks or the pack compiler; no
 unreviewed draft becomes curated study merely because its structure validates (ADR 0005).
 
 | Work                | New tasks                  | Observable result                                                                                      |

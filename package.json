@@ -32,9 +32,11 @@
     "android:sync": "npm run build:android && cap sync android",
     "rename-app": "node scripts/rename-app.mjs",
     "test:repositories:web": "vitest run tests/integration/repositories/web.test.ts",
+    "content:validate-entry": "node tools/content/validate-entry.mjs",
     "content:sources": "node tools/content/inspect-source.mjs",
-    "content:subtlex": "node tools/content/import-subtlex.mjs",
-    "content:spelling": "node tools/content/opentaal-spelling.mjs"
+    "content:nt2lex": "node tools/content/import-nt2lex.mjs",
+    "content:spelling": "node tools/content/opentaal-spelling.mjs",
+    "content:subtlex": "node tools/content/import-subtlex.mjs"
   },
   "dependencies": {
     "@capacitor-community/sqlite": "8.1.1",
@@ -60,6 +62,8 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^5.2.0",
     "@vitest/coverage-v8": "^5.0.3",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "eslint": "^10.11.0",
     "eslint-config-prettier": "^10.1.8",
     "exceljs": "4.4.0",

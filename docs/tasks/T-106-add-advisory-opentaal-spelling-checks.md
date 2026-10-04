@@ -1,7 +1,7 @@
 ---
 id: T-106
 title: Add advisory OpenTaal spelling checks
-status: todo
+status: done
 size: S
 depends_on: [T-100]
 type: task
@@ -33,8 +33,8 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given an exact headword, when checked, then its source-list result includes snapshot and case-sensitive original spelling. (unit)
-- [ ] AC2: Given a phrase or DigiD/BSN allowlist entry absent from the list, when checked, then a review advisory appears and the record is not silently dropped. (unit)
+- [x] AC1: Given an exact headword, when checked, then its source-list result includes snapshot and case-sensitive original spelling. (unit)
+- [x] AC2: Given a phrase or DigiD/BSN allowlist entry absent from the list, when checked, then a review advisory appears and the record is not silently dropped. (unit)
 
 ## Notes for the implementer
 

@@ -1,7 +1,7 @@
 ---
 id: T-013
 title: Plan the tasks for milestones M7 and M8
-status: todo
+status: done
 size: M
 depends_on: [T-011]
 type: plan
@@ -65,13 +65,13 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Every ID in this plan's `refs` appears in the `refs` of at least one new task: with this
+- [x] AC1: Every ID in this plan's `refs` appears in the `refs` of at least one new task: with this
       plan set to `done`, `npm run check:tasks` still passes (verify)
-- [ ] AC2: Every new task is size S or M, a vertical slice, and has Given/When/Then criteria naming
+- [x] AC2: Every new task is size S or M, a vertical slice, and has Given/When/Then criteria naming
       the test type (unit, integration, e2e, device test) that proves them (review)
-- [ ] AC3: Native work (plugins, permissions) sits in tasks of its own, and every native task has a
+- [x] AC3: Native work (plugins, permissions) sits in tasks of its own, and every native task has a
       device test criterion (review)
-- [ ] AC4: Dependencies are minimal and correct, so at least three tasks can start in parallel
+- [x] AC4: Dependencies are minimal and correct, so at least three tasks can start in parallel
       without touching the same files (review)
 
 ## Notes for the implementer
@@ -83,3 +83,25 @@ Out (do not do in this task):
 ## Notes for the reviewer
 
 Apply `docs/agents/plan-red-team.md`. Coverage and test quality are the main risks.
+
+## Planned slices and evidence
+
+T-190–T-208 allocate M7–M8 and W48. IDs start after T-172–T-189 reserved in the open
+T-012 PR; these files depend only on tasks on main, so that PR is not a hidden code dependency.
+Support/metrics/reminder inspectors T-190/T-191/T-192 can start in parallel now with disjoint
+primary files and no manifest/barrel edits. T-203 is another independent comparison inspector.
+T-193–T-200 provide support/private-word/media workflows with native adapters and a cross-target
+backup slice. T-201/T-202 extend evidence/adaptation rather than duplicating M4 T-158.
+T-203–T-206 split experiment assignment/UI and optimizer dataset/local fitting/review/rollback.
+T-207 supplies shared routine settings/web cues and T-208 owns the native plugin and permissions.
+
+Native work is isolated in T-195/T-197/T-200/T-208 with CI-only emulator criteria. Actual
+phone media, force-stop, notification and battery behavior remain recorded external checks.
+No credentials, paid optimizer or backend is required. T-205 must verify a local maintained
+optimizer interface; insufficient data or unavailable compatible tooling yields explicit failure,
+never mock parameter success. T-120 admission remains transitive for starter study through M4.
+
+Run `node --test docs/tasks/T-013-plan-m7-m8.test.mjs` for AC1–AC4 structural evidence,
+`npm run check:tasks`, `npm run verify` and `npm run test:e2e:web`. The executable coverage,
+criteria, native ownership and dependency checks supplement semantic plan-red-team review.
+New task criteria remain unchecked until implementations and actual evidence exist.

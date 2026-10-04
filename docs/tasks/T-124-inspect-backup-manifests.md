@@ -1,7 +1,7 @@
 ---
 id: T-124
 title: Inspect v2 backup manifests and portable inventories
-status: todo
+status: done
 size: S
 depends_on: []
 type: task
@@ -35,11 +35,11 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given full and progress-only inventories, when inspected, then their version, watermark,
+- [x] AC1: Given full and progress-only inventories, when inspected, then their version, watermark,
       retained content revisions and required/omitted media are reported deterministically (unit and integration).
-- [ ] AC2: Given unsupported versions, duplicate/unsafe paths, bad hashes or inconsistent media
+- [x] AC2: Given unsupported versions, duplicate/unsafe paths, bad hashes or inconsistent media
       inclusion, when inspected, then validation rejects the inventory with a field-specific error (unit).
-- [ ] AC3: Given destination-local identity/permission/notification fields in portable settings,
+- [x] AC3: Given destination-local identity/permission/notification fields in portable settings,
       when validated, then they are rejected while historical device references remain valid (unit).
 
 ## Notes for the implementer

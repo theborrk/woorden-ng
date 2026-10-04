@@ -51,3 +51,12 @@ reports per-task/cue-family recall evidence with actual gaps and uncertainty. Se
 for the diagnostic envelope, retained historical labels, primary-replay exception and versioned
 policy. Eligibility after a ten-minute Review exposure gate remains distinct from six-hour delayed
 recall. Input files, scheduler state and content are never written.
+
+## Typed answer inspection
+
+Run `node tools/learning/inspect-answer.ts tests/fixtures/learning/answers/house.json`.
+The pure evaluator uses explicit sense/example/form contracts, keeps lexical,
+meaning, article and spelling results separate, and never accepts a typo
+suggestion as target success. The command validates T-110 entries and checks
+the selected contract's links/answers; all included fixtures remain synthetic
+inspector inputs. See `tests/fixtures/learning/answers/README.md`.

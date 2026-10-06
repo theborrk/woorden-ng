@@ -444,6 +444,46 @@ paradigms or adjudicate facts. Apertium's `landbouw` uses `LWOO__n_nt`; disagree
 masculine primary observation remains visible. Separate projects can share lexical lineage:
 neither agreement nor a majority grants source correction or language approval.
 
+## Legacy audit and annotation sidecars (T-109)
+
+```sh
+npm run content:legacy-audit -- import
+npm run content:legacy-audit -- import --id s295 --output .cache/legacy-audit.json
+```
+
+Import verifies the seed, research CSV and evidence JSON against `sources/legacy-audit.json`
+before parsing. Each must account for exactly s0–s1945 once; the evidence's original record and
+CSV spelling/decision must match. All original fields, including RU/EN, remain unchanged.
+The report gives coverage totals; `--id` shows the complete decision, proposal, source references,
+checks and separate unreviewed/release-blocked assessment. `--output` saves the full artifact to
+a new file only. Pins retain full-file hashes; each row retains JSON record hashes, its CSV logical
+record number (including the header) and zero-based evidence-array index. These locators are not
+physical lines when quoted CSV fields contain newlines.
+
+Research `drop` becomes a drop-as-alias **proposal**; no row is erased or alias target fabricated.
+Article unions are lemma-level observations needing sense/variant scoping, never unconditional
+errors. Noun rows carrying conjugations flag contamination even if verb surfaces match a source.
+All research source and reviewer assertions are retained, but cannot confer language approval.
+
+Accept a reviewed proposal as a separate annotation with a contributor-supplied receipt:
+`legacyId`, exact `proposal_sha256`, `verdict:"accept"`, nonempty `reviewer` and `run_ref`.
+The receipt is an assertion of annotation acceptance, not a verified language-check receipt.
+No model check is performed or fabricated by this tool. Store the real receipt outside the
+immutable seed/research files, then:
+
+```sh
+npm run content:legacy-audit -- apply .cache/legacy-audit.json - actual-receipt.json --output .cache/annotations-v1.json
+npm run content:legacy-audit -- undo .cache/legacy-audit.json .cache/annotations-v1.json s295 --output .cache/annotations-v2.json
+```
+
+`-` initializes an empty sidecar; subsequent applications take the prior sidecar path.
+Each result contains the accepted proposal and receipt, `language_check:not_run`, `release:blocked`
+and an append-only apply/undo history. Undo restores the preceding annotation or removes the
+sidecar value, preserving history. Repeated identical application is idempotent. Artifact/state
+hashes reject accidental edits and stale bindings; hashes do not authenticate reviewer identity.
+Output creation refuses collisions, and failures print no success report. Nothing changes source
+text, canonical entries, study eligibility or old-app progress/settings/backups.
+
 ## Small local audio slices (T-118)
 
 ```sh

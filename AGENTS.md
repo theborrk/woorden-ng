@@ -121,6 +121,9 @@ these names.
   `src/targets/android.ts` may import Capacitor plugins. `detectPlatform` (`src/platform.ts`) is for
   display and UX differences only.
 - Comments explain why, not what.
+- **Tasks run in parallel, so avoid shared append points.** Document a new command or module in
+  a file of its own (for example `tools/content/docs/<command>.md`) instead of adding a section to
+  a shared README; two tasks appending to the same file conflict every time.
 - Once a task adopts the UI framework and conventions from `docs/architecture/`, those conventions
   apply too.
 

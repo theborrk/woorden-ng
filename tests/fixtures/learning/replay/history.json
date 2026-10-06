@@ -1,0 +1,579 @@
+{
+  "replayVersion": 1,
+  "parameterSets": [
+    {
+      "formatVersion": 1,
+      "kind": "parameter_set",
+      "id": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+      "parameterVersion": 1,
+      "engine": "ts-fsrs",
+      "packageVersion": "5.4.2",
+      "createdAt": 1767268800000,
+      "parameters": {
+        "request_retention": 0.9,
+        "maximum_interval": 365,
+        "w": [
+          0.212, 1.2931, 2.3065, 8.2956, 6.4133, 0.8334, 3.0194, 0.001, 1.8722, 0.1666, 0.796,
+          1.4835, 0.0614, 0.2629, 1.6483, 0.6014, 1.8729, 0.5425, 0.0912, 0.0658, 0.1542
+        ],
+        "enable_fuzz": false,
+        "enable_short_term": true,
+        "learning_steps": ["1m", "10m"],
+        "relearning_steps": ["1m", "10m"]
+      }
+    }
+  ],
+  "initial": {
+    "formatVersion": 1,
+    "kind": "scheduler_envelope",
+    "scheduler": {
+      "engine": "ts-fsrs",
+      "packageVersion": "5.4.2",
+      "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+      "serializationVersion": 1,
+      "nativeCard": {
+        "due": "2026-01-01T12:00:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsed_days": 0,
+        "scheduled_days": 0,
+        "reps": 0,
+        "lapses": 0,
+        "learning_steps": 0,
+        "state": 0
+      },
+      "rawDueAt": 1767268800000,
+      "phase": "new",
+      "scheduledDays": 0
+    }
+  },
+  "transitions": [
+    {
+      "evaluationAt": 1767268800000,
+      "rating": "good",
+      "before": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-01-01T12:00:00.000Z",
+          "stability": 0,
+          "difficulty": 0,
+          "elapsed_days": 0,
+          "scheduled_days": 0,
+          "reps": 0,
+          "lapses": 0,
+          "learning_steps": 0,
+          "state": 0
+        },
+        "rawDueAt": 1767268800000,
+        "phase": "new",
+        "scheduledDays": 0
+      },
+      "after": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-01-01T12:10:00.000Z",
+          "stability": 2.3065,
+          "difficulty": 2.11810397,
+          "elapsed_days": 0,
+          "scheduled_days": 0,
+          "reps": 1,
+          "lapses": 0,
+          "learning_steps": 1,
+          "state": 1,
+          "last_review": "2026-01-01T12:00:00.000Z"
+        },
+        "rawDueAt": 1767269400000,
+        "phase": "learning",
+        "scheduledDays": 0
+      },
+      "nativeLog": {
+        "rating": 3,
+        "state": 0,
+        "due": "2026-01-01T12:00:00.000Z",
+        "stability": 0,
+        "difficulty": 0,
+        "elapsed_days": 0,
+        "last_elapsed_days": 0,
+        "scheduled_days": 0,
+        "learning_steps": 0,
+        "review": "2026-01-01T12:00:00.000Z"
+      },
+      "effectiveScheduledDays": 0,
+      "effectiveRawDueAt": 1767269400000,
+      "intervalPolicy": {
+        "version": "fsrs-interval-cap-v1",
+        "maximumDays": 365,
+        "capped": false
+      },
+      "adapterVersion": "ts-fsrs-5.4.2/fsrs-interval-cap-v1"
+    },
+    {
+      "evaluationAt": 1767269400000,
+      "rating": "good",
+      "before": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-01-01T12:10:00.000Z",
+          "stability": 2.3065,
+          "difficulty": 2.11810397,
+          "elapsed_days": 0,
+          "scheduled_days": 0,
+          "reps": 1,
+          "lapses": 0,
+          "learning_steps": 1,
+          "state": 1,
+          "last_review": "2026-01-01T12:00:00.000Z"
+        },
+        "rawDueAt": 1767269400000,
+        "phase": "learning",
+        "scheduledDays": 0
+      },
+      "after": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-01-03T12:10:00.000Z",
+          "stability": 2.3065,
+          "difficulty": 2.11121424,
+          "elapsed_days": 0,
+          "scheduled_days": 2,
+          "reps": 2,
+          "lapses": 0,
+          "learning_steps": 0,
+          "state": 2,
+          "last_review": "2026-01-01T12:10:00.000Z"
+        },
+        "rawDueAt": 1767442200000,
+        "phase": "review",
+        "scheduledDays": 2
+      },
+      "nativeLog": {
+        "rating": 3,
+        "state": 1,
+        "due": "2026-01-01T12:00:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11810397,
+        "elapsed_days": 0,
+        "last_elapsed_days": 0,
+        "scheduled_days": 0,
+        "learning_steps": 1,
+        "review": "2026-01-01T12:10:00.000Z"
+      },
+      "effectiveScheduledDays": 2,
+      "effectiveRawDueAt": 1767442200000,
+      "intervalPolicy": {
+        "version": "fsrs-interval-cap-v1",
+        "maximumDays": 365,
+        "capped": false
+      },
+      "adapterVersion": "ts-fsrs-5.4.2/fsrs-interval-cap-v1"
+    },
+    {
+      "evaluationAt": 1767442200000,
+      "rating": "good",
+      "before": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-01-03T12:10:00.000Z",
+          "stability": 2.3065,
+          "difficulty": 2.11121424,
+          "elapsed_days": 0,
+          "scheduled_days": 2,
+          "reps": 2,
+          "lapses": 0,
+          "learning_steps": 0,
+          "state": 2,
+          "last_review": "2026-01-01T12:10:00.000Z"
+        },
+        "rawDueAt": 1767442200000,
+        "phase": "review",
+        "scheduledDays": 2
+      },
+      "after": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-01-14T12:10:00.000Z",
+          "stability": 10.97104786,
+          "difficulty": 2.1043314,
+          "elapsed_days": 2,
+          "scheduled_days": 11,
+          "reps": 3,
+          "lapses": 0,
+          "learning_steps": 0,
+          "state": 2,
+          "last_review": "2026-01-03T12:10:00.000Z"
+        },
+        "rawDueAt": 1768392600000,
+        "phase": "review",
+        "scheduledDays": 11
+      },
+      "nativeLog": {
+        "rating": 3,
+        "state": 2,
+        "due": "2026-01-01T12:10:00.000Z",
+        "stability": 2.3065,
+        "difficulty": 2.11121424,
+        "elapsed_days": 2,
+        "last_elapsed_days": 0,
+        "scheduled_days": 2,
+        "learning_steps": 0,
+        "review": "2026-01-03T12:10:00.000Z"
+      },
+      "effectiveScheduledDays": 11,
+      "effectiveRawDueAt": 1768392600000,
+      "intervalPolicy": {
+        "version": "fsrs-interval-cap-v1",
+        "maximumDays": 365,
+        "capped": false
+      },
+      "adapterVersion": "ts-fsrs-5.4.2/fsrs-interval-cap-v1"
+    },
+    {
+      "evaluationAt": 1768392600000,
+      "rating": "hard",
+      "before": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-01-14T12:10:00.000Z",
+          "stability": 10.97104786,
+          "difficulty": 2.1043314,
+          "elapsed_days": 2,
+          "scheduled_days": 11,
+          "reps": 3,
+          "lapses": 0,
+          "learning_steps": 0,
+          "state": 2,
+          "last_review": "2026-01-03T12:10:00.000Z"
+        },
+        "rawDueAt": 1768392600000,
+        "phase": "review",
+        "scheduledDays": 11
+      },
+      "after": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-02-15T12:10:00.000Z",
+          "stability": 32.22801722,
+          "difficulty": 4.74371562,
+          "elapsed_days": 11,
+          "scheduled_days": 32,
+          "reps": 4,
+          "lapses": 0,
+          "learning_steps": 0,
+          "state": 2,
+          "last_review": "2026-01-14T12:10:00.000Z"
+        },
+        "rawDueAt": 1771157400000,
+        "phase": "review",
+        "scheduledDays": 32
+      },
+      "nativeLog": {
+        "rating": 2,
+        "state": 2,
+        "due": "2026-01-03T12:10:00.000Z",
+        "stability": 10.97104786,
+        "difficulty": 2.1043314,
+        "elapsed_days": 11,
+        "last_elapsed_days": 2,
+        "scheduled_days": 11,
+        "learning_steps": 0,
+        "review": "2026-01-14T12:10:00.000Z"
+      },
+      "effectiveScheduledDays": 32,
+      "effectiveRawDueAt": 1771157400000,
+      "intervalPolicy": {
+        "version": "fsrs-interval-cap-v1",
+        "maximumDays": 365,
+        "capped": false
+      },
+      "adapterVersion": "ts-fsrs-5.4.2/fsrs-interval-cap-v1"
+    },
+    {
+      "evaluationAt": 1771157400000,
+      "rating": "easy",
+      "before": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-02-15T12:10:00.000Z",
+          "stability": 32.22801722,
+          "difficulty": 4.74371562,
+          "elapsed_days": 11,
+          "scheduled_days": 32,
+          "reps": 4,
+          "lapses": 0,
+          "learning_steps": 0,
+          "state": 2,
+          "last_review": "2026-01-14T12:10:00.000Z"
+        },
+        "rawDueAt": 1771157400000,
+        "phase": "review",
+        "scheduledDays": 32
+      },
+      "after": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-07-11T12:10:00.000Z",
+          "stability": 145.72543096,
+          "difficulty": 2.97253869,
+          "elapsed_days": 32,
+          "scheduled_days": 146,
+          "reps": 5,
+          "lapses": 0,
+          "learning_steps": 0,
+          "state": 2,
+          "last_review": "2026-02-15T12:10:00.000Z"
+        },
+        "rawDueAt": 1783771800000,
+        "phase": "review",
+        "scheduledDays": 146
+      },
+      "nativeLog": {
+        "rating": 4,
+        "state": 2,
+        "due": "2026-01-14T12:10:00.000Z",
+        "stability": 32.22801722,
+        "difficulty": 4.74371562,
+        "elapsed_days": 32,
+        "last_elapsed_days": 11,
+        "scheduled_days": 32,
+        "learning_steps": 0,
+        "review": "2026-02-15T12:10:00.000Z"
+      },
+      "effectiveScheduledDays": 146,
+      "effectiveRawDueAt": 1783771800000,
+      "intervalPolicy": {
+        "version": "fsrs-interval-cap-v1",
+        "maximumDays": 365,
+        "capped": false
+      },
+      "adapterVersion": "ts-fsrs-5.4.2/fsrs-interval-cap-v1"
+    },
+    {
+      "evaluationAt": 1783771800000,
+      "rating": "again",
+      "before": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-07-11T12:10:00.000Z",
+          "stability": 145.72543096,
+          "difficulty": 2.97253869,
+          "elapsed_days": 32,
+          "scheduled_days": 146,
+          "reps": 5,
+          "lapses": 0,
+          "learning_steps": 0,
+          "state": 2,
+          "last_review": "2026-02-15T12:10:00.000Z"
+        },
+        "rawDueAt": 1783771800000,
+        "phase": "review",
+        "scheduledDays": 146
+      },
+      "after": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-07-11T12:11:00.000Z",
+          "stability": 4.4377052,
+          "difficulty": 7.67534962,
+          "elapsed_days": 146,
+          "scheduled_days": 0,
+          "reps": 6,
+          "lapses": 1,
+          "learning_steps": 0,
+          "state": 3,
+          "last_review": "2026-07-11T12:10:00.000Z"
+        },
+        "rawDueAt": 1783771860000,
+        "phase": "relearning",
+        "scheduledDays": 0
+      },
+      "nativeLog": {
+        "rating": 1,
+        "state": 2,
+        "due": "2026-02-15T12:10:00.000Z",
+        "stability": 145.72543096,
+        "difficulty": 2.97253869,
+        "elapsed_days": 146,
+        "last_elapsed_days": 32,
+        "scheduled_days": 146,
+        "learning_steps": 0,
+        "review": "2026-07-11T12:10:00.000Z"
+      },
+      "effectiveScheduledDays": 0,
+      "effectiveRawDueAt": 1783771860000,
+      "intervalPolicy": {
+        "version": "fsrs-interval-cap-v1",
+        "maximumDays": 365,
+        "capped": false
+      },
+      "adapterVersion": "ts-fsrs-5.4.2/fsrs-interval-cap-v1"
+    },
+    {
+      "evaluationAt": 1783771860000,
+      "rating": "good",
+      "before": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-07-11T12:11:00.000Z",
+          "stability": 4.4377052,
+          "difficulty": 7.67534962,
+          "elapsed_days": 146,
+          "scheduled_days": 0,
+          "reps": 6,
+          "lapses": 1,
+          "learning_steps": 0,
+          "state": 3,
+          "last_review": "2026-07-11T12:10:00.000Z"
+        },
+        "rawDueAt": 1783771860000,
+        "phase": "relearning",
+        "scheduledDays": 0
+      },
+      "after": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-07-11T12:21:00.000Z",
+          "stability": 4.4377052,
+          "difficulty": 7.66290264,
+          "elapsed_days": 0,
+          "scheduled_days": 0,
+          "reps": 7,
+          "lapses": 1,
+          "learning_steps": 1,
+          "state": 3,
+          "last_review": "2026-07-11T12:11:00.000Z"
+        },
+        "rawDueAt": 1783772460000,
+        "phase": "relearning",
+        "scheduledDays": 0
+      },
+      "nativeLog": {
+        "rating": 3,
+        "state": 3,
+        "due": "2026-07-11T12:10:00.000Z",
+        "stability": 4.4377052,
+        "difficulty": 7.67534962,
+        "elapsed_days": 0,
+        "last_elapsed_days": 146,
+        "scheduled_days": 0,
+        "learning_steps": 0,
+        "review": "2026-07-11T12:11:00.000Z"
+      },
+      "effectiveScheduledDays": 0,
+      "effectiveRawDueAt": 1783772460000,
+      "intervalPolicy": {
+        "version": "fsrs-interval-cap-v1",
+        "maximumDays": 365,
+        "capped": false
+      },
+      "adapterVersion": "ts-fsrs-5.4.2/fsrs-interval-cap-v1"
+    },
+    {
+      "evaluationAt": 1783772460000,
+      "rating": "good",
+      "before": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-07-11T12:21:00.000Z",
+          "stability": 4.4377052,
+          "difficulty": 7.66290264,
+          "elapsed_days": 0,
+          "scheduled_days": 0,
+          "reps": 7,
+          "lapses": 1,
+          "learning_steps": 1,
+          "state": 3,
+          "last_review": "2026-07-11T12:11:00.000Z"
+        },
+        "rawDueAt": 1783772460000,
+        "phase": "relearning",
+        "scheduledDays": 0
+      },
+      "after": {
+        "engine": "ts-fsrs",
+        "packageVersion": "5.4.2",
+        "parameterSetId": "c815afbe-9c68-4fd5-b64a-64a70bbb302d",
+        "serializationVersion": 1,
+        "nativeCard": {
+          "due": "2026-07-15T12:21:00.000Z",
+          "stability": 4.4377052,
+          "difficulty": 7.65046811,
+          "elapsed_days": 0,
+          "scheduled_days": 4,
+          "reps": 8,
+          "lapses": 1,
+          "learning_steps": 0,
+          "state": 2,
+          "last_review": "2026-07-11T12:21:00.000Z"
+        },
+        "rawDueAt": 1784118060000,
+        "phase": "review",
+        "scheduledDays": 4
+      },
+      "nativeLog": {
+        "rating": 3,
+        "state": 3,
+        "due": "2026-07-11T12:11:00.000Z",
+        "stability": 4.4377052,
+        "difficulty": 7.66290264,
+        "elapsed_days": 0,
+        "last_elapsed_days": 0,
+        "scheduled_days": 0,
+        "learning_steps": 1,
+        "review": "2026-07-11T12:21:00.000Z"
+      },
+      "effectiveScheduledDays": 4,
+      "effectiveRawDueAt": 1784118060000,
+      "intervalPolicy": {
+        "version": "fsrs-interval-cap-v1",
+        "maximumDays": 365,
+        "capped": false
+      },
+      "adapterVersion": "ts-fsrs-5.4.2/fsrs-interval-cap-v1"
+    }
+  ]
+}

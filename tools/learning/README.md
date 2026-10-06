@@ -60,3 +60,12 @@ meaning, article and spelling results separate, and never accepts a typo
 suggestion as target success. The command validates T-110 entries and checks
 the selected contract's links/answers; all included fixtures remain synthetic
 inspector inputs. See `tests/fixtures/learning/answers/README.md`.
+
+## Retained schedule replay
+
+Run `node tools/learning/replay-schedule.ts tests/fixtures/learning/replay/history.json`.
+The versioned interpreter verifies full recorded transitions using their captured
+instants and resolved parameter identities; incompatibility preserves the original
+input and blocks output schedules. Optional future steps preview activation and
+rollback without changing history. See `tests/fixtures/learning/replay/README.md`
+for the input contract and retained fixture provenance.

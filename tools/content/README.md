@@ -414,6 +414,36 @@ The delivered 60-entry research pack can be inspected with this command too: its
 has zero eligible entries and explicit missing-check/source blockers. It receives no fabricated
 review, source observations, media or release status from compilation.
 
+## Optional Apertium conflict observations (T-121)
+
+```sh
+npm run content:apertium -- .cache/content-sources/apertium-nld.dix
+npm run content:apertium -- .cache/content-sources/apertium-nld.dix --compare primary-observations.json
+```
+
+The default pin is `sources/apertium-nld.json`, adapted from the research acquisition.
+`--manifest` selects another expected pin, including the committed excerpt. The CLI reads
+local bytes only, verifies the hash/size and parses XML to the end before printing a report.
+Active `/dictionary/section/e` nodes count; comments and paradigm-definition entries do not.
+Original record XML, hashes, section IDs, active-entry ordinals and raw paradigm IDs accompany
+selected comparisons. Ordinals describe the imported file, not the original bulk excerpt lines.
+No files or primary forms are modified. Invalid bytes/XML/arguments exit nonzero without a
+partial success report. XML external declarations are rejected.
+
+The optional comparison input is an array of selected primary observations: `lemma`, `gender`
+(`m`, `f`, `mf`, `nt`) and/or boolean `separable`, plus `source.source_id` and
+`source.record_sha256`. Retain the original source fields/locators as additional properties;
+they are copied unchanged into each result. These are contributor-selected cited observations,
+not automatically verified evidence. Match exact lemmas only. `mf` overlaps `m` and `f`;
+unsupported or missing features yield no disagreement, not agreement. Results include all matched
+observations and an explicit inspect-only action, lineage caveat and `not_run` language check.
+
+Selected feature decoding follows recognizable paradigm-ID suffixes: `__n_m`, `__n_f`,
+`__n_mf`, `__n_nt`, `__vblex`, `__vblex_sep`. It does not generate inflected forms, decode other
+paradigms or adjudicate facts. Apertium's `landbouw` uses `LWOO__n_nt`; disagreement with a
+masculine primary observation remains visible. Separate projects can share lexical lineage:
+neither agreement nor a majority grants source correction or language approval.
+
 ## Legacy audit and annotation sidecars (T-109)
 
 ```sh

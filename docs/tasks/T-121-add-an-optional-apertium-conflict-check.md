@@ -1,7 +1,7 @@
 ---
 id: T-121
 title: Add an optional Apertium conflict check
-status: todo
+status: done
 size: S
 depends_on: [T-103, T-104]
 type: task
@@ -33,8 +33,8 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given active versus commented entries, when imported, then only active XML entries are counted. (unit)
-- [ ] AC2: Given conflicting landbouw gender, when compared, then the conflict is surfaced and no automatic correction is applied. (unit)
+- [x] AC1: Given active versus commented entries, when imported, then only active XML entries are counted. (unit)
+- [x] AC2: Given conflicting landbouw gender, when compared, then the conflict is surfaced and no automatic correction is applied. (unit)
 
 ## Notes for the implementer
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+<section id="main" type="standard">
+<!--<e r="RL" lm="s">        <p><l><a/>s</l>     <r>s<s n="gen"/></r></p></e>--> <!-- FIXME-->
+<e lm="auto">            <i>auto</i><par n="i__n_m"/></e>
+<e lm="landbouw">        <i>landbouw</i><par n="LWOO__n_nt"/></e>
+<e lm="opstaan">         <i>opst</i><par n="aanst/aan__vblex_sep"/></e>
+<e lm="opstaan">         <p><l>st</l>        <r>opst</r></p><par n="st/aan#_aan__vblex_sep"/><p><l><b/>op</l><r></r></p></e>
+<e lm="opstaan">         <p><l>opgestaan</l> <r>opstaan</r></p><par n="gesproken__vblex_sep"/></e>
+</section>
+</dictionary>

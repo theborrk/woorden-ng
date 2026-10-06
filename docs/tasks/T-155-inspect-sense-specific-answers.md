@@ -1,7 +1,7 @@
 ---
 id: T-155
 title: Inspect deterministic sense-specific typed answer judgments
-status: todo
+status: done
 size: M
 depends_on: [T-110]
 type: task
@@ -32,10 +32,10 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given accepted forms for a specific sense and permitted normalization, when evaluated, then equivalent spacing/Unicode/punctuation matches without collapsing meaningful accents or endings globally (unit and integration).
-- [ ] AC2: Given a valid alternative for an ambiguous cue versus a precise wrong-context answer, when inspected, then the former is ungradable with repair reason and the latter a target error, neither awards target mastery (unit).
-- [ ] AC3: Given a one-character difference that is another Dutch word/form, when evaluated, then a possible typo is only a suggestion and no correct judgment is silently granted (unit).
-- [ ] AC4: Given the right lexical form with a wrong article or strict spelling mismatch, when inspected, then components remain separate and receptive unsupported wording falls back to explicit self-assessment (unit and integration).
+- [x] AC1: Given accepted forms for a specific sense and permitted normalization, when evaluated, then equivalent spacing/Unicode/punctuation matches without collapsing meaningful accents or endings globally (unit and integration).
+- [x] AC2: Given a valid alternative for an ambiguous cue versus a precise wrong-context answer, when inspected, then the former is ungradable with repair reason and the latter a target error, neither awards target mastery (unit).
+- [x] AC3: Given a one-character difference that is another Dutch word/form, when evaluated, then a possible typo is only a suggestion and no correct judgment is silently granted (unit).
+- [x] AC4: Given the right lexical form with a wrong article or strict spelling mismatch, when inspected, then components remain separate and receptive unsupported wording falls back to explicit self-assessment (unit and integration).
 
 ## Notes for the implementer
 

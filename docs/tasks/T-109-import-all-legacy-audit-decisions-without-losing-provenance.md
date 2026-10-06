@@ -1,7 +1,7 @@
 ---
 id: T-109
 title: Import all legacy audit decisions without losing provenance
-status: todo
+status: done
 size: M
 depends_on: [T-103, T-104, T-106]
 type: task
@@ -34,9 +34,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the seed and CSV, when imported, then every one of 1,946 unique IDs is accounted for once and original RU is byte-equivalent as text. (integration)
-- [ ] AC2: Given s295 het eten, when proposed changes are shown, then noun/verb contamination is visible without modifying the immutable source. (unit)
-- [ ] AC3: Given s1392 deksel and s800 soort, when article candidates differ, then valid alternatives are not classified as unconditional errors. (unit)
+- [x] AC1: Given the seed and CSV, when imported, then every one of 1,946 unique IDs is accounted for once and original RU is byte-equivalent as text. (integration)
+- [x] AC2: Given s295 het eten, when proposed changes are shown, then noun/verb contamination is visible without modifying the immutable source. (unit)
+- [x] AC3: Given s1392 deksel and s800 soort, when article candidates differ, then valid alternatives are not classified as unconditional errors. (unit)
 
 ## Notes for the implementer
 

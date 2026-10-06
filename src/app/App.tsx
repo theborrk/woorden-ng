@@ -7,6 +7,7 @@ import { routeFromHash, routes } from './routes';
 import type { AppInfo } from '../application/ports/app-info';
 import { Profiles } from '../features/settings/profiles/Profiles';
 import type { ProfileService } from '../application/profiles/service';
+import { StorageRecoveryScreen } from '../features/settings/storage-recovery/StorageRecovery';
 import { About } from '../features/settings/About';
 import { ContentInspection } from '../features/content-inspection/ContentInspection';
 
@@ -15,7 +16,7 @@ export interface AppProps {
   platform: Platform;
   updates: Pick<TargetServices, 'registerUpdates'>;
   appInfo: AppInfo;
-  storage?: Pick<TargetServices, 'initialize'>;
+  storage?: Pick<TargetServices, 'initialize' | 'recovery'>;
   initialLanguageError?: boolean;
   profiles?: ProfileService;
 }
@@ -35,6 +36,8 @@ export function App({
   const [applyUpdate, setApplyUpdate] = useState<(() => void) | null>(null);
   const [languageError, setLanguageError] = useState(initialLanguageError);
   const [storageError, setStorageError] = useState(false);
+  const [storageReady, setStorageReady] = useState(!storage);
+  const [storageRetry, setStorageRetry] = useState(0);
   const heading = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -71,13 +74,20 @@ export function App({
   useEffect(() => {
     if (!storage) return;
     let mounted = true;
-    void storage.initialize().catch(() => {
-      if (mounted) setStorageError(true);
-    });
+    setStorageError(false);
+    setStorageReady(false);
+    void storage
+      .initialize()
+      .then(() => {
+        if (mounted) setStorageReady(true);
+      })
+      .catch(() => {
+        if (mounted) setStorageError(true);
+      });
     return () => {
       mounted = false;
     };
-  }, [storage]);
+  }, [storage, storageRetry]);
 
   useEffect(() => {
     document.documentElement.lang = i18n.resolvedLanguage ?? 'en';
@@ -100,7 +110,13 @@ export function App({
           {t(online ? 'online' : 'offline')}
         </p>
       </section>
-      {storageError && (
+      {storageError && storage?.recovery && (
+        <StorageRecoveryScreen
+          recovery={storage.recovery}
+          retry={() => setStorageRetry((value) => value + 1)}
+        />
+      )}
+      {storageError && !storage?.recovery && (
         <p role="alert" data-testid="storage-error">
           {t('storageError')}
         </p>
@@ -125,8 +141,8 @@ export function App({
           {t(route)}
         </h2>
         {route === 'library' ? <ContentInspection /> : <p>{t('placeholder')}</p>}
-        {profiles && <Profiles service={profiles} visible={route === 'settings'} />}
-        {route === 'settings' && (
+        {profiles && storageReady && <Profiles service={profiles} visible={route === 'settings'} />}
+        {route === 'settings' && storageReady && (
           <>
             {!profiles && (
               <>

@@ -5,7 +5,7 @@ export type SqlRow = Record<string, unknown>;
 export interface NativeConnection {
   execute(sql: string): Promise<void>;
   run(sql: string, values: SqlValue[]): Promise<void>;
-  query(sql: string): Promise<SqlRow[]>;
+  query(sql: string, values?: SqlValue[]): Promise<SqlRow[]>;
   begin(): Promise<void>;
   commit(): Promise<void>;
   rollback(): Promise<void>;
@@ -14,5 +14,5 @@ export interface NativeConnection {
 
 export interface NativeSqliteBridge {
   isAvailable(): boolean;
-  connect: (database: string) => Promise<NativeConnection>;
+  connect: (database: string, readonly?: boolean) => Promise<NativeConnection>;
 }

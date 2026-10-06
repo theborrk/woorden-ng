@@ -62,6 +62,12 @@ export function Profiles({ service, visible }: { service: ProfileService; visibl
   return (
     <section>
       <p>{t('separateData')}</p>
+      {snapshot && (
+        <p>
+          {t('installationId')}:{' '}
+          <code data-testid="installation-id">{snapshot.installation.deviceId}</code>
+        </p>
+      )}
       {error && <p role="alert">{t('profileError')}</p>}
       <p role="status">{t(busy ? 'profileSaving' : saved ? 'profileSaved' : 'profileUnsaved')}</p>
       {!draft ? (

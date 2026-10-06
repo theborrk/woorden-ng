@@ -1,7 +1,7 @@
 ---
 id: T-127
 title: Persist native profiles and recover failed database initialization
-status: todo
+status: done
 size: M
 depends_on: [T-126, T-005]
 type: task
@@ -36,13 +36,13 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given two native profiles, when preferences are edited, switched and the process restarts,
+- [x] AC1: Given two native profiles, when preferences are edited, switched and the process restarts,
       then each retains its own data through real SQLite and no cross-profile state leaks (device test).
-- [ ] AC2: Given missing native support or open/newer-schema failure, when launch is attempted,
+- [x] AC2: Given missing native support or open/newer-schema failure, when launch is attempted,
       then the recovery screen offers safe retry/export as supported and never substitutes web storage (unit and device test).
-- [ ] AC3: Given an older populated DB, when migration fails after a write or the process dies
+- [x] AC3: Given an older populated DB, when migration fails after a write or the process dies
       during migration, then restart finds the old or fully migrated schema/data, never a partial version (device test).
-- [ ] AC4: Given separate PWA/native installations, when profile Settings are opened, then their
+- [x] AC4: Given separate PWA/native installations, when profile Settings are opened, then their
       installation IDs/stores are distinct and neither claims automatic transfer (e2e and device test).
 
 ## Notes for the implementer

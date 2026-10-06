@@ -7,7 +7,7 @@ import { inspectionSlice } from './import-starter-inspection.mjs';
 import { registry, payloadHash } from './validate-entry.mjs';
 
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url), 'utf8'));
-const research = read('../../research/content-2026-10/content/starter-pack.json');
+const research = read('../../content/pilot/pilot.json');
 const imported = read('../../content/inspection/starter-s01-s10.json');
 const complete = read('../../content/inspection/starter-s01-s60.json');
 it('W20: first ten inspection drafts retain issued IDs, original content and blocked assessment', () => {

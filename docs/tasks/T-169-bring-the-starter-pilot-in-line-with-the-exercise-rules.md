@@ -1,7 +1,7 @@
 ---
 id: T-169
 title: Bring the starter pilot in line with the exercise rules
-status: todo
+status: done
 size: M
 depends_on: [T-116, T-168]
 type: task
@@ -39,9 +39,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given the updated pilot, when validated with T-168's rules, then all 60 entries pass and
+- [x] AC1: Given the updated pilot, when validated with T-168's rules, then all 60 entries pass and
       every source-verified fact is byte-identical to before. (integration)
-- [ ] AC2: Given the change report, when inspected, then each changed entry lists the rule it fixes
+- [x] AC2: Given the change report, when inspected, then each changed entry lists the rule it fixes
       and its old and new hash, and its language check is not_run. (unit)
 
 ## Notes for the implementer

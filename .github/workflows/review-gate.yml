@@ -24,7 +24,8 @@ jobs:
       contents: read
       statuses: write
       issues: write
-      pull-requests: read
+      # Labelling a pull request through the issues API needs pull-requests: write.
+      pull-requests: write
     steps:
       - uses: actions/checkout@v7
         with:
@@ -53,5 +54,8 @@ jobs:
             for (const name of decision.labelsToRemove) {
               await github.rest.issues.removeLabel({ owner, repo, issue_number, name }).catch(() => {});
             }
-            await github.rest.issues.addLabels({ owner, repo, issue_number, labels: decision.labelsToAdd });
+            // The status above is the gate; a label is only a convenience and must not fail the run.
+            await github.rest.issues
+              .addLabels({ owner, repo, issue_number, labels: decision.labelsToAdd })
+              .catch((error) => core.warning(`Could not add labels: ${error.message}`));
             core.notice(`${decision.description} for ${pr.head.sha.slice(0, 7)}`);

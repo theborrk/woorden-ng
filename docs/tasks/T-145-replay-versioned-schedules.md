@@ -1,7 +1,7 @@
 ---
 id: T-145
 title: Replay versioned schedules and retain parameter rollback
-status: todo
+status: done
 size: M
 depends_on: [T-142]
 type: task
@@ -31,9 +31,9 @@ Out (do not do in this task):
 
 ## Acceptance criteria
 
-- [ ] AC1: Given a pinned multi-review/lapse/relearning history, when replayed, then native/effective cards and logs match recorded transitions exactly through JSON round-trip (unit and integration).
-- [ ] AC2: Given a future-only parameter change then rollback, when new transitions are inspected, then each uses its recorded parameter/policy identity and previous results stay byte-for-byte interpretable (unit).
-- [ ] AC3: Given an unsupported engine/schema/policy version or mismatched base, when replay is requested, then a compatibility error preserves the original input and no replacement schedule is emitted as valid (unit and integration).
+- [x] AC1: Given a pinned multi-review/lapse/relearning history, when replayed, then native/effective cards and logs match recorded transitions exactly through JSON round-trip (unit and integration).
+- [x] AC2: Given a future-only parameter change then rollback, when new transitions are inspected, then each uses its recorded parameter/policy identity and previous results stay byte-for-byte interpretable (unit).
+- [x] AC3: Given an unsupported engine/schema/policy version or mismatched base, when replay is requested, then a compatibility error preserves the original input and no replacement schedule is emitted as valid (unit and integration).
 
 ## Notes for the implementer
 

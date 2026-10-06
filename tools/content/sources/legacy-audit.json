@@ -1,0 +1,17 @@
+{
+  "seed": {
+    "path": "content/legacy/seed-v1.json",
+    "bytes": 477362,
+    "sha256": "45bf5feb19f3e9ca9b914a68796f19c4d7fd17bb13f9146bf4f5e9e561155294"
+  },
+  "csv": {
+    "path": "research/content-2026-10/content/legacy-audit.csv",
+    "bytes": 1024067,
+    "sha256": "0715231efc15e077e54efe2751ba043e029d864e580101a76b6df2872cd6c0a6"
+  },
+  "evidence": {
+    "path": "research/content-2026-10/content/legacy-audit-evidence.json",
+    "bytes": 3081078,
+    "sha256": "09d2c5d355ce8cfae8bb51454945f4306602fe2abb6ac70e699ef8baaadc1f59"
+  }
+}

@@ -44,6 +44,7 @@
     "content:import-drafts": "node tools/content/import-drafts.mjs",
     "content:sample": "node tools/content/sample-check.mjs",
     "content:import-sample": "node tools/content/import-sample-check.mjs",
+    "content:media": "node tools/content/media.mjs",
     "content:compile": "node tools/content/compile-pack.mjs"
   },
   "dependencies": {

@@ -1,0 +1,417 @@
+{
+  "entry": {
+    "schema_version": "woorden-content-research-0.2",
+    "id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+    "fixture_ref": "S10",
+    "revision": 1,
+    "lexeme": {
+      "id": "41b8a70a-349f-4d5e-aa79-7c53ea5f17eb",
+      "lemma": "huis",
+      "display": "huis",
+      "pos": "noun",
+      "source_pos": "noun",
+      "variants": [],
+      "pronunciation": {
+        "ipa": [],
+        "ipa_status": "missing",
+        "polish_approximation": null,
+        "polish_approximation_status": "not_produced_requires_review"
+      },
+      "morphology": {
+        "noun": {
+          "article": {
+            "accepted": ["het"],
+            "number": "singular",
+            "status": "generated_draft",
+            "source_ids": ["en:864"]
+          },
+          "countability": "count",
+          "plural": {
+            "values": ["huizen"],
+            "status": "generated_draft",
+            "applies_to_selected_sense": true,
+            "note": "Primary attested plural selected; other source variants remain in raw evidence."
+          },
+          "diminutive": {
+            "values": ["huisje"],
+            "status": "generated_draft",
+            "applies_to_selected_sense": true,
+            "note": "Lexeme-level form; meaning/countability can change."
+          }
+        },
+        "verb": null
+      }
+    },
+    "sense": {
+      "id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+      "lexeme_id": "41b8a70a-349f-4d5e-aa79-7c53ea5f17eb",
+      "definition_nl": "Een gebouw waarin mensen wonen.",
+      "meanings": {
+        "en": ["house; building used as a home"],
+        "pl": ["dom; budynek mieszkalny"]
+      },
+      "register": "neutral",
+      "source_sense": {
+        "record_id": "en:864",
+        "index": 0,
+        "glosses": ["a house, home; residence"],
+        "match_status": "author_selected_needs_reviewer"
+      },
+      "usage_notes": [],
+      "component_lemmas": [],
+      "confusion_links": []
+    },
+    "forms": [],
+    "examples": [
+      {
+        "id": "ec5a9423-b2ec-4d27-b189-1158d6f4f9a2",
+        "nl": "Het huis is klein.",
+        "translations": {
+          "en": "The house is small.",
+          "pl": "Dom jest mały."
+        },
+        "answer_spans": [
+          {
+            "start": 4,
+            "end": 8,
+            "text": "huis"
+          }
+        ],
+        "offset_unit": "UTF-16-code-units",
+        "target_sense_id": "64d91a65-372b-4852-948c-d3ff37e4404b",
+        "target_form_ids": [],
+        "accepted_answers": [
+          {
+            "ordered_segments": ["huis"],
+            "case_sensitive": false
+          }
+        ],
+        "context": {
+          "en": "house; building used as a home",
+          "pl": "dom; budynek mieszkalny"
+        },
+        "task_contract": {
+          "primary_target": "sense_in_context",
+          "valid_alternative": "ungradable_prompt_repair",
+          "unrestricted_fuzzy_match": false,
+          "article_scored_separately": true,
+          "requires_independent_review": true
+        },
+        "difficulty": "A1",
+        "review_status": "generated_draft",
+        "provenance": {
+          "origin": "model_A_original",
+          "source_sentence_id": null,
+          "direct_translation_from": "nl",
+          "reviewer_B": "not_run"
+        }
+      }
+    ],
+    "cefr": {
+      "estimated": "A1",
+      "status": "editorial_estimate",
+      "source_exposure": [
+        {
+          "word": "huis",
+          "tag": "N(soort)",
+          "frequencies": {
+            "A1": 77,
+            "A2": 232,
+            "B1": 187,
+            "B2": 28,
+            "C1": 3
+          }
+        }
+      ]
+    },
+    "frequency": {
+      "source": "SUBTLEX-NL full workbook",
+      "unit": "surface-form",
+      "word": "huis",
+      "zipf": 5.909518775452468,
+      "surface_count": 35810,
+      "contextual_diversity": 6939,
+      "lemma_count": 37139,
+      "lemma_pos": "N",
+      "status": "missing",
+      "note": "Surface evidence is not sense frequency; lemma count uses only matching dominant lemma/POS and never sums repeated rows. Unmapped or conflicting POS leaves lemma fields null."
+    },
+    "curriculum": {
+      "stage": "A1",
+      "priority_order": 10,
+      "priority_is_lesson_schedule": false,
+      "themes": ["home"],
+      "core": true,
+      "utility": 4,
+      "utility_reason": "Chosen for the concrete home situation and representative fixture coverage."
+    },
+    "image_suitability": {
+      "concreteness": "high",
+      "concreteness_source": "model_judgment",
+      "suitability": "single_referent",
+      "image_status": "not_produced",
+      "accessibility": "Offer text cue alternative; never reveal target via alt text in image-only grading."
+    },
+    "hints": {
+      "en": "house; building used as a home",
+      "pl": "dom; budynek mieszkalny",
+      "role": "meaning_reveal",
+      "invented_mnemonic": null,
+      "etymology": null
+    },
+    "media": {
+      "audio_candidates": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Nl-huis.ogg",
+          "source_ids": ["en:864"],
+          "tags": ["Netherlands"],
+          "role": "headword",
+          "status": "candidate_not_downloaded",
+          "sha256": null,
+          "license": null,
+          "review": "not_run"
+        }
+      ],
+      "approved_audio": [],
+      "listening_task_eligible": false,
+      "device_tts": "not_tested"
+    },
+    "legacy": [
+      {
+        "legacy_id": "s267",
+        "original_ru": "дом",
+        "original_en": "house",
+        "mapping": "lemma_link_requires_sense_adjudication"
+      }
+    ],
+    "provenance": {
+      "/sense": {
+        "source_ids": ["en:864"],
+        "method": "model_draft_grounded_in_source",
+        "status": "generated_draft",
+        "note": "Definitions, EN/PL meanings and usage decisions are authored by model A. A source gloss is evidence, not translation approval."
+      },
+      "/lexeme/lemma": {
+        "source_ids": ["en:864"],
+        "method": "source_extraction",
+        "status": "generated_draft"
+      },
+      "/lexeme/pos": {
+        "source_ids": ["en:864"],
+        "method": "source_tag_mapping",
+        "status": "generated_draft"
+      },
+      "/lexeme/morphology/noun": {
+        "source_ids": ["en:864"],
+        "method": "source_extraction",
+        "status": "generated_draft"
+      },
+      "/lexeme/pronunciation": {
+        "source_ids": ["en:864", "en:864", "en:864", "en:864"],
+        "method": "source_extraction",
+        "status": "generated_draft",
+        "note": "Source transcriptions preserved verbatim; region and convention retained, no silent normalization."
+      },
+      "/examples": {
+        "source_ids": ["en:864"],
+        "method": "model_A_original_NL_plus_direct_EN_PL_translation",
+        "status": "generated_draft"
+      },
+      "/forms": {
+        "source_ids": ["en:864"],
+        "method": "feature_filtered_source_extraction",
+        "status": "generated_draft"
+      },
+      "/curriculum": {
+        "source_ids": [],
+        "method": "editorial_policy_v0.2",
+        "status": "generated_draft"
+      },
+      "/frequency": {
+        "source_ids": ["subtlex:huis"],
+        "method": "source_extraction",
+        "status": "generated_draft"
+      },
+      "/cefr/source_exposure": {
+        "source_ids": ["nt2lex:huis"],
+        "method": "source_extraction",
+        "status": "generated_draft"
+      },
+      "/cefr/estimated": {
+        "source_ids": [],
+        "method": "model_A_estimate_not_certified_CEFR",
+        "status": "generated_draft"
+      },
+      "/image_suitability": {
+        "source_ids": [],
+        "method": "model_A_sense_judgment_not_norm_data",
+        "status": "generated_draft"
+      },
+      "/media": {
+        "source_ids": ["en:864"],
+        "method": "source_URL_extraction",
+        "status": "candidate_only"
+      },
+      "/legacy": {
+        "source_ids": ["s267"],
+        "method": "exact_copy_from_immutable_seed",
+        "status": "generated_draft"
+      },
+      "/review": {
+        "source_ids": [],
+        "method": "honest_execution_metadata",
+        "status": "recorded"
+      },
+      "/hints": {
+        "source_ids": [],
+        "method": "model_A_meaning_reveal",
+        "status": "generated_draft"
+      },
+      "/generation": {
+        "source_ids": [],
+        "method": "recorded_authoring_metadata",
+        "status": "recorded"
+      },
+      "/lexeme/variants": {
+        "source_ids": [],
+        "method": "no_variants_selected",
+        "status": "not_applicable"
+      },
+      "/lexeme/display": {
+        "source_ids": ["en:864"],
+        "method": "editorial_display_from_lemma_and_construction",
+        "status": "generated_draft"
+      }
+    },
+    "sources": [
+      {
+        "id": "en:864",
+        "family": "Wiktionary",
+        "edition": "en",
+        "url": "https://en.wiktionary.org/wiki/huis",
+        "excerpt_path": "evidence/sources/kaikki-en-excerpts.json",
+        "record_sha256": "cad0cec165d416985620ecbcf53ad79eca9dee4936b1a1dedf88504e60aead22",
+        "retrieved_at": "2026-10-03"
+      },
+      {
+        "id": "nl:484",
+        "family": "Wiktionary",
+        "edition": "nl",
+        "url": "https://nl.wiktionary.org/wiki/huis",
+        "excerpt_path": "evidence/sources/kaikki-nl-excerpts.json",
+        "record_sha256": "7df1f7a18b27baebeec159284421f87bc42875bdc11724ec1871112747fa3393",
+        "retrieved_at": "2026-10-03"
+      },
+      {
+        "id": "pl:541",
+        "family": "Wiktionary",
+        "edition": "pl",
+        "url": "https://pl.wiktionary.org/wiki/huis",
+        "excerpt_path": "evidence/sources/kaikki-pl-excerpts.json",
+        "record_sha256": "b3d7ba02ef9ed2f0e5019ffd110ed4af6bb714a618df8830aa848035851c072a",
+        "retrieved_at": "2026-10-03"
+      },
+      {
+        "id": "subtlex:huis",
+        "family": "SUBTLEX-NL",
+        "url": "https://osf.io/download/2dcvs/",
+        "excerpt_path": "evidence/lexical-index.json",
+        "selector": "huis/subtlex",
+        "record_sha256": "c0157fe7a6d69d636d440b9fb2c0f9a74ac8cfd74c112c26e947b640a1d857b4",
+        "retrieved_at": "2026-10-03"
+      },
+      {
+        "id": "nt2lex:huis",
+        "family": "NT2Lex",
+        "url": "https://cental.uclouvain.be/cefrlex/static/resources/nl/NT2Lex-CGN-v01.tsv",
+        "excerpt_path": "evidence/lexical-index.json",
+        "selector": "huis/nt2",
+        "record_sha256": "4f4fbe7692bddfe7b4defe026d191ae5fc14b133f668190782071733869b0f2b",
+        "retrieved_at": "2026-10-03"
+      },
+      {
+        "id": "s267",
+        "family": "legacy-seed",
+        "url": null,
+        "excerpt_path": "evidence/inputs/seed-v1.json",
+        "selector": "entries[legacyId=s267]",
+        "record_sha256": "77d569edccde63b6b48f4b7951dee4824e71bced3ffaa98ab6d9d6f07b941208",
+        "retrieved_at": "2026-10-03"
+      }
+    ],
+    "generation": {
+      "actor": "OpenAI Codex",
+      "vendor": "OpenAI",
+      "model_id": null,
+      "model_id_note": "Exact runtime model identifier not exposed",
+      "run_id": "woorden-research-2026-10-03",
+      "intent_file_sha256": "84dc9dad2bf387a6535df23fa2095b240a3820257fa4322fe0454d2f8889eb88"
+    },
+    "review": {
+      "statuses": {
+        "workflow": "machine_checked",
+        "source_facts": "source_verified",
+        "ai_review": "not_run",
+        "release": "blocked",
+        "release_blockers": ["independent_vendor_review_missing"],
+        "user_private_opt_in": false
+      },
+      "risk_categories": [],
+      "verification_log": [
+        {
+          "stage": "source_extraction",
+          "actor": "build_pilot.py",
+          "verdict": "observations_attached",
+          "source_ids": ["en:864", "nl:484", "pl:541"]
+        },
+        {
+          "stage": "editorial_self_check",
+          "actor": "OpenAI Codex; same author/vendor",
+          "verdict": "revised_draft",
+          "notes": [],
+          "independent": false
+        },
+        {
+          "stage": "different_vendor_review",
+          "actor": null,
+          "vendor": null,
+          "verdict": "not_run",
+          "reason": "No other-vendor model invocation was available in this session; a review packet is supplied."
+        },
+        {
+          "stage": "automated_validation",
+          "actor": "tools/validate_delivery.py",
+          "verdict": "pass",
+          "content_sha256": "e0ba92254db1c22970dcd427889e48f5537faa66a947b6153c7584fe8d41198e",
+          "note": "Structural/source support checks only; naturalness, correctness and reviewer B remain distinct."
+        }
+      ],
+      "unresolved_doubts": [
+        "All generated meanings, examples and PL/EN translations await independent vendor review."
+      ]
+    },
+    "content_sha256": "0012377a334b3bc2ac5580965f852195f7d41c816c5bccce129416bbc88269c2"
+  },
+  "evidence": {},
+  "contract": {
+    "senseId": "64d91a65-372b-4852-948c-d3ff37e4404b",
+    "exampleId": "ec5a9423-b2ec-4d27-b189-1158d6f4f9a2",
+    "targetFormIds": [],
+    "family": "productive",
+    "accepted_answers": [
+      {
+        "ordered_segments": ["huis"],
+        "case_sensitive": false
+      }
+    ],
+    "permittedEdgePunctuation": [".", "!", "?"],
+    "acceptedArticles": ["het"],
+    "articleRequired": false,
+    "strictSpelling": false,
+    "ambiguousCue": false,
+    "alternatives": [],
+    "knownWords": ["huid"],
+    "reviewedEquivalents": []
+  },
+  "response": "de huis"
+}

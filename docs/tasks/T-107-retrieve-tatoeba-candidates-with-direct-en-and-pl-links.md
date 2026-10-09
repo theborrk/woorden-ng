@@ -1,7 +1,7 @@
 ---
 id: T-107
 title: Retrieve Tatoeba candidates with direct EN and PL links
-status: todo
+status: blocked
 size: M
 depends_on: [T-100]
 type: task
@@ -51,3 +51,14 @@ download is blocked, open the PR as a draft and say so.
 ## Notes for the reviewer
 
 Check the observable acceptance criteria, exact evidence/units and failure paths. Source support is not linguistic approval; imported drafts cannot self-certify. Confirm no credentials, model call, hidden network fallback, source erasure or fabricated review appears in the app/tooling. Content review in Claude must be an actual separately recorded operation on the exact payload; a code review alone does not imply all Dutch text passed the language rubric.
+
+## Worker blocker (2026-10-04)
+
+The available Dutch export downloaded successfully, but its compressed-byte SHA-256 is
+`c08b598dede48e960ca17322eeec04426c37471406abce5392677ea5c5049032`, rather than the research pin
+`7d29316502fd45e1bd7e75bde6be02da742211044deec906a50bab5c85452e51` (26 September 2026).
+The bulk files and Tatoeba record excerpts are absent from the repository. The current export
+cannot prove AC1 or supply the required committed excerpts of the pinned snapshot. No source
+pin, count or review status has been changed. Supply the original pinned NL/EN/PL and links
+exports, or resolve the snapshot/count requirement in a follow-up specification, to resume.
+All acceptance criteria remain unproven; this task is not complete.

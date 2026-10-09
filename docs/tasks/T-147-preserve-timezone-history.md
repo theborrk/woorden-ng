@@ -44,3 +44,29 @@ Clock anomalies block unsafe grading until a sane instant is available; never ad
 ## Notes for the reviewer
 
 Explicit rescheduling changes a presentation projection, not historical observations or remembered stability.
+
+## Worker blocker report
+
+Checked against main `c1ce9dc` on 4 October 2026. This task remains `todo`; no
+acceptance criteria are claimed as proved.
+
+- The closed `preferences` schema in `src/contracts/runtime/records.ts` has timezone
+  and boundary fields but no review-window preference. T-143 accepts a window as an
+  inspector input only. Persisting the requested window settings requires a preference
+  contract change, which this task explicitly excludes. The existing
+  `ProfileRepositories` port also cannot access learning projections in the same
+  transaction. Confirm ownership of the preference/transaction extension before
+  implementing the atomic settings/reschedule flow.
+- `src/app/App.tsx` renders a placeholder for Today. The committed-introduction
+  flow (T-148) and subsequent session planner are not on main. AC3's real Today
+  e2e cannot currently exercise an introduction allowance; a synthetic UI would
+  not prove the requested behavior.
+- The response-draft and grading commands are planned in T-149/T-150. T-150 itself
+  depends on T-147. AC4 can eventually test an injected clock guard independently,
+  but proving recoverable grading through the production command requires a staged
+  acceptance boundary or moving that integration proof to T-150.
+
+Suggested resolution: authorize the existing preference/transaction extensions,
+identify the Today allowance owner, and separate the pre-grading clock boundary
+from the later grading integration proof. Do not mark this task done or unblock
+T-150 merely on the basis of this report.
